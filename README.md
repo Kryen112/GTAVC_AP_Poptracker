@@ -117,6 +117,43 @@ percent on a run of small round configuration values, everything else in single
 digits. So the 36 jumps are listed without pins. They autotrack and count either
 way, and the pack is complete without them.
 
+### Placing them by hand
+
+`tools/pixel_to_world.py` converts positions clicked on `images/maps/vice_city.png`
+into the world coordinates the tables hold, using the same
+`data/map_geometry.json` the generator pins from, so the two cannot disagree.
+
+Open the map in an image editor, note the pixel under each jump, and put them in
+a file, one per line. Comments and blank lines are ignored, so it can be
+annotated as it is built:
+
+    # 1  Washington Beach, the hotel ramp
+    1032 636
+    # 2  Ocean Drive
+    900, 400
+
+Then:
+
+    py -3.12 tools/pixel_to_world.py --from jumps.txt --preview check.png
+
+That draws the points on the map, numbered, so they can be checked before
+anything is written. When they look right:
+
+    py -3.12 tools/pixel_to_world.py --from jumps.txt --write
+    py -3.12 tools/generate.py
+
+`--write` replaces the `STUNT_JUMP_COORDS` list in `data/check_coords.py` and
+leaves the rest of the file alone. Without it the block is printed to paste by
+hand. `--reverse` goes the other way, world to pixel, to see where a coordinate
+already in the tables lands.
+
+Two things to know. The list must hold all 36 before the generator will pin the
+class: a partial list fails loudly, naming the checks still without a position.
+And entry *n* becomes `Unique Stunt Jump n`, which the mod detects through global
+`$795 + n - 1`, so the order has to be the engine's. Place them in a different
+order and every pin still sits on a real jump, but the names are shuffled against
+what the game reports.
+
 Feeding a dump in, once one is right:
 
     python scripts/dump_check_coords.py clean.txt \n        ../GTAVC_AP_Poptracker/data/check_coords.py gtavc_ap_stuntjumps.txt
