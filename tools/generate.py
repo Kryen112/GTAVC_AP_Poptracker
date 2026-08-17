@@ -90,6 +90,12 @@ CHECK_CLASSES: list[tuple[str, str, str | None]] = [
 CLASS_DISPLAY = {key: display for key, display, _option in CHECK_CLASSES}
 CLASS_OPTION = {key: option for key, _display, option in CHECK_CLASSES}
 
+# The classes the game places nowhere, so their checks are listed rather than
+# pinned: an emergency level completes wherever the last fare or fire happens to
+# be, and a stunt jump is exe-native, registered by the engine rather than the
+# SCM. Every other class must have a position for every check.
+UNPINNABLE_CLASSES = frozenset({"emergency_vehicles", "stunt_jumps"})
+
 
 def class_visibility_code(class_key: str) -> str:
     return f"$vis{''.join(part.title() for part in class_key.split('_'))}"
@@ -459,6 +465,18 @@ def check_positions(data, locations, check_coords) -> dict[str, tuple[float, flo
     unknown = sorted(name for name in positions if name not in locations.LOCATION_NAME_TO_ID)
     if unknown:
         raise SystemExit(f"check_coords names no location knows: {unknown}")
+    # A check in any other class losing its position means a name moved apart in
+    # the two tables, which would quietly unpin it. Fail instead: renaming checks
+    # is ordinary work and the pins have to follow.
+    unplaced = sorted(
+        name for name in locations.LOCATION_NAME_TO_ID
+        if name not in positions
+        and locations.LOCATION_CLASS[name] not in UNPINNABLE_CLASSES
+    )
+    if unplaced:
+        raise SystemExit(
+            "these checks have no position, and their class is one the game does "
+            f"place, so the names have drifted from check_coords: {unplaced}")
     return positions
 
 
