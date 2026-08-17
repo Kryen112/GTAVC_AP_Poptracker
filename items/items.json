@@ -1,0 +1,1635 @@
+[
+	{
+		"name": "Progressive Rosenberg",
+		"type": "consumable",
+		"img": "images/items/hud/radar_lawyer.png",
+		"codes": "Progressive Rosenberg",
+		"min_quantity": 0,
+		"max_quantity": 4,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Cortez",
+		"type": "consumable",
+		"img": "images/items/hud/radar_cortez.png",
+		"codes": "Progressive Cortez",
+		"min_quantity": 0,
+		"max_quantity": 5,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Diaz",
+		"type": "consumable",
+		"img": "images/items/hud/radar_diaz.png",
+		"codes": "Progressive Diaz",
+		"min_quantity": 0,
+		"max_quantity": 5,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Death Row",
+		"type": "consumable",
+		"img": "images/items/hud/radar_kent.png",
+		"codes": "Progressive Death Row",
+		"min_quantity": 0,
+		"max_quantity": 1,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Avery",
+		"type": "consumable",
+		"img": "images/items/hud/radar_avery.png",
+		"codes": "Progressive Avery",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Phil Cassidy",
+		"type": "consumable",
+		"img": "images/items/hud/radar_phil.png",
+		"codes": "Progressive Phil Cassidy",
+		"min_quantity": 0,
+		"max_quantity": 2,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Vercetti Protection",
+		"type": "consumable",
+		"img": "images/items/hud/tommy.png",
+		"codes": "Progressive Vercetti Protection",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Big Mitch Baker",
+		"type": "consumable",
+		"img": "images/items/hud/bikers.png",
+		"codes": "Progressive Big Mitch Baker",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Umberto Robina",
+		"type": "consumable",
+		"img": "images/items/hud/cubans.png",
+		"codes": "Progressive Umberto Robina",
+		"min_quantity": 0,
+		"max_quantity": 4,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Auntie Poulet",
+		"type": "consumable",
+		"img": "images/items/hud/haitians.png",
+		"codes": "Progressive Auntie Poulet",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Love Fist",
+		"type": "consumable",
+		"img": "images/items/hud/lovefist.png",
+		"codes": "Progressive Love Fist",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Mr. Black",
+		"type": "consumable",
+		"img": "images/items/hud/phone.png",
+		"codes": "Progressive Mr. Black",
+		"min_quantity": 0,
+		"max_quantity": 5,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Vercetti Finale",
+		"type": "consumable",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Progressive Vercetti Finale",
+		"min_quantity": 0,
+		"max_quantity": 2,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Mainland Access",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Mainland Access"
+	},
+	{
+		"name": "Starfish Island Access",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Starfish Island Access"
+	},
+	{
+		"name": "Body Armor Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Body Armor Spawn"
+	},
+	{
+		"name": "Chainsaw Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Chainsaw Spawn"
+	},
+	{
+		"name": ".357 Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": ".357 Spawn"
+	},
+	{
+		"name": "Flamethrower Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Flamethrower Spawn"
+	},
+	{
+		"name": ".308 Sniper Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": ".308 Sniper Spawn"
+	},
+	{
+		"name": "Minigun Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Minigun Spawn"
+	},
+	{
+		"name": "Rocket Launcher Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Rocket Launcher Spawn"
+	},
+	{
+		"name": "Sea Sparrow Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Sea Sparrow Spawn"
+	},
+	{
+		"name": "Rhino Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Rhino Spawn"
+	},
+	{
+		"name": "Hunter Spawn",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Hunter Spawn"
+	},
+	{
+		"name": "$100,000",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "$100000"
+	},
+	{
+		"name": "Infinite Sprint",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Infinite Sprint"
+	},
+	{
+		"name": "Fireproof",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Fireproof"
+	},
+	{
+		"name": "Max Armor Upgrade",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Max Armor Upgrade"
+	},
+	{
+		"name": "Taxi Jump Ability",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Taxi Jump Ability"
+	},
+	{
+		"name": "Max Health Upgrade",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Max Health Upgrade"
+	},
+	{
+		"name": "Cash $50",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $50"
+	},
+	{
+		"name": "Cash $100",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $100"
+	},
+	{
+		"name": "Cash $150",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $150"
+	},
+	{
+		"name": "Cash $200",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $200"
+	},
+	{
+		"name": "Cash $250",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $250"
+	},
+	{
+		"name": "Cash $300",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $300"
+	},
+	{
+		"name": "Cash $350",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $350"
+	},
+	{
+		"name": "Cash $400",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $400"
+	},
+	{
+		"name": "Cash $450",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $450"
+	},
+	{
+		"name": "Cash $500",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $500"
+	},
+	{
+		"name": "Cash $550",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $550"
+	},
+	{
+		"name": "Cash $600",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $600"
+	},
+	{
+		"name": "Cash $650",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $650"
+	},
+	{
+		"name": "Cash $700",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $700"
+	},
+	{
+		"name": "Cash $750",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $750"
+	},
+	{
+		"name": "Cash $800",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $800"
+	},
+	{
+		"name": "Cash $850",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $850"
+	},
+	{
+		"name": "Cash $900",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $900"
+	},
+	{
+		"name": "Cash $950",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $950"
+	},
+	{
+		"name": "Cash $1,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1000"
+	},
+	{
+		"name": "Cash $1,050",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1050"
+	},
+	{
+		"name": "Cash $1,100",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1100"
+	},
+	{
+		"name": "Cash $1,150",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1150"
+	},
+	{
+		"name": "Cash $1,200",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1200"
+	},
+	{
+		"name": "Cash $1,250",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1250"
+	},
+	{
+		"name": "Cash $1,300",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1300"
+	},
+	{
+		"name": "Cash $1,350",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1350"
+	},
+	{
+		"name": "Cash $1,400",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1400"
+	},
+	{
+		"name": "Cash $1,450",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1450"
+	},
+	{
+		"name": "Cash $1,500",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1500"
+	},
+	{
+		"name": "Cash $1,550",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1550"
+	},
+	{
+		"name": "Cash $1,600",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1600"
+	},
+	{
+		"name": "Cash $1,650",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1650"
+	},
+	{
+		"name": "Cash $1,700",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1700"
+	},
+	{
+		"name": "Cash $1,800",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1800"
+	},
+	{
+		"name": "Cash $1,900",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $1900"
+	},
+	{
+		"name": "Cash $2,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2000"
+	},
+	{
+		"name": "Cash $2,100",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2100"
+	},
+	{
+		"name": "Cash $2,200",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2200"
+	},
+	{
+		"name": "Cash $2,300",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2300"
+	},
+	{
+		"name": "Cash $2,400",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2400"
+	},
+	{
+		"name": "Cash $2,500",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2500"
+	},
+	{
+		"name": "Cash $2,600",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2600"
+	},
+	{
+		"name": "Cash $2,700",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2700"
+	},
+	{
+		"name": "Cash $2,800",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2800"
+	},
+	{
+		"name": "Cash $2,900",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $2900"
+	},
+	{
+		"name": "Cash $3,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3000"
+	},
+	{
+		"name": "Cash $3,100",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3100"
+	},
+	{
+		"name": "Cash $3,200",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3200"
+	},
+	{
+		"name": "Cash $3,300",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3300"
+	},
+	{
+		"name": "Cash $3,400",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3400"
+	},
+	{
+		"name": "Cash $3,500",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $3500"
+	},
+	{
+		"name": "Cash $4,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $4000"
+	},
+	{
+		"name": "Cash $5,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $5000"
+	},
+	{
+		"name": "Cash $8,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $8000"
+	},
+	{
+		"name": "Cash $10,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $10000"
+	},
+	{
+		"name": "Cash $16,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $16000"
+	},
+	{
+		"name": "Cash $30,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $30000"
+	},
+	{
+		"name": "Cash $50,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $50000"
+	},
+	{
+		"name": "Weapon Pickup",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Weapon Pickup"
+	},
+	{
+		"name": "Health Top-up",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Health Top-up"
+	},
+	{
+		"name": "Armor Top-up",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Armor Top-up"
+	},
+	{
+		"name": "Remove Wanted Level",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Remove Wanted Level"
+	},
+	{
+		"name": "Progressive Malibu Club",
+		"type": "consumable",
+		"img": "images/items/hud/club.png",
+		"codes": "Progressive Malibu Club",
+		"min_quantity": 0,
+		"max_quantity": 4,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Film Studio",
+		"type": "consumable",
+		"img": "images/items/hud/filmstudio.png",
+		"codes": "Progressive Film Studio",
+		"min_quantity": 0,
+		"max_quantity": 4,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Printworks",
+		"type": "consumable",
+		"img": "images/items/hud/printworks.png",
+		"codes": "Progressive Printworks",
+		"min_quantity": 0,
+		"max_quantity": 2,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Kaufman Cabs",
+		"type": "consumable",
+		"img": "images/items/hud/kcabs.png",
+		"codes": "Progressive Kaufman Cabs",
+		"min_quantity": 0,
+		"max_quantity": 3,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Cherry Popper",
+		"type": "consumable",
+		"img": "images/items/hud/icecream.png",
+		"codes": "Progressive Cherry Popper",
+		"min_quantity": 0,
+		"max_quantity": 1,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Boatyard",
+		"type": "consumable",
+		"img": "images/items/hud/boatyard.png",
+		"codes": "Progressive Boatyard",
+		"min_quantity": 0,
+		"max_quantity": 1,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Progressive Sunshine Autos",
+		"type": "consumable",
+		"img": "images/items/hud/SunYard.png",
+		"codes": "Progressive Sunshine Autos",
+		"min_quantity": 0,
+		"max_quantity": 1,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Package Fragment",
+		"type": "consumable",
+		"img": "images/items/hud/tshirt.png",
+		"codes": "Package Fragment",
+		"min_quantity": 0,
+		"max_quantity": 100,
+		"increment": 1,
+		"decrement": 1
+	},
+	{
+		"name": "Wanted Level Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Wanted Level Trap"
+	},
+	{
+		"name": "Exploding Cars Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Exploding Cars Trap"
+	},
+	{
+		"name": "Hostile Pedestrians Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Hostile Pedestrians Trap"
+	},
+	{
+		"name": "Stormy Weather Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Stormy Weather Trap"
+	},
+	{
+		"name": "Speed Up Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Speed Up Trap"
+	},
+	{
+		"name": "Slow Motion Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Slow Motion Trap"
+	},
+	{
+		"name": "Foggy Weather Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Foggy Weather Trap"
+	},
+	{
+		"name": "Drunk Vision Trap",
+		"type": "toggle",
+		"img": "images/items/hud/siterocket.png",
+		"codes": "Drunk Vision Trap"
+	},
+	{
+		"name": "Radio Station: Wildstyle",
+		"type": "toggle",
+		"img": "images/items/hud/RWildstyle.png",
+		"codes": "Radio Station: Wildstyle"
+	},
+	{
+		"name": "Radio Station: Flash FM",
+		"type": "toggle",
+		"img": "images/items/hud/RFlash.png",
+		"codes": "Radio Station: Flash FM"
+	},
+	{
+		"name": "Radio Station: K-Chat",
+		"type": "toggle",
+		"img": "images/items/hud/RKchat.png",
+		"codes": "Radio Station: K-Chat"
+	},
+	{
+		"name": "Radio Station: Fever 105",
+		"type": "toggle",
+		"img": "images/items/hud/RFever.png",
+		"codes": "Radio Station: Fever 105"
+	},
+	{
+		"name": "Radio Station: V-Rock",
+		"type": "toggle",
+		"img": "images/items/hud/RVRock.png",
+		"codes": "Radio Station: V-Rock"
+	},
+	{
+		"name": "Radio Station: VCPR",
+		"type": "toggle",
+		"img": "images/items/hud/RVCPR.png",
+		"codes": "Radio Station: VCPR"
+	},
+	{
+		"name": "Radio Station: Radio Espantoso",
+		"type": "toggle",
+		"img": "images/items/hud/REspantoso.png",
+		"codes": "Radio Station: Radio Espantoso"
+	},
+	{
+		"name": "Radio Station: Emotion 98.3",
+		"type": "toggle",
+		"img": "images/items/hud/REmotion.png",
+		"codes": "Radio Station: Emotion 98.3"
+	},
+	{
+		"name": "Radio Station: Wave 103",
+		"type": "toggle",
+		"img": "images/items/hud/RWave.png",
+		"codes": "Radio Station: Wave 103"
+	},
+	{
+		"name": "Printworks Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Printworks Ownership"
+	},
+	{
+		"name": "Sunshine Autos Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Sunshine Autos Ownership"
+	},
+	{
+		"name": "Film Studio Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Film Studio Ownership"
+	},
+	{
+		"name": "Cherry Popper Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Cherry Popper Ownership"
+	},
+	{
+		"name": "Kaufman Cabs Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Kaufman Cabs Ownership"
+	},
+	{
+		"name": "Malibu Club Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Malibu Club Ownership"
+	},
+	{
+		"name": "Boatyard Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Boatyard Ownership"
+	},
+	{
+		"name": "Pole Position Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Pole Position Ownership"
+	},
+	{
+		"name": "El Swanko Casa Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "El Swanko Casa Ownership"
+	},
+	{
+		"name": "Links View Apartment Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Links View Apartment Ownership"
+	},
+	{
+		"name": "Hyman Condo Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Hyman Condo Ownership"
+	},
+	{
+		"name": "Ocean Heights Apartment Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Ocean Heights Apartment Ownership"
+	},
+	{
+		"name": "1102 Washington Street Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "1102 Washington Street Ownership"
+	},
+	{
+		"name": "Vice Point Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Vice Point Ownership"
+	},
+	{
+		"name": "Skumole Shack Ownership",
+		"type": "toggle",
+		"img": "images/items/hud/property.png",
+		"codes": "Skumole Shack Ownership"
+	},
+	{
+		"name": "Minimap",
+		"type": "toggle",
+		"img": "images/items/hud/radar_centre.png",
+		"codes": "Minimap"
+	},
+	{
+		"name": "Sprint",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Sprint"
+	},
+	{
+		"name": "Jump",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Jump"
+	},
+	{
+		"name": "Crouch",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Crouch"
+	},
+	{
+		"name": "Land Vehicles",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Land Vehicles"
+	},
+	{
+		"name": "Sea Vehicles",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Sea Vehicles"
+	},
+	{
+		"name": "Air Vehicles",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Air Vehicles"
+	},
+	{
+		"name": "Weapon Equip",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Weapon Equip"
+	},
+	{
+		"name": "Wallet",
+		"type": "toggle",
+		"img": "images/items/hud/fist.png",
+		"codes": "Wallet"
+	},
+	{
+		"name": "Hidden Packages",
+		"type": "toggle",
+		"img": "images/items/hud/radar_save.png",
+		"codes": "Hidden Packages"
+	},
+	{
+		"name": "Rampages",
+		"type": "toggle",
+		"img": "images/items/hud/radar_save.png",
+		"codes": "Rampages"
+	},
+	{
+		"name": "Stunt Jumps",
+		"type": "toggle",
+		"img": "images/items/hud/radar_save.png",
+		"codes": "Stunt Jumps"
+	},
+	{
+		"name": "Property Purchases",
+		"type": "toggle",
+		"img": "images/items/hud/radar_save.png",
+		"codes": "Property Purchases"
+	},
+	{
+		"name": "Robbable Stores",
+		"type": "toggle",
+		"img": "images/items/hud/radar_save.png",
+		"codes": "Robbable Stores"
+	},
+	{
+		"name": "Hidden packages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_hidden_packages_off.png",
+				"name": "Hidden packages: off",
+				"codes": "enable_hidden_packages,enable_hidden_packages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_hidden_packages_on.png",
+				"name": "Hidden packages: on",
+				"codes": "enable_hidden_packages,enable_hidden_packages_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Rampages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_rampages_off.png",
+				"name": "Rampages: off",
+				"codes": "enable_rampages,enable_rampages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_rampages_on.png",
+				"name": "Rampages: on",
+				"codes": "enable_rampages,enable_rampages_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Stunt jumps",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_stunt_jumps_off.png",
+				"name": "Stunt jumps: off",
+				"codes": "enable_stunt_jumps,enable_stunt_jumps_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_stunt_jumps_on.png",
+				"name": "Stunt jumps: on",
+				"codes": "enable_stunt_jumps,enable_stunt_jumps_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Emergency vehicle missions",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_emergency_vehicles_off.png",
+				"name": "Emergency vehicle missions: off",
+				"codes": "enable_emergency_vehicles,enable_emergency_vehicles_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_emergency_vehicles_on.png",
+				"name": "Emergency vehicle missions: on",
+				"codes": "enable_emergency_vehicles,enable_emergency_vehicles_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Properties and assets",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_properties_off.png",
+				"name": "Properties and assets: off",
+				"codes": "enable_properties,enable_properties_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_properties_on.png",
+				"name": "Properties and assets: on",
+				"codes": "enable_properties,enable_properties_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Robbable stores",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_robbable_stores_off.png",
+				"name": "Robbable stores: off",
+				"codes": "enable_robbable_stores,enable_robbable_stores_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_robbable_stores_on.png",
+				"name": "Robbable stores: on",
+				"codes": "enable_robbable_stores,enable_robbable_stores_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Side events",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_side_events_off.png",
+				"name": "Side events: off",
+				"codes": "enable_side_events,enable_side_events_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_side_events_on.png",
+				"name": "Side events: on",
+				"codes": "enable_side_events,enable_side_events_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Shuffle emergency rewards",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/shuffle_emergency_rewards_off.png",
+				"name": "Shuffle emergency rewards: off",
+				"codes": "shuffle_emergency_rewards,shuffle_emergency_rewards_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/shuffle_emergency_rewards_on.png",
+				"name": "Shuffle emergency rewards: on",
+				"codes": "shuffle_emergency_rewards,shuffle_emergency_rewards_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Randomize radio stations",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/randomize_radio_stations_off.png",
+				"name": "Randomize radio stations: off",
+				"codes": "randomize_radio_stations,randomize_radio_stations_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/randomize_radio_stations_on.png",
+				"name": "Randomize radio stations: on",
+				"codes": "randomize_radio_stations,randomize_radio_stations_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Shuffle minimap",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/shuffle_minimap_off.png",
+				"name": "Shuffle minimap: off",
+				"codes": "shuffle_minimap,shuffle_minimap_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/shuffle_minimap_on.png",
+				"name": "Shuffle minimap: on",
+				"codes": "shuffle_minimap,shuffle_minimap_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Randomize pickups",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/randomize_pickups_off.png",
+				"name": "Randomize pickups: off",
+				"codes": "randomize_pickups,randomize_pickups_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/randomize_pickups_on.png",
+				"name": "Randomize pickups: on",
+				"codes": "randomize_pickups,randomize_pickups_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Death Link",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/death_link_off.png",
+				"name": "Death Link: off",
+				"codes": "death_link,death_link_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/death_link_on.png",
+				"name": "Death Link: on",
+				"codes": "death_link,death_link_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Goal",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/goal_final_mission.png",
+				"name": "Goal: Final mission",
+				"codes": "goal,goal_final_mission",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/goal_hidden_packages.png",
+				"name": "Goal: Hidden package hunt",
+				"codes": "goal,goal_hidden_packages",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/goal_hundred_percent.png",
+				"name": "Goal: 100 percent",
+				"codes": "goal,goal_hundred_percent",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: crouch",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_crouch_off.png",
+				"name": "Ability lock: crouch: off",
+				"codes": "ability_lock_crouch,ability_lock_crouch_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_crouch_on.png",
+				"name": "Ability lock: crouch: on",
+				"codes": "ability_lock_crouch,ability_lock_crouch_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: jump",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_jump_off.png",
+				"name": "Ability lock: jump: off",
+				"codes": "ability_lock_jump,ability_lock_jump_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_jump_on.png",
+				"name": "Ability lock: jump: on",
+				"codes": "ability_lock_jump,ability_lock_jump_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: sprint",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_sprint_off.png",
+				"name": "Ability lock: sprint: off",
+				"codes": "ability_lock_sprint,ability_lock_sprint_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_sprint_on.png",
+				"name": "Ability lock: sprint: on",
+				"codes": "ability_lock_sprint,ability_lock_sprint_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: vehicles",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_vehicles_off.png",
+				"name": "Ability lock: vehicles: off",
+				"codes": "ability_lock_vehicles,ability_lock_vehicles_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_vehicles_on.png",
+				"name": "Ability lock: vehicles: on",
+				"codes": "ability_lock_vehicles,ability_lock_vehicles_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: wallet",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_wallet_off.png",
+				"name": "Ability lock: wallet: off",
+				"codes": "ability_lock_wallet,ability_lock_wallet_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_wallet_on.png",
+				"name": "Ability lock: wallet: on",
+				"codes": "ability_lock_wallet,ability_lock_wallet_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Ability lock: weapon_equip",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/ability_lock_weapon_equip_off.png",
+				"name": "Ability lock: weapon_equip: off",
+				"codes": "ability_lock_weapon_equip,ability_lock_weapon_equip_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/ability_lock_weapon_equip_on.png",
+				"name": "Ability lock: weapon_equip: on",
+				"codes": "ability_lock_weapon_equip,ability_lock_weapon_equip_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Content lock: hidden_packages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/content_lock_hidden_packages_off.png",
+				"name": "Content lock: hidden_packages: off",
+				"codes": "content_lock_hidden_packages,content_lock_hidden_packages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/content_lock_hidden_packages_on.png",
+				"name": "Content lock: hidden_packages: on",
+				"codes": "content_lock_hidden_packages,content_lock_hidden_packages_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Content lock: properties",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/content_lock_properties_off.png",
+				"name": "Content lock: properties: off",
+				"codes": "content_lock_properties,content_lock_properties_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/content_lock_properties_on.png",
+				"name": "Content lock: properties: on",
+				"codes": "content_lock_properties,content_lock_properties_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Content lock: rampages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/content_lock_rampages_off.png",
+				"name": "Content lock: rampages: off",
+				"codes": "content_lock_rampages,content_lock_rampages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/content_lock_rampages_on.png",
+				"name": "Content lock: rampages: on",
+				"codes": "content_lock_rampages,content_lock_rampages_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Content lock: robbable_stores",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/content_lock_robbable_stores_off.png",
+				"name": "Content lock: robbable_stores: off",
+				"codes": "content_lock_robbable_stores,content_lock_robbable_stores_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/content_lock_robbable_stores_on.png",
+				"name": "Content lock: robbable_stores: on",
+				"codes": "content_lock_robbable_stores,content_lock_robbable_stores_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Content lock: stunt_jumps",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/content_lock_stunt_jumps_off.png",
+				"name": "Content lock: stunt_jumps: off",
+				"codes": "content_lock_stunt_jumps,content_lock_stunt_jumps_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/content_lock_stunt_jumps_on.png",
+				"name": "Content lock: stunt_jumps: on",
+				"codes": "content_lock_stunt_jumps,content_lock_stunt_jumps_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Show Story Missions",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_story_missions_off.png",
+				"name": "Show Story Missions: off",
+				"codes": "show_story_missions,show_story_missions_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_story_missions_on.png",
+				"name": "Show Story Missions: on",
+				"codes": "show_story_missions,show_story_missions_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Properties",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_properties_off.png",
+				"name": "Show Properties: off",
+				"codes": "show_properties,show_properties_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_properties_on.png",
+				"name": "Show Properties: on",
+				"codes": "show_properties,show_properties_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Hidden Packages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_hidden_packages_off.png",
+				"name": "Show Hidden Packages: off",
+				"codes": "show_hidden_packages,show_hidden_packages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_hidden_packages_on.png",
+				"name": "Show Hidden Packages: on",
+				"codes": "show_hidden_packages,show_hidden_packages_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Rampages",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_rampages_off.png",
+				"name": "Show Rampages: off",
+				"codes": "show_rampages,show_rampages_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_rampages_on.png",
+				"name": "Show Rampages: on",
+				"codes": "show_rampages,show_rampages_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Stunt Jumps",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_stunt_jumps_off.png",
+				"name": "Show Stunt Jumps: off",
+				"codes": "show_stunt_jumps,show_stunt_jumps_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_stunt_jumps_on.png",
+				"name": "Show Stunt Jumps: on",
+				"codes": "show_stunt_jumps,show_stunt_jumps_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Robbable Stores",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_robbable_stores_off.png",
+				"name": "Show Robbable Stores: off",
+				"codes": "show_robbable_stores,show_robbable_stores_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_robbable_stores_on.png",
+				"name": "Show Robbable Stores: on",
+				"codes": "show_robbable_stores,show_robbable_stores_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Side Events",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_side_events_off.png",
+				"name": "Show Side Events: off",
+				"codes": "show_side_events,show_side_events_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_side_events_on.png",
+				"name": "Show Side Events: on",
+				"codes": "show_side_events,show_side_events_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Emergency Vehicle Missions",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_emergency_vehicles_off.png",
+				"name": "Show Emergency Vehicle Missions: off",
+				"codes": "show_emergency_vehicles,show_emergency_vehicles_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_emergency_vehicles_on.png",
+				"name": "Show Emergency Vehicle Missions: on",
+				"codes": "show_emergency_vehicles,show_emergency_vehicles_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	}
+]

@@ -1,0 +1,235 @@
+[
+	{
+		"name": "Stunt Jumps",
+		"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+		"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+		"children": [
+			{
+				"name": "Stunt Jumps",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
+					{
+						"name": "Unique Stunt Jump 01",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_01"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 02",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_02"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 03",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_03"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 04",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_04"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 05",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_05"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 06",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_06"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 07",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_07"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 08",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_08"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 09",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_09"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 10",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_10"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 11",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_11"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 12",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_12"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 13",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_13"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 14",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_14"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 15",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_15"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 16",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_16"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 17",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_17"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 18",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_18"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 19",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_19"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 20",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_20"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 21",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_21"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 22",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_22"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 23",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_23"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 24",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_24"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 25",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_25"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 26",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_26"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 27",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_27"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 28",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_28"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 29",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_29"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 30",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_30"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 31",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_31"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 32",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_32"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 33",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_33"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 34",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_34"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 35",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_35"
+						]
+					},
+					{
+						"name": "Unique Stunt Jump 36",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_36"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			}
+		]
+	}
+]

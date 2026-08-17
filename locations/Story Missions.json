@@ -1,0 +1,630 @@
+[
+	{
+		"name": "Story Missions",
+		"chest_unopened_img": "images/items/pins/story_missions.png",
+		"chest_opened_img": "images/items/pins/story_missions_opened.png",
+		"children": [
+			{
+				"name": "Big Mitch Baker",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Alloy Wheels of Steel",
+						"access_rules": [
+							"^$rule_Alloy_Wheels_of_Steel"
+						]
+					},
+					{
+						"name": "Messing with the Man",
+						"access_rules": [
+							"^$rule_Messing_with_the_Man"
+						]
+					},
+					{
+						"name": "Hog Tied",
+						"access_rules": [
+							"^$rule_Hog_Tied"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 359,
+						"y": 345
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "An Old Friend",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "An Old Friend",
+						"access_rules": [
+							"^$rule_An_Old_Friend"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 566,
+						"y": 842
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Autocide",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Autocide",
+						"access_rules": [
+							"^$rule_Autocide"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 522,
+						"y": 774
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Bar Brawl",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Bar Brawl",
+						"access_rules": [
+							"^$rule_Bar_Brawl"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 410,
+						"y": 656
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Cap the Collector",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Cap the Collector",
+						"access_rules": [
+							"^$rule_Cap_the_Collector"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 240,
+						"y": 583
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Check Out at the Check In",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Check Out at the Check In",
+						"access_rules": [
+							"^$rule_Check_Out_at_the_Check_In"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 133,
+						"y": 723
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Cop Land",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Cop Land",
+						"access_rules": [
+							"^$rule_Cop_Land"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 423,
+						"y": 651
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Death Row",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Death Row",
+						"access_rules": [
+							"^$rule_Death_Row"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 638,
+						"y": 532
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Avery",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Four Iron",
+						"access_rules": [
+							"^$rule_Four_Iron"
+						]
+					},
+					{
+						"name": "Two Bit Hit",
+						"access_rules": [
+							"^$rule_Two_Bit_Hit"
+						]
+					},
+					{
+						"name": "Demolition Man",
+						"access_rules": [
+							"^$rule_Demolition_Man"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 578,
+						"y": 571
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Phil Cassidy",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Gun Runner",
+						"access_rules": [
+							"^$rule_Gun_Runner"
+						]
+					},
+					{
+						"name": "Boomshine Saigon",
+						"access_rules": [
+							"^$rule_Boomshine_Saigon"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 230,
+						"y": 424
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Auntie Poulet",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Juju Scramble",
+						"access_rules": [
+							"^$rule_Juju_Scramble"
+						]
+					},
+					{
+						"name": "Bombs Away!",
+						"access_rules": [
+							"^$rule_Bombs_Away"
+						]
+					},
+					{
+						"name": "Dirty Lickin's",
+						"access_rules": [
+							"^$rule_Dirty_Lickin_s"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 266,
+						"y": 475
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Loose Ends",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Loose Ends",
+						"access_rules": [
+							"^$rule_Loose_Ends"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 262,
+						"y": 648
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Love Fist",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Love Juice",
+						"access_rules": [
+							"^$rule_Love_Juice"
+						]
+					},
+					{
+						"name": "Psycho Killer",
+						"access_rules": [
+							"^$rule_Psycho_Killer"
+						]
+					},
+					{
+						"name": "Publicity Tour",
+						"access_rules": [
+							"^$rule_Publicity_Tour"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 288,
+						"y": 215
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Road Kill",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Road Kill",
+						"access_rules": [
+							"^$rule_Road_Kill"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 521,
+						"y": 774
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Rub Out",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Rub Out",
+						"access_rules": [
+							"^$rule_Rub_Out"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 449,
+						"y": 638
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Shakedown & Keep Your Friends Close...",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Shakedown",
+						"access_rules": [
+							"^$rule_Shakedown"
+						]
+					},
+					{
+						"name": "Keep Your Friends Close...",
+						"access_rules": [
+							"^$rule_Keep_Your_Friends_Close"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 415,
+						"y": 660
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Umberto Robina",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Stunt Boat Challenge",
+						"access_rules": [
+							"^$rule_Stunt_Boat_Challenge"
+						]
+					},
+					{
+						"name": "Cannon Fodder",
+						"access_rules": [
+							"^$rule_Cannon_Fodder"
+						]
+					},
+					{
+						"name": "Naval Engagement",
+						"access_rules": [
+							"^$rule_Naval_Engagement"
+						]
+					},
+					{
+						"name": "Trojan Voodoo",
+						"access_rules": [
+							"^$rule_Trojan_Voodoo"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 212,
+						"y": 667
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Diaz",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "The Chase",
+						"access_rules": [
+							"^$rule_The_Chase"
+						]
+					},
+					{
+						"name": "Phnom Penh '86",
+						"access_rules": [
+							"^$rule_Phnom_Penh_86"
+						]
+					},
+					{
+						"name": "The Fastest Boat",
+						"access_rules": [
+							"^$rule_The_Fastest_Boat"
+						]
+					},
+					{
+						"name": "Supply & Demand",
+						"access_rules": [
+							"^$rule_Supply_Demand"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 415,
+						"y": 653
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Rosenberg",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "The Party",
+						"access_rules": [
+							"^$rule_The_Party"
+						]
+					},
+					{
+						"name": "Back Alley Brawl",
+						"access_rules": [
+							"^$rule_Back_Alley_Brawl"
+						]
+					},
+					{
+						"name": "Jury Fury",
+						"access_rules": [
+							"^$rule_Jury_Fury"
+						]
+					},
+					{
+						"name": "Riot",
+						"access_rules": [
+							"^$rule_Riot"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 543,
+						"y": 724
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Cortez",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Treacherous Swine",
+						"access_rules": [
+							"^$rule_Treacherous_Swine"
+						]
+					},
+					{
+						"name": "Mall Shootout",
+						"access_rules": [
+							"^$rule_Mall_Shootout"
+						]
+					},
+					{
+						"name": "Guardian Angels",
+						"access_rules": [
+							"^$rule_Guardian_Angels"
+						]
+					},
+					{
+						"name": "Sir, Yes Sir!",
+						"access_rules": [
+							"^$rule_Sir_Yes_Sir"
+						]
+					},
+					{
+						"name": "All Hands On Deck!",
+						"access_rules": [
+							"^$rule_All_Hands_On_Deck"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 449,
+						"y": 860
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			},
+			{
+				"name": "Waste the Wife",
+				"chest_unopened_img": "images/items/pins/story_missions.png",
+				"chest_opened_img": "images/items/pins/story_missions_opened.png",
+				"sections": [
+					{
+						"name": "Waste the Wife",
+						"access_rules": [
+							"^$rule_Waste_the_Wife"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 636,
+						"y": 449
+					}
+				],
+				"visibility_rules": [
+					"$visStoryMissions"
+				]
+			}
+		]
+	}
+]

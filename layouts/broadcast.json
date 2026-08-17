@@ -1,0 +1,10 @@
+{
+	"tracker_broadcast": {
+		"type": "container",
+		"background": "#3a3a3f",
+		"content": {
+			"type": "layout",
+			"key": "items"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+# Mirrors the GTA Vice City world repository's ruff configuration, which in turn
+# mirrors Archipelago 0.6.7, so the two codebases lint the same way.
+line-length = 120
+indent-width = 4
+target-version = "py311"
+
+[lint]
+select = ["B", "C", "E", "F", "W", "I", "N", "Q", "UP", "RET", "RSE", "RUF", "ISC", "PLC", "PLE", "PLW", "T20", "PERF"]
+ignore = [
+    "B011",
+    "C901",
+    "N818",
+    "PLC0415",
+    "PLC1802",
+    "PLC1901",
+    "PLE1141",
+    "UP015",
+]
+
+[lint.per-file-ignores]
+# The tools are command line entry points and report to the terminal on purpose.
+# preview_map imports the pin palette after putting its own folder on the path.
+"tools/**" = ["T20", "E402"]
+# Generated data, written by the world repository's dump script.
+"data/*.py" = ["E501"]

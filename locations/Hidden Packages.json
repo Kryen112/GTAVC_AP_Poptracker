@@ -1,0 +1,2309 @@
+[
+	{
+		"name": "Hidden Packages",
+		"chest_unopened_img": "images/items/pins/hidden_packages.png",
+		"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+		"children": [
+			{
+				"name": "Hidden Package - Downtown - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 508,
+						"y": 258
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 10",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 10",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 367,
+						"y": 313
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 494,
+						"y": 224
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 533,
+						"y": 227
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 449,
+						"y": 200
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 397,
+						"y": 183
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 316,
+						"y": 188
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 115,
+						"y": 153
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 8",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 8",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_8"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 310,
+						"y": 225
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Downtown - 9",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Downtown - 9",
+						"access_rules": [
+							"^$rule_Hidden_Package_Downtown_9"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 396,
+						"y": 225
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 251,
+						"y": 736
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 10",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 10",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 134,
+						"y": 738
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 11",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 11",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_11"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 112,
+						"y": 783
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 12",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 12",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_12"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 167,
+						"y": 791
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 13",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 13",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_13"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 111,
+						"y": 782
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 14",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 14",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_14"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 162,
+						"y": 750
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 15",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 15",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_15"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 122,
+						"y": 722
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 16",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 16",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_16"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 44,
+						"y": 739
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 17",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 17",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_17"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 240,
+						"y": 759
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 18",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 18",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_18"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 188,
+						"y": 857
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 210,
+						"y": 696
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 250,
+						"y": 895
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 233,
+						"y": 819
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 215,
+						"y": 853
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 161,
+						"y": 833
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 184,
+						"y": 806
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 8",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 8",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_8"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 58,
+						"y": 782
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Escobar International - 9",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Escobar International - 9",
+						"access_rules": [
+							"^$rule_Hidden_Package_Escobar_International_9"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 208,
+						"y": 779
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Leaf Links - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Leaf Links - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Leaf_Links_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 501,
+						"y": 276
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Leaf Links - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Leaf Links - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Leaf_Links_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 528,
+						"y": 277
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Leaf Links - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Leaf Links - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Leaf_Links_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 530,
+						"y": 359
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 282,
+						"y": 402
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 261,
+						"y": 444
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 293,
+						"y": 454
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 237,
+						"y": 422
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 215,
+						"y": 402
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 262,
+						"y": 463
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Haiti - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Haiti - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Haiti_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 247,
+						"y": 501
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 540,
+						"y": 653
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 10",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 10",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 210,
+						"y": 660
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 11",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 11",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_11"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 293,
+						"y": 674
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 12",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 12",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_12"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 70,
+						"y": 619
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 13",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 13",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_13"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 67,
+						"y": 589
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 14",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 14",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_14"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 172,
+						"y": 649
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 523,
+						"y": 551
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 379,
+						"y": 665
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 363,
+						"y": 620
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 258,
+						"y": 576
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 229,
+						"y": 543
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 222,
+						"y": 603
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 8",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 8",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_8"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 206,
+						"y": 593
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Little Havana - 9",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Little Havana - 9",
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_9"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 232,
+						"y": 666
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Ocean Beach - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Ocean Beach - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Ocean_Beach_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 635,
+						"y": 952
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Prawn Island - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Prawn Island - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Prawn_Island_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 500,
+						"y": 446
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Prawn Island - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Prawn Island - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Prawn_Island_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 523,
+						"y": 516
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Starfish Island - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Starfish_Island_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 530,
+						"y": 635
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Starfish Island - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Starfish_Island_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 526,
+						"y": 626
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Starfish Island - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Starfish_Island_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 451,
+						"y": 663
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Starfish Island - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Starfish_Island_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 433,
+						"y": 618
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Starfish Island - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Starfish_Island_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 449,
+						"y": 595
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 693,
+						"y": 640
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 10",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 10",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 656,
+						"y": 216
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 11",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 11",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_11"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 740,
+						"y": 288
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 12",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 12",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_12"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 603,
+						"y": 656
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 13",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 13",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_13"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 591,
+						"y": 211
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 14",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 14",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_14"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 581,
+						"y": 273
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 15",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 15",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_15"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 596,
+						"y": 328
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 16",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 16",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_16"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 633,
+						"y": 508
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 17",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 17",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_17"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 602,
+						"y": 440
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 18",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 18",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_18"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 580,
+						"y": 576
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 19",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 19",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_19"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 618,
+						"y": 200
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 607,
+						"y": 632
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 20",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 20",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_20"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 572,
+						"y": 546
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 21",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 21",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_21"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 621,
+						"y": 489
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 22",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 22",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_22"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 615,
+						"y": 402
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 23",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 23",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_23"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 562,
+						"y": 338
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 24",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 24",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_24"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 663,
+						"y": 503
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 25",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 25",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_25"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 645,
+						"y": 547
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 26",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 26",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_26"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 554,
+						"y": 449
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 588,
+						"y": 583
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 638,
+						"y": 524
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 633,
+						"y": 482
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 609,
+						"y": 457
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 586,
+						"y": 436
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 8",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 8",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_8"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 633,
+						"y": 224
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 9",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 9",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_9"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 616,
+						"y": 251
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 457,
+						"y": 934
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 10",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 10",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 353,
+						"y": 856
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 11",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 11",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_11"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 300,
+						"y": 886
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 418,
+						"y": 956
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 485,
+						"y": 922
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 4",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 4",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_4"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 452,
+						"y": 789
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 5",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 5",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_5"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 535,
+						"y": 766
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 6",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 6",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_6"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 468,
+						"y": 855
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 7",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 7",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_7"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 452,
+						"y": 750
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 8",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 8",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_8"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 530,
+						"y": 716
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Viceport - 9",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Viceport - 9",
+						"access_rules": [
+							"^$rule_Hidden_Package_Viceport_9"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 306,
+						"y": 815
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Washington Beach - 1",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Washington Beach - 1",
+						"access_rules": [
+							"^$rule_Hidden_Package_Washington_Beach_1"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 565,
+						"y": 740
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Washington Beach - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Washington Beach - 2",
+						"access_rules": [
+							"^$rule_Hidden_Package_Washington_Beach_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 559,
+						"y": 679
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Washington Beach - 3",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Washington Beach - 3",
+						"access_rules": [
+							"^$rule_Hidden_Package_Washington_Beach_3"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 594,
+						"y": 710
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			}
+		]
+	}
+]

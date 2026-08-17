@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Release output
+dist/
+*.zip
+
+# Game-derived art, extracted from the player's own install by
+# tools/extract_map.py. Whether the release ships these bitmaps or has the
+# player extract them is still open, so they stay local for now.
+images/maps/*.png
+images/items/hud/*.png
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Preview renders, produced by tools/preview_map.py.
+preview/

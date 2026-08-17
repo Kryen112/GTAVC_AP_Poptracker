@@ -1,0 +1,569 @@
+[
+	{
+		"name": "Properties",
+		"chest_unopened_img": "images/items/pins/properties.png",
+		"chest_opened_img": "images/items/pins/properties_opened.png",
+		"children": [
+			{
+				"name": "1102 Washington Street Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "1102 Washington Street Purchase",
+						"access_rules": [
+							"^$rule_1102_Washington_Street_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 535,
+						"y": 718
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Boatyard Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Boatyard Purchase",
+						"access_rules": [
+							"^$rule_Boatyard_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 336,
+						"y": 895
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Checkpoint Charlie",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Checkpoint Charlie",
+						"access_rules": [
+							"^$rule_Checkpoint_Charlie"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 362,
+						"y": 898
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Cherry Popper Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Cherry Popper Purchase",
+						"access_rules": [
+							"^$rule_Cherry_Popper_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 291,
+						"y": 660
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Distribution",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Distribution",
+						"access_rules": [
+							"^$rule_Distribution"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 290,
+						"y": 658
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "El Swanko Casa Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "El Swanko Casa Purchase",
+						"access_rules": [
+							"^$rule_El_Swanko_Casa_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 622,
+						"y": 357
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Film Studio Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Film Studio Purchase",
+						"access_rules": [
+							"^$rule_Film_Studio_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 516,
+						"y": 266
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Hyman Condo Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Hyman Condo Purchase",
+						"access_rules": [
+							"^$rule_Hyman_Condo_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 298,
+						"y": 177
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Kaufman Cabs Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Kaufman Cabs Purchase",
+						"access_rules": [
+							"^$rule_Kaufman_Cabs_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 253,
+						"y": 460
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Links View Apartment Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Links View Apartment Purchase",
+						"access_rules": [
+							"^$rule_Links_View_Apartment_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 590,
+						"y": 416
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Malibu Club Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Malibu Club Purchase",
+						"access_rules": [
+							"^$rule_Malibu_Club_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 637,
+						"y": 533
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Malibu Club",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "No Escape?",
+						"access_rules": [
+							"^$rule_No_Escape"
+						]
+					},
+					{
+						"name": "The Shootist",
+						"access_rules": [
+							"^$rule_The_Shootist"
+						]
+					},
+					{
+						"name": "The Driver",
+						"access_rules": [
+							"^$rule_The_Driver"
+						]
+					},
+					{
+						"name": "The Job",
+						"access_rules": [
+							"^$rule_The_Job"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 631,
+						"y": 527
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Ocean Heights Apartment Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Ocean Heights Apartment Purchase",
+						"access_rules": [
+							"^$rule_Ocean_Heights_Apartment_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 516,
+						"y": 896
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Pole Position Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Pole Position Purchase",
+						"access_rules": [
+							"^$rule_Pole_Position_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 537,
+						"y": 888
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Printworks Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Printworks Purchase",
+						"access_rules": [
+							"^$rule_Printworks_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 241,
+						"y": 582
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Film Studio",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Recruitment Drive",
+						"access_rules": [
+							"^$rule_Recruitment_Drive"
+						]
+					},
+					{
+						"name": "Dildo Dodo",
+						"access_rules": [
+							"^$rule_Dildo_Dodo"
+						]
+					},
+					{
+						"name": "Martha's Mug Shot",
+						"access_rules": [
+							"^$rule_Martha_s_Mug_Shot"
+						]
+					},
+					{
+						"name": "G-spotlight",
+						"access_rules": [
+							"^$rule_G_spotlight"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 494,
+						"y": 273
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Skumole Shack Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Skumole Shack Purchase",
+						"access_rules": [
+							"^$rule_Skumole_Shack_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 369,
+						"y": 332
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Printworks",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Spilling the Beans",
+						"access_rules": [
+							"^$rule_Spilling_the_Beans"
+						]
+					},
+					{
+						"name": "Hit the Courier",
+						"access_rules": [
+							"^$rule_Hit_the_Courier"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 240,
+						"y": 583
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Sunshine Autos Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Sunshine Autos Purchase",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 254,
+						"y": 735
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Sunshine Autos Races",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Sunshine Autos Races",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Races"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 264,
+						"y": 724
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Kaufman Cabs",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "V.I.P.",
+						"access_rules": [
+							"^$rule_V_I_P"
+						]
+					},
+					{
+						"name": "Friendly Rivalry",
+						"access_rules": [
+							"^$rule_Friendly_Rivalry"
+						]
+					},
+					{
+						"name": "Cabmaggedon",
+						"access_rules": [
+							"^$rule_Cabmaggedon"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 255,
+						"y": 459
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			},
+			{
+				"name": "Vice Point Purchase",
+				"chest_unopened_img": "images/items/pins/properties.png",
+				"chest_opened_img": "images/items/pins/properties_opened.png",
+				"sections": [
+					{
+						"name": "Vice Point Purchase",
+						"access_rules": [
+							"^$rule_Vice_Point_Purchase"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 648,
+						"y": 186
+					}
+				],
+				"visibility_rules": [
+					"$visProperties"
+				]
+			}
+		]
+	}
+]

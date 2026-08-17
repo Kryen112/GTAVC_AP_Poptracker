@@ -1,0 +1,8 @@
+Tracker:AddLocations("locations/Story Missions.json")
+Tracker:AddLocations("locations/Properties.json")
+Tracker:AddLocations("locations/Hidden Packages.json")
+Tracker:AddLocations("locations/Rampages.json")
+Tracker:AddLocations("locations/Stunt Jumps.json")
+Tracker:AddLocations("locations/Robbable Stores.json")
+Tracker:AddLocations("locations/Side Events.json")
+Tracker:AddLocations("locations/Emergency Vehicle Missions.json")

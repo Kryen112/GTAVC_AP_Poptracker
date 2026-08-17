@@ -1,0 +1,354 @@
+[
+	{
+		"name": "Robbable Stores",
+		"chest_unopened_img": "images/items/pins/robbable_stores.png",
+		"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+		"children": [
+			{
+				"name": "Robbable Store 01",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 01",
+						"access_rules": [
+							"^$rule_Robbable_Store_01"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 564,
+						"y": 633
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 02",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 02",
+						"access_rules": [
+							"^$rule_Robbable_Store_02"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 610,
+						"y": 240
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 03",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 03",
+						"access_rules": [
+							"^$rule_Robbable_Store_03"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 264,
+						"y": 689
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 04",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 04",
+						"access_rules": [
+							"^$rule_Robbable_Store_04"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 292,
+						"y": 674
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 05",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 05",
+						"access_rules": [
+							"^$rule_Robbable_Store_05"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 293,
+						"y": 294
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 06",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 06",
+						"access_rules": [
+							"^$rule_Robbable_Store_06"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 299,
+						"y": 322
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 07",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 07",
+						"access_rules": [
+							"^$rule_Robbable_Store_07"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 295,
+						"y": 531
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 08",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 08",
+						"access_rules": [
+							"^$rule_Robbable_Store_08"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 609,
+						"y": 458
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 09",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 09",
+						"access_rules": [
+							"^$rule_Robbable_Store_09"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 610,
+						"y": 318
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 10",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 10",
+						"access_rules": [
+							"^$rule_Robbable_Store_10"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 627,
+						"y": 312
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 11",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 11",
+						"access_rules": [
+							"^$rule_Robbable_Store_11"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 602,
+						"y": 228
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 12",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 12",
+						"access_rules": [
+							"^$rule_Robbable_Store_12"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 620,
+						"y": 246
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 13",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 13",
+						"access_rules": [
+							"^$rule_Robbable_Store_13"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 632,
+						"y": 203
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 14",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 14",
+						"access_rules": [
+							"^$rule_Robbable_Store_14"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 213,
+						"y": 669
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			},
+			{
+				"name": "Robbable Store 15",
+				"chest_unopened_img": "images/items/pins/robbable_stores.png",
+				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
+				"sections": [
+					{
+						"name": "Robbable Store 15",
+						"access_rules": [
+							"^$rule_Robbable_Store_15"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 207,
+						"y": 595
+					}
+				],
+				"visibility_rules": [
+					"$visRobbableStores"
+				]
+			}
+		]
+	}
+]

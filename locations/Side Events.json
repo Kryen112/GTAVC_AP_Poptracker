@@ -1,0 +1,280 @@
+[
+	{
+		"name": "Side Events",
+		"chest_unopened_img": "images/items/pins/side_events.png",
+		"chest_opened_img": "images/items/pins/side_events_opened.png",
+		"children": [
+			{
+				"name": "Cone Crazy",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Cone Crazy",
+						"access_rules": [
+							"^$rule_Cone_Crazy"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 545,
+						"y": 808
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Downtown Chopper Checkpoint",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Downtown Chopper Checkpoint",
+						"access_rules": [
+							"^$rule_Downtown_Chopper_Checkpoint"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 366,
+						"y": 294
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Hotring & Bloodring & Dirtring",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Hotring",
+						"access_rules": [
+							"^$rule_Hotring"
+						]
+					},
+					{
+						"name": "Bloodring",
+						"access_rules": [
+							"^$rule_Bloodring"
+						]
+					},
+					{
+						"name": "Dirtring",
+						"access_rules": [
+							"^$rule_Dirtring"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 228,
+						"y": 171
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Little Haiti Chopper Checkpoint",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Little Haiti Chopper Checkpoint",
+						"access_rules": [
+							"^$rule_Little_Haiti_Chopper_Checkpoint"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 285,
+						"y": 451
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Ocean Beach Chopper Checkpoint",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Ocean Beach Chopper Checkpoint",
+						"access_rules": [
+							"^$rule_Ocean_Beach_Chopper_Checkpoint"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 519,
+						"y": 848
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "PCJ Playground",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "PCJ Playground",
+						"access_rules": [
+							"^$rule_PCJ_Playground"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 642,
+						"y": 591
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "RC Bandit Race",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "RC Bandit Race",
+						"access_rules": [
+							"^$rule_RC_Bandit_Race"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 512,
+						"y": 328
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "RC Baron Race",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "RC Baron Race",
+						"access_rules": [
+							"^$rule_RC_Baron_Race"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 591,
+						"y": 191
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "RC Raider Pickup",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "RC Raider Pickup",
+						"access_rules": [
+							"^$rule_RC_Raider_Pickup"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 512,
+						"y": 828
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Trial by Dirt & Test Track",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Trial by Dirt",
+						"access_rules": [
+							"^$rule_Trial_by_Dirt"
+						]
+					},
+					{
+						"name": "Test Track",
+						"access_rules": [
+							"^$rule_Test_Track"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 403,
+						"y": 151
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Vice Point Chopper Checkpoint",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Vice Point Chopper Checkpoint",
+						"access_rules": [
+							"^$rule_Vice_Point_Chopper_Checkpoint"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 608,
+						"y": 427
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			}
+		]
+	}
+]

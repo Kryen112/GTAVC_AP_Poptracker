@@ -1,0 +1,395 @@
+[
+	{
+		"name": "Emergency Vehicle Missions",
+		"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+		"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+		"children": [
+			{
+				"name": "Paramedic",
+				"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+				"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+				"sections": [
+					{
+						"name": "Paramedic Level 01",
+						"access_rules": [
+							"^$rule_Paramedic_Level_01"
+						]
+					},
+					{
+						"name": "Paramedic Level 02",
+						"access_rules": [
+							"^$rule_Paramedic_Level_02"
+						]
+					},
+					{
+						"name": "Paramedic Level 03",
+						"access_rules": [
+							"^$rule_Paramedic_Level_03"
+						]
+					},
+					{
+						"name": "Paramedic Level 04",
+						"access_rules": [
+							"^$rule_Paramedic_Level_04"
+						]
+					},
+					{
+						"name": "Paramedic Level 05",
+						"access_rules": [
+							"^$rule_Paramedic_Level_05"
+						]
+					},
+					{
+						"name": "Paramedic Level 06",
+						"access_rules": [
+							"^$rule_Paramedic_Level_06"
+						]
+					},
+					{
+						"name": "Paramedic Level 07",
+						"access_rules": [
+							"^$rule_Paramedic_Level_07"
+						]
+					},
+					{
+						"name": "Paramedic Level 08",
+						"access_rules": [
+							"^$rule_Paramedic_Level_08"
+						]
+					},
+					{
+						"name": "Paramedic Level 09",
+						"access_rules": [
+							"^$rule_Paramedic_Level_09"
+						]
+					},
+					{
+						"name": "Paramedic Level 10",
+						"access_rules": [
+							"^$rule_Paramedic_Level_10"
+						]
+					},
+					{
+						"name": "Paramedic Level 11",
+						"access_rules": [
+							"^$rule_Paramedic_Level_11"
+						]
+					},
+					{
+						"name": "Paramedic Level 12",
+						"access_rules": [
+							"^$rule_Paramedic_Level_12"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visEmergencyVehicles"
+				]
+			},
+			{
+				"name": "Vigilante",
+				"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+				"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+				"sections": [
+					{
+						"name": "Vigilante Level 01",
+						"access_rules": [
+							"^$rule_Vigilante_Level_01"
+						]
+					},
+					{
+						"name": "Vigilante Level 02",
+						"access_rules": [
+							"^$rule_Vigilante_Level_02"
+						]
+					},
+					{
+						"name": "Vigilante Level 03",
+						"access_rules": [
+							"^$rule_Vigilante_Level_03"
+						]
+					},
+					{
+						"name": "Vigilante Level 04",
+						"access_rules": [
+							"^$rule_Vigilante_Level_04"
+						]
+					},
+					{
+						"name": "Vigilante Level 05",
+						"access_rules": [
+							"^$rule_Vigilante_Level_05"
+						]
+					},
+					{
+						"name": "Vigilante Level 06",
+						"access_rules": [
+							"^$rule_Vigilante_Level_06"
+						]
+					},
+					{
+						"name": "Vigilante Level 07",
+						"access_rules": [
+							"^$rule_Vigilante_Level_07"
+						]
+					},
+					{
+						"name": "Vigilante Level 08",
+						"access_rules": [
+							"^$rule_Vigilante_Level_08"
+						]
+					},
+					{
+						"name": "Vigilante Level 09",
+						"access_rules": [
+							"^$rule_Vigilante_Level_09"
+						]
+					},
+					{
+						"name": "Vigilante Level 10",
+						"access_rules": [
+							"^$rule_Vigilante_Level_10"
+						]
+					},
+					{
+						"name": "Vigilante Level 11",
+						"access_rules": [
+							"^$rule_Vigilante_Level_11"
+						]
+					},
+					{
+						"name": "Vigilante Level 12",
+						"access_rules": [
+							"^$rule_Vigilante_Level_12"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visEmergencyVehicles"
+				]
+			},
+			{
+				"name": "Firefighter",
+				"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+				"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+				"sections": [
+					{
+						"name": "Firefighter Level 01",
+						"access_rules": [
+							"^$rule_Firefighter_Level_01"
+						]
+					},
+					{
+						"name": "Firefighter Level 02",
+						"access_rules": [
+							"^$rule_Firefighter_Level_02"
+						]
+					},
+					{
+						"name": "Firefighter Level 03",
+						"access_rules": [
+							"^$rule_Firefighter_Level_03"
+						]
+					},
+					{
+						"name": "Firefighter Level 04",
+						"access_rules": [
+							"^$rule_Firefighter_Level_04"
+						]
+					},
+					{
+						"name": "Firefighter Level 05",
+						"access_rules": [
+							"^$rule_Firefighter_Level_05"
+						]
+					},
+					{
+						"name": "Firefighter Level 06",
+						"access_rules": [
+							"^$rule_Firefighter_Level_06"
+						]
+					},
+					{
+						"name": "Firefighter Level 07",
+						"access_rules": [
+							"^$rule_Firefighter_Level_07"
+						]
+					},
+					{
+						"name": "Firefighter Level 08",
+						"access_rules": [
+							"^$rule_Firefighter_Level_08"
+						]
+					},
+					{
+						"name": "Firefighter Level 09",
+						"access_rules": [
+							"^$rule_Firefighter_Level_09"
+						]
+					},
+					{
+						"name": "Firefighter Level 10",
+						"access_rules": [
+							"^$rule_Firefighter_Level_10"
+						]
+					},
+					{
+						"name": "Firefighter Level 11",
+						"access_rules": [
+							"^$rule_Firefighter_Level_11"
+						]
+					},
+					{
+						"name": "Firefighter Level 12",
+						"access_rules": [
+							"^$rule_Firefighter_Level_12"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visEmergencyVehicles"
+				]
+			},
+			{
+				"name": "Taxi",
+				"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+				"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+				"sections": [
+					{
+						"name": "Taxi Level 01",
+						"access_rules": [
+							"^$rule_Taxi_Level_01"
+						]
+					},
+					{
+						"name": "Taxi Level 02",
+						"access_rules": [
+							"^$rule_Taxi_Level_02"
+						]
+					},
+					{
+						"name": "Taxi Level 03",
+						"access_rules": [
+							"^$rule_Taxi_Level_03"
+						]
+					},
+					{
+						"name": "Taxi Level 04",
+						"access_rules": [
+							"^$rule_Taxi_Level_04"
+						]
+					},
+					{
+						"name": "Taxi Level 05",
+						"access_rules": [
+							"^$rule_Taxi_Level_05"
+						]
+					},
+					{
+						"name": "Taxi Level 06",
+						"access_rules": [
+							"^$rule_Taxi_Level_06"
+						]
+					},
+					{
+						"name": "Taxi Level 07",
+						"access_rules": [
+							"^$rule_Taxi_Level_07"
+						]
+					},
+					{
+						"name": "Taxi Level 08",
+						"access_rules": [
+							"^$rule_Taxi_Level_08"
+						]
+					},
+					{
+						"name": "Taxi Level 09",
+						"access_rules": [
+							"^$rule_Taxi_Level_09"
+						]
+					},
+					{
+						"name": "Taxi Level 10",
+						"access_rules": [
+							"^$rule_Taxi_Level_10"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visEmergencyVehicles"
+				]
+			},
+			{
+				"name": "Pizza",
+				"chest_unopened_img": "images/items/pins/emergency_vehicles.png",
+				"chest_opened_img": "images/items/pins/emergency_vehicles_opened.png",
+				"sections": [
+					{
+						"name": "Pizza Level 01",
+						"access_rules": [
+							"^$rule_Pizza_Level_01"
+						]
+					},
+					{
+						"name": "Pizza Level 02",
+						"access_rules": [
+							"^$rule_Pizza_Level_02"
+						]
+					},
+					{
+						"name": "Pizza Level 03",
+						"access_rules": [
+							"^$rule_Pizza_Level_03"
+						]
+					},
+					{
+						"name": "Pizza Level 04",
+						"access_rules": [
+							"^$rule_Pizza_Level_04"
+						]
+					},
+					{
+						"name": "Pizza Level 05",
+						"access_rules": [
+							"^$rule_Pizza_Level_05"
+						]
+					},
+					{
+						"name": "Pizza Level 06",
+						"access_rules": [
+							"^$rule_Pizza_Level_06"
+						]
+					},
+					{
+						"name": "Pizza Level 07",
+						"access_rules": [
+							"^$rule_Pizza_Level_07"
+						]
+					},
+					{
+						"name": "Pizza Level 08",
+						"access_rules": [
+							"^$rule_Pizza_Level_08"
+						]
+					},
+					{
+						"name": "Pizza Level 09",
+						"access_rules": [
+							"^$rule_Pizza_Level_09"
+						]
+					},
+					{
+						"name": "Pizza Level 10",
+						"access_rules": [
+							"^$rule_Pizza_Level_10"
+						]
+					}
+				],
+				"visibility_rules": [
+					"$visEmergencyVehicles"
+				]
+			}
+		]
+	}
+]
