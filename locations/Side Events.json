@@ -5,52 +5,6 @@
 		"chest_opened_img": "images/items/pins/side_events_opened.png",
 		"children": [
 			{
-				"name": "Cone Crazy",
-				"chest_unopened_img": "images/items/pins/side_events.png",
-				"chest_opened_img": "images/items/pins/side_events_opened.png",
-				"sections": [
-					{
-						"name": "Cone Crazy",
-						"access_rules": [
-							"^$rule_Cone_Crazy"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 545,
-						"y": 808
-					}
-				],
-				"visibility_rules": [
-					"$visSideEvents"
-				]
-			},
-			{
-				"name": "Downtown Chopper Checkpoint",
-				"chest_unopened_img": "images/items/pins/side_events.png",
-				"chest_opened_img": "images/items/pins/side_events_opened.png",
-				"sections": [
-					{
-						"name": "Downtown Chopper Checkpoint",
-						"access_rules": [
-							"^$rule_Downtown_Chopper_Checkpoint"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 366,
-						"y": 294
-					}
-				],
-				"visibility_rules": [
-					"$visSideEvents"
-				]
-			},
-			{
 				"name": "Hotring & Bloodring & Dirtring",
 				"chest_unopened_img": "images/items/pins/side_events.png",
 				"chest_opened_img": "images/items/pins/side_events_opened.png",
@@ -77,8 +31,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 228,
-						"y": 171
+						"x": 167,
+						"y": 72
 					}
 				],
 				"visibility_rules": [
@@ -86,22 +40,22 @@
 				]
 			},
 			{
-				"name": "Little Haiti Chopper Checkpoint",
+				"name": "Downtown Chopper Checkpoint",
 				"chest_unopened_img": "images/items/pins/side_events.png",
 				"chest_opened_img": "images/items/pins/side_events_opened.png",
 				"sections": [
 					{
-						"name": "Little Haiti Chopper Checkpoint",
+						"name": "Downtown Chopper Checkpoint",
 						"access_rules": [
-							"^$rule_Little_Haiti_Chopper_Checkpoint"
+							"^$rule_Downtown_Chopper_Checkpoint"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 285,
-						"y": 451
+						"x": 279,
+						"y": 171
 					}
 				],
 				"visibility_rules": [
@@ -123,8 +77,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 519,
-						"y": 848
+						"x": 402,
+						"y": 618
 					}
 				],
 				"visibility_rules": [
@@ -132,22 +86,45 @@
 				]
 			},
 			{
-				"name": "PCJ Playground",
+				"name": "Vice Point Chopper Checkpoint",
 				"chest_unopened_img": "images/items/pins/side_events.png",
 				"chest_opened_img": "images/items/pins/side_events_opened.png",
 				"sections": [
 					{
-						"name": "PCJ Playground",
+						"name": "Vice Point Chopper Checkpoint",
 						"access_rules": [
-							"^$rule_PCJ_Playground"
+							"^$rule_Vice_Point_Chopper_Checkpoint"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 642,
-						"y": 591
+						"x": 474,
+						"y": 278
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Little Haiti Chopper Checkpoint",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Little Haiti Chopper Checkpoint",
+						"access_rules": [
+							"^$rule_Little_Haiti_Chopper_Checkpoint"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 213,
+						"y": 298
 					}
 				],
 				"visibility_rules": [
@@ -169,8 +146,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 696,
-						"y": 332
+						"x": 545,
+						"y": 202
 					}
 				],
 				"visibility_rules": [
@@ -192,8 +169,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 591,
-						"y": 191
+						"x": 460,
+						"y": 88
 					}
 				],
 				"visibility_rules": [
@@ -215,8 +192,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 196,
-						"y": 828
+						"x": 141,
+						"y": 602
 					}
 				],
 				"visibility_rules": [
@@ -244,8 +221,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 403,
-						"y": 151
+						"x": 308,
+						"y": 56
 					}
 				],
 				"visibility_rules": [
@@ -253,22 +230,45 @@
 				]
 			},
 			{
-				"name": "Vice Point Chopper Checkpoint",
+				"name": "PCJ Playground",
 				"chest_unopened_img": "images/items/pins/side_events.png",
 				"chest_opened_img": "images/items/pins/side_events_opened.png",
 				"sections": [
 					{
-						"name": "Vice Point Chopper Checkpoint",
+						"name": "PCJ Playground",
 						"access_rules": [
-							"^$rule_Vice_Point_Chopper_Checkpoint"
+							"^$rule_PCJ_Playground"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 608,
-						"y": 427
+						"x": 501,
+						"y": 411
+					}
+				],
+				"visibility_rules": [
+					"$visSideEvents"
+				]
+			},
+			{
+				"name": "Cone Crazy",
+				"chest_unopened_img": "images/items/pins/side_events.png",
+				"chest_opened_img": "images/items/pins/side_events_opened.png",
+				"sections": [
+					{
+						"name": "Cone Crazy",
+						"access_rules": [
+							"^$rule_Cone_Crazy"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 422,
+						"y": 586
 					}
 				],
 				"visibility_rules": [

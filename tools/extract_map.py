@@ -8,13 +8,19 @@ images/maps/vice_city.png, plus the HUD legend icons the pins use.
 
 Tile n sits at column n % 8, row n // 8. Column 0 starts at world x = -2000 and
 row 0 at world y = +2000, each tile spanning 500 world units, so the assembled
-1024 x 1024 image covers world x and y from -2000 to +2000. That is where the
-pin transform in generate.py comes from; the constants behind it are the
-game's own (0x68FD44 = 500.0 tile span and 0x68FD00 = 2000.0 origin, combined
-as tileIndex * 500.0 - 2000.0 by the radar's world-to-texture transform).
+1024 x 1024 image covers world x and y from -2000 to +2000. The constants behind
+that are the game's own (0x68FD44 = 500.0 tile span and 0x68FD00 = 2000.0
+origin, combined as tileIndex * 500.0 - 2000.0 by the radar's world-to-texture
+transform).
 
 Note the entity sector grid is a different thing with a different origin
 (x from -2400), and using it would shift every pin 400 units east.
+
+Most of that square is open sea, and the whole city has to fit one pane without
+scrolling, so the assembly is then cropped to its own land plus a margin and
+scaled down to MAP_TARGET_HEIGHT. Both steps move the world-to-pixel transform
+away from the plain radar formula, so it is written out to data/map_geometry.json
+and generate.py places every pin from that rather than from constants of its own.
 
 Usage:
     py -3.12 tools/extract_map.py "D:/path/to/Grand Theft Auto Vice City"
@@ -23,6 +29,7 @@ Needs Pillow and numpy.
 """
 from __future__ import annotations
 
+import json
 import struct
 import sys
 from pathlib import Path
@@ -31,6 +38,31 @@ import numpy
 from PIL import Image
 
 PACK = Path(__file__).resolve().parent.parent
+MAP_NAME = "Vice City"
+MAP_IMAGE = "images/maps/vice_city.png"
+MAP_GEOMETRY = "data/map_geometry.json"
+
+# The radar covers world x and y from -2000 to +2000 across the assembly.
+WORLD_ORIGIN = 2000.0
+WORLD_SPAN = 4000.0
+
+# How much open sea to keep around the land, in assembly pixels. The north keeps
+# more because that sea is where the generator puts the pins for checks the game
+# places nowhere.
+LAND_MARGIN_PIXELS = 14
+NORTH_MARGIN_PIXELS = 18
+
+# The finished image is scaled to this height. PopTracker will not zoom out past
+# one image pixel per screen pixel, which a display running at 125 per cent
+# makes 1.25 screen pixels, so a 1080p pane holds around 800 image pixels of
+# height. Raise it for detail on a taller screen, lower it if the city still
+# does not fit.
+MAP_TARGET_HEIGHT = 760
+
+# The sea, as the two near-identical blues the radar tiles use, and how far a
+# pixel may differ and still count as sea.
+SEA_COLOURS = ((156, 202, 255), (148, 202, 255))
+SEA_TOLERANCE = 12
 
 SECTOR_SIZE = 2048
 TILES_PER_AXIS = 8
@@ -224,6 +256,52 @@ def extract_hud_icons(dictionary: Path, destination: Path) -> int:
     return written
 
 
+def land_bounds(image: Image.Image) -> tuple[int, int, int, int]:
+    """The box holding everything that is not open sea, in image pixels."""
+    pixels = numpy.array(image.convert("RGB")).astype(int)
+    sea = numpy.zeros(pixels.shape[:2], dtype=bool)
+    for colour in SEA_COLOURS:
+        sea |= numpy.abs(pixels - numpy.array(colour)).sum(axis=-1) <= SEA_TOLERANCE
+    land = ~sea
+    rows = numpy.where(land.any(axis=1))[0]
+    columns = numpy.where(land.any(axis=0))[0]
+    if not len(rows) or not len(columns):
+        raise SystemExit("the assembled map is all sea; the tiles did not decode")
+    return int(columns.min()), int(rows.min()), int(columns.max()), int(rows.max())
+
+
+def crop_and_scale(atlas: Image.Image) -> tuple[Image.Image, dict]:
+    """Trim the open sea around the city, scale to fit a pane, and describe the
+    world-to-pixel transform that leaves."""
+    assembly_units_per_pixel = WORLD_SPAN / atlas.width
+    left, top, right, bottom = land_bounds(atlas)
+    box = (
+        max(left - LAND_MARGIN_PIXELS, 0),
+        max(top - NORTH_MARGIN_PIXELS, 0),
+        min(right + LAND_MARGIN_PIXELS + 1, atlas.width),
+        min(bottom + LAND_MARGIN_PIXELS + 1, atlas.height),
+    )
+    cropped = atlas.crop(box)
+    scale = min(MAP_TARGET_HEIGHT / cropped.height, 1.0)
+    width = max(round(cropped.width * scale), 1)
+    height = max(round(cropped.height * scale), 1)
+    scaled = cropped.resize((width, height), Image.LANCZOS)
+    units_per_pixel = assembly_units_per_pixel * cropped.height / height
+    geometry = {
+        "name": MAP_NAME,
+        "image": MAP_IMAGE,
+        "width": width,
+        "height": height,
+        # The world position of the top left pixel, and how much world a pixel
+        # spans. A pin is (worldX - world_left) / units_per_pixel across and
+        # (world_top - worldY) / units_per_pixel down.
+        "world_left": box[0] * assembly_units_per_pixel - WORLD_ORIGIN,
+        "world_top": WORLD_ORIGIN - box[1] * assembly_units_per_pixel,
+        "units_per_pixel": units_per_pixel,
+    }
+    return scaled, geometry
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print(__doc__)
@@ -238,10 +316,18 @@ def main() -> int:
 
     index = read_archive_index(directory)
     atlas = assemble_radar_map(archive, index)
-    map_path = PACK / "images" / "maps" / "vice_city.png"
+    trimmed, geometry = crop_and_scale(atlas)
+    map_path = PACK / MAP_IMAGE
     map_path.parent.mkdir(parents=True, exist_ok=True)
-    atlas.convert("RGB").save(map_path)
-    print(f"wrote {map_path} at {atlas.size[0]}x{atlas.size[1]}")
+    trimmed.convert("RGB").save(map_path)
+    geometry_path = PACK / MAP_GEOMETRY
+    geometry_path.parent.mkdir(parents=True, exist_ok=True)
+    geometry_path.write_text(json.dumps(geometry, indent="\t") + "\n", encoding="utf-8")
+    print(f"assembled {atlas.size[0]}x{atlas.size[1]}, "
+          f"wrote {map_path} at {geometry['width']}x{geometry['height']}")
+    print(f"world left {geometry['world_left']:.1f}, top {geometry['world_top']:.1f}, "
+          f"{geometry['units_per_pixel']:.3f} units per pixel")
+    print(f"wrote {geometry_path}")
 
     icon_count = extract_hud_icons(game / HUD_DICTIONARY, PACK / "images" / "items" / "hud")
     print(f"wrote {icon_count} legend icons to images/items/hud")

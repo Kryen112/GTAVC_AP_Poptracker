@@ -8,7 +8,9 @@ dist/
 
 # Game-derived art, extracted from the player's own install by
 # tools/extract_map.py. Whether the release ships these bitmaps or has the
-# player extract them is still open, so they stay local for now.
+# player extract them is still open, so they stay local for now. The geometry
+# beside them is committed: it is the pin transform, not artwork, and the
+# generator needs it whether or not the image ships.
 images/maps/*.png
 images/items/hud/*.png
 

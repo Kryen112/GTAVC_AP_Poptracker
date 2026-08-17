@@ -84,6 +84,13 @@
 				],
 				"visibility_rules": [
 					"$visEmergencyVehicles"
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 417,
+						"y": 25
+					}
 				]
 			},
 			{
@@ -166,6 +173,13 @@
 				],
 				"visibility_rules": [
 					"$visEmergencyVehicles"
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 453,
+						"y": 25
+					}
 				]
 			},
 			{
@@ -248,6 +262,13 @@
 				],
 				"visibility_rules": [
 					"$visEmergencyVehicles"
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 489,
+						"y": 25
+					}
 				]
 			},
 			{
@@ -318,6 +339,13 @@
 				],
 				"visibility_rules": [
 					"$visEmergencyVehicles"
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 525,
+						"y": 25
+					}
 				]
 			},
 			{
@@ -388,6 +416,13 @@
 				],
 				"visibility_rules": [
 					"$visEmergencyVehicles"
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 561,
+						"y": 25
+					}
 				]
 			}
 		]

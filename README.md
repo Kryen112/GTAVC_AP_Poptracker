@@ -48,35 +48,53 @@ only holds that table to account against the decompile.
 
 ## Where the pins come from
 
-The map is the game's own radar art, 64 tiles assembled into one 1024 x 1024
-image covering world x and y from -2000 to +2000. So a check's pin is just its
-game position transformed:
+The map is the game's own radar art: 64 tiles assembled into a 1024 x 1024
+square covering world x and y from -2000 to +2000, using constants read out of
+the executable rather than guessed (`tools/extract_map.py` records where). Most
+of that square is open sea, so the assembly is then cropped to its own land plus
+a margin and scaled down, which is what lets the whole city fit one pane.
 
-    px = (x + 2000) / 4000 * 1024
-    py = (2000 - y) / 4000 * 1024
+Cropping and scaling move the transform off the plain radar formula, so
+`extract_map.py` writes what is left to `data/map_geometry.json` and the
+generator places every pin from that:
 
-The constants are the game's own, read out of the executable rather than
-guessed; `tools/extract_map.py` records where. Nothing is eyeballed, so a
-renamed check keeps its pin and there is no coordinate to re-place by hand.
+    px = (worldX - world_left) / units_per_pixel
+    py = (world_top - worldY) / units_per_pixel
+
+Nothing is eyeballed, so a renamed check keeps its pin and there is no
+coordinate to re-place by hand.
 
 Positions come from the SCM: a mission from its launcher's own trigger test, a
 package or rampage from its pickup, a purchase from its for-sale icon, a store
 from its robbery trigger, a side event from its launcher.
 
-Checks sharing a pixel share a pin, which is what happens to every mission
-strand given from one spot. The pin then holds one section per check, so the
-popup lists the strand and each mission still tracks and gates on its own.
+Checks whose pins would overlap share one pin, which is what happens to every
+mission strand given from one spot. The pin then holds one section per check, so
+the popup lists the strand and each mission still tracks and gates on its own.
+`MERGE_DISTANCE_PIXELS` in the generator sets how close is too close.
+
+## If the map does not fit your screen
+
+PopTracker will not zoom out past one image pixel per screen pixel, which a
+display running at 125 per cent makes 1.25 screen pixels. The map is sized for
+that: `MAP_TARGET_HEIGHT` in `tools/extract_map.py` is the height the finished
+image is scaled to. Lower it and re-run the extractor and the generator if the
+city still does not fit; raise it for more detail on a taller screen.
 
 ## What is not pinned
 
-Two classes place nothing in the world, so they are listed rather than pinned
-(they still autotrack and still count):
+Two classes have no world position.
 
-- Emergency vehicle milestones. A level completes wherever the last fare or fire
-  happens to be, so there is no position to use.
-- Unique stunt jumps. These are exe-native; the SCM only registers a jump the
-  engine already found. Their 36 positions are compiled into the executable and
-  could be dumped from it, or read at runtime by the mod's ASI.
+Emergency vehicle milestones have none because a level completes wherever the
+last fare or fire happens to be, so the five activities are laid out as five
+markers in the open sea north east of Vice Point, each holding that activity's
+levels. These are the only coordinates in the pack not read from the game.
+
+Unique stunt jumps are exe-native: the SCM never defines them, it only registers
+one the engine already found. The 36 definitions are not a static table in the
+executable either, so they are listed without pins for now. Reading them at
+runtime through the mod's ASI is the route that remains. They still autotrack
+and still count.
 
 ## Colours
 

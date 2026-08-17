@@ -13,10 +13,12 @@ the tracker cannot drift from the world it tracks. Emits:
     scripts/logic/access_rules.lua
 
 Pins are never placed by hand. Vice City is one map, so every check sits at its
-own game position, read from data/check_coords.py and put through the radar's
-world-to-pixel transform (see tools/extract_map.py for where the constants come
-from). Checks that share a pixel, which is every mission strand given from one
-spot, become one pin holding a section each.
+own game position, read from data/check_coords.py and put through the transform
+in data/map_geometry.json, which tools/extract_map.py writes alongside the map
+image it crops and scales. Checks whose pins would overlap become one pin
+holding a section each, which is what every mission strand given from one spot
+turns into. The emergency vehicle activities are the one exception: they have no
+world position, so they are laid out in open water.
 
 The access rules are the world's own. Rather than reimplement the requirement
 tables, this stands in a recorder for the two predicate builders in rules.py and
@@ -51,22 +53,50 @@ DEFAULT_ARCHIPELAGO = PACK.parent / "Archipelago"
 # The map and its transform
 # ---------------------------------------------------------------------------
 
-MAP_NAME = "Vice City"
-MAP_IMAGE = "images/maps/vice_city.png"
-MAP_PIXELS = 1024
-# The radar covers world x and y from -2000 to +2000 across the whole image.
-WORLD_ORIGIN = 2000.0
-WORLD_SPAN = 4000.0
-PIN_SIZE = 14
-PIN_BORDER = 2
+MAP_GEOMETRY = PACK / "data" / "map_geometry.json"
+PIN_SIZE = 11
+PIN_BORDER = 1
+
+# Pins closer together than this share one marker holding a section each.
+# Anything nearer is unclickable as two markers, and on a map this size it is
+# the same street corner anyway.
+MERGE_DISTANCE_PIXELS = 11
+
+# The one class placed rather than derived. Emergency vehicle milestones have no
+# world position at all, so their five activities become five markers laid out
+# in the open sea north east of Vice Point, each holding that activity's levels.
+# These world coordinates are chosen to sit in clear water inside the cropped
+# map, not read from the game.
+PLACED_ROW_WORLD_Y = 1560.0
+PLACED_ROW_WORLD_X = (100.0, 275.0, 450.0, 625.0, 800.0)
 
 
-def pixel(x: float, y: float) -> tuple[int, int]:
-    """A world position as map pixels. North is up, so y counts down."""
-    return (
-        round((x + WORLD_ORIGIN) / WORLD_SPAN * MAP_PIXELS),
-        round((WORLD_ORIGIN - y) / WORLD_SPAN * MAP_PIXELS),
-    )
+class Geometry:
+    """How a world position becomes a pixel on the map image.
+
+    Written by tools/extract_map.py, which crops the sea off the radar assembly
+    and scales what is left, so the transform is not the plain radar formula and
+    is read rather than restated here.
+    """
+
+    def __init__(self, path: Path) -> None:
+        if not path.is_file():
+            raise SystemExit(f"{path} is missing; run tools/extract_map.py first")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        self.name = data["name"]
+        self.image = data["image"]
+        self.width = data["width"]
+        self.height = data["height"]
+        self.world_left = data["world_left"]
+        self.world_top = data["world_top"]
+        self.units_per_pixel = data["units_per_pixel"]
+
+    def pixel(self, x: float, y: float) -> tuple[int, int]:
+        """A world position as map pixels. North is up, so y counts down."""
+        return (
+            round((x - self.world_left) / self.units_per_pixel),
+            round((self.world_top - y) / self.units_per_pixel),
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -494,13 +524,44 @@ def node_name(members: list[str], locations) -> str:
     return " & ".join(members)
 
 
-def build_locations(data, locations, positions) -> dict[str, list[dict]]:
+def cluster(named_pixels: list[tuple[str, tuple[int, int]]],
+            ) -> list[tuple[tuple[int, int], list[str]]]:
+    """Group checks whose pins would sit on top of each other.
+
+    Greedy by distance: a check joins the first cluster it is within
+    MERGE_DISTANCE_PIXELS of, and the marker then sits at the middle of its
+    members. This is what turns a giver's whole strand, given from one spot,
+    into one marker, and what stops two packages a few metres apart from
+    covering each other.
+    """
+    clusters: list[list[tuple[str, tuple[int, int]]]] = []
+    for name, (x, y) in named_pixels:
+        for members in clusters:
+            first_x, first_y = members[0][1]
+            if abs(x - first_x) <= MERGE_DISTANCE_PIXELS \
+                    and abs(y - first_y) <= MERGE_DISTANCE_PIXELS:
+                members.append((name, (x, y)))
+                break
+        else:
+            clusters.append([(name, (x, y))])
+    placed = []
+    for members in clusters:
+        centre = (
+            round(sum(position[0] for _name, position in members) / len(members)),
+            round(sum(position[1] for _name, position in members) / len(members)),
+        )
+        placed.append((centre, [name for name, _position in members]))
+    return placed
+
+
+def build_locations(data, locations, positions, geometry: Geometry,
+                    ) -> dict[str, list[dict]]:
     """Class display name -> the group's location nodes.
 
-    Pinned checks group by pixel; the classes the game places nowhere (a
-    stunt jump is exe-native, an emergency level completes wherever the last
-    fare happens to be) become one unpinned node per activity, listed rather
-    than pinned.
+    Checks the game places are pinned at their own position, merged when they
+    would overlap. The emergency vehicle activities are laid out in open water
+    instead, since a level completes wherever the last fare happens to be.
+    Anything else the game places nowhere is listed without a pin.
     """
     by_class: dict[str, list[str]] = defaultdict(list)
     for name in locations.LOCATION_NAME_TO_ID:
@@ -511,28 +572,32 @@ def build_locations(data, locations, positions) -> dict[str, list[dict]]:
         members = by_class.get(class_key, [])
         if not members:
             continue
-        pinned = [name for name in members if name in positions]
-        unpinned = [name for name in members if name not in positions]
         nodes: list[dict] = []
 
-        by_pixel: dict[tuple[int, int], list[str]] = defaultdict(list)
-        for name in pinned:
-            by_pixel[pixel(*positions[name])].append(name)
-        for (x, y), shared in sorted(by_pixel.items(), key=lambda item: item[1][0]):
+        pinned = [(name, geometry.pixel(*positions[name]))
+                  for name in members if name in positions]
+        for (x, y), shared in cluster(pinned):
             nodes.append({
                 "name": node_name(shared, locations),
                 **pin_images(class_key),
                 "sections": [{"name": name} for name in shared],
-                "map_locations": [{"map": MAP_NAME, "x": x, "y": y}],
+                "map_locations": [{"map": geometry.name, "x": x, "y": y}],
                 "visibility_rules": [class_visibility_code(class_key)],
             })
-        for activity, activity_members in unpinned_nodes(class_key, unpinned, data):
-            nodes.append({
-                "name": activity,
+
+        unpinned = [name for name in members if name not in positions]
+        for index, (group, group_members) in enumerate(
+                unpinned_nodes(class_key, unpinned, data)):
+            node = {
+                "name": group,
                 **pin_images(class_key),
-                "sections": [{"name": name} for name in activity_members],
+                "sections": [{"name": name} for name in group_members],
                 "visibility_rules": [class_visibility_code(class_key)],
-            })
+            }
+            if class_key == "emergency_vehicles" and index < len(PLACED_ROW_WORLD_X):
+                x, y = geometry.pixel(PLACED_ROW_WORLD_X[index], PLACED_ROW_WORLD_Y)
+                node["map_locations"] = [{"map": geometry.name, "x": x, "y": y}]
+            nodes.append(node)
         groups[display] = nodes
     return groups
 
@@ -558,8 +623,9 @@ def main() -> int:
     data, items, locations, rules = load_world_modules()
     check_coords = load_check_coords()
 
+    geometry = Geometry(MAP_GEOMETRY)
     positions = check_positions(data, locations, check_coords)
-    groups = build_locations(data, locations, positions)
+    groups = build_locations(data, locations, positions, geometry)
     attach_access_rules(groups)
 
     # ---- items/items.json and the panels showing them --------------------
@@ -568,10 +634,10 @@ def main() -> int:
 
     # ---- maps/maps.json ---------------------------------------------------
     write_json(PACK / "maps" / "maps.json", [{
-        "name": MAP_NAME,
+        "name": geometry.name,
         "location_size": PIN_SIZE,
         "location_border_thickness": PIN_BORDER,
-        "img": MAP_IMAGE,
+        "img": geometry.image,
     }])
 
     # ---- locations/<class>.json and the import list ----------------------

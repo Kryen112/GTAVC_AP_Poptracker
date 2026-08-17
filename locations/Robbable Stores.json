@@ -19,8 +19,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 564,
-						"y": 633
+						"x": 438,
+						"y": 445
 					}
 				],
 				"visibility_rules": [
@@ -28,7 +28,7 @@
 				]
 			},
 			{
-				"name": "Robbable Store 02",
+				"name": "Robbable Store 02 & Robbable Store 11 & Robbable Store 12",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
@@ -37,13 +37,25 @@
 						"access_rules": [
 							"^$rule_Robbable_Store_02"
 						]
+					},
+					{
+						"name": "Robbable Store 11",
+						"access_rules": [
+							"^$rule_Robbable_Store_11"
+						]
+					},
+					{
+						"name": "Robbable Store 12",
+						"access_rules": [
+							"^$rule_Robbable_Store_12"
+						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 610,
-						"y": 240
+						"x": 476,
+						"y": 125
 					}
 				],
 				"visibility_rules": [
@@ -65,8 +77,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 264,
-						"y": 689
+						"x": 196,
+						"y": 490
 					}
 				],
 				"visibility_rules": [
@@ -88,8 +100,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 292,
-						"y": 674
+						"x": 219,
+						"y": 478
 					}
 				],
 				"visibility_rules": [
@@ -111,8 +123,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 293,
-						"y": 294
+						"x": 220,
+						"y": 171
 					}
 				],
 				"visibility_rules": [
@@ -134,8 +146,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 299,
-						"y": 322
+						"x": 225,
+						"y": 194
 					}
 				],
 				"visibility_rules": [
@@ -157,8 +169,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 295,
-						"y": 531
+						"x": 221,
+						"y": 362
 					}
 				],
 				"visibility_rules": [
@@ -180,8 +192,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 609,
-						"y": 458
+						"x": 475,
+						"y": 304
 					}
 				],
 				"visibility_rules": [
@@ -203,8 +215,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 610,
-						"y": 318
+						"x": 475,
+						"y": 190
 					}
 				],
 				"visibility_rules": [
@@ -226,54 +238,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 627,
-						"y": 312
-					}
-				],
-				"visibility_rules": [
-					"$visRobbableStores"
-				]
-			},
-			{
-				"name": "Robbable Store 11",
-				"chest_unopened_img": "images/items/pins/robbable_stores.png",
-				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
-				"sections": [
-					{
-						"name": "Robbable Store 11",
-						"access_rules": [
-							"^$rule_Robbable_Store_11"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 602,
-						"y": 228
-					}
-				],
-				"visibility_rules": [
-					"$visRobbableStores"
-				]
-			},
-			{
-				"name": "Robbable Store 12",
-				"chest_unopened_img": "images/items/pins/robbable_stores.png",
-				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
-				"sections": [
-					{
-						"name": "Robbable Store 12",
-						"access_rules": [
-							"^$rule_Robbable_Store_12"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 620,
-						"y": 246
+						"x": 489,
+						"y": 186
 					}
 				],
 				"visibility_rules": [
@@ -295,8 +261,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 632,
-						"y": 203
+						"x": 493,
+						"y": 98
 					}
 				],
 				"visibility_rules": [
@@ -318,8 +284,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 213,
-						"y": 669
+						"x": 155,
+						"y": 474
 					}
 				],
 				"visibility_rules": [
@@ -341,8 +307,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 207,
-						"y": 595
+						"x": 150,
+						"y": 414
 					}
 				],
 				"visibility_rules": [

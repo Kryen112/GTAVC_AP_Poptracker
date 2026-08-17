@@ -5,22 +5,22 @@
 		"chest_opened_img": "images/items/pins/rampages_opened.png",
 		"children": [
 			{
-				"name": ".308 Sniper Rampage - Ocean Beach",
+				"name": "Tear Gas Rampage - Ocean Beach",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": ".308 Sniper Rampage - Ocean Beach",
+						"name": "Tear Gas Rampage - Ocean Beach",
 						"access_rules": [
-							"^$rule_308_Sniper_Rampage_Ocean_Beach"
+							"^$rule_Tear_Gas_Rampage_Ocean_Beach"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 534,
-						"y": 835
+						"x": 441,
+						"y": 680
 					}
 				],
 				"visibility_rules": [
@@ -28,229 +28,28 @@
 				]
 			},
 			{
-				"name": ".308 Sniper Rampage - Vice Point",
+				"name": "Rocket Launcher Rampage - Escobar International & S.P.A.S. 12 Rampage - Escobar International",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": ".308 Sniper Rampage - Vice Point",
+						"name": "Rocket Launcher Rampage - Escobar International",
 						"access_rules": [
-							"^$rule_308_Sniper_Rampage_Vice_Point"
+							"^$rule_Rocket_Launcher_Rampage_Escobar_International"
+						]
+					},
+					{
+						"name": "S.P.A.S. 12 Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_S_P_A_S_12_Rampage_Escobar_International"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 672,
-						"y": 571
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": ".357 Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": ".357 Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_357_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 211,
-						"y": 692
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Chainsaw Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Chainsaw Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_Chainsaw_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 568,
-						"y": 445
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Chainsaw Rampage - Washington Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Chainsaw Rampage - Washington Beach",
-						"access_rules": [
-							"^$rule_Chainsaw_Rampage_Washington_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 530,
-						"y": 799
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Flamethrower Rampage - Downtown",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Flamethrower Rampage - Downtown",
-						"access_rules": [
-							"^$rule_Flamethrower_Rampage_Downtown"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 230,
-						"y": 140
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Grenade Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Grenade Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_Grenade_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 267,
-						"y": 821
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Katana Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Katana Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_Katana_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 260,
-						"y": 603
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Katana Rampage - Washington Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Katana Rampage - Washington Beach",
-						"access_rules": [
-							"^$rule_Katana_Rampage_Washington_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 513,
-						"y": 806
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "M60 Rampage - Little Haiti",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "M60 Rampage - Little Haiti",
-						"access_rules": [
-							"^$rule_M60_Rampage_Little_Haiti"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 310,
-						"y": 360
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "MP5 Rampage - Downtown",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "MP5 Rampage - Downtown",
-						"access_rules": [
-							"^$rule_MP5_Rampage_Downtown"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 279,
-						"y": 321
+						"x": 95,
+						"y": 524
 					}
 				],
 				"visibility_rules": [
@@ -272,491 +71,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 572,
-						"y": 503
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "MP5 Rampage - Vice Point 2",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "MP5 Rampage - Vice Point 2",
-						"access_rules": [
-							"^$rule_MP5_Rampage_Vice_Point_2"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 589,
-						"y": 173
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Mac-10 Rampage - Little Havana",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Mac-10 Rampage - Little Havana",
-						"access_rules": [
-							"^$rule_Mac_10_Rampage_Little_Havana"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 253,
-						"y": 556
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Minigun Rampage - Little Havana",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Minigun Rampage - Little Havana",
-						"access_rules": [
-							"^$rule_Minigun_Rampage_Little_Havana"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 123,
-						"y": 587
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Minigun Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Minigun Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_Minigun_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 397,
-						"y": 192
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Pistol Rampage - Downtown",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Pistol Rampage - Downtown",
-						"access_rules": [
-							"^$rule_Pistol_Rampage_Downtown"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 339,
-						"y": 214
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Pistol Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Pistol Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_Pistol_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 662,
-						"y": 203
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rampage - Little Havana",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rampage - Little Havana",
-						"access_rules": [
-							"^$rule_Rampage_Little_Havana"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 338,
-						"y": 619
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rampage - Ocean Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rampage - Ocean Beach",
-						"access_rules": [
-							"^$rule_Rampage_Ocean_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 632,
-						"y": 924
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rocket Launcher Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rocket Launcher Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 145,
-						"y": 725
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rocket Launcher Rampage - Ocean Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rocket Launcher Rampage - Ocean Beach",
-						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Ocean_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 418,
-						"y": 958
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rocket Launcher Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rocket Launcher Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 607,
-						"y": 224
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Rocket Launcher Rampage - Viceport",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Rocket Launcher Rampage - Viceport",
-						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Viceport"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 352,
-						"y": 859
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Ruger Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Ruger Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_Ruger_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 549,
-						"y": 652
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "S.P.A.S. 12 Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "S.P.A.S. 12 Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 132,
-						"y": 738
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "S.P.A.S. 12 Rampage - Little Havana",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "S.P.A.S. 12 Rampage - Little Havana",
-						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Little_Havana"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 196,
-						"y": 535
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "S.P.A.S. 12 Rampage - Vice Point",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "S.P.A.S. 12 Rampage - Vice Point",
-						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Vice_Point"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 664,
-						"y": 602
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Shotgun Rampage - Escobar International",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Shotgun Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_Shotgun_Rampage_Escobar_International"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 219,
-						"y": 617
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Shotgun Rampage - Washington Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Shotgun Rampage - Washington Beach",
-						"access_rules": [
-							"^$rule_Shotgun_Rampage_Washington_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 503,
-						"y": 755
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Sniper Rifle Rampage - Little Havana",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Sniper Rifle Rampage - Little Havana",
-						"access_rules": [
-							"^$rule_Sniper_Rifle_Rampage_Little_Havana"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 284,
-						"y": 637
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Tear Gas Rampage - Downtown",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Tear Gas Rampage - Downtown",
-						"access_rules": [
-							"^$rule_Tear_Gas_Rampage_Downtown"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 382,
-						"y": 218
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Tear Gas Rampage - Ocean Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Tear Gas Rampage - Ocean Beach",
-						"access_rules": [
-							"^$rule_Tear_Gas_Rampage_Ocean_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 568,
-						"y": 925
+						"x": 445,
+						"y": 340
 					}
 				],
 				"visibility_rules": [
@@ -778,8 +94,652 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 635,
-						"y": 228
+						"x": 495,
+						"y": 118
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Rocket Launcher Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Rocket Launcher Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_Rocket_Launcher_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 473,
+						"y": 114
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Ruger Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Ruger Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_Ruger_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 426,
+						"y": 460
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Flamethrower Rampage - Downtown",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Flamethrower Rampage - Downtown",
+						"access_rules": [
+							"^$rule_Flamethrower_Rampage_Downtown"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 169,
+						"y": 47
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "MP5 Rampage - Downtown",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "MP5 Rampage - Downtown",
+						"access_rules": [
+							"^$rule_MP5_Rampage_Downtown"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 209,
+						"y": 193
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Tear Gas Rampage - Downtown",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Tear Gas Rampage - Downtown",
+						"access_rules": [
+							"^$rule_Tear_Gas_Rampage_Downtown"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 291,
+						"y": 110
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "M60 Rampage - Little Haiti",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "M60 Rampage - Little Haiti",
+						"access_rules": [
+							"^$rule_M60_Rampage_Little_Haiti"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 233,
+						"y": 225
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Mac-10 Rampage - Little Havana",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Mac-10 Rampage - Little Havana",
+						"access_rules": [
+							"^$rule_Mac_10_Rampage_Little_Havana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 187,
+						"y": 382
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Chainsaw Rampage - Washington Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Chainsaw Rampage - Washington Beach",
+						"access_rules": [
+							"^$rule_Chainsaw_Rampage_Washington_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 410,
+						"y": 578
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": ".308 Sniper Rampage - Ocean Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": ".308 Sniper Rampage - Ocean Beach",
+						"access_rules": [
+							"^$rule_308_Sniper_Rampage_Ocean_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 414,
+						"y": 607
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Rampage - Little Havana",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Rampage - Little Havana",
+						"access_rules": [
+							"^$rule_Rampage_Little_Havana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 256,
+						"y": 434
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": ".357 Rampage - Escobar International",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": ".357 Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_357_Rampage_Escobar_International"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 153,
+						"y": 492
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Rocket Launcher Rampage - Viceport",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Rocket Launcher Rampage - Viceport",
+						"access_rules": [
+							"^$rule_Rocket_Launcher_Rampage_Viceport"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 267,
+						"y": 627
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Minigun Rampage - Little Havana",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Minigun Rampage - Little Havana",
+						"access_rules": [
+							"^$rule_Minigun_Rampage_Little_Havana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 82,
+						"y": 407
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Grenade Rampage - Escobar International",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Grenade Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_Grenade_Rampage_Escobar_International"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 199,
+						"y": 596
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Sniper Rifle Rampage - Little Havana",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Sniper Rifle Rampage - Little Havana",
+						"access_rules": [
+							"^$rule_Sniper_Rifle_Rampage_Little_Havana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 212,
+						"y": 448
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Katana Rampage - Washington Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Katana Rampage - Washington Beach",
+						"access_rules": [
+							"^$rule_Katana_Rampage_Washington_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 397,
+						"y": 584
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Rampage - Ocean Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Rampage - Ocean Beach",
+						"access_rules": [
+							"^$rule_Rampage_Ocean_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 493,
+						"y": 679
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Pistol Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Pistol Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_Pistol_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 518,
+						"y": 98
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "MP5 Rampage - Vice Point 2",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "MP5 Rampage - Vice Point 2",
+						"access_rules": [
+							"^$rule_MP5_Rampage_Vice_Point_2"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 458,
+						"y": 73
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Chainsaw Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Chainsaw Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_Chainsaw_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 441,
+						"y": 293
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Rocket Launcher Rampage - Ocean Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Rocket Launcher Rampage - Ocean Beach",
+						"access_rules": [
+							"^$rule_Rocket_Launcher_Rampage_Ocean_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 320,
+						"y": 707
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Minigun Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Minigun Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_Minigun_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 303,
+						"y": 89
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Pistol Rampage - Downtown",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Pistol Rampage - Downtown",
+						"access_rules": [
+							"^$rule_Pistol_Rampage_Downtown"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 257,
+						"y": 107
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Shotgun Rampage - Escobar International",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Shotgun Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_Shotgun_Rampage_Escobar_International"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 160,
+						"y": 432
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": ".308 Sniper Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": ".308 Sniper Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_308_Sniper_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 525,
+						"y": 394
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Shotgun Rampage - Washington Beach",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Shotgun Rampage - Washington Beach",
+						"access_rules": [
+							"^$rule_Shotgun_Rampage_Washington_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 389,
+						"y": 543
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "S.P.A.S. 12 Rampage - Vice Point",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "S.P.A.S. 12 Rampage - Vice Point",
+						"access_rules": [
+							"^$rule_S_P_A_S_12_Rampage_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 519,
+						"y": 420
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "S.P.A.S. 12 Rampage - Little Havana",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "S.P.A.S. 12 Rampage - Little Havana",
+						"access_rules": [
+							"^$rule_S_P_A_S_12_Rampage_Little_Havana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 141,
+						"y": 366
 					}
 				],
 				"visibility_rules": [
@@ -801,8 +761,31 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 462,
-						"y": 790
+						"x": 356,
+						"y": 571
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "Katana Rampage - Escobar International",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "Katana Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_Katana_Rampage_Escobar_International"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 193,
+						"y": 420
 					}
 				],
 				"visibility_rules": [

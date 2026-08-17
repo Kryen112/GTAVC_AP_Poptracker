@@ -26,8 +26,7 @@ from make_pins import CLASS_COLOURS
 
 PACK = Path(__file__).resolve().parent.parent
 OUTPUT = PACK / "preview" / "pinned_map.png"
-SCALE = 4
-PIN_RADIUS = 7
+SCALE = 3
 
 # Location file name -> the class whose colour its pins take. Mirrors the
 # display names in tools/generate.py.
@@ -45,6 +44,9 @@ CLASS_BY_FILE = {
 
 def main() -> int:
     maps = json.loads((PACK / "maps" / "maps.json").read_text(encoding="utf-8"))
+    # Pins are drawn at the size PopTracker will draw them, so the preview
+    # shows the real crowding rather than a prettier version of it.
+    pin_radius = max(round(maps[0].get("location_size", 10) * SCALE / 2), 1)
     image_path = PACK / maps[0]["img"]
     if not image_path.is_file():
         print(f"{image_path} is missing; run tools/extract_map.py first")
@@ -65,8 +67,8 @@ def main() -> int:
                     continue
                 for pin in pins:
                     x, y = pin["x"] * SCALE, pin["y"] * SCALE
-                    draw.ellipse(
-                        [x - PIN_RADIUS, y - PIN_RADIUS, x + PIN_RADIUS, y + PIN_RADIUS],
+                    draw.rectangle(
+                        [x - pin_radius, y - pin_radius, x + pin_radius, y + pin_radius],
                         fill=colour, outline=(20, 20, 24), width=2)
                     drawn += 1
 
