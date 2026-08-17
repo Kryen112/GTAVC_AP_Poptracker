@@ -169,8 +169,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 512,
-						"y": 328
+						"x": 696,
+						"y": 332
 					}
 				],
 				"visibility_rules": [
@@ -215,7 +215,7 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 512,
+						"x": 196,
 						"y": 828
 					}
 				],
