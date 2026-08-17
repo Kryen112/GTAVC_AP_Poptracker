@@ -54,13 +54,13 @@ DEFAULT_ARCHIPELAGO = PACK.parent / "Archipelago"
 # ---------------------------------------------------------------------------
 
 MAP_GEOMETRY = PACK / "data" / "map_geometry.json"
-PIN_SIZE = 7
-PIN_BORDER = 1
+PIN_SIZE = 14
+PIN_BORDER = 2
 
 # Pins closer together than this share one marker holding a section each.
 # Anything nearer is unclickable as two markers, and on a map this size it is
 # the same street corner anyway.
-MERGE_DISTANCE_PIXELS = 7
+MERGE_DISTANCE_PIXELS = 14
 
 # The one class placed rather than derived. Emergency vehicle milestones have no
 # world position at all, so their five activities become five markers laid out

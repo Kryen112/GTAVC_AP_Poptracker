@@ -88,8 +88,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 208,
-						"y": 12
+						"x": 517,
+						"y": 31
 					}
 				]
 			},
@@ -177,8 +177,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 226,
-						"y": 12
+						"x": 561,
+						"y": 31
 					}
 				]
 			},
@@ -266,8 +266,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 245,
-						"y": 12
+						"x": 606,
+						"y": 31
 					}
 				]
 			},
@@ -343,8 +343,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 263,
-						"y": 12
+						"x": 651,
+						"y": 31
 					}
 				]
 			},
@@ -420,8 +420,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 281,
-						"y": 12
+						"x": 696,
+						"y": 31
 					}
 				]
 			}

@@ -52,12 +52,12 @@ WORLD_SPAN = 4000.0
 LAND_MARGIN_PIXELS = 14
 NORTH_MARGIN_PIXELS = 18
 
-# The finished image is scaled to this height. PopTracker will not zoom out past
-# one image pixel per screen pixel, and a display running at 125 per cent makes
-# that 1.25 screen pixels, so a 1080p pane holds around 400 image pixels of
-# height once the window's own furniture is out of the way. Raise it for detail
-# on a taller screen, lower it if the city still does not fit.
-MAP_TARGET_HEIGHT = 380
+# A ceiling on the finished image's height in pixels, so a future source of
+# larger tiles cannot produce an unwieldy file. It does NOT control how large the
+# map draws: PopTracker scales the image to the space its layout gives it, so
+# fewer pixels only means a blurrier map at the same size on screen. What the map
+# is drawn at is set by max_height on the map element in layouts/tabs.json.
+MAP_TARGET_HEIGHT = 1024
 
 # The sea, as the two near-identical blues the radar tiles use, and how far a
 # pixel may differ and still count as sea.
