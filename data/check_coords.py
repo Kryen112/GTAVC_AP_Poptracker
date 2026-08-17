@@ -4,10 +4,11 @@ Each entry is the game position the PopTracker pack pins a check at. Missions
 carry their launcher's trigger position, rampages their pickup, purchases their
 for-sale icon, stores their robbery trigger, and side events their launcher.
 
-Three classes are absent. Hidden packages have their positions in the world's
-own package_data.py, in the same order, so the generator reads them from there.
-Emergency vehicle milestones have no position at all, and stunt jumps are
-exe-native, so neither is pinned.
+Hidden packages are absent: their positions live in the world's own
+package_data.py, in the same order, so the generator reads them from there.
+Emergency vehicle milestones are absent because they have no position at all.
+Stunt jumps are absent: the game builds their table only while it runs, so
+they arrive from the mod's runtime dump or not at all.
 
 Indexed classes are lists in check order, the order that fixes location ids and
 names; the rest are keyed by check name. A 2d position test names no height, so
