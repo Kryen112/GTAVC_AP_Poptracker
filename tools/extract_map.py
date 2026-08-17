@@ -53,11 +53,17 @@ LAND_MARGIN_PIXELS = 14
 NORTH_MARGIN_PIXELS = 18
 
 # A ceiling on the finished image's height in pixels, so a future source of
-# larger tiles cannot produce an unwieldy file. It does NOT control how large the
-# map draws: PopTracker scales the image to the space its layout gives it, so
-# fewer pixels only means a blurrier map at the same size on screen. What the map
-# is drawn at is set by max_height on the map element in layouts/tabs.json.
+# larger tiles cannot produce an unwieldy file. It does not decide how large the
+# map draws.
 MAP_TARGET_HEIGHT = 1024
+
+# What decides how large the map draws. PopTracker fits the image across the
+# width it is given and lets the height fall where it may, so a tall image
+# overflows the pane and cannot be zoomed out of. Padding the sides with open sea
+# widens the image without moving the city, and a wider image is a shorter one
+# once fitted: at 1.9 the whole of Vice City sits inside a 1080p pane. Raise it
+# to draw the city smaller, lower it to draw it larger.
+MAP_ASPECT_RATIO = 1.9
 
 # The sea, as the two near-identical blues the radar tiles use, and how far a
 # pixel may differ and still count as sea.
@@ -270,6 +276,17 @@ def land_bounds(image: Image.Image) -> tuple[int, int, int, int]:
     return int(columns.min()), int(rows.min()), int(columns.max()), int(rows.max())
 
 
+def edge_sea_colour(image: Image.Image) -> tuple[int, int, int, int]:
+    """The sea colour along the image's own left edge, so the padding joins it
+    without a seam. The crop keeps a margin of open water, so that column is
+    sea all the way down."""
+    pixels = numpy.array(image.convert("RGBA"))
+    column = pixels[:, 0, :]
+    colours, counts = numpy.unique(column, axis=0, return_counts=True)
+    most_common = colours[int(numpy.argmax(counts))]
+    return tuple(int(channel) for channel in most_common)
+
+
 def crop_and_scale(atlas: Image.Image) -> tuple[Image.Image, dict]:
     """Trim the open sea around the city, scale to fit a pane, and describe the
     world-to-pixel transform that leaves."""
@@ -287,15 +304,25 @@ def crop_and_scale(atlas: Image.Image) -> tuple[Image.Image, dict]:
     height = max(round(cropped.height * scale), 1)
     scaled = cropped.resize((width, height), Image.LANCZOS)
     units_per_pixel = assembly_units_per_pixel * cropped.height / height
+
+    # Widen with open sea so the fitted image is short enough to sit in a pane.
+    # The city does not move within the padding, so only the left edge shifts.
+    padded_width = max(round(height * MAP_ASPECT_RATIO), width)
+    pad_left = (padded_width - width) // 2
+    padded = Image.new("RGBA", (padded_width, height), edge_sea_colour(scaled))
+    padded.paste(scaled, (pad_left, 0))
+    scaled = padded
+
     geometry = {
         "name": MAP_NAME,
         "image": MAP_IMAGE,
-        "width": width,
+        "width": padded_width,
         "height": height,
         # The world position of the top left pixel, and how much world a pixel
         # spans. A pin is (worldX - world_left) / units_per_pixel across and
         # (world_top - worldY) / units_per_pixel down.
-        "world_left": box[0] * assembly_units_per_pixel - WORLD_ORIGIN,
+        "world_left": (box[0] * assembly_units_per_pixel - WORLD_ORIGIN)
+                      - pad_left * units_per_pixel,
         "world_top": WORLD_ORIGIN - box[1] * assembly_units_per_pixel,
         "units_per_pixel": units_per_pixel,
     }

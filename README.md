@@ -51,10 +51,11 @@ only holds that table to account against the decompile.
 The map is the game's own radar art: 64 tiles assembled into a 1024 x 1024
 square covering world x and y from -2000 to +2000, using constants read out of
 the executable rather than guessed (`tools/extract_map.py` records where). Most
-of that square is open sea, so the assembly is then cropped to its own land plus
-a margin and scaled down, which is what lets the whole city fit one pane.
+of that square is open sea, so the assembly is cropped to its own land plus a
+margin, then padded back out sideways so the fitted image is short enough to
+sit in a pane.
 
-Cropping and scaling move the transform off the plain radar formula, so
+Cropping and padding move the transform off the plain radar formula, so
 `extract_map.py` writes what is left to `data/map_geometry.json` and the
 generator places every pin from that:
 
@@ -75,11 +76,15 @@ the popup lists the strand and each mission still tracks and gates on its own.
 
 ## If the map does not fit your screen
 
-PopTracker will not zoom out past one image pixel per screen pixel, which a
-display running at 125 per cent makes 1.25 screen pixels. The map is sized for
-that: `MAP_TARGET_HEIGHT` in `tools/extract_map.py` is the height the finished
-image is scaled to. Lower it and re-run the extractor and the generator if the
-city still does not fit; raise it for more detail on a taller screen.
+PopTracker fits the map across the width it is given and lets the height fall
+where it may, so a tall image overflows the pane and no amount of zooming out
+recovers it. The image's pixel count does not come into it: a smaller file draws
+at the same size, only blurrier.
+
+What controls the drawn size is the image's shape. `MAP_ASPECT_RATIO` in
+`tools/extract_map.py` pads the sides with open sea, which leaves the city where
+it is and makes the fitted image shorter. Raise it to draw the city smaller,
+lower it to draw it larger, then re-run the extractor and the generator.
 
 ## What is not pinned
 
@@ -92,20 +97,29 @@ levels. These are the only coordinates in the pack not read from the game.
 
 Unique stunt jumps have no position anywhere a build step can read: the SCM
 never defines them, and the executable holds no static table either. The game
-builds the table on the heap at game start, so it exists only while the game is
-running.
+builds the table while it runs, so it exists only in a live process.
 
-The mod's ASI reads it from there. Load any game with the mod installed and
-press **F7**: it finds the table in memory and writes `gtavc_ap_stuntjumps.txt`
-beside `gta-vc.exe`, and a toast says how many jumps it found. Feed that file to
-the dump script as its third argument and the jumps join `data/check_coords.py`:
+The mod's ASI looks for it there. Load a game with the mod installed and press
+**F7**: it scans for an array of world positions at a constant stride, spread
+across the city, and writes `gtavc_ap_stuntjumps.txt` beside `gta-vc.exe`. Read
+the header before trusting it:
 
-    python scripts/dump_check_coords.py clean.txt \
-        ../GTAVC_AP_Poptracker/data/check_coords.py gtavc_ap_stuntjumps.txt
+    # span 3704 units, 100 percent away from the origin, 0 percent fits ...
 
-Re-run the generator and all 36 pin themselves at the middle of their start box,
-where the run-up begins. Until then they are listed without pins; they autotrack
-and count either way.
+That fit percentage is the honest signal. The heap holds a great many arrays of
+positions, and a spatial grid can share the table's length, reach and spread; only
+the fit says whether the floats form a jump record. A low percentage means the
+scan did not find the table, whatever else the numbers say. The file carries six
+alternatives with their own fit scores so a near-miss is recoverable.
+
+At the time of writing the scan has not found it: five sessions, best fit 81
+percent on a run of small round configuration values, everything else in single
+digits. So the 36 jumps are listed without pins. They autotrack and count either
+way, and the pack is complete without them.
+
+Feeding a dump in, once one is right:
+
+    python scripts/dump_check_coords.py clean.txt \n        ../GTAVC_AP_Poptracker/data/check_coords.py gtavc_ap_stuntjumps.txt
 
 ## Colours
 
