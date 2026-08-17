@@ -19,8 +19,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 441,
-						"y": 680
+						"x": 221,
+						"y": 340
 					}
 				],
 				"visibility_rules": [
@@ -48,8 +48,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 95,
-						"y": 524
+						"x": 48,
+						"y": 262
 					}
 				],
 				"visibility_rules": [
@@ -71,8 +71,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 445,
-						"y": 340
+						"x": 222,
+						"y": 170
 					}
 				],
 				"visibility_rules": [
@@ -94,8 +94,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 495,
-						"y": 118
+						"x": 248,
+						"y": 59
 					}
 				],
 				"visibility_rules": [
@@ -117,8 +117,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 473,
-						"y": 114
+						"x": 236,
+						"y": 57
 					}
 				],
 				"visibility_rules": [
@@ -140,8 +140,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 426,
-						"y": 460
+						"x": 213,
+						"y": 230
 					}
 				],
 				"visibility_rules": [
@@ -163,8 +163,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 169,
-						"y": 47
+						"x": 84,
+						"y": 23
 					}
 				],
 				"visibility_rules": [
@@ -186,8 +186,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 209,
-						"y": 193
+						"x": 104,
+						"y": 97
 					}
 				],
 				"visibility_rules": [
@@ -209,8 +209,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 291,
-						"y": 110
+						"x": 146,
+						"y": 55
 					}
 				],
 				"visibility_rules": [
@@ -232,8 +232,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 233,
-						"y": 225
+						"x": 117,
+						"y": 112
 					}
 				],
 				"visibility_rules": [
@@ -255,8 +255,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 187,
-						"y": 382
+						"x": 94,
+						"y": 191
 					}
 				],
 				"visibility_rules": [
@@ -264,7 +264,7 @@
 				]
 			},
 			{
-				"name": "Chainsaw Rampage - Washington Beach",
+				"name": "Chainsaw Rampage - Washington Beach & Katana Rampage - Washington Beach",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
@@ -273,13 +273,19 @@
 						"access_rules": [
 							"^$rule_Chainsaw_Rampage_Washington_Beach"
 						]
+					},
+					{
+						"name": "Katana Rampage - Washington Beach",
+						"access_rules": [
+							"^$rule_Katana_Rampage_Washington_Beach"
+						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 410,
-						"y": 578
+						"x": 202,
+						"y": 290
 					}
 				],
 				"visibility_rules": [
@@ -301,8 +307,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 414,
-						"y": 607
+						"x": 207,
+						"y": 304
 					}
 				],
 				"visibility_rules": [
@@ -324,8 +330,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 256,
-						"y": 434
+						"x": 128,
+						"y": 217
 					}
 				],
 				"visibility_rules": [
@@ -347,8 +353,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 153,
-						"y": 492
+						"x": 77,
+						"y": 246
 					}
 				],
 				"visibility_rules": [
@@ -370,8 +376,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 267,
-						"y": 627
+						"x": 133,
+						"y": 313
 					}
 				],
 				"visibility_rules": [
@@ -393,8 +399,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 82,
-						"y": 407
+						"x": 41,
+						"y": 204
 					}
 				],
 				"visibility_rules": [
@@ -416,8 +422,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 199,
-						"y": 596
+						"x": 99,
+						"y": 298
 					}
 				],
 				"visibility_rules": [
@@ -439,31 +445,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 212,
-						"y": 448
-					}
-				],
-				"visibility_rules": [
-					"$visRampages"
-				]
-			},
-			{
-				"name": "Katana Rampage - Washington Beach",
-				"chest_unopened_img": "images/items/pins/rampages.png",
-				"chest_opened_img": "images/items/pins/rampages_opened.png",
-				"sections": [
-					{
-						"name": "Katana Rampage - Washington Beach",
-						"access_rules": [
-							"^$rule_Katana_Rampage_Washington_Beach"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 397,
-						"y": 584
+						"x": 106,
+						"y": 224
 					}
 				],
 				"visibility_rules": [
@@ -485,8 +468,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 493,
-						"y": 679
+						"x": 246,
+						"y": 340
 					}
 				],
 				"visibility_rules": [
@@ -508,8 +491,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 518,
-						"y": 98
+						"x": 259,
+						"y": 49
 					}
 				],
 				"visibility_rules": [
@@ -531,8 +514,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 458,
-						"y": 73
+						"x": 229,
+						"y": 37
 					}
 				],
 				"visibility_rules": [
@@ -554,8 +537,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 441,
-						"y": 293
+						"x": 221,
+						"y": 146
 					}
 				],
 				"visibility_rules": [
@@ -577,8 +560,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 320,
-						"y": 707
+						"x": 160,
+						"y": 353
 					}
 				],
 				"visibility_rules": [
@@ -600,8 +583,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 303,
-						"y": 89
+						"x": 152,
+						"y": 44
 					}
 				],
 				"visibility_rules": [
@@ -623,8 +606,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 257,
-						"y": 107
+						"x": 128,
+						"y": 53
 					}
 				],
 				"visibility_rules": [
@@ -646,8 +629,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 160,
-						"y": 432
+						"x": 80,
+						"y": 216
 					}
 				],
 				"visibility_rules": [
@@ -669,8 +652,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 525,
-						"y": 394
+						"x": 263,
+						"y": 197
 					}
 				],
 				"visibility_rules": [
@@ -692,8 +675,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 389,
-						"y": 543
+						"x": 195,
+						"y": 271
 					}
 				],
 				"visibility_rules": [
@@ -715,8 +698,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 519,
-						"y": 420
+						"x": 259,
+						"y": 210
 					}
 				],
 				"visibility_rules": [
@@ -738,8 +721,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 141,
-						"y": 366
+						"x": 71,
+						"y": 183
 					}
 				],
 				"visibility_rules": [
@@ -761,8 +744,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 356,
-						"y": 571
+						"x": 178,
+						"y": 286
 					}
 				],
 				"visibility_rules": [
@@ -784,8 +767,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 193,
-						"y": 420
+						"x": 97,
+						"y": 210
 					}
 				],
 				"visibility_rules": [

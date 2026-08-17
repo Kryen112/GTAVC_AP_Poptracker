@@ -31,8 +31,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 167,
-						"y": 72
+						"x": 83,
+						"y": 36
 					}
 				],
 				"visibility_rules": [
@@ -54,8 +54,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 279,
-						"y": 171
+						"x": 139,
+						"y": 86
 					}
 				],
 				"visibility_rules": [
@@ -77,8 +77,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 402,
-						"y": 618
+						"x": 201,
+						"y": 309
 					}
 				],
 				"visibility_rules": [
@@ -100,8 +100,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 474,
-						"y": 278
+						"x": 237,
+						"y": 139
 					}
 				],
 				"visibility_rules": [
@@ -123,8 +123,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 213,
-						"y": 298
+						"x": 107,
+						"y": 149
 					}
 				],
 				"visibility_rules": [
@@ -146,8 +146,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 545,
-						"y": 202
+						"x": 272,
+						"y": 101
 					}
 				],
 				"visibility_rules": [
@@ -169,8 +169,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 460,
-						"y": 88
+						"x": 230,
+						"y": 44
 					}
 				],
 				"visibility_rules": [
@@ -192,8 +192,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 141,
-						"y": 602
+						"x": 71,
+						"y": 301
 					}
 				],
 				"visibility_rules": [
@@ -221,8 +221,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 308,
-						"y": 56
+						"x": 154,
+						"y": 28
 					}
 				],
 				"visibility_rules": [
@@ -244,8 +244,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 501,
-						"y": 411
+						"x": 250,
+						"y": 205
 					}
 				],
 				"visibility_rules": [
@@ -267,8 +267,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 422,
-						"y": 586
+						"x": 211,
+						"y": 293
 					}
 				],
 				"visibility_rules": [

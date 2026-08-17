@@ -53,11 +53,11 @@ LAND_MARGIN_PIXELS = 14
 NORTH_MARGIN_PIXELS = 18
 
 # The finished image is scaled to this height. PopTracker will not zoom out past
-# one image pixel per screen pixel, which a display running at 125 per cent
-# makes 1.25 screen pixels, so a 1080p pane holds around 800 image pixels of
-# height. Raise it for detail on a taller screen, lower it if the city still
-# does not fit.
-MAP_TARGET_HEIGHT = 760
+# one image pixel per screen pixel, and a display running at 125 per cent makes
+# that 1.25 screen pixels, so a 1080p pane holds around 400 image pixels of
+# height once the window's own furniture is out of the way. Raise it for detail
+# on a taller screen, lower it if the city still does not fit.
+MAP_TARGET_HEIGHT = 380
 
 # The sea, as the two near-identical blues the radar tiles use, and how far a
 # pixel may differ and still count as sea.

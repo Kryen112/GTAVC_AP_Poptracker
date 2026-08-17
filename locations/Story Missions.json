@@ -19,8 +19,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 439,
-						"y": 613
+						"x": 220,
+						"y": 307
 					}
 				],
 				"visibility_rules": [
@@ -60,8 +60,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 421,
-						"y": 518
+						"x": 210,
+						"y": 259
 					}
 				],
 				"visibility_rules": [
@@ -107,8 +107,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 345,
-						"y": 628
+						"x": 173,
+						"y": 314
 					}
 				],
 				"visibility_rules": [
@@ -172,8 +172,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 318,
-						"y": 462
+						"x": 159,
+						"y": 231
 					}
 				],
 				"visibility_rules": [
@@ -195,8 +195,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 346,
-						"y": 448
+						"x": 173,
+						"y": 224
 					}
 				],
 				"visibility_rules": [
@@ -218,8 +218,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 498,
-						"y": 363
+						"x": 249,
+						"y": 181
 					}
 				],
 				"visibility_rules": [
@@ -253,8 +253,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 449,
-						"y": 395
+						"x": 225,
+						"y": 197
 					}
 				],
 				"visibility_rules": [
@@ -282,8 +282,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 169,
-						"y": 276
+						"x": 84,
+						"y": 138
 					}
 				],
 				"visibility_rules": [
@@ -317,8 +317,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 273,
-						"y": 212
+						"x": 136,
+						"y": 106
 					}
 				],
 				"visibility_rules": [
@@ -358,8 +358,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 154,
-						"y": 472
+						"x": 77,
+						"y": 236
 					}
 				],
 				"visibility_rules": [
@@ -393,8 +393,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 197,
-						"y": 317
+						"x": 99,
+						"y": 159
 					}
 				],
 				"visibility_rules": [
@@ -428,8 +428,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 215,
-						"y": 107
+						"x": 108,
+						"y": 54
 					}
 				],
 				"visibility_rules": [
@@ -457,8 +457,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 404,
-						"y": 558
+						"x": 202,
+						"y": 279
 					}
 				],
 				"visibility_rules": [
@@ -480,8 +480,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 496,
-						"y": 296
+						"x": 248,
+						"y": 148
 					}
 				],
 				"visibility_rules": [
@@ -503,8 +503,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 90,
-						"y": 517
+						"x": 45,
+						"y": 259
 					}
 				],
 				"visibility_rules": [
@@ -526,8 +526,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 194,
-						"y": 457
+						"x": 97,
+						"y": 228
 					}
 				],
 				"visibility_rules": [
@@ -549,8 +549,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 177,
-						"y": 405
+						"x": 88,
+						"y": 202
 					}
 				],
 				"visibility_rules": [

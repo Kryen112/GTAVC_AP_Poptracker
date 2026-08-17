@@ -19,8 +19,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 438,
-						"y": 445
+						"x": 219,
+						"y": 222
 					}
 				],
 				"visibility_rules": [
@@ -54,8 +54,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 476,
-						"y": 125
+						"x": 238,
+						"y": 63
 					}
 				],
 				"visibility_rules": [
@@ -77,8 +77,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 196,
-						"y": 490
+						"x": 98,
+						"y": 245
 					}
 				],
 				"visibility_rules": [
@@ -100,8 +100,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 219,
-						"y": 478
+						"x": 109,
+						"y": 239
 					}
 				],
 				"visibility_rules": [
@@ -123,8 +123,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 220,
-						"y": 171
+						"x": 110,
+						"y": 86
 					}
 				],
 				"visibility_rules": [
@@ -146,8 +146,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 225,
-						"y": 194
+						"x": 112,
+						"y": 97
 					}
 				],
 				"visibility_rules": [
@@ -169,8 +169,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 221,
-						"y": 362
+						"x": 111,
+						"y": 181
 					}
 				],
 				"visibility_rules": [
@@ -192,8 +192,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 475,
-						"y": 304
+						"x": 237,
+						"y": 152
 					}
 				],
 				"visibility_rules": [
@@ -201,7 +201,7 @@
 				]
 			},
 			{
-				"name": "Robbable Store 09",
+				"name": "Robbable Store 09 & Robbable Store 10",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
@@ -210,24 +210,7 @@
 						"access_rules": [
 							"^$rule_Robbable_Store_09"
 						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 475,
-						"y": 190
-					}
-				],
-				"visibility_rules": [
-					"$visRobbableStores"
-				]
-			},
-			{
-				"name": "Robbable Store 10",
-				"chest_unopened_img": "images/items/pins/robbable_stores.png",
-				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
-				"sections": [
+					},
 					{
 						"name": "Robbable Store 10",
 						"access_rules": [
@@ -238,8 +221,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 489,
-						"y": 186
+						"x": 242,
+						"y": 94
 					}
 				],
 				"visibility_rules": [
@@ -261,8 +244,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 493,
-						"y": 98
+						"x": 246,
+						"y": 49
 					}
 				],
 				"visibility_rules": [
@@ -284,8 +267,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 155,
-						"y": 474
+						"x": 78,
+						"y": 237
 					}
 				],
 				"visibility_rules": [
@@ -307,8 +290,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 150,
-						"y": 414
+						"x": 75,
+						"y": 207
 					}
 				],
 				"visibility_rules": [
