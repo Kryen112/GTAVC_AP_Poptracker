@@ -38,7 +38,13 @@ repository, not from here:
 
 `clean.txt` is the player's own decompiled `main.scm`, the same file the mod
 build uses. All decompile parsing lives in the world repository so there is only
-one set of regexes to keep working.
+one set of regexes to keep working. The dump refuses to write unless every
+count, name, and cross-check passes, since three of its tables are ordered by
+check index and one dropped entry would shift every later pin.
+
+Hidden packages are the exception: their 100 positions already live in the
+world's `package_data.py`, so the generator reads them from there and the dump
+only holds that table to account against the decompile.
 
 ## Where the pins come from
 

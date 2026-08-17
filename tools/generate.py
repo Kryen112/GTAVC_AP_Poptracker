@@ -452,7 +452,10 @@ def check_positions(data, locations, check_coords) -> dict[str, tuple[float, flo
     positions: dict[str, tuple[float, float]] = {}
     for name, (x, y, _z) in check_coords.MISSION_COORDS.items():
         positions[name] = (x, y)
-    for index, (x, y, _z) in enumerate(check_coords.PACKAGE_COORDS):
+    # The packages come from the world's own table rather than check_coords, so
+    # there is one copy of them; the dump script holds that table to account
+    # against the decompile.
+    for index, (x, y, _z) in enumerate(data.PACKAGE_COORDS):
         positions[data.hidden_package_name(index + 1)] = (x, y)
     for index, (x, y, _z) in enumerate(check_coords.RAMPAGE_COORDS):
         positions[data.rampage_name(index + 1)] = (x, y)
