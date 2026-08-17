@@ -169,3 +169,7 @@ SIDE_EVENT_COORDS: dict[str, tuple[float, float, float]] = {
     "Trial by Dirt": (-425.0, 1410.0, 10.5),
     "Vice Point Chopper Checkpoint": (375.845, 332.9194, 11.5155),
 }
+
+STUNT_JUMP_COORDS: list[tuple[float, float, float]] = [
+
+]

@@ -90,11 +90,22 @@ last fare or fire happens to be, so the five activities are laid out as five
 markers in the open sea north east of Vice Point, each holding that activity's
 levels. These are the only coordinates in the pack not read from the game.
 
-Unique stunt jumps are exe-native: the SCM never defines them, it only registers
-one the engine already found. The 36 definitions are not a static table in the
-executable either, so they are listed without pins for now. Reading them at
-runtime through the mod's ASI is the route that remains. They still autotrack
-and still count.
+Unique stunt jumps have no position anywhere a build step can read: the SCM
+never defines them, and the executable holds no static table either. The game
+builds the table on the heap at game start, so it exists only while the game is
+running.
+
+The mod's ASI reads it from there. Load any game with the mod installed and
+press **F7**: it finds the table in memory and writes `gtavc_ap_stuntjumps.txt`
+beside `gta-vc.exe`, and a toast says how many jumps it found. Feed that file to
+the dump script as its third argument and the jumps join `data/check_coords.py`:
+
+    python scripts/dump_check_coords.py clean.txt \
+        ../GTAVC_AP_Poptracker/data/check_coords.py gtavc_ap_stuntjumps.txt
+
+Re-run the generator and all 36 pin themselves at the middle of their start box,
+where the run-up begins. Until then they are listed without pins; they autotrack
+and count either way.
 
 ## Colours
 

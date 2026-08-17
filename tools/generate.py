@@ -120,11 +120,17 @@ CHECK_CLASSES: list[tuple[str, str, str | None]] = [
 CLASS_DISPLAY = {key: display for key, display, _option in CHECK_CLASSES}
 CLASS_OPTION = {key: option for key, _display, option in CHECK_CLASSES}
 
-# The classes the game places nowhere, so their checks are listed rather than
-# pinned: an emergency level completes wherever the last fare or fire happens to
-# be, and a stunt jump is exe-native, registered by the engine rather than the
-# SCM. Every other class must have a position for every check.
-UNPINNABLE_CLASSES = frozenset({"emergency_vehicles", "stunt_jumps"})
+# An emergency level completes wherever the last fare or fire happens to be, so
+# that class never has positions to pin and is laid out instead. Stunt jumps
+# join it only while their table is missing: the game builds it on the heap and
+# writes it nowhere, so it arrives from the mod's runtime dump or not at all.
+BASE_UNPINNABLE_CLASSES = frozenset({"emergency_vehicles"})
+
+
+def unpinnable_classes(check_coords) -> frozenset[str]:
+    if not getattr(check_coords, "STUNT_JUMP_COORDS", []):
+        return BASE_UNPINNABLE_CLASSES | {"stunt_jumps"}
+    return BASE_UNPINNABLE_CLASSES
 
 
 def class_visibility_code(class_key: str) -> str:
@@ -477,7 +483,8 @@ def lock_keys_for(slot_key: str, data) -> set[str]:
     return set(data.CONTENT_LOCK_ITEMS)
 
 
-def check_positions(data, locations, check_coords) -> dict[str, tuple[float, float]]:
+def check_positions(data, locations, check_coords,
+                    unpinnable: frozenset[str]) -> dict[str, tuple[float, float]]:
     """Check name -> world position, for every check the game places."""
     positions: dict[str, tuple[float, float]] = {}
     for name, (x, y, _z) in check_coords.MISSION_COORDS.items():
@@ -495,6 +502,9 @@ def check_positions(data, locations, check_coords) -> dict[str, tuple[float, flo
         positions[data.robbable_store_name(index + 1)] = (x, y)
     for name, (x, y, _z) in check_coords.SIDE_EVENT_COORDS.items():
         positions[name] = (x, y)
+    # Present only once the mod's runtime dump has been folded in.
+    for index, (x, y, _z) in enumerate(getattr(check_coords, "STUNT_JUMP_COORDS", [])):
+        positions[data.stunt_jump_name(index + 1)] = (x, y)
     unknown = sorted(name for name in positions if name not in locations.LOCATION_NAME_TO_ID)
     if unknown:
         raise SystemExit(f"check_coords names no location knows: {unknown}")
@@ -504,7 +514,7 @@ def check_positions(data, locations, check_coords) -> dict[str, tuple[float, flo
     unplaced = sorted(
         name for name in locations.LOCATION_NAME_TO_ID
         if name not in positions
-        and locations.LOCATION_CLASS[name] not in UNPINNABLE_CLASSES
+        and locations.LOCATION_CLASS[name] not in unpinnable
     )
     if unplaced:
         raise SystemExit(
@@ -624,7 +634,8 @@ def main() -> int:
     check_coords = load_check_coords()
 
     geometry = Geometry(MAP_GEOMETRY)
-    positions = check_positions(data, locations, check_coords)
+    positions = check_positions(data, locations, check_coords,
+                                unpinnable_classes(check_coords))
     groups = build_locations(data, locations, positions, geometry)
     attach_access_rules(groups)
 
