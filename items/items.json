@@ -122,7 +122,7 @@
 	{
 		"name": "Progressive Vercetti Finale",
 		"type": "consumable",
-		"img": "images/items/drawn/vercetti_finale.png",
+		"img": "images/items/hud/tommy.png",
 		"codes": "Progressive Vercetti Finale",
 		"min_quantity": 0,
 		"max_quantity": 2,
