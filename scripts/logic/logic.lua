@@ -17,8 +17,14 @@ end
 -- Reachable maps to Normal, otherwise None. Wrapped rather than returned raw so
 -- a rule reads as an AccessibilityLevel, which is what the "^$rule" prefix asks
 -- PopTracker for.
-function reachAccess(reachable)
+--
+-- A rule whose requirements are not all hard passes a second argument: what it
+-- still demands once the soft ones are set aside. Holding that much but not the
+-- whole rule is out of logic rather than unreachable, which the tracker draws in
+-- the sequence break colour.
+function reachAccess(reachable, withoutSoftRequirements)
     if reachable then return AccessibilityLevel.Normal end
+    if withoutSoftRequirements then return AccessibilityLevel.SequenceBreak end
     return AccessibilityLevel.None
 end
 

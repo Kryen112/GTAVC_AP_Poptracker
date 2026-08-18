@@ -2,7 +2,9 @@
 -- One function per AP location returning its PopTracker AccessibilityLevel:
 -- its region entry ANDed with the world's own requirements for it. A rule
 -- that differs between the properties class being on and off carries both
--- and switches on the seed's own setting.
+-- and switches on the seed's own setting. A second argument is what the
+-- rule still demands once its soft requirement is set aside, and holding
+-- that much makes the check out of logic rather than unreachable.
 
 function rule_An_Old_Friend() return reachAccess(true) end
 function rule_The_Party() return reachAccess(has("Progressive Rosenberg")) end
@@ -237,56 +239,56 @@ function rule_Paramedic_Level_03() return reachAccess(lockTerm("Land Vehicles", 
 function rule_Paramedic_Level_04() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Paramedic_Level_05() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Paramedic_Level_06() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Paramedic_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Paramedic_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Paramedic_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Paramedic_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Paramedic_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Paramedic_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Paramedic_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Paramedic_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Paramedic_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Paramedic_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Paramedic_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Paramedic_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_01() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_02() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_03() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_04() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_05() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Vigilante_Level_06() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Vigilante_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Vigilante_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Vigilante_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Vigilante_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Vigilante_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Vigilante_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Vigilante_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Vigilante_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Vigilante_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Vigilante_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Vigilante_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Vigilante_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_01() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_02() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_03() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_04() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_05() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Firefighter_Level_06() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Firefighter_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Firefighter_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Firefighter_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Firefighter_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Firefighter_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Firefighter_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Firefighter_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Firefighter_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Firefighter_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Firefighter_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Firefighter_Level_11() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Firefighter_Level_12() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Taxi_Level_01() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Taxi_Level_02() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Taxi_Level_03() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Taxi_Level_04() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Taxi_Level_05() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Taxi_Level_06() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Taxi_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Taxi_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Taxi_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Taxi_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Taxi_Level_06() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Taxi_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Taxi_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Taxi_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Taxi_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Pizza_Level_01() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Pizza_Level_02() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Pizza_Level_03() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Pizza_Level_04() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Pizza_Level_05() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Pizza_Level_06() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Pizza_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Pizza_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Pizza_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
-function rule_Pizza_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Pizza_Level_06() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Pizza_Level_07() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Pizza_Level_08() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Pizza_Level_09() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
+function rule_Pizza_Level_10() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")), lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Hotring() return reachAccess(has("Mainland Access")) end
 function rule_Bloodring() return reachAccess(has("Mainland Access")) end
 function rule_Dirtring() return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end

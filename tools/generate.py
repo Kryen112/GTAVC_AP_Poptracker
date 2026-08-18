@@ -376,21 +376,39 @@ def conjunction(terms: list[str]) -> str:
     return "(" + " and ".join(terms) + ")"
 
 
-def rule_expression(rule: Rule | None, region_term: str | None,
-                    lock_settings: dict[str, str]) -> str:
-    """A location's full access expression: its region entry and its rule."""
+# Class -> the requirements the tracker calls soft. A check holding everything
+# else is out of logic rather than unreachable, which PopTracker draws in the
+# sequence break colour. The emergency activities are the case: the world puts
+# their later levels behind the mainland, where the city is big enough to keep
+# finding work, but the islands alone will get a patient player there, so that
+# wall belongs to the routing rather than to the seed.
+SOFT_REQUIREMENTS: dict[str, frozenset[str]] = {
+    "emergency_vehicles": frozenset({"Mainland Access"}),
+}
+
+
+def rule_expression(rule: Rule | None, region_item: str | None,
+                    lock_settings: dict[str, str],
+                    omitted: frozenset[str] = frozenset()) -> str:
+    """A location's full access expression: its region entry and its rule.
+
+    Items in omitted drop out, which is how the caller asks what a rule still
+    demands once a soft requirement is set aside. Threshold clauses are left
+    alone: they count alternatives, so dropping a term from one changes what the
+    count means rather than relaxing it.
+    """
     terms: list[str] = []
-    if region_term is not None:
-        terms.append(region_term)
+    if region_item is not None and region_item not in omitted:
+        terms.append(requirement_term(region_item, 1, lock_settings))
     if rule is None:
         return conjunction(terms)
     if rule[0] == "all":
         terms.extend(requirement_term(item, count, lock_settings)
-                     for item, count in deduplicated(rule[1]))
+                     for item, count in deduplicated(rule[1]) if item not in omitted)
         return conjunction(terms)
     _kind, requirements, optional, needed = rule
     terms.extend(requirement_term(item, count, lock_settings)
-                 for item, count in deduplicated(requirements))
+                 for item, count in deduplicated(requirements) if item not in omitted)
     clauses = ", ".join(
         conjunction([requirement_term(item, count, lock_settings)
                      for item, count in deduplicated(each)])
@@ -398,6 +416,21 @@ def rule_expression(rule: Rule | None, region_term: str | None,
     )
     terms.append(f"satisfiedCount({{{clauses}}}) >= {needed}")
     return conjunction(terms)
+
+
+def access_call(rule: Rule | None, region_item: str | None,
+                lock_settings: dict[str, str], soft: frozenset[str]) -> str:
+    """The reachAccess call for one rule.
+
+    A rule carrying a soft requirement passes what is left of it without that
+    requirement as a second argument, so holding the rest reads as out of logic
+    instead of unreachable.
+    """
+    full = rule_expression(rule, region_item, lock_settings)
+    relaxed = rule_expression(rule, region_item, lock_settings, soft)
+    if not soft or relaxed == full:
+        return f"reachAccess({full})"
+    return f"reachAccess({full}, {relaxed})"
 
 
 # ---------------------------------------------------------------------------
@@ -676,6 +709,13 @@ def main() -> int:
     check_coords = load_check_coords()
 
     geometry = Geometry(MAP_GEOMETRY)
+    unknown_soft = sorted(
+        [key for key in SOFT_REQUIREMENTS if key not in CLASS_DISPLAY]
+        + [item for soft in SOFT_REQUIREMENTS.values() for item in soft
+           if item not in items.ITEM_NAME_TO_ID])
+    if unknown_soft:
+        raise SystemExit(
+            f"SOFT_REQUIREMENTS names classes or items that do not exist: {unknown_soft}")
     unknown_icons = sorted(set(DRAWN_ICONS) - set(items.ITEM_NAME_TO_ID))
     if unknown_icons:
         raise SystemExit(
@@ -763,9 +803,9 @@ def main() -> int:
     all_content_locks = frozenset(data.CONTENT_LOCK_ITEMS)
     with_properties = capture_rules(rules, True, all_ability_locks, all_content_locks)
     without_properties = capture_rules(rules, False, all_ability_locks, all_content_locks)
-    region_terms = {
+    region_items = {
         region: (None if region == data.REGION_VICE_CITY
-                 else f"has({lua_string(item_code(data.AREA_ITEM_BY_REGION[region]))})")
+                 else data.AREA_ITEM_BY_REGION[region])
         for region in {data.REGION_VICE_CITY, data.REGION_MAINLAND, data.REGION_STARFISH}
     }
 
@@ -774,22 +814,25 @@ def main() -> int:
         "-- One function per AP location returning its PopTracker AccessibilityLevel:",
         "-- its region entry ANDed with the world's own requirements for it. A rule",
         "-- that differs between the properties class being on and off carries both",
-        "-- and switches on the seed's own setting.",
+        "-- and switches on the seed's own setting. A second argument is what the",
+        "-- rule still demands once its soft requirement is set aside, and holding",
+        "-- that much makes the check out of logic rather than unreachable.",
         "",
     ]
     for name in locations.LOCATION_NAME_TO_ID:
-        region_term = region_terms[locations.LOCATION_REGIONS[name]]
-        on = rule_expression(with_properties.get(name), region_term, lock_settings)
-        off = rule_expression(without_properties.get(name), region_term, lock_settings)
+        region_item = region_items[locations.LOCATION_REGIONS[name]]
+        soft = SOFT_REQUIREMENTS.get(locations.LOCATION_CLASS[name], frozenset())
+        on = access_call(with_properties.get(name), region_item, lock_settings, soft)
+        off = access_call(without_properties.get(name), region_item, lock_settings, soft)
         function = f"rule_{slug(name)}"
         if on == off:
-            lines.append(f"function {function}() return reachAccess({on}) end")
+            lines.append(f"function {function}() return {on} end")
         else:
             lines.append(f"function {function}()")
             lines.append("\tif propertiesEnabled() then")
-            lines.append(f"\t\treturn reachAccess({on})")
+            lines.append(f"\t\treturn {on}")
             lines.append("\telse")
-            lines.append(f"\t\treturn reachAccess({off})")
+            lines.append(f"\t\treturn {off}")
             lines.append("\tend")
             lines.append("end")
     write_text(PACK / "scripts" / "logic" / "access_rules.lua", "\n".join(lines) + "\n")
