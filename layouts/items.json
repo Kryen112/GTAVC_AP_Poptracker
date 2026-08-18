@@ -449,13 +449,7 @@
 						]
 					]
 				}
-			}
-		]
-	},
-	"panel_two": {
-		"type": "array",
-		"orientation": "vertical",
-		"content": [
+			},
 			{
 				"type": "group",
 				"header": "Emergency rewards",
@@ -496,7 +490,13 @@
 						]
 					]
 				}
-			},
+			}
+		]
+	},
+	"panel_two": {
+		"type": "array",
+		"orientation": "vertical",
+		"content": [
 			{
 				"type": "group",
 				"header": "Seed options",

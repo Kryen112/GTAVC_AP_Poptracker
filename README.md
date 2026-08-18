@@ -92,9 +92,11 @@ too: it is clipped at the bottom, with a band of background above it, and no
 amount of zooming out recovers it. That 1269 was a single tall column of items,
 against a window of about 978.
 
-So the fix is never in the map. Everything beside it goes in two columns, split
-by `split_into_columns` in the generator to about equal height. If the band comes
-back, those sections have grown past the window and want rebalancing or a third
+So the fix is never in the map. Everything beside it goes in two columns: one
+holds what the player has, the other what the seed was rolled with, so each reads
+as one thing. The generator prints both column heights and warns past
+`COLUMN_HEIGHT_BUDGET`, since a column taller than the window is what pushes the
+map off the screen. If that warning appears, move a section across or add a
 column.
 
 With the columns short, the map fits the window and no padding is wanted: the
