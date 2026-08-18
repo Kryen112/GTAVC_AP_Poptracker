@@ -210,6 +210,31 @@ RADIO_ICONS = {
 
 FALLBACK_ICON = "radar_centre"
 
+# Items the game has no art for, drawn by tools/make_icons.py instead. Vice City
+# renders its weapon and vehicle icons as models rather than sprites, so without
+# these the package rewards, the emergency rewards and the minimap all fall back
+# to the same marker and a panel of eleven identical icons says nothing.
+DRAWN_ICON_DIRECTORY = "images/items/drawn"
+DRAWN_ICONS = {
+    "Body Armor Spawn": "body_armor",
+    "Chainsaw Spawn": "chainsaw",
+    ".357 Spawn": "pistol",
+    "Flamethrower Spawn": "flamethrower",
+    ".308 Sniper Spawn": "sniper",
+    "Minigun Spawn": "minigun",
+    "Rocket Launcher Spawn": "rocket_launcher",
+    "Sea Sparrow Spawn": "sea_sparrow",
+    "Rhino Spawn": "rhino",
+    "Hunter Spawn": "hunter",
+    "$100,000": "money",
+    "Infinite Sprint": "sprint",
+    "Fireproof": "fireproof",
+    "Max Armor Upgrade": "max_armor",
+    "Taxi Jump Ability": "taxi_jump",
+    "Max Health Upgrade": "max_health",
+    "Minimap": "minimap",
+}
+
 
 # ---------------------------------------------------------------------------
 # World import
@@ -379,6 +404,9 @@ def write_text(path: Path, body: str) -> None:
 
 
 def icon_for_item(name: str, data, items) -> str:
+    drawn = DRAWN_ICONS.get(name)
+    if drawn is not None:
+        return f"{DRAWN_ICON_DIRECTORY}/{drawn}.png"
     for strand, icon in STRAND_ICONS.items():
         if name == data.progressive_item_name(strand):
             return f"{ICON_DIRECTORY}/{icon}.png"
@@ -634,6 +662,17 @@ def main() -> int:
     check_coords = load_check_coords()
 
     geometry = Geometry(MAP_GEOMETRY)
+    unknown_icons = sorted(set(DRAWN_ICONS) - set(items.ITEM_NAME_TO_ID))
+    if unknown_icons:
+        raise SystemExit(
+            f"DRAWN_ICONS names items the world does not have: {unknown_icons}")
+    missing_art = sorted(
+        drawn for drawn in set(DRAWN_ICONS.values())
+        if not (PACK / DRAWN_ICON_DIRECTORY / f"{drawn}.png").is_file())
+    if missing_art:
+        raise SystemExit(
+            f"drawn icons missing, run tools/make_icons.py: {missing_art}")
+
     positions = check_positions(data, locations, check_coords,
                                 unpinnable_classes(check_coords))
     groups = build_locations(data, locations, positions, geometry)

@@ -14,6 +14,7 @@ of it that can drift.
 | Map art | `py -3.12 tools/extract_map.py "<game folder>"` | `images/maps/vice_city.png`, `images/items/hud/*.png` |
 | Pack files | `py -3.12 tools/generate.py` | `items/`, `locations/`, `maps/`, `layouts/items.json`, `scripts/logic/access_rules.lua`, `scripts/autotracking/*_mapping.lua` |
 | Pin art | `py -3.12 tools/make_pins.py` | `images/items/pins/*.png`, `images/items/settings/*.png` |
+| Item art | `py -3.12 tools/make_icons.py` | `images/items/drawn/*.png` |
 | Self-test | `py -3.12 tools/check_logic.py` | pass or a list of problems |
 | Preview | `py -3.12 tools/preview_map.py` | `preview/pinned_map.png` |
 
@@ -176,6 +177,24 @@ what the game reports.
 Feeding a dump in, once one is right:
 
     python scripts/dump_check_coords.py clean.txt \n        ../GTAVC_AP_Poptracker/data/check_coords.py gtavc_ap_stuntjumps.txt
+
+## Icons
+
+Most items wear the game's own legend art, pulled out of `hud.txd` by the map
+extractor: each giver's progressive shows that giver's radar blip, the venues
+show their own icons, the radio stations their station logos.
+
+The game has no art for the rest. Vice City draws its weapon and vehicle icons as
+models rather than sprites, so there is no sheet to lift them from, and the only
+usable pieces anywhere in its textures are a banknote, a radar disc and a couple
+of flames. `tools/make_icons.py` draws those instead: a white glyph on a rounded
+tile, the tile colour naming the family and the glyph the item. Package rewards
+are amber, emergency rewards teal, the minimap blue.
+
+Without them all eleven package rewards, all five emergency rewards and the
+minimap fall back to the same marker, and a panel of identical icons says
+nothing. The generator refuses to run if a drawn icon is missing or names an item
+the world does not have, so a rename cannot quietly put one back on the fallback.
 
 ## Colours
 
