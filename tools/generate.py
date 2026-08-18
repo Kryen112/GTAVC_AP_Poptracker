@@ -73,6 +73,8 @@ NEVER_MERGED_CLASSES = frozenset({"robbable_stores"})
 NEVER_MERGED_CHECKS = frozenset({
     "Hidden Package - Vice Point - 5",
     "Hidden Package - Vice Point - 21",
+    "Hidden Package - Starfish Island - 1",
+    "Hidden Package - Starfish Island - 2",
 })
 
 # The one class placed rather than derived. Emergency vehicle milestones have no

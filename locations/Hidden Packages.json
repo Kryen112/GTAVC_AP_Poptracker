@@ -609,7 +609,7 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 1 & Hidden Package - Starfish Island - 2",
+				"name": "Hidden Package - Starfish Island - 1",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
@@ -618,7 +618,24 @@
 						"access_rules": [
 							"^$rule_Hidden_Package_Starfish_Island_1"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 509,
+						"y": 553
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Starfish Island - 2",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
 					{
 						"name": "Hidden Package - Starfish Island - 2",
 						"access_rules": [
@@ -629,8 +646,8 @@
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 507,
-						"y": 548
+						"x": 505,
+						"y": 544
 					}
 				],
 				"visibility_rules": [
