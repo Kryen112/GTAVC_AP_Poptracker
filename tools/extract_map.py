@@ -16,9 +16,10 @@ transform).
 Note the entity sector grid is a different thing with a different origin
 (x from -2400), and using it would shift every pin 400 units east.
 
-Most of that square is open sea, and the whole city has to fit one pane without
-scrolling, so the assembly is then cropped to its own land plus a margin and
-scaled down to MAP_TARGET_HEIGHT. Both steps move the world-to-pixel transform
+Most of that square is open sea, so the assembly is cropped to its own land plus
+a margin. PopTracker fits the image inside the space its layout gives it, so a
+tall map is fine and no padding is wanted; what matters is that nothing beside
+the map is taller than the window. Cropping moves the world-to-pixel transform
 away from the plain radar formula, so it is written out to data/map_geometry.json
 and generate.py places every pin from that rather than from constants of its own.
 
@@ -57,17 +58,7 @@ NORTH_MARGIN_PIXELS = 18
 # map draws.
 MAP_TARGET_HEIGHT = 1024
 
-# What decides how large the map draws. PopTracker fits the image across the
-# width it is given and lets the height fall where it may, so a tall image
-# overflows the pane and cannot be zoomed out of. Padding the sides with open sea
-# widens the image without moving the city, and a wider image is a shorter one
-# once fitted.
-#
-# The map fits whenever its pane is less wide-to-tall than this. Two panels of
-# items sit beside it, leaving a pane of about 1290 by 976 on a 1080p screen,
-# which is 1.32, so 1.5 fits with room and wastes little width on sea. Raise it
-# to draw the city smaller, lower it to draw it larger.
-MAP_ASPECT_RATIO = 1.5
+
 
 # The sea, as the two near-identical blues the radar tiles use, and how far a
 # pixel may differ and still count as sea.
@@ -280,17 +271,6 @@ def land_bounds(image: Image.Image) -> tuple[int, int, int, int]:
     return int(columns.min()), int(rows.min()), int(columns.max()), int(rows.max())
 
 
-def edge_sea_colour(image: Image.Image) -> tuple[int, int, int, int]:
-    """The sea colour along the image's own left edge, so the padding joins it
-    without a seam. The crop keeps a margin of open water, so that column is
-    sea all the way down."""
-    pixels = numpy.array(image.convert("RGBA"))
-    column = pixels[:, 0, :]
-    colours, counts = numpy.unique(column, axis=0, return_counts=True)
-    most_common = colours[int(numpy.argmax(counts))]
-    return tuple(int(channel) for channel in most_common)
-
-
 def crop_and_scale(atlas: Image.Image) -> tuple[Image.Image, dict]:
     """Trim the open sea around the city, scale to fit a pane, and describe the
     world-to-pixel transform that leaves."""
@@ -308,25 +288,15 @@ def crop_and_scale(atlas: Image.Image) -> tuple[Image.Image, dict]:
     height = max(round(cropped.height * scale), 1)
     scaled = cropped.resize((width, height), Image.LANCZOS)
     units_per_pixel = assembly_units_per_pixel * cropped.height / height
-
-    # Widen with open sea so the fitted image is short enough to sit in a pane.
-    # The city does not move within the padding, so only the left edge shifts.
-    padded_width = max(round(height * MAP_ASPECT_RATIO), width)
-    pad_left = (padded_width - width) // 2
-    padded = Image.new("RGBA", (padded_width, height), edge_sea_colour(scaled))
-    padded.paste(scaled, (pad_left, 0))
-    scaled = padded
-
     geometry = {
         "name": MAP_NAME,
         "image": MAP_IMAGE,
-        "width": padded_width,
+        "width": width,
         "height": height,
         # The world position of the top left pixel, and how much world a pixel
         # spans. A pin is (worldX - world_left) / units_per_pixel across and
         # (world_top - worldY) / units_per_pixel down.
-        "world_left": (box[0] * assembly_units_per_pixel - WORLD_ORIGIN)
-                      - pad_left * units_per_pixel,
+        "world_left": box[0] * assembly_units_per_pixel - WORLD_ORIGIN,
         "world_top": WORLD_ORIGIN - box[1] * assembly_units_per_pixel,
         "units_per_pixel": units_per_pixel,
     }

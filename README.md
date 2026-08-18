@@ -76,29 +76,32 @@ the popup lists the strand and each mission still tracks and gates on its own.
 
 ## If the map does not fit your screen
 
-PopTracker fits the map across the width it is given and lets the height fall
-where it may, so a tall image overflows the pane and no amount of zooming out
-recovers it. The image's pixel count does not come into it: a smaller file draws
-at the same size, only blurrier.
+PopTracker fits the map inside the space its layout gives it, so the image's own
+shape and pixel count do not decide how large it draws. Measured from two
+sessions:
 
-What controls the drawn size is the image's shape. `MAP_ASPECT_RATIO` in
-`tools/extract_map.py` pads the sides with open sea, which leaves the city where
-it is and makes the fitted image shorter. Raise it to draw the city smaller,
-lower it to draw it larger, then re-run the extractor and the generator.
+| image | pane | drawn | limited by |
+| --- | --- | --- | --- |
+| 1024 x 1024 | 1605 x 1269 | 1269 x 1269 | height |
+| 1790 x 942 | 1599 x 1269 | 1599 x 841 | width |
 
-The map fits its pane whenever the pane is less wide-to-tall than the image, so
-at 1.9 it fits anything up to a 1.9:1 pane.
+The number that matters is the second one in the pane column. PopTracker lays the
+window out to whatever height its tallest column needs and fits the map into
+that, so a column taller than the screen makes the map bigger than the screen
+too: it is clipped at the bottom, with a band of background above it, and no
+amount of zooming out recovers it. That 1269 was a single tall column of items,
+against a window of about 978.
 
-The other half is the panels beside it. PopTracker lays the window out to
-whatever height its tallest column needs and then centres the map in that, so a
-column taller than the screen leaves a band of background above the map and
-pushes its bottom off the window. Nothing about the map can recover that: the
-band is the same height whatever the image is.
+So the fix is never in the map. Everything beside it goes in two columns, split
+by `split_into_columns` in the generator to about equal height. If the band comes
+back, those sections have grown past the window and want rebalancing or a third
+column.
 
-So everything beside the map goes in two columns, split by
-`split_into_columns` in the generator to about equal height, keeping the section
-order. If the band ever comes back, that is the place to look: either the
-sections have grown, or a third column is wanted.
+With the columns short, the map fits the window and no padding is wanted: the
+image is the cropped city and nothing else, and PopTracker centres it in whatever
+space is left. Padding the sides out to a wide aspect, which an earlier version
+did, only shrinks the city, since the scale then follows the padded width rather
+than the height.
 
 ## What is not pinned
 

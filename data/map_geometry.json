@@ -1,9 +1,9 @@
 {
 	"name": "Vice City",
 	"image": "images/maps/vice_city.png",
-	"width": 1413,
+	"width": 754,
 	"height": 942,
-	"world_left": -3203.125,
+	"world_left": -1917.96875,
 	"world_top": 1679.6875,
 	"units_per_pixel": 3.90625
 }
