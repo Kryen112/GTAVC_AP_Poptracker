@@ -22,3 +22,8 @@ Thumbs.db
 
 # Preview renders, produced by tools/preview_map.py.
 preview/
+
+# Working files for placing pins by hand: the pixel list and its check
+# render. The positions they produce live in data/check_coords.py.
+tools/jumps.txt
+tools/check.png
