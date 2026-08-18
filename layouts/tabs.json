@@ -7,9 +7,7 @@
 				"content": {
 					"type": "map",
 					"h_alignment": "center",
-					"v_alignment": "center",
-					"max_height": 700,
-					"max_width": 700,
+					"v_alignment": "top",
 					"maps": [
 						"Vice City"
 					]

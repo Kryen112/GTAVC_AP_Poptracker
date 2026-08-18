@@ -86,6 +86,12 @@ What controls the drawn size is the image's shape. `MAP_ASPECT_RATIO` in
 it is and makes the fitted image shorter. Raise it to draw the city smaller,
 lower it to draw it larger, then re-run the extractor and the generator.
 
+The map fits its pane whenever the pane is less wide-to-tall than the image, so
+at 1.9 it fits anything up to a 1.9:1 pane. The map element in
+`layouts/tabs.json` is also aligned to the top: centred vertically, PopTracker
+leaves the spare height as a band above the map and pushes it off the bottom of
+the window instead.
+
 ## What is not pinned
 
 Two classes have no world position.
