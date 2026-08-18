@@ -61,9 +61,13 @@ MAP_TARGET_HEIGHT = 1024
 # width it is given and lets the height fall where it may, so a tall image
 # overflows the pane and cannot be zoomed out of. Padding the sides with open sea
 # widens the image without moving the city, and a wider image is a shorter one
-# once fitted: at 1.9 the whole of Vice City sits inside a 1080p pane. Raise it
+# once fitted.
+#
+# The map fits whenever its pane is less wide-to-tall than this. Two panels of
+# items sit beside it, leaving a pane of about 1290 by 976 on a 1080p screen,
+# which is 1.32, so 1.5 fits with room and wastes little width on sea. Raise it
 # to draw the city smaller, lower it to draw it larger.
-MAP_ASPECT_RATIO = 1.9
+MAP_ASPECT_RATIO = 1.5
 
 # The sea, as the two near-identical blues the radar tiles use, and how far a
 # pixel may differ and still count as sea.

@@ -5,7 +5,7 @@
 		"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 		"children": [
 			{
-				"name": "Stunt Jumps",
+				"name": "Unique Stunt Jump 01",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
@@ -14,31 +14,116 @@
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_01"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 438,
+						"y": 689
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 02",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 02",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_02"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 479,
+						"y": 619
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 03",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 03",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_03"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 510,
+						"y": 663
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 04",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 04",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_04"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 503,
+						"y": 696
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 05",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 05",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_05"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 423,
+						"y": 695
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 06 & Unique Stunt Jump 07",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 06",
 						"access_rules": [
@@ -50,73 +135,277 @@
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_07"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 418,
+						"y": 748
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 08",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 08",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_08"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 478,
+						"y": 679
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 09",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 09",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_09"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 832,
+						"y": 197
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 10",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 10",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_10"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 896,
+						"y": 491
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 11",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 11",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_11"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 649,
+						"y": 134
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 12",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 12",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_12"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 686,
+						"y": 213
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 13",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 13",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_13"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 743,
+						"y": 145
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 14",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 14",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_14"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 607,
+						"y": 136
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 15",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 15",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_15"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 562,
+						"y": 439
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 16",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 16",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_16"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 578,
+						"y": 460
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 17",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 17",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_17"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 590,
+						"y": 355
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 18",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 18",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_18"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 557,
+						"y": 574
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 19 & Unique Stunt Jump 28",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 19",
 						"access_rules": [
@@ -124,65 +413,235 @@
 						]
 					},
 					{
+						"name": "Unique Stunt Jump 28",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_28"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 877,
+						"y": 676
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 20",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
+					{
 						"name": "Unique Stunt Jump 20",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_20"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 828,
+						"y": 675
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 21",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 21",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_21"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 928,
+						"y": 512
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 22",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 22",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_22"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 847,
+						"y": 744
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 23",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 23",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_23"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 824,
+						"y": 746
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 24",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 24",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_24"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 824,
+						"y": 768
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 25",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 25",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_25"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 738,
+						"y": 781
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 26",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 26",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_26"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 738,
+						"y": 754
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 27",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 27",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_27"
 						]
-					},
+					}
+				],
+				"map_locations": [
 					{
-						"name": "Unique Stunt Jump 28",
-						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_28"
-						]
-					},
+						"map": "Vice City",
+						"x": 875,
+						"y": 726
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 29",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 29",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_29"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 933,
+						"y": 463
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 30 & Unique Stunt Jump 35",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 30",
 						"access_rules": [
@@ -190,11 +649,51 @@
 						]
 					},
 					{
+						"name": "Unique Stunt Jump 35",
+						"access_rules": [
+							"^$rule_Unique_Stunt_Jump_35"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 888,
+						"y": 557
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 31",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
+					{
 						"name": "Unique Stunt Jump 31",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_31"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 914,
+						"y": 613
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 32 & Unique Stunt Jump 33",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 32",
 						"access_rules": [
@@ -206,24 +705,59 @@
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_33"
 						]
-					},
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 938,
+						"y": 563
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 34",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 34",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_34"
 						]
-					},
+					}
+				],
+				"map_locations": [
 					{
-						"name": "Unique Stunt Jump 35",
-						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_35"
-						]
-					},
+						"map": "Vice City",
+						"x": 938,
+						"y": 528
+					}
+				],
+				"visibility_rules": [
+					"$visStuntJumps"
+				]
+			},
+			{
+				"name": "Unique Stunt Jump 36",
+				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
+				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
+				"sections": [
 					{
 						"name": "Unique Stunt Jump 36",
 						"access_rules": [
 							"^$rule_Unique_Stunt_Jump_36"
 						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 729,
+						"y": 505
 					}
 				],
 				"visibility_rules": [
