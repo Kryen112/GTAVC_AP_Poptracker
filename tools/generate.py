@@ -64,18 +64,11 @@ MERGE_DISTANCE_PIXELS = 14
 
 # Classes whose checks keep a marker each however close together they fall. A
 # store is a shopfront the player walks into, so which of the three on that Vice
-# Point block is still standing is the whole point of the marker.
-NEVER_MERGED_CLASSES = frozenset({"robbable_stores"})
-
-# Single checks kept apart, where the distance says one marker but the map says
-# two. These are named rather than derived, so main() refuses a name the world
-# does not have and a rename cannot drop the exception quietly.
-NEVER_MERGED_CHECKS = frozenset({
-    "Hidden Package - Vice Point - 5",
-    "Hidden Package - Vice Point - 21",
-    "Hidden Package - Starfish Island - 1",
-    "Hidden Package - Starfish Island - 2",
-})
+# Point block is still standing is the whole point of the marker, and a package
+# is one pickup in one spot, so a pair sharing a marker only hides which of the
+# two is still out there. Merging stays right for everything else, where several
+# checks really do come from one place.
+NEVER_MERGED_CLASSES = frozenset({"robbable_stores", "hidden_packages"})
 
 # The one class placed rather than derived. Emergency vehicle milestones have no
 # world position at all, so their five activities become five markers laid out
@@ -578,38 +571,30 @@ def node_name(members: list[str], locations) -> str:
     return " & ".join(members)
 
 
-def merges_with_neighbours(class_key: str, name: str) -> bool:
-    """Whether a check may share a marker with the ones it lands on top of."""
-    return class_key not in NEVER_MERGED_CLASSES and name not in NEVER_MERGED_CHECKS
-
-
 def cluster(named_pixels: list[tuple[str, tuple[int, int]]], class_key: str,
             ) -> list[tuple[tuple[int, int], list[str]]]:
     """Group checks whose pins would sit on top of each other.
 
     Greedy by distance: a check joins the first cluster it is within
     MERGE_DISTANCE_PIXELS of, and the marker then sits at the middle of its
-    members. This is what turns a giver's whole strand, given from one spot,
-    into one marker, and what stops two packages a few metres apart from
-    covering each other. A check the merge rules keep apart opens a cluster
-    nothing else may join, so it keeps its own marker at its own position.
+    members. This is what turns a giver's whole strand, all of it handed out from
+    one spot, into one marker. A class in NEVER_MERGED_CLASSES skips the joining
+    and keeps every check on its own marker at its own position.
     """
-    clusters: list[tuple[bool, list[tuple[str, tuple[int, int]]]]] = []
+    if class_key in NEVER_MERGED_CLASSES:
+        return [(position, [name]) for name, position in named_pixels]
+    clusters: list[list[tuple[str, tuple[int, int]]]] = []
     for name, (x, y) in named_pixels:
-        if not merges_with_neighbours(class_key, name):
-            clusters.append((False, [(name, (x, y))]))
-            continue
-        for accepts_more, members in clusters:
+        for members in clusters:
             first_x, first_y = members[0][1]
-            if (accepts_more
-                    and abs(x - first_x) <= MERGE_DISTANCE_PIXELS
+            if (abs(x - first_x) <= MERGE_DISTANCE_PIXELS
                     and abs(y - first_y) <= MERGE_DISTANCE_PIXELS):
                 members.append((name, (x, y)))
                 break
         else:
-            clusters.append((True, [(name, (x, y))]))
+            clusters.append([(name, (x, y))])
     placed = []
-    for _accepts_more, members in clusters:
+    for members in clusters:
         centre = (
             round(sum(position[0] for _name, position in members) / len(members)),
             round(sum(position[1] for _name, position in members) / len(members)),
@@ -688,10 +673,6 @@ def main() -> int:
     check_coords = load_check_coords()
 
     geometry = Geometry(MAP_GEOMETRY)
-    unknown_apart = sorted(NEVER_MERGED_CHECKS - set(locations.LOCATION_NAME_TO_ID))
-    if unknown_apart:
-        raise SystemExit(
-            f"NEVER_MERGED_CHECKS names checks the world does not have: {unknown_apart}")
     unknown_icons = sorted(set(DRAWN_ICONS) - set(items.ITEM_NAME_TO_ID))
     if unknown_icons:
         raise SystemExit(
