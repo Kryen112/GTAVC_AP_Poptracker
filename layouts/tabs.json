@@ -12,6 +12,14 @@
 						"Vice City"
 					]
 				}
+			},
+			{
+				"title": "Seed",
+				"content": {
+					"type": "layout",
+					"v_alignment": "top",
+					"key": "settings"
+				}
 			}
 		]
 	}

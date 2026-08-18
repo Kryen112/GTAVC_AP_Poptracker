@@ -18,23 +18,16 @@
 								"type": "layout",
 								"key": "items"
 							}
-						},
-						{
-							"type": "group",
-							"header": "Seed",
-							"dock": "top",
-							"content": {
-								"type": "layout",
-								"key": "settings"
-							}
 						}
 					]
 				},
 				{
 					"type": "dock",
+					"v_alignment": "top",
 					"content": [
 						{
 							"type": "layout",
+							"v_alignment": "top",
 							"key": "tabbed_maps"
 						}
 					]
