@@ -11,23 +11,28 @@
 					"dock": "left",
 					"content": [
 						{
-							"type": "group",
-							"header": "Items",
+							"type": "layout",
 							"dock": "top",
-							"content": {
-								"type": "layout",
-								"key": "items"
-							}
+							"key": "panel_one"
 						}
 					]
 				},
 				{
 					"type": "dock",
-					"v_alignment": "top",
+					"dock": "left",
 					"content": [
 						{
 							"type": "layout",
-							"v_alignment": "top",
+							"dock": "top",
+							"key": "panel_two"
+						}
+					]
+				},
+				{
+					"type": "dock",
+					"content": [
+						{
+							"type": "layout",
 							"key": "tabbed_maps"
 						}
 					]

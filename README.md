@@ -89,13 +89,16 @@ lower it to draw it larger, then re-run the extractor and the generator.
 The map fits its pane whenever the pane is less wide-to-tall than the image, so
 at 1.9 it fits anything up to a 1.9:1 pane.
 
-The other half is the item panel beside it. PopTracker lays the window out to
+The other half is the panels beside it. PopTracker lays the window out to
 whatever height its tallest column needs and then centres the map in that, so a
 column taller than the screen leaves a band of background above the map and
 pushes its bottom off the window. Nothing about the map can recover that: the
-band is the same height whatever the image is. This is why the seed settings sit
-in their own tab beside the map rather than under the items, and why adding rows
-to the items panel is what to look at first if the band comes back.
+band is the same height whatever the image is.
+
+So everything beside the map goes in two columns, split by
+`split_into_columns` in the generator to about equal height, keeping the section
+order. If the band ever comes back, that is the place to look: either the
+sections have grown, or a third column is wanted.
 
 ## What is not pinned
 

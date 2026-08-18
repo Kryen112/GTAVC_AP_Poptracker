@@ -772,14 +772,29 @@ def wrap(names: list[str], per_row: int) -> list[list[str]]:
 
 
 def build_items_layout(data, items) -> dict:
-    """The items and settings panels.
+    """The panels beside the map.
 
     Generated alongside items.json so a renamed item cannot leave a dead code
     behind in a hand-written layout. Cash, filler, and traps are left out: they
     gate nothing and would bury the items that do.
+
+    PopTracker lays the window out to whatever height its tallest column needs
+    and centres the map in that, so one tall column leaves a band of background
+    above the map and pushes its bottom off the window. Everything beside the map
+    therefore goes in two balanced columns.
     """
     story = [data.progressive_item_name(giver) for giver in data.STORY_GIVERS]
     venues = [data.progressive_item_name(venue) for venue in data.VENUE_STRANDS]
+    settings_codes = (
+        [key for key, _label, _stages in STAGED_SETTINGS]
+        + [key for key, _label, _default in BINARY_SETTINGS]
+    )
+    lock_codes = [
+        f"{prefix}_{member}"
+        for slot_key, prefix, _label in SET_SETTINGS
+        for member in sorted(lock_keys_for(slot_key, data))
+    ]
+    display_codes = [f"show_{class_key}" for class_key, _display, _option in CHECK_CLASSES]
     sections = [
         ("Area access", wrap(list(data.AREA_ITEMS), 2)),
         ("Goal", wrap([data.PACKAGE_FRAGMENT_ITEM], 1)),
@@ -792,39 +807,60 @@ def build_items_layout(data, items) -> dict:
         ("Emergency rewards", wrap(list(data.EMERGENCY_REWARD_ITEMS), 5)),
         ("Radio and minimap",
          wrap([*data.RADIO_STATION_ITEMS, data.MINIMAP_ITEM], 5)),
+        ("Seed options", wrap(settings_codes, 7)),
+        ("Locks selected", wrap(lock_codes, 6)),
+        ("Show on map", wrap(display_codes, 8)),
     ]
-    settings_codes = (
-        [key for key, _label, _stages in STAGED_SETTINGS]
-        + [key for key, _label, _default in BINARY_SETTINGS]
-    )
-    lock_codes = [
-        f"{prefix}_{member}"
-        for slot_key, prefix, _label in SET_SETTINGS
-        for member in sorted(lock_keys_for(slot_key, data))
-    ]
-    display_codes = [f"show_{class_key}" for class_key, _display, _option in CHECK_CLASSES]
+    first, second = split_into_columns(sections)
     return {
-        "items": {
-            "type": "array",
-            "orientation": "vertical",
-            "content": [
-                {"type": "group", "header": header, "content": item_grid(rows)}
-                for header, rows in sections
-            ],
-        },
-        "settings": {
-            "type": "array",
-            "orientation": "vertical",
-            "content": [
-                {"type": "group", "header": "Seed options",
-                 "content": item_grid(wrap(settings_codes, 7))},
-                {"type": "group", "header": "Locks selected",
-                 "content": item_grid(wrap(lock_codes, 6))},
-                {"type": "group", "header": "Show on map",
-                 "content": item_grid(wrap(display_codes, 8))},
-            ],
-        },
+        # One column of everything, for the broadcast window, which is its own
+        # narrow thing and has no map to sit beside.
+        "items": column_layout(sections),
+        "panel_one": column_layout(first),
+        "panel_two": column_layout(second),
     }
+
+
+def column_layout(sections: list[tuple[str, list[list[str]]]]) -> dict:
+    return {
+        "type": "array",
+        "orientation": "vertical",
+        "content": [
+            {"type": "group", "header": header, "content": item_grid(rows)}
+            for header, rows in sections
+        ],
+    }
+
+
+# Rough heights, only ever compared against each other: one row of icons, and
+# the group header above it, in the proportions PopTracker draws them.
+ROW_HEIGHT = 38
+HEADER_HEIGHT = 30
+
+
+def section_height(section: tuple[str, list[list[str]]]) -> int:
+    _header, rows = section
+    return len(rows) * ROW_HEIGHT + HEADER_HEIGHT
+
+
+def split_into_columns(
+    sections: list[tuple[str, list[list[str]]]],
+) -> tuple[list[tuple[str, list[list[str]]]], list[tuple[str, list[list[str]]]]]:
+    """Two columns of about the same height, in the order given.
+
+    The order is kept rather than optimised, so related groups stay together and
+    the panels read the way they are written. The split is the first point where
+    the running height passes half the total.
+    """
+    total = sum(section_height(section) for section in sections)
+    running = 0
+    for index, section in enumerate(sections):
+        running += section_height(section)
+        if running >= total / 2:
+            return sections[:index + 1], sections[index + 1:]
+    return sections, []
+
+
 
 
 def render_setting_mapping(data) -> str:

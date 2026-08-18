@@ -207,13 +207,296 @@
 						]
 					]
 				}
+			},
+			{
+				"type": "group",
+				"header": "Seed options",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"goal",
+							"enable_hidden_packages",
+							"enable_rampages",
+							"enable_stunt_jumps",
+							"enable_emergency_vehicles",
+							"enable_properties",
+							"enable_robbable_stores"
+						],
+						[
+							"enable_side_events",
+							"shuffle_emergency_rewards",
+							"randomize_radio_stations",
+							"shuffle_minimap",
+							"randomize_pickups",
+							"death_link"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Locks selected",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"ability_lock_crouch",
+							"ability_lock_jump",
+							"ability_lock_sprint",
+							"ability_lock_vehicles",
+							"ability_lock_wallet",
+							"ability_lock_weapon_equip"
+						],
+						[
+							"content_lock_hidden_packages",
+							"content_lock_properties",
+							"content_lock_rampages",
+							"content_lock_robbable_stores",
+							"content_lock_stunt_jumps"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Show on map",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"show_story_missions",
+							"show_properties",
+							"show_hidden_packages",
+							"show_rampages",
+							"show_stunt_jumps",
+							"show_robbable_stores",
+							"show_side_events",
+							"show_emergency_vehicles"
+						]
+					]
+				}
 			}
 		]
 	},
-	"settings": {
+	"panel_one": {
 		"type": "array",
 		"orientation": "vertical",
 		"content": [
+			{
+				"type": "group",
+				"header": "Area access",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Mainland Access",
+							"Starfish Island Access"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Goal",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Package Fragment"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Story strands",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Progressive Rosenberg",
+							"Progressive Cortez",
+							"Progressive Diaz",
+							"Progressive Death Row",
+							"Progressive Avery",
+							"Progressive Phil Cassidy",
+							"Progressive Vercetti Protection"
+						],
+						[
+							"Progressive Big Mitch Baker",
+							"Progressive Umberto Robina",
+							"Progressive Auntie Poulet",
+							"Progressive Love Fist",
+							"Progressive Mr. Black",
+							"Progressive Vercetti Finale"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Venue strands",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Progressive Malibu Club",
+							"Progressive Film Studio",
+							"Progressive Printworks",
+							"Progressive Kaufman Cabs",
+							"Progressive Cherry Popper",
+							"Progressive Boatyard",
+							"Progressive Sunshine Autos"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Property ownership",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Printworks Ownership",
+							"Sunshine Autos Ownership",
+							"Film Studio Ownership",
+							"Cherry Popper Ownership",
+							"Kaufman Cabs Ownership",
+							"Malibu Club Ownership",
+							"Boatyard Ownership",
+							"Pole Position Ownership"
+						],
+						[
+							"El Swanko Casa Ownership",
+							"Links View Apartment Ownership",
+							"Hyman Condo Ownership",
+							"Ocean Heights Apartment Ownership",
+							"1102 Washington Street Ownership",
+							"Vice Point Ownership",
+							"Skumole Shack Ownership"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Abilities",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Sprint",
+							"Jump",
+							"Crouch",
+							"Land Vehicles",
+							"Sea Vehicles",
+							"Air Vehicles",
+							"Weapon Equip",
+							"Wallet"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Content locks",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Hidden Packages",
+							"Rampages",
+							"Stunt Jumps",
+							"Property Purchases",
+							"Robbable Stores"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Package rewards",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Body Armor Spawn",
+							"Chainsaw Spawn",
+							".357 Spawn",
+							"Flamethrower Spawn",
+							".308 Sniper Spawn",
+							"Minigun Spawn"
+						],
+						[
+							"Rocket Launcher Spawn",
+							"Sea Sparrow Spawn",
+							"Rhino Spawn",
+							"Hunter Spawn",
+							"$100000"
+						]
+					]
+				}
+			}
+		]
+	},
+	"panel_two": {
+		"type": "array",
+		"orientation": "vertical",
+		"content": [
+			{
+				"type": "group",
+				"header": "Emergency rewards",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Infinite Sprint",
+							"Fireproof",
+							"Max Armor Upgrade",
+							"Taxi Jump Ability",
+							"Max Health Upgrade"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Radio and minimap",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Radio Station: Wildstyle",
+							"Radio Station: Flash FM",
+							"Radio Station: K-Chat",
+							"Radio Station: Fever 105",
+							"Radio Station: V-Rock"
+						],
+						[
+							"Radio Station: VCPR",
+							"Radio Station: Radio Espantoso",
+							"Radio Station: Emotion 98.3",
+							"Radio Station: Wave 103",
+							"Minimap"
+						]
+					]
+				}
+			},
 			{
 				"type": "group",
 				"header": "Seed options",
