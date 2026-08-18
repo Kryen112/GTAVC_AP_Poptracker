@@ -28,7 +28,7 @@
 				]
 			},
 			{
-				"name": "Rocket Launcher Rampage - Escobar International & S.P.A.S. 12 Rampage - Escobar International",
+				"name": "Rocket Launcher Rampage - Escobar International",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
@@ -37,19 +37,13 @@
 						"access_rules": [
 							"^$rule_Rocket_Launcher_Rampage_Escobar_International"
 						]
-					},
-					{
-						"name": "S.P.A.S. 12 Rampage - Escobar International",
-						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Escobar_International"
-						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 118,
-						"y": 650
+						"x": 124,
+						"y": 643
 					}
 				],
 				"visibility_rules": [
@@ -740,6 +734,29 @@
 						"map": "Vice City",
 						"x": 175,
 						"y": 453
+					}
+				],
+				"visibility_rules": [
+					"$visRampages"
+				]
+			},
+			{
+				"name": "S.P.A.S. 12 Rampage - Escobar International",
+				"chest_unopened_img": "images/items/pins/rampages.png",
+				"chest_opened_img": "images/items/pins/rampages_opened.png",
+				"sections": [
+					{
+						"name": "S.P.A.S. 12 Rampage - Escobar International",
+						"access_rules": [
+							"^$rule_S_P_A_S_12_Rampage_Escobar_International"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 111,
+						"y": 656
 					}
 				],
 				"visibility_rules": [

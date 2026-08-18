@@ -62,13 +62,16 @@ PIN_BORDER = 2
 # the same street corner anyway.
 MERGE_DISTANCE_PIXELS = 14
 
-# Classes whose checks keep a marker each however close together they fall. A
-# store is a shopfront the player walks into, so which of the three on that Vice
-# Point block is still standing is the whole point of the marker, and a package
-# is one pickup in one spot, so a pair sharing a marker only hides which of the
-# two is still out there. Merging stays right for everything else, where several
-# checks really do come from one place.
-NEVER_MERGED_CLASSES = frozenset({"robbable_stores", "hidden_packages"})
+# Classes whose checks keep a marker each however close together they fall. Each
+# of these is one thing standing in one spot, a shopfront to walk into, a package
+# to pick up, a rampage icon, a ramp to hit, so a shared marker only hides which
+# of the two neighbours is still out there. Merging stays right for the classes
+# where several checks really do come from one place: a giver hands out a whole
+# strand from one doorway, and a property's purchase and venue missions are one
+# building.
+NEVER_MERGED_CLASSES = frozenset({
+    "robbable_stores", "hidden_packages", "rampages", "stunt_jumps",
+})
 
 # The one class placed rather than derived. Emergency vehicle milestones have no
 # world position at all, so their five activities become five markers laid out
