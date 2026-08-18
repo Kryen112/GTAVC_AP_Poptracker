@@ -67,6 +67,14 @@ MERGE_DISTANCE_PIXELS = 14
 # Point block is still standing is the whole point of the marker.
 NEVER_MERGED_CLASSES = frozenset({"robbable_stores"})
 
+# Single checks kept apart, where the distance says one marker but the map says
+# two. These are named rather than derived, so main() refuses a name the world
+# does not have and a rename cannot drop the exception quietly.
+NEVER_MERGED_CHECKS = frozenset({
+    "Hidden Package - Vice Point - 5",
+    "Hidden Package - Vice Point - 21",
+})
+
 # The one class placed rather than derived. Emergency vehicle milestones have no
 # world position at all, so their five activities become five markers laid out
 # in the open sea north east of Vice Point, each holding that activity's levels.
@@ -568,7 +576,12 @@ def node_name(members: list[str], locations) -> str:
     return " & ".join(members)
 
 
-def cluster(named_pixels: list[tuple[str, tuple[int, int]]], merge: bool = True,
+def merges_with_neighbours(class_key: str, name: str) -> bool:
+    """Whether a check may share a marker with the ones it lands on top of."""
+    return class_key not in NEVER_MERGED_CLASSES and name not in NEVER_MERGED_CHECKS
+
+
+def cluster(named_pixels: list[tuple[str, tuple[int, int]]], class_key: str,
             ) -> list[tuple[tuple[int, int], list[str]]]:
     """Group checks whose pins would sit on top of each other.
 
@@ -576,23 +589,25 @@ def cluster(named_pixels: list[tuple[str, tuple[int, int]]], merge: bool = True,
     MERGE_DISTANCE_PIXELS of, and the marker then sits at the middle of its
     members. This is what turns a giver's whole strand, given from one spot,
     into one marker, and what stops two packages a few metres apart from
-    covering each other. A class in NEVER_MERGED_CLASSES passes merge False and
-    keeps one marker per check.
+    covering each other. A check the merge rules keep apart opens a cluster
+    nothing else may join, so it keeps its own marker at its own position.
     """
-    if not merge:
-        return [(position, [name]) for name, position in named_pixels]
-    clusters: list[list[tuple[str, tuple[int, int]]]] = []
+    clusters: list[tuple[bool, list[tuple[str, tuple[int, int]]]]] = []
     for name, (x, y) in named_pixels:
-        for members in clusters:
+        if not merges_with_neighbours(class_key, name):
+            clusters.append((False, [(name, (x, y))]))
+            continue
+        for accepts_more, members in clusters:
             first_x, first_y = members[0][1]
-            if abs(x - first_x) <= MERGE_DISTANCE_PIXELS \
-                    and abs(y - first_y) <= MERGE_DISTANCE_PIXELS:
+            if (accepts_more
+                    and abs(x - first_x) <= MERGE_DISTANCE_PIXELS
+                    and abs(y - first_y) <= MERGE_DISTANCE_PIXELS):
                 members.append((name, (x, y)))
                 break
         else:
-            clusters.append([(name, (x, y))])
+            clusters.append((True, [(name, (x, y))]))
     placed = []
-    for members in clusters:
+    for _accepts_more, members in clusters:
         centre = (
             round(sum(position[0] for _name, position in members) / len(members)),
             round(sum(position[1] for _name, position in members) / len(members)),
@@ -623,8 +638,7 @@ def build_locations(data, locations, positions, geometry: Geometry,
 
         pinned = [(name, geometry.pixel(*positions[name]))
                   for name in members if name in positions]
-        for (x, y), shared in cluster(pinned,
-                                     class_key not in NEVER_MERGED_CLASSES):
+        for (x, y), shared in cluster(pinned, class_key):
             nodes.append({
                 "name": node_name(shared, locations),
                 **pin_images(class_key),
@@ -672,6 +686,10 @@ def main() -> int:
     check_coords = load_check_coords()
 
     geometry = Geometry(MAP_GEOMETRY)
+    unknown_apart = sorted(NEVER_MERGED_CHECKS - set(locations.LOCATION_NAME_TO_ID))
+    if unknown_apart:
+        raise SystemExit(
+            f"NEVER_MERGED_CHECKS names checks the world does not have: {unknown_apart}")
     unknown_icons = sorted(set(DRAWN_ICONS) - set(items.ITEM_NAME_TO_ID))
     if unknown_icons:
         raise SystemExit(

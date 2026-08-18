@@ -310,7 +310,7 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 5 & Hidden Package - Vice Point - 21",
+				"name": "Hidden Package - Vice Point - 5",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
@@ -319,19 +319,13 @@
 						"access_rules": [
 							"^$rule_Hidden_Package_Vice_Point_5"
 						]
-					},
-					{
-						"name": "Hidden Package - Vice Point - 21",
-						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_21"
-						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 606,
-						"y": 404
+						"x": 612,
+						"y": 400
 					}
 				],
 				"visibility_rules": [
@@ -775,6 +769,29 @@
 						"map": "Vice City",
 						"x": 551,
 						"y": 464
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages"
+				]
+			},
+			{
+				"name": "Hidden Package - Vice Point - 21",
+				"chest_unopened_img": "images/items/pins/hidden_packages.png",
+				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
+				"sections": [
+					{
+						"name": "Hidden Package - Vice Point - 21",
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_21"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 600,
+						"y": 407
 					}
 				],
 				"visibility_rules": [
