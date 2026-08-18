@@ -62,6 +62,11 @@ PIN_BORDER = 2
 # the same street corner anyway.
 MERGE_DISTANCE_PIXELS = 14
 
+# Classes whose checks keep a marker each however close together they fall. A
+# store is a shopfront the player walks into, so which of the three on that Vice
+# Point block is still standing is the whole point of the marker.
+NEVER_MERGED_CLASSES = frozenset({"robbable_stores"})
+
 # The one class placed rather than derived. Emergency vehicle milestones have no
 # world position at all, so their five activities become five markers laid out
 # in the open sea north east of Vice Point, each holding that activity's levels.
@@ -188,14 +193,15 @@ SET_SETTINGS: list[tuple[str, str, str]] = [
 ICON_DIRECTORY = "images/items/hud"
 
 # Progressive strand item -> the giver's own radar blip, so the items panel
-# reads like the map does.
+# reads like the map does. The Vercetti finale is missing here on purpose: the
+# game marks it with the generic destination droplet, so it is drawn instead.
 STRAND_ICONS = {
     "Rosenberg": "radar_lawyer", "Cortez": "radar_cortez", "Diaz": "radar_diaz",
     "Death Row": "radar_kent", "Avery": "radar_avery", "Phil Cassidy": "radar_phil",
     "Vercetti Protection": "tommy", "Big Mitch Baker": "bikers",
     "Umberto Robina": "cubans", "Auntie Poulet": "haitians",
     "Love Fist": "lovefist", "Mr. Black": "phone",
-    "Vercetti Finale": "radar_centre", "Malibu Club": "club",
+    "Malibu Club": "club",
     "Film Studio": "filmstudio", "Printworks": "printworks",
     "Kaufman Cabs": "kcabs", "Cherry Popper": "icecream",
     "Boatyard": "boatyard", "Sunshine Autos": "SunYard",
@@ -212,8 +218,9 @@ FALLBACK_ICON = "radar_centre"
 
 # Items the game has no art for, drawn by tools/make_icons.py instead. Vice City
 # renders its weapon and vehicle icons as models rather than sprites, so without
-# these the package rewards, the emergency rewards and the minimap all fall back
-# to the same marker and a panel of eleven identical icons says nothing.
+# these the package rewards, the emergency rewards, the minimap and the Vercetti
+# finale all fall back to the same marker and a panel of twelve identical icons
+# says nothing.
 DRAWN_ICON_DIRECTORY = "images/items/drawn"
 DRAWN_ICONS = {
     "Body Armor Spawn": "body_armor",
@@ -233,6 +240,7 @@ DRAWN_ICONS = {
     "Taxi Jump Ability": "taxi_jump",
     "Max Health Upgrade": "max_health",
     "Minimap": "minimap",
+    "Progressive Vercetti Finale": "vercetti_finale",
 }
 
 
@@ -562,7 +570,7 @@ def node_name(members: list[str], locations) -> str:
     return " & ".join(members)
 
 
-def cluster(named_pixels: list[tuple[str, tuple[int, int]]],
+def cluster(named_pixels: list[tuple[str, tuple[int, int]]], merge: bool = True,
             ) -> list[tuple[tuple[int, int], list[str]]]:
     """Group checks whose pins would sit on top of each other.
 
@@ -570,8 +578,11 @@ def cluster(named_pixels: list[tuple[str, tuple[int, int]]],
     MERGE_DISTANCE_PIXELS of, and the marker then sits at the middle of its
     members. This is what turns a giver's whole strand, given from one spot,
     into one marker, and what stops two packages a few metres apart from
-    covering each other.
+    covering each other. A class in NEVER_MERGED_CLASSES passes merge False and
+    keeps one marker per check.
     """
+    if not merge:
+        return [(position, [name]) for name, position in named_pixels]
     clusters: list[list[tuple[str, tuple[int, int]]]] = []
     for name, (x, y) in named_pixels:
         for members in clusters:
@@ -614,7 +625,8 @@ def build_locations(data, locations, positions, geometry: Geometry,
 
         pinned = [(name, geometry.pixel(*positions[name]))
                   for name in members if name in positions]
-        for (x, y), shared in cluster(pinned):
+        for (x, y), shared in cluster(pinned,
+                                     class_key not in NEVER_MERGED_CLASSES):
             nodes.append({
                 "name": node_name(shared, locations),
                 **pin_images(class_key),

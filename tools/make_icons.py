@@ -38,6 +38,7 @@ GLYPH = (255, 255, 255, 255)
 PACKAGE_REWARD = (196, 122, 40)
 EMERGENCY_REWARD = (32, 150, 140)
 MINIMAP = (70, 110, 190)
+FINALE = (168, 52, 96)
 
 
 def tile(colour: tuple[int, int, int]) -> tuple[Image.Image, ImageDraw.ImageDraw]:
@@ -156,6 +157,13 @@ def fireproof(draw: ImageDraw.ImageDraw) -> None:
     flame(draw, colour=(*EMERGENCY_REWARD, 255), scale=0.52, shift=2)
 
 
+def vercetti(draw: ImageDraw.ImageDraw) -> None:
+    """The V the game marks the Vercetti strand with, on its own tile so the
+    finale still reads as Vercetti without wearing the protection blip."""
+    draw.polygon([(24, 22), (40, 22), (48, 58), (56, 22), (72, 22),
+                  (54, 76), (42, 76)], fill=GLYPH)
+
+
 def armour_plus(draw: ImageDraw.ImageDraw) -> None:
     shield(draw)
     middle = CANVAS // 2
@@ -182,6 +190,7 @@ ICONS = {
     "taxi_jump": (EMERGENCY_REWARD, jump),
     "max_health": (EMERGENCY_REWARD, cross),
     "minimap": (MINIMAP, radar),
+    "vercetti_finale": (FINALE, vercetti),
 }
 
 
