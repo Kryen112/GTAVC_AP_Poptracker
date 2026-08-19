@@ -13,6 +13,14 @@
 						[
 							"Mainland Access",
 							"Starfish Island Access"
+						],
+						[
+							"Prawn Island Bridge",
+							"Leaf Links Bridge"
+						],
+						[
+							"Ocean Beach Bridge",
+							"Starfish Island Causeway"
 						]
 					]
 				}
@@ -230,6 +238,7 @@
 							"randomize_radio_stations",
 							"shuffle_minimap",
 							"randomize_pickups",
+							"split_mainland_access",
 							"death_link"
 						]
 					]
@@ -296,6 +305,14 @@
 						[
 							"Mainland Access",
 							"Starfish Island Access"
+						],
+						[
+							"Prawn Island Bridge",
+							"Leaf Links Bridge"
+						],
+						[
+							"Ocean Beach Bridge",
+							"Starfish Island Causeway"
 						]
 					]
 				}
@@ -519,6 +536,7 @@
 							"randomize_radio_stations",
 							"shuffle_minimap",
 							"randomize_pickups",
+							"split_mainland_access",
 							"death_link"
 						]
 					]

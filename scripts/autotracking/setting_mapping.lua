@@ -44,6 +44,10 @@ SLOT_CODES = {
 		code = "randomize_pickups",
 		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
 	},
+	split_mainland_access = {
+		code = "split_mainland_access",
+		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
+	},
 	death_link = {
 		code = "death_link",
 		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },

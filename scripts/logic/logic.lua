@@ -54,6 +54,12 @@ function propertiesEnabled()
     return has("enable_properties_on")
 end
 
+-- With this on, Mainland Access is replaced by one item per vanilla crossing and
+-- reaching the mainland means holding any one of them.
+function mainlandCrossingsSplit()
+    return has("split_mainland_access_on")
+end
+
 -- A class's pins show only when the seed made it checks and the player has not
 -- hidden the class. Story missions are always on, so only the display toggle
 -- gates them.

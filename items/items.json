@@ -142,6 +142,30 @@
 		"codes": "Starfish Island Access"
 	},
 	{
+		"name": "Prawn Island Bridge",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Prawn Island Bridge"
+	},
+	{
+		"name": "Leaf Links Bridge",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Leaf Links Bridge"
+	},
+	{
+		"name": "Ocean Beach Bridge",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Ocean Beach Bridge"
+	},
+	{
+		"name": "Starfish Island Causeway",
+		"type": "toggle",
+		"img": "images/items/hud/arrow.png",
+		"codes": "Starfish Island Causeway"
+	},
+	{
 		"name": "Body Armor Spawn",
 		"type": "toggle",
 		"img": "images/items/drawn/body_armor.png",
@@ -1206,6 +1230,26 @@
 				"img": "images/items/settings/randomize_pickups_on.png",
 				"name": "Randomize pickups: on",
 				"codes": "randomize_pickups,randomize_pickups_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Split mainland access",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/split_mainland_access_off.png",
+				"name": "Split mainland access: off",
+				"codes": "split_mainland_access,split_mainland_access_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/split_mainland_access_on.png",
+				"name": "Split mainland access: on",
+				"codes": "split_mainland_access,split_mainland_access_on",
 				"inherit_codes": false
 			}
 		]

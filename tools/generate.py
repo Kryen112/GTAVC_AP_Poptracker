@@ -173,6 +173,7 @@ BINARY_SETTINGS: list[tuple[str, str, bool]] = [
     ("randomize_radio_stations", "Randomize radio stations", False),
     ("shuffle_minimap", "Shuffle minimap", False),
     ("randomize_pickups", "Randomize pickups", False),
+    ("split_mainland_access", "Split mainland access", False),
     ("death_link", "Death Link", False),
 ]
 
@@ -280,12 +281,13 @@ def load_check_coords():
 # ---------------------------------------------------------------------------
 
 # A captured rule is ("all", requirements) or
-# ("threshold", requirements, optional_requirement_sets, needed).
+# ("thresholds", requirements, [(alternative_requirement_sets, needed), ...]).
 Rule = tuple
 
 
 def capture_rules(rules, properties_enabled: bool, ability_locks: frozenset[str],
-                  content_locks: frozenset[str]) -> dict[str, Rule]:
+                  content_locks: frozenset[str],
+                  split_mainland_access: bool = False) -> dict[str, Rule]:
     """The world's own location rules as requirement structures.
 
     build_location_rules returns predicates built by exactly two helpers, so
@@ -293,21 +295,24 @@ def capture_rules(rules, properties_enabled: bool, ability_locks: frozenset[str]
     second copy of the requirement logic to drift.
     """
     original_requires = rules._requires
-    original_threshold = rules._requires_with_asset_threshold
+    original_thresholds = rules._requires_with_thresholds
     try:
         rules._requires = lambda requirements: ("all", list(requirements))
-        rules._requires_with_asset_threshold = (
-            lambda requirements, optional, needed: (
-                "threshold", list(requirements), [list(each) for each in optional], needed)
+        rules._requires_with_thresholds = (
+            lambda requirements, thresholds: (
+                "thresholds", list(requirements),
+                [([list(each) for each in alternatives], needed)
+                 for alternatives, needed in thresholds])
         )
         return rules.build_location_rules(
             properties_enabled=properties_enabled,
             ability_locks=ability_locks,
             content_locks=content_locks,
+            split_mainland_access=split_mainland_access,
         )
     finally:
         rules._requires = original_requires
-        rules._requires_with_asset_threshold = original_threshold
+        rules._requires_with_thresholds = original_thresholds
 
 
 # ---------------------------------------------------------------------------
@@ -387,7 +392,37 @@ SOFT_REQUIREMENTS: dict[str, frozenset[str]] = {
 }
 
 
-def rule_expression(rule: Rule | None, region_item: str | None,
+def threshold_term(alternatives: list[list[tuple[str, int]]], needed: int,
+                   lock_settings: dict[str, str]) -> str:
+    clauses = ", ".join(
+        conjunction([requirement_term(item, count, lock_settings)
+                     for item, count in deduplicated(each)])
+        for each in alternatives
+    )
+    return f"satisfiedCount({{{clauses}}}) >= {needed}"
+
+
+def region_expression(groups: list[list[str]], region_item: str | None,
+                      lock_settings: dict[str, str],
+                      omitted: frozenset[str]) -> str | None:
+    """A region's entry expression, or None when it asks for nothing.
+
+    One way in renders as its own terms; several render as a count of them, which
+    is the mainland once its crossings are split. The whole expression drops when
+    the region's unsplit area item is omitted, so a soft requirement relaxes the
+    region however many ways in it has.
+    """
+    if not groups or (region_item is not None and region_item in omitted):
+        return None
+    if len(groups) == 1:
+        return conjunction([requirement_term(item, 1, lock_settings)
+                            for item in groups[0]])
+    return threshold_term([[(item, 1) for item in group] for group in groups],
+                          1, lock_settings)
+
+
+def rule_expression(rule: Rule | None, region_groups: list[list[str]],
+                    region_item: str | None,
                     lock_settings: dict[str, str],
                     omitted: frozenset[str] = frozenset()) -> str:
     """A location's full access expression: its region entry and its rule.
@@ -398,27 +433,55 @@ def rule_expression(rule: Rule | None, region_item: str | None,
     count means rather than relaxing it.
     """
     terms: list[str] = []
-    if region_item is not None and region_item not in omitted:
-        terms.append(requirement_term(region_item, 1, lock_settings))
+    region = region_expression(region_groups, region_item, lock_settings, omitted)
+    if region is not None:
+        terms.append(region)
     if rule is None:
         return conjunction(terms)
     if rule[0] == "all":
         terms.extend(requirement_term(item, count, lock_settings)
                      for item, count in deduplicated(rule[1]) if item not in omitted)
         return conjunction(terms)
-    _kind, requirements, optional, needed = rule
+    _kind, requirements, thresholds = rule
     terms.extend(requirement_term(item, count, lock_settings)
                  for item, count in deduplicated(requirements) if item not in omitted)
-    clauses = ", ".join(
-        conjunction([requirement_term(item, count, lock_settings)
-                     for item, count in deduplicated(each)])
-        for each in optional
-    )
-    terms.append(f"satisfiedCount({{{clauses}}}) >= {needed}")
+    terms.extend(threshold_term(alternatives, needed, lock_settings)
+                 for alternatives, needed in thresholds)
     return conjunction(terms)
 
 
-def access_call(rule: Rule | None, region_item: str | None,
+def rule_function(function: str, calls: dict[tuple[bool, bool], str]) -> list[str]:
+    """One Lua function for a rule, switching only on the settings it depends on.
+
+    calls is keyed by (properties class on, crossings split). Identical versions
+    collapse, so a rule that ignores a setting carries no test for it.
+    """
+    def branch(properties: bool, indent: str) -> list[str]:
+        whole, split = calls[properties, False], calls[properties, True]
+        if whole == split:
+            return [f"{indent}return {whole}"]
+        return [f"{indent}if mainlandCrossingsSplit() then",
+                f"{indent}\treturn {split}",
+                f"{indent}else",
+                f"{indent}\treturn {whole}",
+                f"{indent}end"]
+
+    if len(set(calls.values())) == 1:
+        return [f"function {function}() return {next(iter(calls.values()))} end"]
+    on, off = branch(True, "\t"), branch(False, "\t")
+    if on == off:
+        return [f"function {function}()", *on, "end"]
+    return [f"function {function}()",
+            "\tif propertiesEnabled() then",
+            *branch(True, "\t\t"),
+            "\telse",
+            *branch(False, "\t\t"),
+            "\tend",
+            "end"]
+
+
+def access_call(rule: Rule | None, region_groups: list[list[str]],
+                region_item: str | None,
                 lock_settings: dict[str, str], soft: frozenset[str]) -> str:
     """The reachAccess call for one rule.
 
@@ -426,8 +489,8 @@ def access_call(rule: Rule | None, region_item: str | None,
     requirement as a second argument, so holding the rest reads as out of logic
     instead of unreachable.
     """
-    full = rule_expression(rule, region_item, lock_settings)
-    relaxed = rule_expression(rule, region_item, lock_settings, soft)
+    full = rule_expression(rule, region_groups, region_item, lock_settings)
+    relaxed = rule_expression(rule, region_groups, region_item, lock_settings, soft)
     if not soft or relaxed == full:
         return f"reachAccess({full})"
     return f"reachAccess({full}, {relaxed})"
@@ -831,8 +894,24 @@ def main() -> int:
     }
     all_ability_locks = frozenset(data.ABILITY_LOCK_ITEMS)
     all_content_locks = frozenset(data.CONTENT_LOCK_ITEMS)
-    with_properties = capture_rules(rules, True, all_ability_locks, all_content_locks)
-    without_properties = capture_rules(rules, False, all_ability_locks, all_content_locks)
+    # Two settings change what a rule asks for, so every combination is captured
+    # and only the differences are emitted: the properties class decides whether
+    # the finale carries its asset prerequisite, and the mainland crossing split
+    # decides whether the mainland is one item or a choice of four.
+    captured = {
+        (properties, split): capture_rules(
+            rules, properties, all_ability_locks, all_content_locks, split)
+        for properties in (True, False)
+        for split in (False, True)
+    }
+    regions_by_split = {
+        split: {
+            region: data.region_access_groups(region, split)
+            for region in (data.REGION_VICE_CITY, data.REGION_MAINLAND,
+                           data.REGION_STARFISH)
+        }
+        for split in (False, True)
+    }
     region_items = {
         region: (None if region == data.REGION_VICE_CITY
                  else data.AREA_ITEM_BY_REGION[region])
@@ -843,28 +922,23 @@ def main() -> int:
         "-- Generated by tools/generate.py from the GTA Vice City apworld.",
         "-- One function per AP location returning its PopTracker AccessibilityLevel:",
         "-- its region entry ANDed with the world's own requirements for it. A rule",
-        "-- that differs between the properties class being on and off carries both",
-        "-- and switches on the seed's own setting. A second argument is what the",
+        "-- that differs between the properties class being on and off, or between",
+        "-- the mainland crossings being split and whole, carries each version and",
+        "-- switches on the seed's own settings. A second argument is what the",
         "-- rule still demands once its soft requirement is set aside, and holding",
         "-- that much makes the check out of logic rather than unreachable.",
         "",
     ]
     for name in locations.LOCATION_NAME_TO_ID:
-        region_item = region_items[locations.LOCATION_REGIONS[name]]
+        region = locations.LOCATION_REGIONS[name]
+        region_item = region_items[region]
         soft = SOFT_REQUIREMENTS.get(locations.LOCATION_CLASS[name], frozenset())
-        on = access_call(with_properties.get(name), region_item, lock_settings, soft)
-        off = access_call(without_properties.get(name), region_item, lock_settings, soft)
-        function = f"rule_{slug(name)}"
-        if on == off:
-            lines.append(f"function {function}() return {on} end")
-        else:
-            lines.append(f"function {function}()")
-            lines.append("\tif propertiesEnabled() then")
-            lines.append(f"\t\treturn {on}")
-            lines.append("\telse")
-            lines.append(f"\t\treturn {off}")
-            lines.append("\tend")
-            lines.append("end")
+        calls = {
+            key: access_call(rules_for.get(name), regions_by_split[key[1]][region],
+                             region_item, lock_settings, soft)
+            for key, rules_for in captured.items()
+        }
+        lines.extend(rule_function(f"rule_{slug(name)}", calls))
     write_text(PACK / "scripts" / "logic" / "access_rules.lua", "\n".join(lines) + "\n")
 
     pinned = sum(1 for name in locations.LOCATION_NAME_TO_ID if name in positions)

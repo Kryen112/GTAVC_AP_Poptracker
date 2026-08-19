@@ -21,6 +21,7 @@ Needs lupa (a Lua runtime) and Pillow for the image bounds check.
 """
 from __future__ import annotations
 
+import itertools
 import json
 import re
 import sys
@@ -32,19 +33,28 @@ PACK = Path(__file__).resolve().parent.parent
 
 # The PopTracker API the logic layer touches. ProviderCountForCode answers zero
 # for everything, which is the state a fresh seed starts in, so a rule that runs
-# clean here runs clean at connect.
+# clean here runs clean at connect. CODES_ON names codes to answer one for
+# instead, which is how the rules are run for each setting a rule can switch on:
+# with everything zero only one branch of each switch ever executes.
 STUB = """
 AccessibilityLevel = {
     None = 0, Inspect = 1, Partial = 2, SequenceBreak = 3, Normal = 4, Cleared = 5,
 }
 REQUESTED_CODES = {}
+CODES_ON = {}
 Tracker = {}
 function Tracker:ProviderCountForCode(code)
     REQUESTED_CODES[code] = true
+    if CODES_ON[code] then return 1 end
     return 0
 end
 PopVersion = "0.31.0"
 """
+
+# The settings a generated rule branches on, so every combination of them is run.
+# A rule that carries both (the finale's last mission) has four expressions, and
+# the mixed corners are only reached by toggling them apart.
+SWITCH_SETTINGS = ("enable_properties_on", "split_mainland_access_on")
 
 
 def load_runtime() -> lupa.LuaRuntime:
@@ -73,9 +83,14 @@ def rule_names() -> list[str]:
     return re.findall(r"^function (rule_\w+)\(\)", source, flags=re.MULTILINE)
 
 
-def rules_run(runtime: lupa.LuaRuntime, problems: list[str]) -> set[str]:
+def rules_run(runtime: lupa.LuaRuntime, problems: list[str],
+              codes_on: tuple[str, ...] = ()) -> set[str]:
     """Call every rule. Returns the item codes the rules asked about."""
     globals_table = runtime.globals()
+    on = runtime.table()
+    for code in codes_on:
+        on[code] = True
+    globals_table["CODES_ON"] = on
     levels = {0, 1, 2, 3, 4, 5}
     for name in rule_names():
         function = globals_table[name]
@@ -190,6 +205,13 @@ def main() -> int:
 
     runtime = load_runtime()
     requested_codes = rules_run(runtime, problems)
+    # Again for every combination of the settings a rule switches on, so each
+    # expression a rule carries is evaluated at least once, mixed corners
+    # included.
+    for combination in itertools.product(*[(None, code) for code in SWITCH_SETTINGS]):
+        codes_on = tuple(code for code in combination if code)
+        if codes_on:
+            requested_codes |= rules_run(runtime, problems, codes_on)
     paths, referenced_rules = section_paths_and_rules(problems)
     declared_rules = set(rule_names())
 
