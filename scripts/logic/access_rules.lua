@@ -23,8 +23,8 @@ function rule_Supply_Demand() return reachAccess((has("Starfish Island Access") 
 function rule_Rub_Out() return reachAccess((has("Starfish Island Access") and itemAtLeast("Progressive Diaz", 5) and has("Progressive Death Row"))) end
 function rule_Death_Row() return reachAccess(has("Progressive Death Row")) end
 function rule_Four_Iron() return reachAccess(has("Progressive Avery")) end
-function rule_Two_Bit_Hit() return reachAccess(itemAtLeast("Progressive Avery", 2)) end
-function rule_Demolition_Man() return reachAccess((itemAtLeast("Progressive Avery", 3) and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Demolition_Man() return reachAccess((itemAtLeast("Progressive Avery", 2) and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_Two_Bit_Hit() return reachAccess(itemAtLeast("Progressive Avery", 3)) end
 function rule_Gun_Runner() return reachAccess((has("Mainland Access") and has("Progressive Phil Cassidy"))) end
 function rule_Boomshine_Saigon() return reachAccess((has("Mainland Access") and itemAtLeast("Progressive Phil Cassidy", 2))) end
 function rule_Shakedown() return reachAccess((has("Starfish Island Access") and has("Progressive Vercetti Protection"))) end

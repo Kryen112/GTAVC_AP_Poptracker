@@ -238,15 +238,15 @@
 						]
 					},
 					{
-						"name": "Two Bit Hit",
-						"access_rules": [
-							"^$rule_Two_Bit_Hit"
-						]
-					},
-					{
 						"name": "Demolition Man",
 						"access_rules": [
 							"^$rule_Demolition_Man"
+						]
+					},
+					{
+						"name": "Two Bit Hit",
+						"access_rules": [
+							"^$rule_Two_Bit_Hit"
 						]
 					}
 				],
