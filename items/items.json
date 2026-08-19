@@ -580,10 +580,22 @@
 		"codes": "Cash $16000"
 	},
 	{
+		"name": "Cash $20,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $20000"
+	},
+	{
 		"name": "Cash $30,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
 		"codes": "Cash $30000"
+	},
+	{
+		"name": "Cash $40,000",
+		"type": "toggle",
+		"img": "images/items/hud/gun.png",
+		"codes": "Cash $40000"
 	},
 	{
 		"name": "Cash $50,000",
@@ -681,7 +693,7 @@
 		"img": "images/items/hud/SunYard.png",
 		"codes": "Progressive Sunshine Autos",
 		"min_quantity": 0,
-		"max_quantity": 1,
+		"max_quantity": 4,
 		"increment": 1,
 		"decrement": 1
 	},

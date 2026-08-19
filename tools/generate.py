@@ -596,14 +596,43 @@ def check_positions(data, locations, check_coords,
     return positions
 
 
-def node_name(members: list[str], locations) -> str:
+PURCHASE_SUFFIX = " Purchase"
+
+
+def property_owners(data) -> dict[str, str]:
+    """Every properties-class check mapped to the property it belongs to.
+
+    A property is one building, so a pin covering nothing but that building's
+    checks is named after the building: its purchase, its venue strand's
+    missions, and its own activities. Sunshine Autos is why this exists: its lot
+    holds a for-sale icon, a showroom door and a garage door within one marker's
+    distance, so eleven checks share a pin.
+    """
+    owners: dict[str, str] = {}
+    for purchase in data.PROPERTY_PURCHASES:
+        assert purchase.endswith(PURCHASE_SUFFIX), purchase
+        owners[purchase] = purchase[: -len(PURCHASE_SUFFIX)]
+    for venue, missions in data.VENUE_STRANDS.items():
+        for mission in missions:
+            owners[mission] = venue
+    for venue, activities in data.VENUE_ACTIVITIES.items():
+        for activity in activities:
+            owners[activity] = venue
+    return owners
+
+
+def node_name(members: list[str], locations, owners: dict[str, str]) -> str:
     """The pin's name. Checks sharing a pixel share a pin, and when they are one
-    strand's missions the strand names it; otherwise the members do."""
+    strand's missions the strand names it, when they are one property's checks
+    the property does; otherwise the members do."""
     if len(members) == 1:
         return members[0]
     strands = {locations.MISSION_GIVER.get(member) for member in members}
     if len(strands) == 1 and None not in strands:
         return strands.pop()
+    properties = {owners.get(member) for member in members}
+    if len(properties) == 1 and None not in properties:
+        return properties.pop()
     return " & ".join(members)
 
 
@@ -652,6 +681,7 @@ def build_locations(data, locations, positions, geometry: Geometry,
     for name in locations.LOCATION_NAME_TO_ID:
         by_class[locations.LOCATION_CLASS[name]].append(name)
 
+    owners = property_owners(data)
     groups: dict[str, list[dict]] = {}
     for class_key, display, _option in CHECK_CLASSES:
         members = by_class.get(class_key, [])
@@ -663,7 +693,7 @@ def build_locations(data, locations, positions, geometry: Geometry,
                   for name in members if name in positions]
         for (x, y), shared in cluster(pinned, class_key):
             nodes.append({
-                "name": node_name(shared, locations),
+                "name": node_name(shared, locations, owners),
                 **pin_images(class_key),
                 "sections": [{"name": name} for name in shared],
                 "map_locations": [{"map": geometry.name, "x": x, "y": y}],

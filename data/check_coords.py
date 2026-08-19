@@ -7,8 +7,8 @@ for-sale icon, stores their robbery trigger, and side events their launcher.
 Hidden packages are absent: their positions live in the world's own
 package_data.py, in the same order, so the generator reads them from there.
 Emergency vehicle milestones are absent because they have no position at all.
-Stunt jumps are absent: the game builds their table only while it runs, so
-they arrive from the mod's runtime dump or not at all.
+Stunt jumps carry the middle of each start box, read from the game's own
+table by the mod's runtime dump; the game defines them nowhere else.
 
 Indexed classes are lists in check order, the order that fixes location ids and
 names; the rest are keyed by check name. A 2d position test names no height, so
@@ -65,7 +65,16 @@ MISSION_COORDS: dict[str, tuple[float, float, float]] = {
     "Sir, Yes Sir!": (-246.6, -1360.5, 7.3),
     "Spilling the Beans": (-1062.6, -278.8, 11.0),
     "Stunt Boat Challenge": (-1170.0, -606.9, 10.6),
-    "Sunshine Autos Races": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Import List 1": (-966.016, -861.529, 5.761),
+    "Sunshine Autos Import List 2": (-966.016, -861.529, 5.761),
+    "Sunshine Autos Import List 3": (-966.016, -861.529, 5.761),
+    "Sunshine Autos Import List 4": (-966.016, -861.529, 5.761),
+    "Sunshine Autos Race: Border Run": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Race: Capital Cruise": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Race: Ocean Drive": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Race: Terminal Velocity": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Race: Tour!": (-967.705, -827.3005, 5.7702),
+    "Sunshine Autos Race: V.C. Endurance": (-967.705, -827.3005, 5.7702),
     "Supply & Demand": (-378.5, -551.3, 18.2),
     "The Chase": (-378.5, -551.3, 18.2),
     "The Driver": (463.9, -58.5, 10.5),

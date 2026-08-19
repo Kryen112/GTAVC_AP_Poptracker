@@ -5,7 +5,7 @@
 		"chest_opened_img": "images/items/pins/properties_opened.png",
 		"children": [
 			{
-				"name": "Printworks Purchase & Spilling the Beans & Hit the Courier",
+				"name": "Printworks",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
@@ -40,7 +40,7 @@
 				]
 			},
 			{
-				"name": "Sunshine Autos Purchase & Sunshine Autos Races",
+				"name": "Sunshine Autos",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
@@ -51,17 +51,71 @@
 						]
 					},
 					{
-						"name": "Sunshine Autos Races",
+						"name": "Sunshine Autos Import List 1",
 						"access_rules": [
-							"^$rule_Sunshine_Autos_Races"
+							"^$rule_Sunshine_Autos_Import_List_1"
+						]
+					},
+					{
+						"name": "Sunshine Autos Import List 2",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Import_List_2"
+						]
+					},
+					{
+						"name": "Sunshine Autos Import List 3",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Import_List_3"
+						]
+					},
+					{
+						"name": "Sunshine Autos Import List 4",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Import_List_4"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: Terminal Velocity",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_Terminal_Velocity"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: Ocean Drive",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_Ocean_Drive"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: Border Run",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_Border_Run"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: Capital Cruise",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_Capital_Cruise"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: Tour!",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_Tour"
+						]
+					},
+					{
+						"name": "Sunshine Autos Race: V.C. Endurance",
+						"access_rules": [
+							"^$rule_Sunshine_Autos_Race_V_C_Endurance"
 						]
 					}
 				],
 				"map_locations": [
 					{
 						"map": "Vice City",
-						"x": 238,
-						"y": 648
+						"x": 242,
+						"y": 646
 					}
 				],
 				"visibility_rules": [
@@ -92,7 +146,7 @@
 				]
 			},
 			{
-				"name": "Cherry Popper Purchase & Distribution",
+				"name": "Cherry Popper",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
@@ -121,7 +175,7 @@
 				]
 			},
 			{
-				"name": "Kaufman Cabs Purchase & V.I.P. & Friendly Rivalry & Cabmaggedon",
+				"name": "Kaufman Cabs",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
@@ -162,7 +216,7 @@
 				]
 			},
 			{
-				"name": "Malibu Club Purchase & No Escape? & The Shootist & The Driver & The Job",
+				"name": "Malibu Club",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
