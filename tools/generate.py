@@ -330,6 +330,25 @@ def lua_string(text: str) -> str:
     return '"' + text.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+# The world names a mission-passed requirement "<mission> Passed" and places it
+# on an event location. There is no such item for the tracker to hold, so the
+# rule reads whether the mission's own check has come in, which means naming the
+# section that check lives in. MISSION_SECTION_PATHS is filled from the built
+# location tree, since only the tree knows which node a mission ended up in.
+_MISSION_PASSED_SUFFIX = " Passed"
+MISSION_SECTION_PATHS: dict[str, str] = {}
+
+
+def mission_passed_path(item: str) -> str | None:
+    if not item.endswith(_MISSION_PASSED_SUFFIX):
+        return None
+    mission = item[:-len(_MISSION_PASSED_SUFFIX)]
+    path = MISSION_SECTION_PATHS.get(mission)
+    if path is None:
+        raise SystemExit(f"no tracker section for the mission {mission!r}")
+    return path
+
+
 def item_code(name: str) -> str:
     """The tracker code for an item.
 
@@ -346,8 +365,12 @@ def requirement_term(item: str, count: int, lock_settings: dict[str, str]) -> st
 
     A lock item's term carries the setting naming its key: with the key
     unselected the world leaves the term out of the rule entirely, so the term
-    has to read as satisfied.
+    has to read as satisfied. A mission-passed term is not an item at all, so it
+    reads the mission's section instead.
     """
+    section = mission_passed_path(item)
+    if section is not None:
+        return f"missionPassed({lua_string(section)})"
     setting = lock_settings.get(item)
     if setting is not None:
         return f"lockTerm({lua_string(item_code(item))}, {lua_string(setting)})"
@@ -868,6 +891,9 @@ def main() -> int:
     )
     write_text(PACK / "scripts" / "autotracking" / "location_mapping.lua",
                "LOCATION_MAPPING = {\n" + location_rows + "\n}\n")
+
+    MISSION_SECTION_PATHS.update(
+        (mission, path_of[mission]) for mission in data.ROUTE_MISSIONS)
 
     # ---- scripts/autotracking/item_mapping.lua ---------------------------
     counters = {

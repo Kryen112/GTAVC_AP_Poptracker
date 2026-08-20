@@ -36,17 +36,27 @@ PACK = Path(__file__).resolve().parent.parent
 # clean here runs clean at connect. CODES_ON names codes to answer one for
 # instead, which is how the rules are run for each setting a rule can switch on:
 # with everything zero only one branch of each switch ever executes.
+#
+# FindObjectForCode answers a section with its chest still available, the state
+# of a mission not yet passed, which is what missionPassed reads. REQUESTED_PATHS
+# records what was asked for, so a rule naming a section the pack does not have
+# is caught here rather than in PopTracker.
 STUB = """
 AccessibilityLevel = {
     None = 0, Inspect = 1, Partial = 2, SequenceBreak = 3, Normal = 4, Cleared = 5,
 }
 REQUESTED_CODES = {}
+REQUESTED_PATHS = {}
 CODES_ON = {}
 Tracker = {}
 function Tracker:ProviderCountForCode(code)
     REQUESTED_CODES[code] = true
     if CODES_ON[code] then return 1 end
     return 0
+end
+function Tracker:FindObjectForCode(path)
+    REQUESTED_PATHS[path] = true
+    return { AvailableChestCount = 1, ChestCount = 1 }
 end
 PopVersion = "0.31.0"
 """
@@ -116,7 +126,8 @@ def rules_run(runtime: lupa.LuaRuntime, problems: list[str],
         except lupa.LuaError as error:
             problems.append(f"{helper} raised: {error}")
     requested = globals_table["REQUESTED_CODES"]
-    return set(requested.keys())
+    paths = globals_table["REQUESTED_PATHS"]
+    return set(requested.keys()), set(paths.keys())
 
 
 def location_files() -> dict[str, list]:
@@ -225,14 +236,16 @@ def main() -> int:
         return 1
 
     runtime = load_runtime()
-    requested_codes = rules_run(runtime, problems)
+    requested_codes, requested_paths = rules_run(runtime, problems)
     # Again for every combination of the settings a rule switches on, so each
     # expression a rule carries is evaluated at least once, mixed corners
     # included.
     for combination in itertools.product(*[(None, code) for code in SWITCH_SETTINGS]):
         codes_on = tuple(code for code in combination if code)
         if codes_on:
-            requested_codes |= rules_run(runtime, problems, codes_on)
+            more_codes, more_paths = rules_run(runtime, problems, codes_on)
+            requested_codes |= more_codes
+            requested_paths |= more_paths
     paths, referenced_rules = section_paths_and_rules(problems)
     declared_rules = set(rule_names())
 
@@ -247,6 +260,11 @@ def main() -> int:
     problems.extend(
         f"a rule tests item code {code!r}, which items.json does not declare"
         for code in sorted(requested_codes - item_codes))
+    # A missionPassed term names a section rather than an item, so the path it
+    # asks for has to be one the locations declare.
+    problems.extend(
+        f"a rule reads section {path!r}, which no location declares"
+        for path in sorted(requested_paths - paths))
 
     locations = mapping_table("location_mapping")
     problems.extend(

@@ -48,6 +48,21 @@ function satisfiedCount(clauses)
     return total
 end
 
+-- Whether a mission has been passed, which the audit uses as a way between the
+-- islands: the Sparrow that passing Rub Out spawns in Vice Point, and a boat
+-- from Cortez's or Diaz's strand. Passing a mission is not an item, so this reads the
+-- mission's own section: its one chest is cleared when the check comes in.
+-- A section with no chests would read as passed on an empty count, so the count
+-- is checked first. PopTracker keys its logic cache on item codes, and this is a
+-- section lookup rather than a provider one, so a rule using it may lag a check
+-- by one state change; that is a display lag, never a wrong rule.
+function missionPassed(section)
+    local object = Tracker:FindObjectForCode(section)
+    if object == nil then return false end
+    if object.ChestCount == nil or object.ChestCount < 1 then return false end
+    return object.AvailableChestCount == 0
+end
+
 -- Seed options, set from slot_data by the autotracker.
 
 function propertiesEnabled()
