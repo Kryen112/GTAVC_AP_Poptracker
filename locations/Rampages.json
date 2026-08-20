@@ -5,14 +5,14 @@
 		"chest_opened_img": "images/items/pins/rampages_opened.png",
 		"children": [
 			{
-				"name": "Tear Gas Rampage - Ocean Beach",
+				"name": "Rampage - Ocean Beach - Molotov",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Tear Gas Rampage - Ocean Beach",
+						"name": "Rampage - Ocean Beach - Molotov",
 						"access_rules": [
-							"^$rule_Tear_Gas_Rampage_Ocean_Beach"
+							"^$rule_Rampage_Ocean_Beach_Molotov"
 						]
 					}
 				],
@@ -28,14 +28,14 @@
 				]
 			},
 			{
-				"name": "Rocket Launcher Rampage - Escobar International",
+				"name": "Rampage - Escobar International - RPG",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rocket Launcher Rampage - Escobar International",
+						"name": "Rampage - Escobar International - RPG",
 						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Escobar_International"
+							"^$rule_Rampage_Escobar_International_RPG"
 						]
 					}
 				],
@@ -51,14 +51,14 @@
 				]
 			},
 			{
-				"name": "MP5 Rampage - Vice Point 1",
+				"name": "Rampage - Vice Point - Uzi drive-by south",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "MP5 Rampage - Vice Point 1",
+						"name": "Rampage - Vice Point - Uzi drive-by south",
 						"access_rules": [
-							"^$rule_MP5_Rampage_Vice_Point_1"
+							"^$rule_Rampage_Vice_Point_Uzi_drive_by_south"
 						]
 					}
 				],
@@ -74,14 +74,14 @@
 				]
 			},
 			{
-				"name": "Tec-9 Rampage - Vice Point",
+				"name": "Rampage - Vice Point - M4",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Tec-9 Rampage - Vice Point",
+						"name": "Rampage - Vice Point - M4",
 						"access_rules": [
-							"^$rule_Tec_9_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_M4"
 						]
 					}
 				],
@@ -97,14 +97,14 @@
 				]
 			},
 			{
-				"name": "Rocket Launcher Rampage - Vice Point",
+				"name": "Rampage - Vice Point - Rocket Launcher",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rocket Launcher Rampage - Vice Point",
+						"name": "Rampage - Vice Point - Rocket Launcher",
 						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_Rocket_Launcher"
 						]
 					}
 				],
@@ -120,14 +120,14 @@
 				]
 			},
 			{
-				"name": "Ruger Rampage - Vice Point",
+				"name": "Rampage - Washington Beach - MP5",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Ruger Rampage - Vice Point",
+						"name": "Rampage - Washington Beach - MP5",
 						"access_rules": [
-							"^$rule_Ruger_Rampage_Vice_Point"
+							"^$rule_Rampage_Washington_Beach_MP5"
 						]
 					}
 				],
@@ -143,14 +143,14 @@
 				]
 			},
 			{
-				"name": "Flamethrower Rampage - Downtown",
+				"name": "Rampage - Downtown - Flamethrower",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Flamethrower Rampage - Downtown",
+						"name": "Rampage - Downtown - Flamethrower",
 						"access_rules": [
-							"^$rule_Flamethrower_Rampage_Downtown"
+							"^$rule_Rampage_Downtown_Flamethrower"
 						]
 					}
 				],
@@ -166,14 +166,14 @@
 				]
 			},
 			{
-				"name": "MP5 Rampage - Downtown",
+				"name": "Rampage - Downtown - Uzi drive-by",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "MP5 Rampage - Downtown",
+						"name": "Rampage - Downtown - Uzi drive-by",
 						"access_rules": [
-							"^$rule_MP5_Rampage_Downtown"
+							"^$rule_Rampage_Downtown_Uzi_drive_by"
 						]
 					}
 				],
@@ -189,14 +189,14 @@
 				]
 			},
 			{
-				"name": "Tear Gas Rampage - Downtown",
+				"name": "Rampage - Downtown - Molotov",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Tear Gas Rampage - Downtown",
+						"name": "Rampage - Downtown - Molotov",
 						"access_rules": [
-							"^$rule_Tear_Gas_Rampage_Downtown"
+							"^$rule_Rampage_Downtown_Molotov"
 						]
 					}
 				],
@@ -212,14 +212,14 @@
 				]
 			},
 			{
-				"name": "M60 Rampage - Little Haiti",
+				"name": "Rampage - Downtown - M60",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "M60 Rampage - Little Haiti",
+						"name": "Rampage - Downtown - M60",
 						"access_rules": [
-							"^$rule_M60_Rampage_Little_Haiti"
+							"^$rule_Rampage_Downtown_M60"
 						]
 					}
 				],
@@ -235,14 +235,14 @@
 				]
 			},
 			{
-				"name": "Mac-10 Rampage - Little Havana",
+				"name": "Rampage - Little Haiti - Tec-9",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Mac-10 Rampage - Little Havana",
+						"name": "Rampage - Little Haiti - Tec-9",
 						"access_rules": [
-							"^$rule_Mac_10_Rampage_Little_Havana"
+							"^$rule_Rampage_Little_Haiti_Tec_9"
 						]
 					}
 				],
@@ -258,14 +258,14 @@
 				]
 			},
 			{
-				"name": "Chainsaw Rampage - Washington Beach",
+				"name": "Rampage - Ocean Beach - Chainsaw",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Chainsaw Rampage - Washington Beach",
+						"name": "Rampage - Ocean Beach - Chainsaw",
 						"access_rules": [
-							"^$rule_Chainsaw_Rampage_Washington_Beach"
+							"^$rule_Rampage_Ocean_Beach_Chainsaw"
 						]
 					}
 				],
@@ -281,14 +281,14 @@
 				]
 			},
 			{
-				"name": ".308 Sniper Rampage - Ocean Beach",
+				"name": "Rampage - Ocean Beach - .308 Sniper Rifle",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": ".308 Sniper Rampage - Ocean Beach",
+						"name": "Rampage - Ocean Beach - .308 Sniper Rifle",
 						"access_rules": [
-							"^$rule_308_Sniper_Rampage_Ocean_Beach"
+							"^$rule_Rampage_Ocean_Beach_308_Sniper_Rifle"
 						]
 					}
 				],
@@ -304,14 +304,14 @@
 				]
 			},
 			{
-				"name": "Rampage - Little Havana",
+				"name": "Rampage - Starfish Island - Vehicle",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rampage - Little Havana",
+						"name": "Rampage - Starfish Island - Vehicle",
 						"access_rules": [
-							"^$rule_Rampage_Little_Havana"
+							"^$rule_Rampage_Starfish_Island_Vehicle"
 						]
 					}
 				],
@@ -327,14 +327,14 @@
 				]
 			},
 			{
-				"name": ".357 Rampage - Escobar International",
+				"name": "Rampage - Little Havana - Ruger",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": ".357 Rampage - Escobar International",
+						"name": "Rampage - Little Havana - Ruger",
 						"access_rules": [
-							"^$rule_357_Rampage_Escobar_International"
+							"^$rule_Rampage_Little_Havana_Ruger"
 						]
 					}
 				],
@@ -350,14 +350,14 @@
 				]
 			},
 			{
-				"name": "Rocket Launcher Rampage - Viceport",
+				"name": "Rampage - Viceport - Rocket Launcher",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rocket Launcher Rampage - Viceport",
+						"name": "Rampage - Viceport - Rocket Launcher",
 						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Viceport"
+							"^$rule_Rampage_Viceport_Rocket_Launcher"
 						]
 					}
 				],
@@ -373,14 +373,14 @@
 				]
 			},
 			{
-				"name": "Minigun Rampage - Little Havana",
+				"name": "Rampage - Escobar International - Minigun",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Minigun Rampage - Little Havana",
+						"name": "Rampage - Escobar International - Minigun",
 						"access_rules": [
-							"^$rule_Minigun_Rampage_Little_Havana"
+							"^$rule_Rampage_Escobar_International_Minigun"
 						]
 					}
 				],
@@ -396,14 +396,14 @@
 				]
 			},
 			{
-				"name": "Grenade Rampage - Escobar International",
+				"name": "Rampage - Viceport - Grenade",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Grenade Rampage - Escobar International",
+						"name": "Rampage - Viceport - Grenade",
 						"access_rules": [
-							"^$rule_Grenade_Rampage_Escobar_International"
+							"^$rule_Rampage_Viceport_Grenade"
 						]
 					}
 				],
@@ -419,14 +419,14 @@
 				]
 			},
 			{
-				"name": "Sniper Rifle Rampage - Little Havana",
+				"name": "Rampage - Little Havana - Sniper Rifle",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Sniper Rifle Rampage - Little Havana",
+						"name": "Rampage - Little Havana - Sniper Rifle",
 						"access_rules": [
-							"^$rule_Sniper_Rifle_Rampage_Little_Havana"
+							"^$rule_Rampage_Little_Havana_Sniper_Rifle"
 						]
 					}
 				],
@@ -442,14 +442,14 @@
 				]
 			},
 			{
-				"name": "Katana Rampage - Washington Beach",
+				"name": "Rampage - Ocean Beach - Katana",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Katana Rampage - Washington Beach",
+						"name": "Rampage - Ocean Beach - Katana",
 						"access_rules": [
-							"^$rule_Katana_Rampage_Washington_Beach"
+							"^$rule_Rampage_Ocean_Beach_Katana"
 						]
 					}
 				],
@@ -465,14 +465,14 @@
 				]
 			},
 			{
-				"name": "Rampage - Ocean Beach",
+				"name": "Rampage - Ocean Beach - Vehicle",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rampage - Ocean Beach",
+						"name": "Rampage - Ocean Beach - Vehicle",
 						"access_rules": [
-							"^$rule_Rampage_Ocean_Beach"
+							"^$rule_Rampage_Ocean_Beach_Vehicle"
 						]
 					}
 				],
@@ -488,14 +488,14 @@
 				]
 			},
 			{
-				"name": "Pistol Rampage - Vice Point",
+				"name": "Rampage - Vice Point - .357",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Pistol Rampage - Vice Point",
+						"name": "Rampage - Vice Point - .357",
 						"access_rules": [
-							"^$rule_Pistol_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_357"
 						]
 					}
 				],
@@ -511,14 +511,14 @@
 				]
 			},
 			{
-				"name": "MP5 Rampage - Vice Point 2",
+				"name": "Rampage - Vice Point - Uzi drive-by north",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "MP5 Rampage - Vice Point 2",
+						"name": "Rampage - Vice Point - Uzi drive-by north",
 						"access_rules": [
-							"^$rule_MP5_Rampage_Vice_Point_2"
+							"^$rule_Rampage_Vice_Point_Uzi_drive_by_north"
 						]
 					}
 				],
@@ -534,14 +534,14 @@
 				]
 			},
 			{
-				"name": "Chainsaw Rampage - Vice Point",
+				"name": "Rampage - Vice Point - Chainsaw",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Chainsaw Rampage - Vice Point",
+						"name": "Rampage - Vice Point - Chainsaw",
 						"access_rules": [
-							"^$rule_Chainsaw_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_Chainsaw"
 						]
 					}
 				],
@@ -557,14 +557,14 @@
 				]
 			},
 			{
-				"name": "Rocket Launcher Rampage - Ocean Beach",
+				"name": "Rampage - Viceport - RPG",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rocket Launcher Rampage - Ocean Beach",
+						"name": "Rampage - Viceport - RPG",
 						"access_rules": [
-							"^$rule_Rocket_Launcher_Rampage_Ocean_Beach"
+							"^$rule_Rampage_Viceport_RPG"
 						]
 					}
 				],
@@ -580,14 +580,14 @@
 				]
 			},
 			{
-				"name": "Minigun Rampage - Vice Point",
+				"name": "Rampage - Downtown - Minigun",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Minigun Rampage - Vice Point",
+						"name": "Rampage - Downtown - Minigun",
 						"access_rules": [
-							"^$rule_Minigun_Rampage_Vice_Point"
+							"^$rule_Rampage_Downtown_Minigun"
 						]
 					}
 				],
@@ -603,14 +603,14 @@
 				]
 			},
 			{
-				"name": "Pistol Rampage - Downtown",
+				"name": "Rampage - Downtown - .357",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Pistol Rampage - Downtown",
+						"name": "Rampage - Downtown - .357",
 						"access_rules": [
-							"^$rule_Pistol_Rampage_Downtown"
+							"^$rule_Rampage_Downtown_357"
 						]
 					}
 				],
@@ -626,14 +626,14 @@
 				]
 			},
 			{
-				"name": "Shotgun Rampage - Escobar International",
+				"name": "Rampage - Little Havana - Shotgun",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Shotgun Rampage - Escobar International",
+						"name": "Rampage - Little Havana - Shotgun",
 						"access_rules": [
-							"^$rule_Shotgun_Rampage_Escobar_International"
+							"^$rule_Rampage_Little_Havana_Shotgun"
 						]
 					}
 				],
@@ -649,14 +649,14 @@
 				]
 			},
 			{
-				"name": ".308 Sniper Rampage - Vice Point",
+				"name": "Rampage - Vice Point - .308 Sniper",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": ".308 Sniper Rampage - Vice Point",
+						"name": "Rampage - Vice Point - .308 Sniper",
 						"access_rules": [
-							"^$rule_308_Sniper_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_308_Sniper"
 						]
 					}
 				],
@@ -672,14 +672,14 @@
 				]
 			},
 			{
-				"name": "Shotgun Rampage - Washington Beach",
+				"name": "Rampage - Ocean Beach - Shotgun",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Shotgun Rampage - Washington Beach",
+						"name": "Rampage - Ocean Beach - Shotgun",
 						"access_rules": [
-							"^$rule_Shotgun_Rampage_Washington_Beach"
+							"^$rule_Rampage_Ocean_Beach_Shotgun"
 						]
 					}
 				],
@@ -695,14 +695,14 @@
 				]
 			},
 			{
-				"name": "S.P.A.S. 12 Rampage - Vice Point",
+				"name": "Rampage - Vice Point - S.P.A.S. 12",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "S.P.A.S. 12 Rampage - Vice Point",
+						"name": "Rampage - Vice Point - S.P.A.S. 12",
 						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Vice_Point"
+							"^$rule_Rampage_Vice_Point_S_P_A_S_12"
 						]
 					}
 				],
@@ -718,14 +718,14 @@
 				]
 			},
 			{
-				"name": "S.P.A.S. 12 Rampage - Little Havana",
+				"name": "Rampage - Little Havana - S.P.A.S. 12",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "S.P.A.S. 12 Rampage - Little Havana",
+						"name": "Rampage - Little Havana - S.P.A.S. 12",
 						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Little_Havana"
+							"^$rule_Rampage_Little_Havana_S_P_A_S_12"
 						]
 					}
 				],
@@ -741,14 +741,14 @@
 				]
 			},
 			{
-				"name": "S.P.A.S. 12 Rampage - Escobar International",
+				"name": "Rampage - Escobar International - S.P.A.S. 12",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "S.P.A.S. 12 Rampage - Escobar International",
+						"name": "Rampage - Escobar International - S.P.A.S. 12",
 						"access_rules": [
-							"^$rule_S_P_A_S_12_Rampage_Escobar_International"
+							"^$rule_Rampage_Escobar_International_S_P_A_S_12"
 						]
 					}
 				],
@@ -764,14 +764,14 @@
 				]
 			},
 			{
-				"name": "Tec-9 Rampage - Washington Beach",
+				"name": "Rampage - Ocean Beach - M4",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Tec-9 Rampage - Washington Beach",
+						"name": "Rampage - Ocean Beach - M4",
 						"access_rules": [
-							"^$rule_Tec_9_Rampage_Washington_Beach"
+							"^$rule_Rampage_Ocean_Beach_M4"
 						]
 					}
 				],
@@ -787,14 +787,14 @@
 				]
 			},
 			{
-				"name": "Katana Rampage - Escobar International",
+				"name": "Rampage - Little Havana - Katana",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Katana Rampage - Escobar International",
+						"name": "Rampage - Little Havana - Katana",
 						"access_rules": [
-							"^$rule_Katana_Rampage_Escobar_International"
+							"^$rule_Rampage_Little_Havana_Katana"
 						]
 					}
 				],

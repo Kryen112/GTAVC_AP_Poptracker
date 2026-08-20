@@ -155,12 +155,33 @@ def declared_item_codes() -> set[str]:
     return codes
 
 
+def lua_unescaped(literal: str) -> str:
+    """The string a Lua literal denotes, not the source that spells it.
+
+    One location name carries double quotes, so the generator escapes them and a
+    literal read straight out of the source keeps the backslashes. Comparing that
+    against a JSON value, which its own reader has already decoded, reports a
+    mismatch where the two agree.
+    """
+    out: list[str] = []
+    index = 0
+    while index < len(literal):
+        if literal[index] == "\\" and index + 1 < len(literal):
+            out.append(literal[index + 1])
+            index += 2
+        else:
+            out.append(literal[index])
+            index += 1
+    return "".join(out)
+
+
 def mapping_table(name: str) -> dict[int, list[str]]:
     """Read one of the generated Lua mapping tables without running it."""
     source = (PACK / "scripts" / "autotracking" / f"{name}.lua").read_text(encoding="utf-8")
     table: dict[int, list[str]] = {}
     for key, body in re.findall(r"\[(\d+)\] = \{(.*?)\},", source):
-        table[int(key)] = re.findall(r'"((?:[^"\\]|\\.)*)"', body)
+        table[int(key)] = [lua_unescaped(literal) for literal
+                           in re.findall(r'"((?:[^"\\]|\\.)*)"', body)]
     return table
 
 

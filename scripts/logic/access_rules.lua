@@ -154,9 +154,9 @@ end
 function rule_Cap_the_Collector()
 	if propertiesEnabled() then
 		if mainlandCrossingsSplit() then
-			return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and has("Progressive Vercetti Finale") and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties") and satisfiedCount({(has("Malibu Club Ownership") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), has("Pole Position Ownership")}) >= 5))
+			return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and has("Progressive Vercetti Finale") and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and satisfiedCount({(has("Malibu Club Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Pole Position Ownership") and lockTerm("Property Purchases", "content_lock_properties"))}) >= 5))
 		else
-			return reachAccess((has("Mainland Access") and has("Progressive Vercetti Finale") and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties") and satisfiedCount({(has("Malibu Club Ownership") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), has("Pole Position Ownership")}) >= 5))
+			return reachAccess((has("Mainland Access") and has("Progressive Vercetti Finale") and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and satisfiedCount({(has("Malibu Club Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Pole Position Ownership") and lockTerm("Property Purchases", "content_lock_properties"))}) >= 5))
 		end
 	else
 		if mainlandCrossingsSplit() then
@@ -169,9 +169,9 @@ end
 function rule_Keep_Your_Friends_Close()
 	if propertiesEnabled() then
 		if mainlandCrossingsSplit() then
-			return reachAccess((has("Starfish Island Access") and itemAtLeast("Progressive Vercetti Finale", 2) and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties") and satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and satisfiedCount({(has("Malibu Club Ownership") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), has("Pole Position Ownership")}) >= 5))
+			return reachAccess((has("Starfish Island Access") and itemAtLeast("Progressive Vercetti Finale", 2) and itemAtLeast("Progressive Vercetti Protection", 3) and has("Printworks Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and satisfiedCount({(has("Malibu Club Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Pole Position Ownership") and lockTerm("Property Purchases", "content_lock_properties"))}) >= 5))
 		else
-			return reachAccess((has("Starfish Island Access") and itemAtLeast("Progressive Vercetti Finale", 2) and itemAtLeast("Progressive Vercetti Protection", 3) and has("Mainland Access") and has("Printworks Ownership") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties") and satisfiedCount({(has("Malibu Club Ownership") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), has("Pole Position Ownership")}) >= 5))
+			return reachAccess((has("Starfish Island Access") and itemAtLeast("Progressive Vercetti Finale", 2) and itemAtLeast("Progressive Vercetti Protection", 3) and has("Mainland Access") and has("Printworks Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Printworks", 2) and has("Starfish Island Access") and lockTerm("Wallet", "ability_lock_wallet") and satisfiedCount({(has("Malibu Club Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Malibu Club", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Film Studio Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Film Studio", 4) and lockTerm("Air Vehicles", "ability_lock_vehicles") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Kaufman Cabs Ownership") and lockTerm("Property Purchases", "content_lock_properties") and itemAtLeast("Progressive Kaufman Cabs", 3)), (has("Cherry Popper Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Cherry Popper")), (has("Boatyard Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Boatyard") and lockTerm("Sea Vehicles", "ability_lock_vehicles")), (has("Sunshine Autos Ownership") and lockTerm("Property Purchases", "content_lock_properties") and has("Progressive Sunshine Autos") and lockTerm("Land Vehicles", "ability_lock_vehicles")), (has("Pole Position Ownership") and lockTerm("Property Purchases", "content_lock_properties"))}) >= 5))
 		end
 	else
 		if mainlandCrossingsSplit() then
@@ -181,849 +181,843 @@ function rule_Keep_Your_Friends_Close()
 		end
 	end
 end
-function rule_Hidden_Package_Ocean_Beach_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Viceport_1()
+function rule_Hidden_Package_Ocean_Beach_Lighthouse() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Hut_on_beach() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Ocean_Beach_On_rocks_in_the_ocean()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_2()
+function rule_Hidden_Package_Viceport_Southwest_house_on_stilts_in_the_ocean()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_3()
+function rule_Hidden_Package_Ocean_Beach_Building_south_of_the_Gun_store()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_4()
+function rule_Hidden_Package_Ocean_Beach_Behind_building_near_Hospital()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_5()
+function rule_Hidden_Package_Ocean_Beach_On_the_roof_of_the_building_east_of_the_Mall()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Washington_Beach_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Washington_Beach_2() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_2() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_3() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Washington_Beach_3() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_4() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_5() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_6() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_7() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_8() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_9() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_10() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_11() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_12() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_13() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_14() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_15() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_16() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_17() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Starfish_Island_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Starfish_Island_2() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_18() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_19() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Viceport_6()
+function rule_Hidden_Package_Washington_Beach_Near_Body_armour_behind_big_Pink_building() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Bridge_south_of_Hardware_store() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_VCPD_HQ() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Behind_Spand_Express_building() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Alley_rooftop_near_stunt_jump() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Behind_Club_Malibu() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Behind_stairs_of_a_condo_east_of_Pizza_parlor() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Inside_the_Jewelers() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Mercedes_house_south_of_Pay_n_Spray() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Inside_North_Point_Mall_east() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Inside_North_Point_Mall_inside_Gash() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Behind_building_east_of_North_Point_Mall() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Behind_Jocksports_board_west_of_Sand_track() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Rooftop_south_of_VCPD_HQ() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Parking_lot_west_of_North_Point_Mall() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Under_the_bridge_to_Prawn_Island() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Ducum_Inn_diving_boards() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Rooftop_of_building_north_of_Club_Malibu() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Rooftops_southeast_of_Pay_n_Spray() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_West_of_Hardware_store() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Washington_Beach_Under_bridge_to_Starfish_Island() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Top_of_construction_site() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_North_of_North_Point_Mall() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Ocean_Beach_Car_park_near_docks()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_7()
+function rule_Hidden_Package_Ocean_Beach_Under_the_bridge_to_the_mainland()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_8()
+function rule_Hidden_Package_Washington_Beach_Behind_1102_Washington_Street()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_1()
+function rule_Hidden_Package_Washington_Beach_Southwest_of_Hardware_store()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Vice_Point_20() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_21() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_22() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_23() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_24() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_25() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Leaf_Links_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Downtown_1()
+function rule_Hidden_Package_Vice_Point_On_pier_northwest_of_construction_site() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Inside_Pizza_parlor() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Inside_a_fence_east_of_the_Pay_n_Spray() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Ducum_Inn_west() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Behind_WK_Chariot_Hotel_East_of_Club_Malibu() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Vice_Point_Rooftop_of_building_south_of_Club_Malibu() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Prawn_Island_Film_Studio_roof() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Prawn_Island_Film_Studio_Stage_C()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Leaf_Links_2() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Downtown_2()
+function rule_Hidden_Package_Prawn_Island_Southeast_alleyway() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Prawn_Island_Behind_northwestern_building()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_3()
+function rule_Hidden_Package_Prawn_Island_Inside_northeastern_building()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Leaf_Links_3() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Vice_Point_26() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Little_Havana_2()
+function rule_Hidden_Package_Leaf_Links_Driving_Range() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Leaf_Links_Under_bridge_to_Vice_Point() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Leaf_Links_Southern_bridge()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Prawn_Island_1() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Prawn_Island_2() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
-function rule_Hidden_Package_Starfish_Island_3() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
-function rule_Hidden_Package_Little_Havana_3() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
-function rule_Hidden_Package_Little_Havana_4() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
-function rule_Hidden_Package_Starfish_Island_4() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
-function rule_Hidden_Package_Starfish_Island_5() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
-function rule_Hidden_Package_Downtown_4()
+function rule_Hidden_Package_Leaf_Links_Sand_pit_west_of_parking_lot() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Leaf_Links_Small_island_in_water() return reachAccess(lockTerm("Hidden Packages", "content_lock_hidden_packages")) end
+function rule_Hidden_Package_Starfish_Island_Diaz_s_mansion_east_pier() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
+function rule_Hidden_Package_Starfish_Island_Diaz_s_mansion_west_next_to_pools() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
+function rule_Hidden_Package_Starfish_Island_Northwest_rooftop_with_red_white_patio_umbrellas() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
+function rule_Hidden_Package_Starfish_Island_Northeast_pool() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
+function rule_Hidden_Package_Starfish_Island_Northeast_house() return reachAccess((has("Starfish Island Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages"))) end
+function rule_Hidden_Package_Downtown_Behind_a_building_closest_to_Prawn_Island()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_5()
+function rule_Hidden_Package_Downtown_Underneath_a_sculpture_under_a_building()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_6()
+function rule_Hidden_Package_Downtown_Alley_near_Hyman_Condo()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_7()
+function rule_Hidden_Package_Downtown_Behind_the_Stadium()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_8()
+function rule_Hidden_Package_Downtown_Behind_the_Hospital()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_9()
+function rule_Hidden_Package_Downtown_Near_a_Helipad()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Downtown_10()
+function rule_Hidden_Package_Downtown_Office_building_east_of_Police_Department()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_1()
+function rule_Hidden_Package_Downtown_West_of_J_shaped_building()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_2()
+function rule_Hidden_Package_Little_Haiti_Alley_north_of_Kaufman_Cabs()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_3()
+function rule_Hidden_Package_Little_Haiti_On_a_building_northeast_of_Auntie_Poulet_s()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_4()
+function rule_Hidden_Package_Little_Haiti_In_a_barn_inside_Phil_s_Place()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_5()
+function rule_Hidden_Package_Little_Haiti_Northwest_of_Phil_s_Place()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_6()
+function rule_Hidden_Package_Little_Haiti_On_stairs_east_of_Kaufman_Cabs()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Haiti_7()
+function rule_Hidden_Package_Little_Haiti_Alley_south_of_Pizza_parlor()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_5()
+function rule_Hidden_Package_Little_Haiti_Under_Little_Haiti_billboard()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_6()
+function rule_Hidden_Package_Little_Haiti_Rooftop_building_north_of_Printworks()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_7()
+function rule_Hidden_Package_Little_Havana_House_with_ramp_southeast_of_Laundromat()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_8()
+function rule_Hidden_Package_Little_Havana_Inside_the_Laundromat()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_9()
+function rule_Hidden_Package_Little_Havana_Kaufman_Cabs_billboard()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_10()
+function rule_Hidden_Package_Little_Havana_Alley_north_of_Umberto_s_cafe()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_1()
+function rule_Hidden_Package_Little_Havana_Inside_Sunshine_Autos()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_11()
+function rule_Hidden_Package_Little_Havana_Inside_Calleggi_Delicatessen_Restaurant()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_2()
+function rule_Hidden_Package_Little_Havana_Rooftop_northwest_of_Sunshine_Autos()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_9()
+function rule_Hidden_Package_Viceport_Next_to_the_houses_north_of_the_Viceport_gates()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_10()
+function rule_Hidden_Package_Viceport_On_the_eastern_ship()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_3()
+function rule_Hidden_Package_Viceport_On_the_southwestern_ship()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_4()
+function rule_Hidden_Package_Viceport_West_of_Pay_n_Spray()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Viceport_11()
+function rule_Hidden_Package_Viceport_Under_the_signpost_of_Vice_City_Port_Authority()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_5()
+function rule_Hidden_Package_Viceport_In_the_docks_next_to_the_Freight_terminal_near_Escobar_International()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_6()
+function rule_Hidden_Package_Escobar_International_On_a_helipad()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_7()
+function rule_Hidden_Package_Escobar_International_On_top_of_the_McAdam_Airways_hangar()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_8()
+function rule_Hidden_Package_Escobar_International_Under_an_airplane_west_of_the_airport_in_a_hangar()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_9()
+function rule_Hidden_Package_Viceport_Between_2_trucks_southwest_of_4_silos()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_10()
+function rule_Hidden_Package_Escobar_International_On_top_of_the_terminal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_11()
+function rule_Hidden_Package_Escobar_International_Under_an_airplane_south_of_the_airport()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_12()
+function rule_Hidden_Package_Escobar_International_On_top_of_the_southeastern_jet_bridge()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_13()
+function rule_Hidden_Package_Escobar_International_On_an_airplane_south_of_the_airport()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_14()
+function rule_Hidden_Package_Escobar_International_Inside_the_eastern_jet_bridge()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_15()
+function rule_Hidden_Package_Escobar_International_West_side_inside_the_terminal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_16()
+function rule_Hidden_Package_Escobar_International_Behind_the_Fire_station_west_of_the_airport()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_12()
+function rule_Hidden_Package_Escobar_International_Under_an_airplane_behind_the_north_terminal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_13()
+function rule_Hidden_Package_Escobar_International_Behind_the_sign_of_the_Fort_Baxter_Air_Base()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Little_Havana_14()
+function rule_Hidden_Package_Escobar_International_Behind_the_big_billboards_to_the_north_of_the_terminal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_17()
+function rule_Hidden_Package_Viceport_Between_4_silos_southwest_of_Sunshine_Autos()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Hidden_Package_Escobar_International_18()
+function rule_Hidden_Package_Escobar_International_On_top_of_the_freight_terminal_building()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Hidden Packages", "content_lock_hidden_packages")))
 	end
 end
-function rule_Tear_Gas_Rampage_Ocean_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rocket_Launcher_Rampage_Escobar_International()
+function rule_Rampage_Ocean_Beach_Molotov() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Escobar_International_RPG()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_MP5_Rampage_Vice_Point_1() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Tec_9_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rocket_Launcher_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Ruger_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Flamethrower_Rampage_Downtown()
+function rule_Rampage_Vice_Point_Uzi_drive_by_south() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_M4() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_Rocket_Launcher() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Washington_Beach_MP5() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Downtown_Flamethrower()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_MP5_Rampage_Downtown()
+function rule_Rampage_Downtown_Uzi_drive_by()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Tear_Gas_Rampage_Downtown()
+function rule_Rampage_Downtown_Molotov()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_M60_Rampage_Little_Haiti()
+function rule_Rampage_Downtown_M60()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Mac_10_Rampage_Little_Havana()
+function rule_Rampage_Little_Haiti_Tec_9()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Chainsaw_Rampage_Washington_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_308_Sniper_Rampage_Ocean_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rampage_Little_Havana() return reachAccess((has("Starfish Island Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_357_Rampage_Escobar_International()
+function rule_Rampage_Ocean_Beach_Chainsaw() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Ocean_Beach_308_Sniper_Rifle() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Starfish_Island_Vehicle() return reachAccess((has("Starfish Island Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Little_Havana_Ruger()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Rocket_Launcher_Rampage_Viceport()
+function rule_Rampage_Viceport_Rocket_Launcher()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Minigun_Rampage_Little_Havana()
+function rule_Rampage_Escobar_International_Minigun()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Grenade_Rampage_Escobar_International()
+function rule_Rampage_Viceport_Grenade()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Sniper_Rifle_Rampage_Little_Havana()
+function rule_Rampage_Little_Havana_Sniper_Rifle()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Katana_Rampage_Washington_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rampage_Ocean_Beach() return reachAccess((lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Pistol_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_MP5_Rampage_Vice_Point_2() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Chainsaw_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rocket_Launcher_Rampage_Ocean_Beach()
+function rule_Rampage_Ocean_Beach_Katana() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Ocean_Beach_Vehicle() return reachAccess((lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_357() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_Uzi_drive_by_north() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_Chainsaw() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Viceport_RPG()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Minigun_Rampage_Vice_Point()
+function rule_Rampage_Downtown_Minigun()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Pistol_Rampage_Downtown()
+function rule_Rampage_Downtown_357()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Shotgun_Rampage_Escobar_International()
+function rule_Rampage_Little_Havana_Shotgun()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_308_Sniper_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Shotgun_Rampage_Washington_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_S_P_A_S_12_Rampage_Vice_Point() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_S_P_A_S_12_Rampage_Little_Havana()
+function rule_Rampage_Vice_Point_308_Sniper() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Ocean_Beach_Shotgun() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Vice_Point_S_P_A_S_12() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Little_Havana_S_P_A_S_12()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_S_P_A_S_12_Rampage_Escobar_International()
+function rule_Rampage_Escobar_International_S_P_A_S_12()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Tec_9_Rampage_Washington_Beach() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Katana_Rampage_Escobar_International()
+function rule_Rampage_Ocean_Beach_M4() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Little_Havana_Katana()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Unique_Stunt_Jump_01()
+function rule_Unique_Stunt_Jump_Escobar_International_Western_aircraft_staircase_over_the_airbridge_east()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_02()
+function rule_Unique_Stunt_Jump_Escobar_International_Vice_Surf_board_onto_the_terminal_roof()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_03()
+function rule_Unique_Stunt_Jump_Escobar_International_Aircraft_staircase_east_of_the_terminal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_04()
+function rule_Unique_Stunt_Jump_Escobar_International_Steep_metal_ramp_at_the_end_of_the_angled_runway()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_05()
+function rule_Unique_Stunt_Jump_Escobar_International_Western_aircraft_staircase_over_the_airbridge_west()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_06()
+function rule_Unique_Stunt_Jump_Escobar_International_Aircraft_staircase_south_of_red_radar_dish()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_07()
+function rule_Unique_Stunt_Jump_Escobar_International_Runway_marker_north_of_red_radar_dish()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_08()
+function rule_Unique_Stunt_Jump_Escobar_International_Eastern_aircraft_staircase_over_the_airbridge()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_09()
+function rule_Unique_Stunt_Jump_Prawn_Island_To_Film_Studio()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_10()
+function rule_Unique_Stunt_Jump_Vice_Point_Construction_site()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_11()
+function rule_Unique_Stunt_Jump_Downtown_Large_staircase_going_over_Ammu_Nation()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_12()
+function rule_Unique_Stunt_Jump_Downtown_First_G_spotlight_jump()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_13()
+function rule_Unique_Stunt_Jump_Downtown_Second_G_spotlight_jump()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_14()
+function rule_Unique_Stunt_Jump_Downtown_Third_G_spotlight_jump()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_15()
+function rule_Unique_Stunt_Jump_Little_Haiti_Wooden_ramp_southwest_of_Auntie_Poulet_s()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_16()
+function rule_Unique_Stunt_Jump_Little_Haiti_Wooden_ramp_over_a_canal()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_17()
+function rule_Unique_Stunt_Jump_Little_Haiti_East_of_Kaufman_Cabs()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_18()
+function rule_Unique_Stunt_Jump_Little_Havana_Roof_of_Calle_Cafetaria()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_19()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Alley_rooftop()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_20()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Parking_Garage_east_of_Hospital()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_21()
+function rule_Unique_Stunt_Jump_Washington_Beach_Over_northern_bridge()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_22()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Cone_Crazy_parking_lot_rooftop()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_23()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Gas_station_stairs()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_24()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Pink_roof_south_of_Gas_station()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_25()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Cortez_s_docks_south()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_26()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Cortez_s_docks_north()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_27()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Alley_pallets_south()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_28()
+function rule_Unique_Stunt_Jump_Ocean_Beach_Alley_pallets_north()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_29()
+function rule_Unique_Stunt_Jump_Vice_Point_Over_the_river_near_Club_Malibu()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_30()
+function rule_Unique_Stunt_Jump_Washington_Beach_River_jump_east()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_31()
+function rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_south()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_32()
+function rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_northeast()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_33()
+function rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_northwest()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_34()
+function rule_Unique_Stunt_Jump_Washington_Beach_Ramp_north_of_alley()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_35()
+function rule_Unique_Stunt_Jump_Washington_Beach_River_jump_west()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
 	end
 end
-function rule_Unique_Stunt_Jump_36()
-	if mainlandCrossingsSplit() then
-		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
-	else
-		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps")))
-	end
-end
+function rule_Unique_Stunt_Jump_Starfish_Island_Northeast_house_staircase() return reachAccess((has("Starfish Island Access") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Stunt Jumps", "content_lock_stunt_jumps"))) end
 function rule_Paramedic_Level_01() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Paramedic_Level_02() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Paramedic_Level_03() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
@@ -1310,57 +1304,57 @@ function rule_Test_Track()
 end
 function rule_PCJ_Playground() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
 function rule_Cone_Crazy() return reachAccess(lockTerm("Land Vehicles", "ability_lock_vehicles")) end
-function rule_Robbable_Store_01() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_02() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_03()
+function rule_Store_Robbery_Washington_Beach_Hardware_store() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_North_Point_Mall_Tooled_Up() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_Little_Havana_Screw_This()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_04()
+function rule_Store_Robbery_Little_Havana_Calleggi_Delicatessen_Restaurant()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_05()
+function rule_Store_Robbery_Downtown_The_Jewelers()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_06()
+function rule_Store_Robbery_Downtown_Dispensary()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_07()
+function rule_Store_Robbery_Little_Haiti_Hyton_Aide()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_08() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_09() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_10() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_11() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_12() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_13() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
-function rule_Robbable_Store_14()
+function rule_Store_Robbery_Vice_Point_The_Jewelers() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_Vice_Point_Dispensary() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_Vice_Point_Corner_store() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_North_Point_Mall_Vinyl_Countdown() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_North_Point_Mall_Gash() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_North_Point_Mall_Family_Jewels() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores"))) end
+function rule_Store_Robbery_Little_Havana_Caf_Robina()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	end
 end
-function rule_Robbable_Store_15()
+function rule_Store_Robbery_Little_Havana_Laundromat()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Robbable Stores", "content_lock_robbable_stores")))
 	else
@@ -1416,7 +1410,7 @@ function rule_Hyman_Condo_Purchase()
 end
 function rule_Ocean_Heights_Apartment_Purchase() return reachAccess((lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties"))) end
 function rule_1102_Washington_Street_Purchase() return reachAccess((lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties"))) end
-function rule_Vice_Point_Purchase() return reachAccess((lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties"))) end
+function rule_3321_Vice_Point_Purchase() return reachAccess((lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties"))) end
 function rule_Skumole_Shack_Purchase()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet") and lockTerm("Property Purchases", "content_lock_properties")))

@@ -5,14 +5,14 @@
 		"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 		"children": [
 			{
-				"name": "Hidden Package - Ocean Beach - 1",
+				"name": "Hidden Package - Ocean Beach - Lighthouse",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Ocean Beach - 1",
+						"name": "Hidden Package - Ocean Beach - Lighthouse",
 						"access_rules": [
-							"^$rule_Hidden_Package_Ocean_Beach_1"
+							"^$rule_Hidden_Package_Ocean_Beach_Lighthouse"
 						]
 					}
 				],
@@ -28,14 +28,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 1",
+				"name": "Hidden Package - Washington Beach - Hut on beach",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 1",
+						"name": "Hidden Package - Washington Beach - Hut on beach",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_1"
+							"^$rule_Hidden_Package_Washington_Beach_Hut_on_beach"
 						]
 					}
 				],
@@ -51,14 +51,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 1",
+				"name": "Hidden Package - Ocean Beach - On rocks in the ocean",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 1",
+						"name": "Hidden Package - Ocean Beach - On rocks in the ocean",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_1"
+							"^$rule_Hidden_Package_Ocean_Beach_On_rocks_in_the_ocean"
 						]
 					}
 				],
@@ -74,14 +74,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 2",
+				"name": "Hidden Package - Viceport - Southwest house on stilts in the ocean",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 2",
+						"name": "Hidden Package - Viceport - Southwest house on stilts in the ocean",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_2"
+							"^$rule_Hidden_Package_Viceport_Southwest_house_on_stilts_in_the_ocean"
 						]
 					}
 				],
@@ -97,14 +97,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 3",
+				"name": "Hidden Package - Ocean Beach - Building south of the Gun store",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 3",
+						"name": "Hidden Package - Ocean Beach - Building south of the Gun store",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_3"
+							"^$rule_Hidden_Package_Ocean_Beach_Building_south_of_the_Gun_store"
 						]
 					}
 				],
@@ -120,14 +120,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 4",
+				"name": "Hidden Package - Ocean Beach - Behind building near Hospital",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 4",
+						"name": "Hidden Package - Ocean Beach - Behind building near Hospital",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_4"
+							"^$rule_Hidden_Package_Ocean_Beach_Behind_building_near_Hospital"
 						]
 					}
 				],
@@ -143,14 +143,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 5",
+				"name": "Hidden Package - Ocean Beach - On the roof of the building east of the Mall",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 5",
+						"name": "Hidden Package - Ocean Beach - On the roof of the building east of the Mall",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_5"
+							"^$rule_Hidden_Package_Ocean_Beach_On_the_roof_of_the_building_east_of_the_Mall"
 						]
 					}
 				],
@@ -166,14 +166,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Washington Beach - 1",
+				"name": "Hidden Package - Washington Beach - Near Body armour behind big Pink building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Washington Beach - 1",
+						"name": "Hidden Package - Washington Beach - Near Body armour behind big Pink building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Washington_Beach_1"
+							"^$rule_Hidden_Package_Washington_Beach_Near_Body_armour_behind_big_Pink_building"
 						]
 					}
 				],
@@ -189,14 +189,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Washington Beach - 2",
+				"name": "Hidden Package - Washington Beach - Bridge south of Hardware store",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Washington Beach - 2",
+						"name": "Hidden Package - Washington Beach - Bridge south of Hardware store",
 						"access_rules": [
-							"^$rule_Hidden_Package_Washington_Beach_2"
+							"^$rule_Hidden_Package_Washington_Beach_Bridge_south_of_Hardware_store"
 						]
 					}
 				],
@@ -212,14 +212,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 2",
+				"name": "Hidden Package - Washington Beach - VCPD HQ",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 2",
+						"name": "Hidden Package - Washington Beach - VCPD HQ",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_2"
+							"^$rule_Hidden_Package_Washington_Beach_VCPD_HQ"
 						]
 					}
 				],
@@ -235,14 +235,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 3",
+				"name": "Hidden Package - Washington Beach - Behind Spand Express building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 3",
+						"name": "Hidden Package - Washington Beach - Behind Spand Express building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_3"
+							"^$rule_Hidden_Package_Washington_Beach_Behind_Spand_Express_building"
 						]
 					}
 				],
@@ -258,14 +258,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Washington Beach - 3",
+				"name": "Hidden Package - Washington Beach - Alley rooftop near stunt jump",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Washington Beach - 3",
+						"name": "Hidden Package - Washington Beach - Alley rooftop near stunt jump",
 						"access_rules": [
-							"^$rule_Hidden_Package_Washington_Beach_3"
+							"^$rule_Hidden_Package_Washington_Beach_Alley_rooftop_near_stunt_jump"
 						]
 					}
 				],
@@ -281,14 +281,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 4",
+				"name": "Hidden Package - Vice Point - Behind Club Malibu",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 4",
+						"name": "Hidden Package - Vice Point - Behind Club Malibu",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_4"
+							"^$rule_Hidden_Package_Vice_Point_Behind_Club_Malibu"
 						]
 					}
 				],
@@ -304,14 +304,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 5",
+				"name": "Hidden Package - Vice Point - Behind stairs of a condo east of Pizza parlor",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 5",
+						"name": "Hidden Package - Vice Point - Behind stairs of a condo east of Pizza parlor",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_5"
+							"^$rule_Hidden_Package_Vice_Point_Behind_stairs_of_a_condo_east_of_Pizza_parlor"
 						]
 					}
 				],
@@ -327,14 +327,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 6",
+				"name": "Hidden Package - Vice Point - Inside the Jewelers",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 6",
+						"name": "Hidden Package - Vice Point - Inside the Jewelers",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_6"
+							"^$rule_Hidden_Package_Vice_Point_Inside_the_Jewelers"
 						]
 					}
 				],
@@ -350,14 +350,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 7",
+				"name": "Hidden Package - Vice Point - Mercedes' house (south of Pay 'n' Spray)",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 7",
+						"name": "Hidden Package - Vice Point - Mercedes' house (south of Pay 'n' Spray)",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_7"
+							"^$rule_Hidden_Package_Vice_Point_Mercedes_house_south_of_Pay_n_Spray"
 						]
 					}
 				],
@@ -373,14 +373,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 8",
+				"name": "Hidden Package - Vice Point - Inside North Point Mall east",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 8",
+						"name": "Hidden Package - Vice Point - Inside North Point Mall east",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_8"
+							"^$rule_Hidden_Package_Vice_Point_Inside_North_Point_Mall_east"
 						]
 					}
 				],
@@ -396,14 +396,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 9",
+				"name": "Hidden Package - Vice Point - Inside North Point Mall inside Gash",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 9",
+						"name": "Hidden Package - Vice Point - Inside North Point Mall inside Gash",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_9"
+							"^$rule_Hidden_Package_Vice_Point_Inside_North_Point_Mall_inside_Gash"
 						]
 					}
 				],
@@ -419,14 +419,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 10",
+				"name": "Hidden Package - Vice Point - Behind building east of North Point Mall",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 10",
+						"name": "Hidden Package - Vice Point - Behind building east of North Point Mall",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_10"
+							"^$rule_Hidden_Package_Vice_Point_Behind_building_east_of_North_Point_Mall"
 						]
 					}
 				],
@@ -442,14 +442,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 11",
+				"name": "Hidden Package - Vice Point - Behind Jocksports board west of Sand track",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 11",
+						"name": "Hidden Package - Vice Point - Behind Jocksports board west of Sand track",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_11"
+							"^$rule_Hidden_Package_Vice_Point_Behind_Jocksports_board_west_of_Sand_track"
 						]
 					}
 				],
@@ -465,14 +465,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 12",
+				"name": "Hidden Package - Washington Beach - Rooftop south of VCPD HQ",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 12",
+						"name": "Hidden Package - Washington Beach - Rooftop south of VCPD HQ",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_12"
+							"^$rule_Hidden_Package_Washington_Beach_Rooftop_south_of_VCPD_HQ"
 						]
 					}
 				],
@@ -488,14 +488,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 13",
+				"name": "Hidden Package - Vice Point - Parking lot west of North Point Mall",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 13",
+						"name": "Hidden Package - Vice Point - Parking lot west of North Point Mall",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_13"
+							"^$rule_Hidden_Package_Vice_Point_Parking_lot_west_of_North_Point_Mall"
 						]
 					}
 				],
@@ -511,14 +511,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 14",
+				"name": "Hidden Package - Vice Point - Under the bridge to Prawn Island",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 14",
+						"name": "Hidden Package - Vice Point - Under the bridge to Prawn Island",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_14"
+							"^$rule_Hidden_Package_Vice_Point_Under_the_bridge_to_Prawn_Island"
 						]
 					}
 				],
@@ -534,14 +534,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 15",
+				"name": "Hidden Package - Vice Point - Ducum Inn diving boards",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 15",
+						"name": "Hidden Package - Vice Point - Ducum Inn diving boards",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_15"
+							"^$rule_Hidden_Package_Vice_Point_Ducum_Inn_diving_boards"
 						]
 					}
 				],
@@ -557,14 +557,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 16",
+				"name": "Hidden Package - Vice Point - Rooftop of building north of Club Malibu",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 16",
+						"name": "Hidden Package - Vice Point - Rooftop of building north of Club Malibu",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_16"
+							"^$rule_Hidden_Package_Vice_Point_Rooftop_of_building_north_of_Club_Malibu"
 						]
 					}
 				],
@@ -580,14 +580,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 17",
+				"name": "Hidden Package - Vice Point - Rooftops southeast of Pay 'n' Spray",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 17",
+						"name": "Hidden Package - Vice Point - Rooftops southeast of Pay 'n' Spray",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_17"
+							"^$rule_Hidden_Package_Vice_Point_Rooftops_southeast_of_Pay_n_Spray"
 						]
 					}
 				],
@@ -603,14 +603,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 1",
+				"name": "Hidden Package - Washington Beach - West of Hardware store",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Starfish Island - 1",
+						"name": "Hidden Package - Washington Beach - West of Hardware store",
 						"access_rules": [
-							"^$rule_Hidden_Package_Starfish_Island_1"
+							"^$rule_Hidden_Package_Washington_Beach_West_of_Hardware_store"
 						]
 					}
 				],
@@ -626,14 +626,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 2",
+				"name": "Hidden Package - Washington Beach - Under bridge to Starfish Island",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Starfish Island - 2",
+						"name": "Hidden Package - Washington Beach - Under bridge to Starfish Island",
 						"access_rules": [
-							"^$rule_Hidden_Package_Starfish_Island_2"
+							"^$rule_Hidden_Package_Washington_Beach_Under_bridge_to_Starfish_Island"
 						]
 					}
 				],
@@ -649,14 +649,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 18",
+				"name": "Hidden Package - Vice Point - Top of construction site",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 18",
+						"name": "Hidden Package - Vice Point - Top of construction site",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_18"
+							"^$rule_Hidden_Package_Vice_Point_Top_of_construction_site"
 						]
 					}
 				],
@@ -672,14 +672,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 19",
+				"name": "Hidden Package - Vice Point - North of North Point Mall",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 19",
+						"name": "Hidden Package - Vice Point - North of North Point Mall",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_19"
+							"^$rule_Hidden_Package_Vice_Point_North_of_North_Point_Mall"
 						]
 					}
 				],
@@ -695,14 +695,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 6",
+				"name": "Hidden Package - Ocean Beach - Car park near docks",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 6",
+						"name": "Hidden Package - Ocean Beach - Car park near docks",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_6"
+							"^$rule_Hidden_Package_Ocean_Beach_Car_park_near_docks"
 						]
 					}
 				],
@@ -718,14 +718,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 7",
+				"name": "Hidden Package - Ocean Beach - Under the bridge to the mainland",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 7",
+						"name": "Hidden Package - Ocean Beach - Under the bridge to the mainland",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_7"
+							"^$rule_Hidden_Package_Ocean_Beach_Under_the_bridge_to_the_mainland"
 						]
 					}
 				],
@@ -741,14 +741,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 8",
+				"name": "Hidden Package - Washington Beach - Behind 1102 Washington Street",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 8",
+						"name": "Hidden Package - Washington Beach - Behind 1102 Washington Street",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_8"
+							"^$rule_Hidden_Package_Washington_Beach_Behind_1102_Washington_Street"
 						]
 					}
 				],
@@ -764,14 +764,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 1",
+				"name": "Hidden Package - Washington Beach - Southwest of Hardware store",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 1",
+						"name": "Hidden Package - Washington Beach - Southwest of Hardware store",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_1"
+							"^$rule_Hidden_Package_Washington_Beach_Southwest_of_Hardware_store"
 						]
 					}
 				],
@@ -787,14 +787,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 20",
+				"name": "Hidden Package - Vice Point - On pier northwest of construction site",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 20",
+						"name": "Hidden Package - Vice Point - On pier northwest of construction site",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_20"
+							"^$rule_Hidden_Package_Vice_Point_On_pier_northwest_of_construction_site"
 						]
 					}
 				],
@@ -810,14 +810,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 21",
+				"name": "Hidden Package - Vice Point - Inside Pizza parlor",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 21",
+						"name": "Hidden Package - Vice Point - Inside Pizza parlor",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_21"
+							"^$rule_Hidden_Package_Vice_Point_Inside_Pizza_parlor"
 						]
 					}
 				],
@@ -833,14 +833,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 22",
+				"name": "Hidden Package - Vice Point - Inside a fence east of the Pay 'n' Spray",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 22",
+						"name": "Hidden Package - Vice Point - Inside a fence east of the Pay 'n' Spray",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_22"
+							"^$rule_Hidden_Package_Vice_Point_Inside_a_fence_east_of_the_Pay_n_Spray"
 						]
 					}
 				],
@@ -856,14 +856,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 23",
+				"name": "Hidden Package - Vice Point - Ducum Inn west",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 23",
+						"name": "Hidden Package - Vice Point - Ducum Inn west",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_23"
+							"^$rule_Hidden_Package_Vice_Point_Ducum_Inn_west"
 						]
 					}
 				],
@@ -879,14 +879,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 24",
+				"name": "Hidden Package - Vice Point - Behind WK Chariot Hotel (East of Club Malibu)",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 24",
+						"name": "Hidden Package - Vice Point - Behind WK Chariot Hotel (East of Club Malibu)",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_24"
+							"^$rule_Hidden_Package_Vice_Point_Behind_WK_Chariot_Hotel_East_of_Club_Malibu"
 						]
 					}
 				],
@@ -902,14 +902,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 25",
+				"name": "Hidden Package - Vice Point - Rooftop of building south of Club Malibu",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 25",
+						"name": "Hidden Package - Vice Point - Rooftop of building south of Club Malibu",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_25"
+							"^$rule_Hidden_Package_Vice_Point_Rooftop_of_building_south_of_Club_Malibu"
 						]
 					}
 				],
@@ -925,14 +925,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Leaf Links - 1",
+				"name": "Hidden Package - Prawn Island - Film Studio roof",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Leaf Links - 1",
+						"name": "Hidden Package - Prawn Island - Film Studio roof",
 						"access_rules": [
-							"^$rule_Hidden_Package_Leaf_Links_1"
+							"^$rule_Hidden_Package_Prawn_Island_Film_Studio_roof"
 						]
 					}
 				],
@@ -948,14 +948,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 1",
+				"name": "Hidden Package - Prawn Island - Film Studio Stage C",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 1",
+						"name": "Hidden Package - Prawn Island - Film Studio Stage C",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_1"
+							"^$rule_Hidden_Package_Prawn_Island_Film_Studio_Stage_C"
 						]
 					}
 				],
@@ -971,14 +971,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Leaf Links - 2",
+				"name": "Hidden Package - Prawn Island - Southeast alleyway",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Leaf Links - 2",
+						"name": "Hidden Package - Prawn Island - Southeast alleyway",
 						"access_rules": [
-							"^$rule_Hidden_Package_Leaf_Links_2"
+							"^$rule_Hidden_Package_Prawn_Island_Southeast_alleyway"
 						]
 					}
 				],
@@ -994,14 +994,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 2",
+				"name": "Hidden Package - Prawn Island - Behind northwestern building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 2",
+						"name": "Hidden Package - Prawn Island - Behind northwestern building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_2"
+							"^$rule_Hidden_Package_Prawn_Island_Behind_northwestern_building"
 						]
 					}
 				],
@@ -1017,14 +1017,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 3",
+				"name": "Hidden Package - Prawn Island - Inside northeastern building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 3",
+						"name": "Hidden Package - Prawn Island - Inside northeastern building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_3"
+							"^$rule_Hidden_Package_Prawn_Island_Inside_northeastern_building"
 						]
 					}
 				],
@@ -1040,14 +1040,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Leaf Links - 3",
+				"name": "Hidden Package - Leaf Links - Driving Range",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Leaf Links - 3",
+						"name": "Hidden Package - Leaf Links - Driving Range",
 						"access_rules": [
-							"^$rule_Hidden_Package_Leaf_Links_3"
+							"^$rule_Hidden_Package_Leaf_Links_Driving_Range"
 						]
 					}
 				],
@@ -1063,14 +1063,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - 26",
+				"name": "Hidden Package - Leaf Links - Under bridge to Vice Point",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - 26",
+						"name": "Hidden Package - Leaf Links - Under bridge to Vice Point",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_26"
+							"^$rule_Hidden_Package_Leaf_Links_Under_bridge_to_Vice_Point"
 						]
 					}
 				],
@@ -1086,14 +1086,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 2",
+				"name": "Hidden Package - Leaf Links - Southern bridge",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 2",
+						"name": "Hidden Package - Leaf Links - Southern bridge",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_2"
+							"^$rule_Hidden_Package_Leaf_Links_Southern_bridge"
 						]
 					}
 				],
@@ -1109,14 +1109,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Prawn Island - 1",
+				"name": "Hidden Package - Leaf Links - Sand pit west of parking lot",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Prawn Island - 1",
+						"name": "Hidden Package - Leaf Links - Sand pit west of parking lot",
 						"access_rules": [
-							"^$rule_Hidden_Package_Prawn_Island_1"
+							"^$rule_Hidden_Package_Leaf_Links_Sand_pit_west_of_parking_lot"
 						]
 					}
 				],
@@ -1132,14 +1132,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Prawn Island - 2",
+				"name": "Hidden Package - Leaf Links - Small island in water",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Prawn Island - 2",
+						"name": "Hidden Package - Leaf Links - Small island in water",
 						"access_rules": [
-							"^$rule_Hidden_Package_Prawn_Island_2"
+							"^$rule_Hidden_Package_Leaf_Links_Small_island_in_water"
 						]
 					}
 				],
@@ -1155,14 +1155,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 3",
+				"name": "Hidden Package - Starfish Island - Diaz's mansion east pier",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Starfish Island - 3",
+						"name": "Hidden Package - Starfish Island - Diaz's mansion east pier",
 						"access_rules": [
-							"^$rule_Hidden_Package_Starfish_Island_3"
+							"^$rule_Hidden_Package_Starfish_Island_Diaz_s_mansion_east_pier"
 						]
 					}
 				],
@@ -1178,14 +1178,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 3",
+				"name": "Hidden Package - Starfish Island - Diaz's mansion west next to pools",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 3",
+						"name": "Hidden Package - Starfish Island - Diaz's mansion west next to pools",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_3"
+							"^$rule_Hidden_Package_Starfish_Island_Diaz_s_mansion_west_next_to_pools"
 						]
 					}
 				],
@@ -1201,14 +1201,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 4",
+				"name": "Hidden Package - Starfish Island - Northwest rooftop with red/white patio umbrellas",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 4",
+						"name": "Hidden Package - Starfish Island - Northwest rooftop with red/white patio umbrellas",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_4"
+							"^$rule_Hidden_Package_Starfish_Island_Northwest_rooftop_with_red_white_patio_umbrellas"
 						]
 					}
 				],
@@ -1224,14 +1224,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 4",
+				"name": "Hidden Package - Starfish Island - Northeast pool",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Starfish Island - 4",
+						"name": "Hidden Package - Starfish Island - Northeast pool",
 						"access_rules": [
-							"^$rule_Hidden_Package_Starfish_Island_4"
+							"^$rule_Hidden_Package_Starfish_Island_Northeast_pool"
 						]
 					}
 				],
@@ -1247,14 +1247,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Starfish Island - 5",
+				"name": "Hidden Package - Starfish Island - Northeast house",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Starfish Island - 5",
+						"name": "Hidden Package - Starfish Island - Northeast house",
 						"access_rules": [
-							"^$rule_Hidden_Package_Starfish_Island_5"
+							"^$rule_Hidden_Package_Starfish_Island_Northeast_house"
 						]
 					}
 				],
@@ -1270,14 +1270,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 4",
+				"name": "Hidden Package - Downtown - Behind a building closest to Prawn Island",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 4",
+						"name": "Hidden Package - Downtown - Behind a building closest to Prawn Island",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_4"
+							"^$rule_Hidden_Package_Downtown_Behind_a_building_closest_to_Prawn_Island"
 						]
 					}
 				],
@@ -1293,14 +1293,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 5",
+				"name": "Hidden Package - Downtown - Underneath a sculpture under a building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 5",
+						"name": "Hidden Package - Downtown - Underneath a sculpture under a building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_5"
+							"^$rule_Hidden_Package_Downtown_Underneath_a_sculpture_under_a_building"
 						]
 					}
 				],
@@ -1316,14 +1316,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 6",
+				"name": "Hidden Package - Downtown - Alley near Hyman Condo",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 6",
+						"name": "Hidden Package - Downtown - Alley near Hyman Condo",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_6"
+							"^$rule_Hidden_Package_Downtown_Alley_near_Hyman_Condo"
 						]
 					}
 				],
@@ -1339,14 +1339,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 7",
+				"name": "Hidden Package - Downtown - Behind the Stadium",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 7",
+						"name": "Hidden Package - Downtown - Behind the Stadium",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_7"
+							"^$rule_Hidden_Package_Downtown_Behind_the_Stadium"
 						]
 					}
 				],
@@ -1362,14 +1362,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 8",
+				"name": "Hidden Package - Downtown - Behind the Hospital",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 8",
+						"name": "Hidden Package - Downtown - Behind the Hospital",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_8"
+							"^$rule_Hidden_Package_Downtown_Behind_the_Hospital"
 						]
 					}
 				],
@@ -1385,14 +1385,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 9",
+				"name": "Hidden Package - Downtown - Near a Helipad",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 9",
+						"name": "Hidden Package - Downtown - Near a Helipad",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_9"
+							"^$rule_Hidden_Package_Downtown_Near_a_Helipad"
 						]
 					}
 				],
@@ -1408,14 +1408,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Downtown - 10",
+				"name": "Hidden Package - Downtown - Office building east of Police Department",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Downtown - 10",
+						"name": "Hidden Package - Downtown - Office building east of Police Department",
 						"access_rules": [
-							"^$rule_Hidden_Package_Downtown_10"
+							"^$rule_Hidden_Package_Downtown_Office_building_east_of_Police_Department"
 						]
 					}
 				],
@@ -1431,14 +1431,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 1",
+				"name": "Hidden Package - Downtown - West of J-shaped building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 1",
+						"name": "Hidden Package - Downtown - West of J-shaped building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_1"
+							"^$rule_Hidden_Package_Downtown_West_of_J_shaped_building"
 						]
 					}
 				],
@@ -1454,14 +1454,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 2",
+				"name": "Hidden Package - Little Haiti - Alley north of Kaufman Cabs",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 2",
+						"name": "Hidden Package - Little Haiti - Alley north of Kaufman Cabs",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_2"
+							"^$rule_Hidden_Package_Little_Haiti_Alley_north_of_Kaufman_Cabs"
 						]
 					}
 				],
@@ -1477,14 +1477,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 3",
+				"name": "Hidden Package - Little Haiti - On a building northeast of Auntie Poulet's",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 3",
+						"name": "Hidden Package - Little Haiti - On a building northeast of Auntie Poulet's",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_3"
+							"^$rule_Hidden_Package_Little_Haiti_On_a_building_northeast_of_Auntie_Poulet_s"
 						]
 					}
 				],
@@ -1500,14 +1500,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 4",
+				"name": "Hidden Package - Little Haiti - In a barn inside Phil's Place",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 4",
+						"name": "Hidden Package - Little Haiti - In a barn inside Phil's Place",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_4"
+							"^$rule_Hidden_Package_Little_Haiti_In_a_barn_inside_Phil_s_Place"
 						]
 					}
 				],
@@ -1523,14 +1523,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 5",
+				"name": "Hidden Package - Little Haiti - Northwest of Phil's Place",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 5",
+						"name": "Hidden Package - Little Haiti - Northwest of Phil's Place",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_5"
+							"^$rule_Hidden_Package_Little_Haiti_Northwest_of_Phil_s_Place"
 						]
 					}
 				],
@@ -1546,14 +1546,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 6",
+				"name": "Hidden Package - Little Haiti - On stairs east of Kaufman Cabs",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 6",
+						"name": "Hidden Package - Little Haiti - On stairs east of Kaufman Cabs",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_6"
+							"^$rule_Hidden_Package_Little_Haiti_On_stairs_east_of_Kaufman_Cabs"
 						]
 					}
 				],
@@ -1569,14 +1569,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Haiti - 7",
+				"name": "Hidden Package - Little Haiti - Alley south of Pizza parlor",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Haiti - 7",
+						"name": "Hidden Package - Little Haiti - Alley south of Pizza parlor",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Haiti_7"
+							"^$rule_Hidden_Package_Little_Haiti_Alley_south_of_Pizza_parlor"
 						]
 					}
 				],
@@ -1592,14 +1592,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 5",
+				"name": "Hidden Package - Little Haiti - Under \"Little Haiti\" billboard",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 5",
+						"name": "Hidden Package - Little Haiti - Under \"Little Haiti\" billboard",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_5"
+							"^$rule_Hidden_Package_Little_Haiti_Under_Little_Haiti_billboard"
 						]
 					}
 				],
@@ -1615,14 +1615,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 6",
+				"name": "Hidden Package - Little Haiti - Rooftop building north of Printworks",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 6",
+						"name": "Hidden Package - Little Haiti - Rooftop building north of Printworks",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_6"
+							"^$rule_Hidden_Package_Little_Haiti_Rooftop_building_north_of_Printworks"
 						]
 					}
 				],
@@ -1638,14 +1638,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 7",
+				"name": "Hidden Package - Little Havana - House with ramp southeast of Laundromat",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 7",
+						"name": "Hidden Package - Little Havana - House with ramp southeast of Laundromat",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_7"
+							"^$rule_Hidden_Package_Little_Havana_House_with_ramp_southeast_of_Laundromat"
 						]
 					}
 				],
@@ -1661,14 +1661,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 8",
+				"name": "Hidden Package - Little Havana - Inside the Laundromat",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 8",
+						"name": "Hidden Package - Little Havana - Inside the Laundromat",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_8"
+							"^$rule_Hidden_Package_Little_Havana_Inside_the_Laundromat"
 						]
 					}
 				],
@@ -1684,14 +1684,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 9",
+				"name": "Hidden Package - Little Havana - Kaufman Cabs billboard",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 9",
+						"name": "Hidden Package - Little Havana - Kaufman Cabs billboard",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_9"
+							"^$rule_Hidden_Package_Little_Havana_Kaufman_Cabs_billboard"
 						]
 					}
 				],
@@ -1707,14 +1707,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 10",
+				"name": "Hidden Package - Little Havana - Alley north of Umberto's cafe",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 10",
+						"name": "Hidden Package - Little Havana - Alley north of Umberto's cafe",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_10"
+							"^$rule_Hidden_Package_Little_Havana_Alley_north_of_Umberto_s_cafe"
 						]
 					}
 				],
@@ -1730,14 +1730,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 1",
+				"name": "Hidden Package - Little Havana - Inside Sunshine Autos",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 1",
+						"name": "Hidden Package - Little Havana - Inside Sunshine Autos",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_1"
+							"^$rule_Hidden_Package_Little_Havana_Inside_Sunshine_Autos"
 						]
 					}
 				],
@@ -1753,14 +1753,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 11",
+				"name": "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 11",
+						"name": "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_11"
+							"^$rule_Hidden_Package_Little_Havana_Inside_Calleggi_Delicatessen_Restaurant"
 						]
 					}
 				],
@@ -1776,14 +1776,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 2",
+				"name": "Hidden Package - Little Havana - Rooftop northwest of Sunshine Autos",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 2",
+						"name": "Hidden Package - Little Havana - Rooftop northwest of Sunshine Autos",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_2"
+							"^$rule_Hidden_Package_Little_Havana_Rooftop_northwest_of_Sunshine_Autos"
 						]
 					}
 				],
@@ -1799,14 +1799,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 9",
+				"name": "Hidden Package - Viceport - Next to the houses north of the Viceport gates",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 9",
+						"name": "Hidden Package - Viceport - Next to the houses north of the Viceport gates",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_9"
+							"^$rule_Hidden_Package_Viceport_Next_to_the_houses_north_of_the_Viceport_gates"
 						]
 					}
 				],
@@ -1822,14 +1822,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 10",
+				"name": "Hidden Package - Viceport - On the eastern ship",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 10",
+						"name": "Hidden Package - Viceport - On the eastern ship",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_10"
+							"^$rule_Hidden_Package_Viceport_On_the_eastern_ship"
 						]
 					}
 				],
@@ -1845,14 +1845,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 3",
+				"name": "Hidden Package - Viceport - On the southwestern ship",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 3",
+						"name": "Hidden Package - Viceport - On the southwestern ship",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_3"
+							"^$rule_Hidden_Package_Viceport_On_the_southwestern_ship"
 						]
 					}
 				],
@@ -1868,14 +1868,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 4",
+				"name": "Hidden Package - Viceport - West of Pay 'n' Spray",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 4",
+						"name": "Hidden Package - Viceport - West of Pay 'n' Spray",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_4"
+							"^$rule_Hidden_Package_Viceport_West_of_Pay_n_Spray"
 						]
 					}
 				],
@@ -1891,14 +1891,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Viceport - 11",
+				"name": "Hidden Package - Viceport - Under the signpost of Vice City Port Authority",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Viceport - 11",
+						"name": "Hidden Package - Viceport - Under the signpost of Vice City Port Authority",
 						"access_rules": [
-							"^$rule_Hidden_Package_Viceport_11"
+							"^$rule_Hidden_Package_Viceport_Under_the_signpost_of_Vice_City_Port_Authority"
 						]
 					}
 				],
@@ -1914,14 +1914,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 5",
+				"name": "Hidden Package - Viceport - In the docks next to the Freight terminal near Escobar International",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 5",
+						"name": "Hidden Package - Viceport - In the docks next to the Freight terminal near Escobar International",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_5"
+							"^$rule_Hidden_Package_Viceport_In_the_docks_next_to_the_Freight_terminal_near_Escobar_International"
 						]
 					}
 				],
@@ -1937,14 +1937,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 6",
+				"name": "Hidden Package - Escobar International - On a helipad",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 6",
+						"name": "Hidden Package - Escobar International - On a helipad",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_6"
+							"^$rule_Hidden_Package_Escobar_International_On_a_helipad"
 						]
 					}
 				],
@@ -1960,14 +1960,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 7",
+				"name": "Hidden Package - Escobar International - On top of the McAdam Airways hangar",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 7",
+						"name": "Hidden Package - Escobar International - On top of the McAdam Airways hangar",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_7"
+							"^$rule_Hidden_Package_Escobar_International_On_top_of_the_McAdam_Airways_hangar"
 						]
 					}
 				],
@@ -1983,14 +1983,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 8",
+				"name": "Hidden Package - Escobar International - Under an airplane west of the airport in a hangar",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 8",
+						"name": "Hidden Package - Escobar International - Under an airplane west of the airport in a hangar",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_8"
+							"^$rule_Hidden_Package_Escobar_International_Under_an_airplane_west_of_the_airport_in_a_hangar"
 						]
 					}
 				],
@@ -2006,14 +2006,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 9",
+				"name": "Hidden Package - Viceport - Between 2 trucks southwest of 4 silos",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 9",
+						"name": "Hidden Package - Viceport - Between 2 trucks southwest of 4 silos",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_9"
+							"^$rule_Hidden_Package_Viceport_Between_2_trucks_southwest_of_4_silos"
 						]
 					}
 				],
@@ -2029,14 +2029,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 10",
+				"name": "Hidden Package - Escobar International - On top of the terminal",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 10",
+						"name": "Hidden Package - Escobar International - On top of the terminal",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_10"
+							"^$rule_Hidden_Package_Escobar_International_On_top_of_the_terminal"
 						]
 					}
 				],
@@ -2052,14 +2052,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 11",
+				"name": "Hidden Package - Escobar International - Under an airplane south of the airport",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 11",
+						"name": "Hidden Package - Escobar International - Under an airplane south of the airport",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_11"
+							"^$rule_Hidden_Package_Escobar_International_Under_an_airplane_south_of_the_airport"
 						]
 					}
 				],
@@ -2075,14 +2075,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 12",
+				"name": "Hidden Package - Escobar International - On top of the southeastern jet bridge",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 12",
+						"name": "Hidden Package - Escobar International - On top of the southeastern jet bridge",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_12"
+							"^$rule_Hidden_Package_Escobar_International_On_top_of_the_southeastern_jet_bridge"
 						]
 					}
 				],
@@ -2098,14 +2098,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 13",
+				"name": "Hidden Package - Escobar International - On an airplane south of the airport",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 13",
+						"name": "Hidden Package - Escobar International - On an airplane south of the airport",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_13"
+							"^$rule_Hidden_Package_Escobar_International_On_an_airplane_south_of_the_airport"
 						]
 					}
 				],
@@ -2121,14 +2121,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 14",
+				"name": "Hidden Package - Escobar International - Inside the eastern jet bridge",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 14",
+						"name": "Hidden Package - Escobar International - Inside the eastern jet bridge",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_14"
+							"^$rule_Hidden_Package_Escobar_International_Inside_the_eastern_jet_bridge"
 						]
 					}
 				],
@@ -2144,14 +2144,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 15",
+				"name": "Hidden Package - Escobar International - West side inside the terminal",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 15",
+						"name": "Hidden Package - Escobar International - West side inside the terminal",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_15"
+							"^$rule_Hidden_Package_Escobar_International_West_side_inside_the_terminal"
 						]
 					}
 				],
@@ -2167,14 +2167,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 16",
+				"name": "Hidden Package - Escobar International - Behind the Fire station west of the airport",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 16",
+						"name": "Hidden Package - Escobar International - Behind the Fire station west of the airport",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_16"
+							"^$rule_Hidden_Package_Escobar_International_Behind_the_Fire_station_west_of_the_airport"
 						]
 					}
 				],
@@ -2190,14 +2190,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 12",
+				"name": "Hidden Package - Escobar International - Under an airplane behind the north terminal",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 12",
+						"name": "Hidden Package - Escobar International - Under an airplane behind the north terminal",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_12"
+							"^$rule_Hidden_Package_Escobar_International_Under_an_airplane_behind_the_north_terminal"
 						]
 					}
 				],
@@ -2213,14 +2213,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 13",
+				"name": "Hidden Package - Escobar International - Behind the sign of the Fort Baxter Air Base",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 13",
+						"name": "Hidden Package - Escobar International - Behind the sign of the Fort Baxter Air Base",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_13"
+							"^$rule_Hidden_Package_Escobar_International_Behind_the_sign_of_the_Fort_Baxter_Air_Base"
 						]
 					}
 				],
@@ -2236,14 +2236,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - 14",
+				"name": "Hidden Package - Escobar International - Behind the big billboards to the north of the terminal",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - 14",
+						"name": "Hidden Package - Escobar International - Behind the big billboards to the north of the terminal",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_14"
+							"^$rule_Hidden_Package_Escobar_International_Behind_the_big_billboards_to_the_north_of_the_terminal"
 						]
 					}
 				],
@@ -2259,14 +2259,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 17",
+				"name": "Hidden Package - Viceport - Between 4 silos southwest of Sunshine Autos",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 17",
+						"name": "Hidden Package - Viceport - Between 4 silos southwest of Sunshine Autos",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_17"
+							"^$rule_Hidden_Package_Viceport_Between_4_silos_southwest_of_Sunshine_Autos"
 						]
 					}
 				],
@@ -2282,14 +2282,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Escobar International - 18",
+				"name": "Hidden Package - Escobar International - On top of the freight terminal building",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Escobar International - 18",
+						"name": "Hidden Package - Escobar International - On top of the freight terminal building",
 						"access_rules": [
-							"^$rule_Hidden_Package_Escobar_International_18"
+							"^$rule_Hidden_Package_Escobar_International_On_top_of_the_freight_terminal_building"
 						]
 					}
 				],

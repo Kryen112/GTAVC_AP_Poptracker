@@ -5,14 +5,14 @@
 		"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 		"children": [
 			{
-				"name": "Unique Stunt Jump 01",
+				"name": "Unique Stunt Jump - Escobar International - Western aircraft staircase over the airbridge east",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 01",
+						"name": "Unique Stunt Jump - Escobar International - Western aircraft staircase over the airbridge east",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_01"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Western_aircraft_staircase_over_the_airbridge_east"
 						]
 					}
 				],
@@ -28,14 +28,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 02",
+				"name": "Unique Stunt Jump - Escobar International - Vice Surf board onto the terminal roof",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 02",
+						"name": "Unique Stunt Jump - Escobar International - Vice Surf board onto the terminal roof",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_02"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Vice_Surf_board_onto_the_terminal_roof"
 						]
 					}
 				],
@@ -51,14 +51,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 03",
+				"name": "Unique Stunt Jump - Escobar International - Aircraft staircase east of the terminal",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 03",
+						"name": "Unique Stunt Jump - Escobar International - Aircraft staircase east of the terminal",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_03"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Aircraft_staircase_east_of_the_terminal"
 						]
 					}
 				],
@@ -74,14 +74,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 04",
+				"name": "Unique Stunt Jump - Escobar International - Steep metal ramp at the end of the angled runway",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 04",
+						"name": "Unique Stunt Jump - Escobar International - Steep metal ramp at the end of the angled runway",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_04"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Steep_metal_ramp_at_the_end_of_the_angled_runway"
 						]
 					}
 				],
@@ -97,14 +97,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 05",
+				"name": "Unique Stunt Jump - Escobar International - Western aircraft staircase over the airbridge west",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 05",
+						"name": "Unique Stunt Jump - Escobar International - Western aircraft staircase over the airbridge west",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_05"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Western_aircraft_staircase_over_the_airbridge_west"
 						]
 					}
 				],
@@ -120,14 +120,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 06",
+				"name": "Unique Stunt Jump - Escobar International - Aircraft staircase south of red radar dish",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 06",
+						"name": "Unique Stunt Jump - Escobar International - Aircraft staircase south of red radar dish",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_06"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Aircraft_staircase_south_of_red_radar_dish"
 						]
 					}
 				],
@@ -143,14 +143,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 07",
+				"name": "Unique Stunt Jump - Escobar International - Runway marker north of red radar dish",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 07",
+						"name": "Unique Stunt Jump - Escobar International - Runway marker north of red radar dish",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_07"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Runway_marker_north_of_red_radar_dish"
 						]
 					}
 				],
@@ -166,14 +166,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 08",
+				"name": "Unique Stunt Jump - Escobar International - Eastern aircraft staircase over the airbridge",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 08",
+						"name": "Unique Stunt Jump - Escobar International - Eastern aircraft staircase over the airbridge",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_08"
+							"^$rule_Unique_Stunt_Jump_Escobar_International_Eastern_aircraft_staircase_over_the_airbridge"
 						]
 					}
 				],
@@ -189,14 +189,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 09",
+				"name": "Unique Stunt Jump - Prawn Island - To Film Studio",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 09",
+						"name": "Unique Stunt Jump - Prawn Island - To Film Studio",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_09"
+							"^$rule_Unique_Stunt_Jump_Prawn_Island_To_Film_Studio"
 						]
 					}
 				],
@@ -212,14 +212,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 10",
+				"name": "Unique Stunt Jump - Vice Point - Construction site",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 10",
+						"name": "Unique Stunt Jump - Vice Point - Construction site",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_10"
+							"^$rule_Unique_Stunt_Jump_Vice_Point_Construction_site"
 						]
 					}
 				],
@@ -235,14 +235,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 11",
+				"name": "Unique Stunt Jump - Downtown - Large staircase going over Ammu-Nation",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 11",
+						"name": "Unique Stunt Jump - Downtown - Large staircase going over Ammu-Nation",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_11"
+							"^$rule_Unique_Stunt_Jump_Downtown_Large_staircase_going_over_Ammu_Nation"
 						]
 					}
 				],
@@ -258,14 +258,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 12",
+				"name": "Unique Stunt Jump - Downtown - First G-spotlight jump",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 12",
+						"name": "Unique Stunt Jump - Downtown - First G-spotlight jump",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_12"
+							"^$rule_Unique_Stunt_Jump_Downtown_First_G_spotlight_jump"
 						]
 					}
 				],
@@ -281,14 +281,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 13",
+				"name": "Unique Stunt Jump - Downtown - Second G-spotlight jump",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 13",
+						"name": "Unique Stunt Jump - Downtown - Second G-spotlight jump",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_13"
+							"^$rule_Unique_Stunt_Jump_Downtown_Second_G_spotlight_jump"
 						]
 					}
 				],
@@ -304,14 +304,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 14",
+				"name": "Unique Stunt Jump - Downtown - Third G-spotlight jump",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 14",
+						"name": "Unique Stunt Jump - Downtown - Third G-spotlight jump",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_14"
+							"^$rule_Unique_Stunt_Jump_Downtown_Third_G_spotlight_jump"
 						]
 					}
 				],
@@ -327,14 +327,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 15",
+				"name": "Unique Stunt Jump - Little Haiti - Wooden ramp southwest of Auntie Poulet's",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 15",
+						"name": "Unique Stunt Jump - Little Haiti - Wooden ramp southwest of Auntie Poulet's",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_15"
+							"^$rule_Unique_Stunt_Jump_Little_Haiti_Wooden_ramp_southwest_of_Auntie_Poulet_s"
 						]
 					}
 				],
@@ -350,14 +350,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 16",
+				"name": "Unique Stunt Jump - Little Haiti - Wooden ramp over a canal",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 16",
+						"name": "Unique Stunt Jump - Little Haiti - Wooden ramp over a canal",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_16"
+							"^$rule_Unique_Stunt_Jump_Little_Haiti_Wooden_ramp_over_a_canal"
 						]
 					}
 				],
@@ -373,14 +373,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 17",
+				"name": "Unique Stunt Jump - Little Haiti - East of Kaufman Cabs",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 17",
+						"name": "Unique Stunt Jump - Little Haiti - East of Kaufman Cabs",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_17"
+							"^$rule_Unique_Stunt_Jump_Little_Haiti_East_of_Kaufman_Cabs"
 						]
 					}
 				],
@@ -396,14 +396,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 18",
+				"name": "Unique Stunt Jump - Little Havana - Roof of Calle Cafetaria",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 18",
+						"name": "Unique Stunt Jump - Little Havana - Roof of Calle Cafetaria",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_18"
+							"^$rule_Unique_Stunt_Jump_Little_Havana_Roof_of_Calle_Cafetaria"
 						]
 					}
 				],
@@ -419,14 +419,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 19",
+				"name": "Unique Stunt Jump - Ocean Beach - Alley rooftop",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 19",
+						"name": "Unique Stunt Jump - Ocean Beach - Alley rooftop",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_19"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Alley_rooftop"
 						]
 					}
 				],
@@ -442,14 +442,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 20",
+				"name": "Unique Stunt Jump - Ocean Beach - Parking Garage east of Hospital",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 20",
+						"name": "Unique Stunt Jump - Ocean Beach - Parking Garage east of Hospital",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_20"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Parking_Garage_east_of_Hospital"
 						]
 					}
 				],
@@ -465,14 +465,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 21",
+				"name": "Unique Stunt Jump - Washington Beach - Over northern bridge",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 21",
+						"name": "Unique Stunt Jump - Washington Beach - Over northern bridge",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_21"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_Over_northern_bridge"
 						]
 					}
 				],
@@ -488,14 +488,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 22",
+				"name": "Unique Stunt Jump - Ocean Beach - Cone Crazy parking lot rooftop",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 22",
+						"name": "Unique Stunt Jump - Ocean Beach - Cone Crazy parking lot rooftop",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_22"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Cone_Crazy_parking_lot_rooftop"
 						]
 					}
 				],
@@ -511,14 +511,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 23",
+				"name": "Unique Stunt Jump - Ocean Beach - Gas station stairs",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 23",
+						"name": "Unique Stunt Jump - Ocean Beach - Gas station stairs",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_23"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Gas_station_stairs"
 						]
 					}
 				],
@@ -534,14 +534,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 24",
+				"name": "Unique Stunt Jump - Ocean Beach - Pink roof south of Gas station",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 24",
+						"name": "Unique Stunt Jump - Ocean Beach - Pink roof south of Gas station",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_24"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Pink_roof_south_of_Gas_station"
 						]
 					}
 				],
@@ -557,14 +557,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 25",
+				"name": "Unique Stunt Jump - Ocean Beach - Cortez's docks south",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 25",
+						"name": "Unique Stunt Jump - Ocean Beach - Cortez's docks south",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_25"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Cortez_s_docks_south"
 						]
 					}
 				],
@@ -580,14 +580,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 26",
+				"name": "Unique Stunt Jump - Ocean Beach - Cortez's docks north",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 26",
+						"name": "Unique Stunt Jump - Ocean Beach - Cortez's docks north",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_26"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Cortez_s_docks_north"
 						]
 					}
 				],
@@ -603,14 +603,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 27",
+				"name": "Unique Stunt Jump - Ocean Beach - Alley pallets south",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 27",
+						"name": "Unique Stunt Jump - Ocean Beach - Alley pallets south",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_27"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Alley_pallets_south"
 						]
 					}
 				],
@@ -626,14 +626,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 28",
+				"name": "Unique Stunt Jump - Ocean Beach - Alley pallets north",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 28",
+						"name": "Unique Stunt Jump - Ocean Beach - Alley pallets north",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_28"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Alley_pallets_north"
 						]
 					}
 				],
@@ -649,14 +649,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 29",
+				"name": "Unique Stunt Jump - Vice Point - Over the river near Club Malibu",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 29",
+						"name": "Unique Stunt Jump - Vice Point - Over the river near Club Malibu",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_29"
+							"^$rule_Unique_Stunt_Jump_Vice_Point_Over_the_river_near_Club_Malibu"
 						]
 					}
 				],
@@ -672,14 +672,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 30",
+				"name": "Unique Stunt Jump - Washington Beach - River jump east",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 30",
+						"name": "Unique Stunt Jump - Washington Beach - River jump east",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_30"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_River_jump_east"
 						]
 					}
 				],
@@ -695,14 +695,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 31",
+				"name": "Unique Stunt Jump - Washington Beach - Alley stairs south",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 31",
+						"name": "Unique Stunt Jump - Washington Beach - Alley stairs south",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_31"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_south"
 						]
 					}
 				],
@@ -718,14 +718,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 32",
+				"name": "Unique Stunt Jump - Washington Beach - Alley stairs northeast",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 32",
+						"name": "Unique Stunt Jump - Washington Beach - Alley stairs northeast",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_32"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_northeast"
 						]
 					}
 				],
@@ -741,14 +741,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 33",
+				"name": "Unique Stunt Jump - Washington Beach - Alley stairs northwest",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 33",
+						"name": "Unique Stunt Jump - Washington Beach - Alley stairs northwest",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_33"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_Alley_stairs_northwest"
 						]
 					}
 				],
@@ -764,14 +764,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 34",
+				"name": "Unique Stunt Jump - Washington Beach - Ramp north of alley",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 34",
+						"name": "Unique Stunt Jump - Washington Beach - Ramp north of alley",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_34"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_Ramp_north_of_alley"
 						]
 					}
 				],
@@ -787,14 +787,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 35",
+				"name": "Unique Stunt Jump - Washington Beach - River jump west",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 35",
+						"name": "Unique Stunt Jump - Washington Beach - River jump west",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_35"
+							"^$rule_Unique_Stunt_Jump_Washington_Beach_River_jump_west"
 						]
 					}
 				],
@@ -810,14 +810,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump 36",
+				"name": "Unique Stunt Jump - Starfish Island - Northeast house staircase",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump 36",
+						"name": "Unique Stunt Jump - Starfish Island - Northeast house staircase",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_36"
+							"^$rule_Unique_Stunt_Jump_Starfish_Island_Northeast_house_staircase"
 						]
 					}
 				],

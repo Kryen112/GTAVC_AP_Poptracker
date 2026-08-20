@@ -424,14 +424,14 @@
 				]
 			},
 			{
-				"name": "Vice Point Purchase",
+				"name": "3321 Vice Point Purchase",
 				"chest_unopened_img": "images/items/pins/properties.png",
 				"chest_opened_img": "images/items/pins/properties_opened.png",
 				"sections": [
 					{
-						"name": "Vice Point Purchase",
+						"name": "3321 Vice Point Purchase",
 						"access_rules": [
-							"^$rule_Vice_Point_Purchase"
+							"^$rule_3321_Vice_Point_Purchase"
 						]
 					}
 				],

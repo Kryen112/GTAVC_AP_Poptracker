@@ -129,6 +129,7 @@ RAMPAGE_COORDS: list[tuple[float, float, float]] = [
 
 PROPERTY_COORDS: dict[str, tuple[float, float, float]] = {
     "1102 Washington Street Purchase": (88.5, -804.7, 11.2),
+    "3321 Vice Point Purchase": (531.4, 1273.7, 17.6),
     "Boatyard Purchase": (-685.8, -1495.6, 12.5),
     "Cherry Popper Purchase": (-864.3, -576.6, 11.0),
     "El Swanko Casa Purchase": (428.4, 605.9, 12.2),
@@ -142,7 +143,6 @@ PROPERTY_COORDS: dict[str, tuple[float, float, float]] = {
     "Printworks Purchase": (-1059.6, -274.5, 11.4),
     "Skumole Shack Purchase": (-560.1, 703.6, 20.5),
     "Sunshine Autos Purchase": (-1007.3, -869.9, 12.8),
-    "Vice Point Purchase": (531.4, 1273.7, 17.6),
 }
 
 STORE_COORDS: list[tuple[float, float, float]] = [

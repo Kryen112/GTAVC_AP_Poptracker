@@ -5,14 +5,14 @@
 		"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 		"children": [
 			{
-				"name": "Robbable Store 01",
+				"name": "Store Robbery - Washington Beach - Hardware store",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 01",
+						"name": "Store Robbery - Washington Beach - Hardware store",
 						"access_rules": [
-							"^$rule_Robbable_Store_01"
+							"^$rule_Store_Robbery_Washington_Beach_Hardware_store"
 						]
 					}
 				],
@@ -28,14 +28,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 02",
+				"name": "Store Robbery - North Point Mall - Tooled Up",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 02",
+						"name": "Store Robbery - North Point Mall - Tooled Up",
 						"access_rules": [
-							"^$rule_Robbable_Store_02"
+							"^$rule_Store_Robbery_North_Point_Mall_Tooled_Up"
 						]
 					}
 				],
@@ -51,14 +51,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 03",
+				"name": "Store Robbery - Little Havana - Screw This",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 03",
+						"name": "Store Robbery - Little Havana - Screw This",
 						"access_rules": [
-							"^$rule_Robbable_Store_03"
+							"^$rule_Store_Robbery_Little_Havana_Screw_This"
 						]
 					}
 				],
@@ -74,14 +74,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 04",
+				"name": "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 04",
+						"name": "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
 						"access_rules": [
-							"^$rule_Robbable_Store_04"
+							"^$rule_Store_Robbery_Little_Havana_Calleggi_Delicatessen_Restaurant"
 						]
 					}
 				],
@@ -97,14 +97,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 05",
+				"name": "Store Robbery - Downtown - The Jewelers",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 05",
+						"name": "Store Robbery - Downtown - The Jewelers",
 						"access_rules": [
-							"^$rule_Robbable_Store_05"
+							"^$rule_Store_Robbery_Downtown_The_Jewelers"
 						]
 					}
 				],
@@ -120,14 +120,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 06",
+				"name": "Store Robbery - Downtown - Dispensary",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 06",
+						"name": "Store Robbery - Downtown - Dispensary",
 						"access_rules": [
-							"^$rule_Robbable_Store_06"
+							"^$rule_Store_Robbery_Downtown_Dispensary"
 						]
 					}
 				],
@@ -143,14 +143,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 07",
+				"name": "Store Robbery - Little Haiti - Hyton Aide",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 07",
+						"name": "Store Robbery - Little Haiti - Hyton Aide",
 						"access_rules": [
-							"^$rule_Robbable_Store_07"
+							"^$rule_Store_Robbery_Little_Haiti_Hyton_Aide"
 						]
 					}
 				],
@@ -166,14 +166,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 08",
+				"name": "Store Robbery - Vice Point - The Jewelers",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 08",
+						"name": "Store Robbery - Vice Point - The Jewelers",
 						"access_rules": [
-							"^$rule_Robbable_Store_08"
+							"^$rule_Store_Robbery_Vice_Point_The_Jewelers"
 						]
 					}
 				],
@@ -189,14 +189,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 09",
+				"name": "Store Robbery - Vice Point - Dispensary",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 09",
+						"name": "Store Robbery - Vice Point - Dispensary",
 						"access_rules": [
-							"^$rule_Robbable_Store_09"
+							"^$rule_Store_Robbery_Vice_Point_Dispensary"
 						]
 					}
 				],
@@ -212,14 +212,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 10",
+				"name": "Store Robbery - Vice Point - Corner store",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 10",
+						"name": "Store Robbery - Vice Point - Corner store",
 						"access_rules": [
-							"^$rule_Robbable_Store_10"
+							"^$rule_Store_Robbery_Vice_Point_Corner_store"
 						]
 					}
 				],
@@ -235,14 +235,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 11",
+				"name": "Store Robbery - North Point Mall - Vinyl Countdown",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 11",
+						"name": "Store Robbery - North Point Mall - Vinyl Countdown",
 						"access_rules": [
-							"^$rule_Robbable_Store_11"
+							"^$rule_Store_Robbery_North_Point_Mall_Vinyl_Countdown"
 						]
 					}
 				],
@@ -258,14 +258,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 12",
+				"name": "Store Robbery - North Point Mall - Gash",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 12",
+						"name": "Store Robbery - North Point Mall - Gash",
 						"access_rules": [
-							"^$rule_Robbable_Store_12"
+							"^$rule_Store_Robbery_North_Point_Mall_Gash"
 						]
 					}
 				],
@@ -281,14 +281,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 13",
+				"name": "Store Robbery - North Point Mall - Family Jewels",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 13",
+						"name": "Store Robbery - North Point Mall - Family Jewels",
 						"access_rules": [
-							"^$rule_Robbable_Store_13"
+							"^$rule_Store_Robbery_North_Point_Mall_Family_Jewels"
 						]
 					}
 				],
@@ -304,14 +304,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 14",
+				"name": "Store Robbery - Little Havana - Café Robina",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 14",
+						"name": "Store Robbery - Little Havana - Café Robina",
 						"access_rules": [
-							"^$rule_Robbable_Store_14"
+							"^$rule_Store_Robbery_Little_Havana_Caf_Robina"
 						]
 					}
 				],
@@ -327,14 +327,14 @@
 				]
 			},
 			{
-				"name": "Robbable Store 15",
+				"name": "Store Robbery - Little Havana - Laundromat",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Robbable Store 15",
+						"name": "Store Robbery - Little Havana - Laundromat",
 						"access_rules": [
-							"^$rule_Robbable_Store_15"
+							"^$rule_Store_Robbery_Little_Havana_Laundromat"
 						]
 					}
 				],
