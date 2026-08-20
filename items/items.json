@@ -262,370 +262,370 @@
 		"codes": "Max Health Upgrade"
 	},
 	{
-		"name": "Cash $50",
+		"name": "$50",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $50"
+		"codes": "$50"
 	},
 	{
-		"name": "Cash $100",
+		"name": "$100",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $100"
+		"codes": "$100"
 	},
 	{
-		"name": "Cash $150",
+		"name": "$150",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $150"
+		"codes": "$150"
 	},
 	{
-		"name": "Cash $200",
+		"name": "$200",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $200"
+		"codes": "$200"
 	},
 	{
-		"name": "Cash $250",
+		"name": "$250",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $250"
+		"codes": "$250"
 	},
 	{
-		"name": "Cash $300",
+		"name": "$300",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $300"
+		"codes": "$300"
 	},
 	{
-		"name": "Cash $350",
+		"name": "$350",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $350"
+		"codes": "$350"
 	},
 	{
-		"name": "Cash $400",
+		"name": "$400",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $400"
+		"codes": "$400"
 	},
 	{
-		"name": "Cash $450",
+		"name": "$450",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $450"
+		"codes": "$450"
 	},
 	{
-		"name": "Cash $500",
+		"name": "$500",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $500"
+		"codes": "$500"
 	},
 	{
-		"name": "Cash $550",
+		"name": "$550",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $550"
+		"codes": "$550"
 	},
 	{
-		"name": "Cash $600",
+		"name": "$600",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $600"
+		"codes": "$600"
 	},
 	{
-		"name": "Cash $650",
+		"name": "$650",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $650"
+		"codes": "$650"
 	},
 	{
-		"name": "Cash $700",
+		"name": "$700",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $700"
+		"codes": "$700"
 	},
 	{
-		"name": "Cash $750",
+		"name": "$750",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $750"
+		"codes": "$750"
 	},
 	{
-		"name": "Cash $800",
+		"name": "$800",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $800"
+		"codes": "$800"
 	},
 	{
-		"name": "Cash $850",
+		"name": "$850",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $850"
+		"codes": "$850"
 	},
 	{
-		"name": "Cash $900",
+		"name": "$900",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $900"
+		"codes": "$900"
 	},
 	{
-		"name": "Cash $950",
+		"name": "$950",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $950"
+		"codes": "$950"
 	},
 	{
-		"name": "Cash $1,000",
+		"name": "$1,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1000"
+		"codes": "$1000"
 	},
 	{
-		"name": "Cash $1,050",
+		"name": "$1,050",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1050"
+		"codes": "$1050"
 	},
 	{
-		"name": "Cash $1,100",
+		"name": "$1,100",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1100"
+		"codes": "$1100"
 	},
 	{
-		"name": "Cash $1,150",
+		"name": "$1,150",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1150"
+		"codes": "$1150"
 	},
 	{
-		"name": "Cash $1,200",
+		"name": "$1,200",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1200"
+		"codes": "$1200"
 	},
 	{
-		"name": "Cash $1,250",
+		"name": "$1,250",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1250"
+		"codes": "$1250"
 	},
 	{
-		"name": "Cash $1,300",
+		"name": "$1,300",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1300"
+		"codes": "$1300"
 	},
 	{
-		"name": "Cash $1,350",
+		"name": "$1,350",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1350"
+		"codes": "$1350"
 	},
 	{
-		"name": "Cash $1,400",
+		"name": "$1,400",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1400"
+		"codes": "$1400"
 	},
 	{
-		"name": "Cash $1,450",
+		"name": "$1,450",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1450"
+		"codes": "$1450"
 	},
 	{
-		"name": "Cash $1,500",
+		"name": "$1,500",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1500"
+		"codes": "$1500"
 	},
 	{
-		"name": "Cash $1,550",
+		"name": "$1,550",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1550"
+		"codes": "$1550"
 	},
 	{
-		"name": "Cash $1,600",
+		"name": "$1,600",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1600"
+		"codes": "$1600"
 	},
 	{
-		"name": "Cash $1,650",
+		"name": "$1,650",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1650"
+		"codes": "$1650"
 	},
 	{
-		"name": "Cash $1,700",
+		"name": "$1,700",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1700"
+		"codes": "$1700"
 	},
 	{
-		"name": "Cash $1,800",
+		"name": "$1,800",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1800"
+		"codes": "$1800"
 	},
 	{
-		"name": "Cash $1,900",
+		"name": "$1,900",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $1900"
+		"codes": "$1900"
 	},
 	{
-		"name": "Cash $2,000",
+		"name": "$2,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2000"
+		"codes": "$2000"
 	},
 	{
-		"name": "Cash $2,100",
+		"name": "$2,100",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2100"
+		"codes": "$2100"
 	},
 	{
-		"name": "Cash $2,200",
+		"name": "$2,200",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2200"
+		"codes": "$2200"
 	},
 	{
-		"name": "Cash $2,300",
+		"name": "$2,300",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2300"
+		"codes": "$2300"
 	},
 	{
-		"name": "Cash $2,400",
+		"name": "$2,400",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2400"
+		"codes": "$2400"
 	},
 	{
-		"name": "Cash $2,500",
+		"name": "$2,500",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2500"
+		"codes": "$2500"
 	},
 	{
-		"name": "Cash $2,600",
+		"name": "$2,600",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2600"
+		"codes": "$2600"
 	},
 	{
-		"name": "Cash $2,700",
+		"name": "$2,700",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2700"
+		"codes": "$2700"
 	},
 	{
-		"name": "Cash $2,800",
+		"name": "$2,800",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2800"
+		"codes": "$2800"
 	},
 	{
-		"name": "Cash $2,900",
+		"name": "$2,900",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $2900"
+		"codes": "$2900"
 	},
 	{
-		"name": "Cash $3,000",
+		"name": "$3,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3000"
+		"codes": "$3000"
 	},
 	{
-		"name": "Cash $3,100",
+		"name": "$3,100",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3100"
+		"codes": "$3100"
 	},
 	{
-		"name": "Cash $3,200",
+		"name": "$3,200",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3200"
+		"codes": "$3200"
 	},
 	{
-		"name": "Cash $3,300",
+		"name": "$3,300",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3300"
+		"codes": "$3300"
 	},
 	{
-		"name": "Cash $3,400",
+		"name": "$3,400",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3400"
+		"codes": "$3400"
 	},
 	{
-		"name": "Cash $3,500",
+		"name": "$3,500",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $3500"
+		"codes": "$3500"
 	},
 	{
-		"name": "Cash $4,000",
+		"name": "$4,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $4000"
+		"codes": "$4000"
 	},
 	{
-		"name": "Cash $5,000",
+		"name": "$5,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $5000"
+		"codes": "$5000"
 	},
 	{
-		"name": "Cash $8,000",
+		"name": "$8,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $8000"
+		"codes": "$8000"
 	},
 	{
-		"name": "Cash $10,000",
+		"name": "$10,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $10000"
+		"codes": "$10000"
 	},
 	{
-		"name": "Cash $16,000",
+		"name": "$16,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $16000"
+		"codes": "$16000"
 	},
 	{
-		"name": "Cash $20,000",
+		"name": "$20,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $20000"
+		"codes": "$20000"
 	},
 	{
-		"name": "Cash $30,000",
+		"name": "$30,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $30000"
+		"codes": "$30000"
 	},
 	{
-		"name": "Cash $40,000",
+		"name": "$40,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $40000"
+		"codes": "$40000"
 	},
 	{
-		"name": "Cash $50,000",
+		"name": "$50,000",
 		"type": "toggle",
 		"img": "images/items/hud/gun.png",
-		"codes": "Cash $50000"
+		"codes": "$50000"
 	},
 	{
 		"name": "Weapon Pickup",
