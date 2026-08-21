@@ -11,6 +11,8 @@ Checks run:
     every rule function runs against a stub tracker and returns a level
     every location section has a rule, and every rule has a section
     every item code a rule tests is declared in items.json
+    the percentage item the autotracker draws on is declared and named
+    the autotracker draws the percentage it is given, and only its own slot's
     every location id the world knows maps to exactly one section path
     every pin sits inside the map image
 
@@ -41,9 +43,22 @@ PACK = Path(__file__).resolve().parent.parent
 # of a mission not yet passed, which is what missionPassed reads. REQUESTED_PATHS
 # records what was asked for, so a rule naming a section the pack does not have
 # is caught here rather than in PopTracker.
+# PopTracker's own AccessibilityLevel values, read off its Lua API definition.
+# The numbers are not contiguous and Partial sits BELOW Inspect, so they are
+# declared once here and both the Lua stub and the validation below are built
+# from this rather than each carrying a copy. An earlier version had two copies
+# that disagreed, which left the checker validating against a numbering
+# PopTracker does not use.
+ACCESSIBILITY_LEVELS = {
+    "None": 0, "Partial": 1, "Inspect": 3, "SequenceBreak": 5,
+    "Normal": 6, "Cleared": 7,
+}
+_LEVEL_LINE = ", ".join(
+    f"{name} = {value}" for name, value in ACCESSIBILITY_LEVELS.items())
+
 STUB = """
 AccessibilityLevel = {
-    None = 0, Inspect = 1, Partial = 2, SequenceBreak = 3, Normal = 4, Cleared = 5,
+    -- LEVELS --
 }
 REQUESTED_CODES = {}
 REQUESTED_PATHS = {}
@@ -60,6 +75,43 @@ function Tracker:FindObjectForCode(path)
 end
 PopVersion = "0.31.0"
 """
+# The PopTracker API the autotracker layer touches, for the one thing in it that
+# is hand-written rather than generated: the completion percentage. Everything
+# else archipelago.lua does is driven by the generated mapping tables, which the
+# checks below read directly. FindObjectForCode answers the percentage item alone
+# and records what was drawn on it.
+AUTOTRACKER_STUB = """
+OVERLAY = ""
+ACTIVE = nil
+GETS = {}
+NOTIFIES = {}
+
+Tracker = {}
+function Tracker:FindObjectForCode(code)
+    if code ~= PERCENTAGE_CODE then return nil end
+    return {
+        Active = false,
+        SetOverlay = function(self, text) OVERLAY = text; ACTIVE = self.Active end,
+    }
+end
+
+ScriptHost = {}
+function ScriptHost:LoadScript(path) LOAD(path) end
+
+Archipelago = { PlayerNumber = 3, TeamNumber = 0 }
+function Archipelago:Get(keys) for _, key in ipairs(keys) do GETS[key] = true end end
+function Archipelago:SetNotify(keys)
+    for _, key in ipairs(keys) do NOTIFIES[key] = true end
+end
+function Archipelago:AddClearHandler(_name, _handler) end
+function Archipelago:AddItemHandler(_name, _handler) end
+function Archipelago:AddLocationHandler(_name, _handler) end
+function Archipelago:AddRetrievedHandler(_name, _handler) end
+function Archipelago:AddSetReplyHandler(_name, _handler) end
+
+AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP = false
+Highlight = nil
+"""
 
 # The settings a generated rule branches on, so every combination of them is run.
 # A rule that carries both (the finale's last mission) has four expressions, and
@@ -69,7 +121,7 @@ SWITCH_SETTINGS = ("enable_properties_on", "split_mainland_access_on")
 
 def load_runtime() -> lupa.LuaRuntime:
     runtime = lupa.LuaRuntime(unpack_returned_tuples=True)
-    runtime.execute(STUB)
+    runtime.execute(STUB.replace("-- LEVELS --", _LEVEL_LINE))
     for name in ("scripts/logic/logic.lua", "scripts/logic/access_rules.lua"):
         source = (PACK / name).read_text(encoding="utf-8")
         try:
@@ -101,7 +153,7 @@ def rules_run(runtime: lupa.LuaRuntime, problems: list[str],
     for code in codes_on:
         on[code] = True
     globals_table["CODES_ON"] = on
-    levels = {0, 1, 2, 3, 4, 5}
+    levels = set(ACCESSIBILITY_LEVELS.values())
     for name in rule_names():
         function = globals_table[name]
         if function is None:
@@ -196,6 +248,119 @@ def mapping_table(name: str) -> dict[int, list[str]]:
     return table
 
 
+def check_percentage_item(problems: list[str], item_codes: set[str]) -> None:
+    """The completion percentage is not an AP item, so nothing above reaches it:
+    the generator emits its code and its data store key into setting_mapping.lua
+    and archipelago.lua reads both by name. A generator that stopped emitting
+    them would leave the hand-written half concatenating nil, which takes down
+    autotracking as a whole, so the two names are checked here."""
+    generated = (PACK / "scripts" / "autotracking" / "setting_mapping.lua").read_text(
+        encoding="utf-8")
+    code = re.search(r'PERCENTAGE_CODE = "([^"]+)"', generated)
+    if code is None:
+        problems.append("setting_mapping.lua declares no PERCENTAGE_CODE, which "
+                        "archipelago.lua looks the percentage item up by")
+    elif code.group(1) not in item_codes:
+        problems.append(f"PERCENTAGE_CODE is {code.group(1)!r}, which items.json "
+                        "does not declare")
+    if not re.search(r'PERCENTAGE_KEY_PREFIX = "[^"]+"', generated):
+        problems.append("setting_mapping.lua declares no PERCENTAGE_KEY_PREFIX, "
+                        "which archipelago.lua builds its data store key from")
+
+
+def check_autotracker_percentage(problems: list[str]) -> None:
+    """Run the autotracker's percentage path against a stub PopTracker.
+
+    The number is the one thing the tracker shows that no AP item or location
+    carries, so nothing else here reaches it: it arrives on a data store key, is
+    dispatched by hand-written Lua, and is drawn as overlay text. Cheap to run
+    for real, and a wrong key or a nil the dispatcher cannot take would show up
+    in game as silence.
+    """
+    runtime = lupa.LuaRuntime(unpack_returned_tuples=True)
+    runtime.globals()["LOAD"] = lambda path: runtime.execute(
+        (PACK / path).read_text(encoding="utf-8"))
+    runtime.execute(AUTOTRACKER_STUB)
+    try:
+        runtime.execute((PACK / "scripts" / "autotracking" / "archipelago.lua")
+                        .read_text(encoding="utf-8"))
+        lua = runtime.globals()
+        lua["onClear"](runtime.table())
+    except lupa.LuaError as error:
+        problems.append(f"archipelago.lua failed to clear: {error}")
+        return
+
+    key = lua["PERCENTAGE_KEY"]
+    expected = f"{lua['PERCENTAGE_KEY_PREFIX']}0_3"
+    if key != expected:
+        problems.append(f"the percentage key is {key!r}, not {expected!r}")
+    if not (lua["GETS"][key] and lua["NOTIFIES"][key]):
+        problems.append("onClear does not subscribe to the percentage key")
+    if lua["OVERLAY"] != "":
+        problems.append(f"a fresh seed draws {lua['OVERLAY']!r} on the percentage")
+
+    # Whole and float numbers alike (JSON carries either), the unset key a Get
+    # answers with before the mod has reported, and, since the key carries no
+    # read-only prefix and anything in the room can Set it, the values that would
+    # raise inside the handler if they reached the format: out of range, an
+    # infinity, a not-a-number, and something that is not a number at all.
+    drawn = [(0, "0%", False), (93, "93%", False), (93.0, "93%", False),
+             (100, "100%", True), (100.0, "100%", True), (None, "", False),
+             ("93", "93%", False), (-5, "0%", False), (150, "100%", True),
+             (1e19, "100%", True), (float("inf"), "100%", True),
+             (float("-inf"), "0%", False), (float("nan"), "0%", False),
+             ("not a number", "", False), (True, "", False)]
+    for value, overlay, active in drawn:
+        try:
+            lua["onDataStorageUpdate"](key, value, None)
+        except lupa.LuaError as error:
+            problems.append(f"the percentage {value!r} raised: {error}")
+            continue
+        if lua["OVERLAY"] != overlay:
+            problems.append(
+                f"the percentage {value!r} drew {lua['OVERLAY']!r}, not {overlay!r}")
+        if lua["ACTIVE"] != active:
+            problems.append(
+                f"the percentage {value!r} left the icon active={lua['ACTIVE']}")
+    lua["onDataStorageUpdate"](key, 42, None)
+    lua["onDataStorageUpdate"](f"{lua['PERCENTAGE_KEY_PREFIX']}0_9", 77, None)
+    if lua["OVERLAY"] != "42%":
+        problems.append(f"another slot's percentage key drew {lua['OVERLAY']!r}")
+
+
+def check_accessibility_levels(problems: list[str]) -> None:
+    """Pins ACCESSIBILITY_LEVELS against PopTracker's own Lua API definition.
+
+    The values are PopTracker's, not the pack's, so nothing inside the pack can
+    prove them. PopTracker ships the definition it generates its Lua API from,
+    and it sits beside this repository the way the Archipelago checkout sits
+    beside the world's, so when it is there the numbers are checked rather than
+    trusted. Absent, this says so and moves on rather than failing: the pack has
+    to build on a machine with no PopTracker install.
+    """
+    definition = PACK.parent / "Poptracker" / "api" / "lua" / "definition" / "poptracker.lua"
+    if not definition.is_file():
+        print("  accessibility levels: no PopTracker install beside the pack, "
+              "so the values are taken on trust")
+        return
+    text = definition.read_text(encoding="utf-8", errors="replace")
+    block = re.search(r"AccessibilityLevel\s*=\s*\{(.*?)\}", text, re.S)
+    if block is None:
+        problems.append(
+            f"{definition} has no AccessibilityLevel table, so the pack's copy "
+            "of the values cannot be checked")
+        return
+    theirs = {name: int(value)
+              for name, value in re.findall(r"(\w+)\s*=\s*(\d+)", block.group(1))}
+    if theirs != ACCESSIBILITY_LEVELS:
+        problems.append(
+            f"ACCESSIBILITY_LEVELS is {ACCESSIBILITY_LEVELS} but PopTracker's own "
+            f"definition says {theirs}; take theirs")
+        return
+    print(f"  accessibility levels: match PopTracker's own definition, "
+          f"{len(theirs)} of them")
+
+
 def check_pins(problems: list[str]) -> int:
     maps = json.loads((PACK / "maps" / "maps.json").read_text(encoding="utf-8"))
     sizes: dict[str, tuple[int, int]] = {}
@@ -281,6 +446,11 @@ def main() -> int:
         if entry and entry[0] not in item_codes:
             problems.append(
                 f"item id {item_id} maps to {entry[0]!r}, which items.json does not declare")
+
+    check_percentage_item(problems, item_codes)
+    check_autotracker_percentage(problems)
+
+    check_accessibility_levels(problems)
 
     pins = check_pins(problems)
 
