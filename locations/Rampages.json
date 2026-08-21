@@ -120,14 +120,14 @@
 				]
 			},
 			{
-				"name": "Rampage - Washington Beach - MP5",
+				"name": "Rampage - Washington Beach - MP",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rampage - Washington Beach - MP5",
+						"name": "Rampage - Washington Beach - MP",
 						"access_rules": [
-							"^$rule_Rampage_Washington_Beach_MP5"
+							"^$rule_Rampage_Washington_Beach_MP"
 						]
 					}
 				],
@@ -327,14 +327,14 @@
 				]
 			},
 			{
-				"name": "Rampage - Little Havana - Ruger",
+				"name": "Rampage - Little Havana - Kruger",
 				"chest_unopened_img": "images/items/pins/rampages.png",
 				"chest_opened_img": "images/items/pins/rampages_opened.png",
 				"sections": [
 					{
-						"name": "Rampage - Little Havana - Ruger",
+						"name": "Rampage - Little Havana - Kruger",
 						"access_rules": [
-							"^$rule_Rampage_Little_Havana_Ruger"
+							"^$rule_Rampage_Little_Havana_Kruger"
 						]
 					}
 				],

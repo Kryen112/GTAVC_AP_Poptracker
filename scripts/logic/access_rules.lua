@@ -700,7 +700,7 @@ end
 function rule_Rampage_Vice_Point_Uzi_drive_by_south() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Rampages", "content_lock_rampages"))) end
 function rule_Rampage_Vice_Point_M4() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
 function rule_Rampage_Vice_Point_Rocket_Launcher() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
-function rule_Rampage_Washington_Beach_MP5() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
+function rule_Rampage_Washington_Beach_MP() return reachAccess((lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages"))) end
 function rule_Rampage_Downtown_Flamethrower()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
@@ -745,7 +745,7 @@ function rule_Rampage_Starfish_Island_Vehicle()
 		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Cortez/All Hands On Deck!"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Jump", "ability_lock_jump") and lockTerm("Rampages", "content_lock_rampages")))
 	end
 end
-function rule_Rampage_Little_Havana_Ruger()
+function rule_Rampage_Little_Havana_Kruger()
 	if mainlandCrossingsSplit() then
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Rampages", "content_lock_rampages")))
 	else
