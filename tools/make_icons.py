@@ -38,6 +38,7 @@ GLYPH = (255, 255, 255, 255)
 PACKAGE_REWARD = (196, 122, 40)
 EMERGENCY_REWARD = (32, 150, 140)
 MINIMAP = (70, 110, 190)
+GOAL = (122, 92, 176)
 
 
 def tile(colour: tuple[int, int, int]) -> tuple[Image.Image, ImageDraw.ImageDraw]:
@@ -163,6 +164,15 @@ def armour_plus(draw: ImageDraw.ImageDraw) -> None:
     draw.rectangle([middle - 14, 44, middle + 14, 54], fill=(*EMERGENCY_REWARD, 255))
 
 
+def percent(draw: ImageDraw.ImageDraw) -> None:
+    """A percent sign, for the game's own completion percentage. The tracker
+    writes the number itself over this icon, and PopTracker puts overlay text in
+    the bottom right, so the glyph is kept inside the top left two thirds."""
+    draw.ellipse([16, 14, 34, 32], outline=GLYPH, width=6)
+    draw.ellipse([36, 34, 54, 52], outline=GLYPH, width=6)
+    draw.line([18, 52, 52, 16], fill=GLYPH, width=7)
+
+
 # Icon file name -> (tile colour, glyph). The names are what generate.py asks for.
 ICONS = {
     "body_armor": (PACKAGE_REWARD, shield),
@@ -182,6 +192,7 @@ ICONS = {
     "taxi_jump": (EMERGENCY_REWARD, jump),
     "max_health": (EMERGENCY_REWARD, cross),
     "minimap": (MINIMAP, radar),
+    "percentage": (GOAL, percent),
 }
 
 

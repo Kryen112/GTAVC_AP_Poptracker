@@ -189,12 +189,33 @@ models rather than sprites, so there is no sheet to lift them from, and the only
 usable pieces anywhere in its textures are a banknote, a radar disc and a couple
 of flames. `tools/make_icons.py` draws those instead: a white glyph on a rounded
 tile, the tile colour naming the family and the glyph the item. Package rewards
-are amber, emergency rewards teal, the minimap blue.
+are amber, emergency rewards teal, the minimap blue, the completion percentage
+violet.
 
 Without them all eleven package rewards, all five emergency rewards and the
 minimap fall back to the same marker, and a panel of identical icons says
 nothing. The generator refuses to run if a drawn icon is missing or names an item
 the world does not have, so a rename cannot quietly put one back on the fallback.
+
+## The completion percentage
+
+The Goal group holds one item that no multiworld ever grants: `Percentage
+Completed`, the game's own "Percentage completed" stat. The mod reads it off the
+same number the stats menu prints, truncated the same way that screen truncates
+it, and the client publishes it to the AP data store under
+`gta_vice_city_percentage_<team>_<slot>`. The autotracker subscribes to that key
+and writes the number as overlay text, so the icon is dark while the number
+climbs and lights up at a hundred.
+
+The key and the item's code both come from the apworld: `generate.py` imports
+`protocol.percentage_key` and emits its prefix into `setting_mapping.lua`, so
+the tracker cannot end up watching a key nothing writes. `check_logic.py` checks
+that the emitted code names an item `items.json` declares, because the
+hand-written `archipelago.lua` reads both names and a missing one would take
+autotracking down with it rather than just the number.
+
+It shows on every seed, not only the 100 percent goal. The goal itself is
+still every check checked; this is a readout beside it.
 
 ## Colours
 

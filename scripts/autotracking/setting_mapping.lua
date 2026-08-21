@@ -80,3 +80,9 @@ SLOT_SET_CODES = {
 		["stunt_jumps"] = "content_lock_stunt_jumps",
 	},
 }
+
+-- The game's own completion percentage: the item its number is
+-- drawn on, and the AP data store key the client publishes it
+-- under, one per team and slot.
+PERCENTAGE_CODE = "Percentage Completed"
+PERCENTAGE_KEY_PREFIX = "gta_vice_city_percentage_"

@@ -12,6 +12,10 @@ the tracker cannot drift from the world it tracks. Emits:
     scripts/autotracking/setting_mapping.lua
     scripts/logic/access_rules.lua
 
+One item is not an AP item: the game's own completion percentage, which the mod
+reads and the client publishes to the AP data store. Its code and that key are
+read from the apworld too, so the tracker watches what the client writes.
+
 Pins are never placed by hand. Vice City is one map, so every check sits at its
 own game position, read from data/check_coords.py and put through the transform
 in data/map_geometry.json, which tools/extract_map.py writes alongside the map
@@ -223,6 +227,14 @@ RADIO_ICONS = {
 
 FALLBACK_ICON = "radar_centre"
 
+# The game's own "Percentage completed" stat, which the mod reads off the same
+# number the stats menu prints and the client publishes to the AP data store.
+# Not an AP item: nothing in the multiworld grants it and no rule reads it, so it
+# carries no item id and no logic, and the autotracker draws its number as
+# overlay text on this item instead.
+PERCENTAGE_ITEM = "Percentage Completed"
+PERCENTAGE_ICON = "percentage"
+
 # Items the game has no art for, drawn by tools/make_icons.py instead. Vice City
 # renders its weapon and vehicle icons as models rather than sprites, so without
 # these the package rewards, the emergency rewards and the minimap all fall back
@@ -268,6 +280,14 @@ def load_world_modules():
     sys.modules["gta_vice_city"] = package
     from gta_vice_city import data, items, locations, rules
     return data, items, locations, rules
+
+
+def load_client_protocol():
+    """The client's protocol module, for the data store key it publishes the
+    completion percentage under. It imports nothing outside the standard
+    library, and load_world_modules has already put the package on the path."""
+    from gta_vice_city.client import protocol
+    return protocol
 
 
 def load_check_coords():
@@ -585,6 +605,14 @@ def build_items_json(data, items) -> list[dict]:
             entries.append({"name": name, "type": "toggle", "img": image,
                             "codes": item_code(name)})
 
+    # A toggle rather than a consumable: the number is overlay text the
+    # autotracker writes, and the icon itself lights up on a finished game.
+    entries.append({
+        "name": PERCENTAGE_ITEM, "type": "toggle",
+        "img": f"{DRAWN_ICON_DIRECTORY}/{PERCENTAGE_ICON}.png",
+        "codes": item_code(PERCENTAGE_ITEM),
+    })
+
     for key, label, default_on in BINARY_SETTINGS:
         entries.append(binary_setting_item(key, label, default_on))
     for key, label, stages in STAGED_SETTINGS:
@@ -822,7 +850,15 @@ def section_path(display: str, node: str, section: str) -> str:
 
 def main() -> int:
     data, items, locations, rules = load_world_modules()
+    protocol = load_client_protocol()
     check_coords = load_check_coords()
+    # The Lua builds the percentage key from the prefix, the team and the slot.
+    # A client that assembled it differently would leave the tracker watching a
+    # key nothing writes, showing no number and saying nothing, so it fails here.
+    if protocol.percentage_key(0, 3) != f"{protocol.PERCENTAGE_KEY_PREFIX}0_3":
+        raise SystemExit(
+            "the client's percentage key is no longer the prefix followed by "
+            "team and slot; setting_mapping.lua would watch the wrong key")
 
     geometry = Geometry(MAP_GEOMETRY)
     unknown_soft = sorted(
@@ -837,7 +873,7 @@ def main() -> int:
         raise SystemExit(
             f"DRAWN_ICONS names items the world does not have: {unknown_icons}")
     missing_art = sorted(
-        drawn for drawn in set(DRAWN_ICONS.values())
+        drawn for drawn in set(DRAWN_ICONS.values()) | {PERCENTAGE_ICON}
         if not (PACK / DRAWN_ICON_DIRECTORY / f"{drawn}.png").is_file())
     if missing_art:
         raise SystemExit(
@@ -909,7 +945,7 @@ def main() -> int:
 
     # ---- scripts/autotracking/setting_mapping.lua ------------------------
     write_text(PACK / "scripts" / "autotracking" / "setting_mapping.lua",
-               render_setting_mapping(data))
+               render_setting_mapping(data, protocol.PERCENTAGE_KEY_PREFIX))
 
     # ---- scripts/logic/access_rules.lua ---------------------------------
     # A lock item -> the setting whose on stage means its key was selected. The
@@ -1024,8 +1060,8 @@ def build_items_layout(data, items) -> dict:
     display_codes = [f"show_{class_key}" for class_key, _display, _option in CHECK_CLASSES]
 
     owned_sections = [
-        ("Area access", wrap(list(data.AREA_ITEMS), 2)),
-        ("Goal", wrap([data.PACKAGE_FRAGMENT_ITEM], 1)),
+        ("Area access", wrap(list(data.AREA_ITEMS), 6)),
+        ("Goal", wrap([data.PACKAGE_FRAGMENT_ITEM, PERCENTAGE_ITEM], 2)),
         ("Story strands", wrap(story, 7)),
         ("Venue strands", wrap(venues, 7)),
         ("Property ownership", wrap(list(data.PROPERTY_OWNERSHIP_ITEMS), 8)),
@@ -1093,7 +1129,7 @@ def report_column_heights(*columns: list[tuple[str, list[list[str]]]]) -> None:
 
 
 
-def render_setting_mapping(data) -> str:
+def render_setting_mapping(data, percentage_key_prefix: str) -> str:
     lines = ["-- Generated by tools/generate.py. slot_data key -> tracker setting.",
              "SLOT_CODES = {"]
     for key, _label, _default in BINARY_SETTINGS:
@@ -1119,6 +1155,12 @@ def render_setting_mapping(data) -> str:
                      for member in sorted(lock_keys_for(slot_key, data)))
         lines.append("\t},")
     lines.append("}")
+    lines.append("")
+    lines.append("-- The game's own completion percentage: the item its number is")
+    lines.append("-- drawn on, and the AP data store key the client publishes it")
+    lines.append("-- under, one per team and slot.")
+    lines.append(f'PERCENTAGE_CODE = "{item_code(PERCENTAGE_ITEM)}"')
+    lines.append(f'PERCENTAGE_KEY_PREFIX = "{percentage_key_prefix}"')
     return "\n".join(lines) + "\n"
 
 

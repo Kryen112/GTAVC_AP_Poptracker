@@ -12,13 +12,9 @@
 					"rows": [
 						[
 							"Mainland Access",
-							"Starfish Island Access"
-						],
-						[
+							"Starfish Island Access",
 							"Prawn Island Bridge",
-							"Leaf Links Bridge"
-						],
-						[
+							"Leaf Links Bridge",
 							"Ocean Beach Bridge",
 							"Starfish Island Causeway"
 						]
@@ -33,7 +29,8 @@
 					"item_margin": "2,2",
 					"rows": [
 						[
-							"Package Fragment"
+							"Package Fragment",
+							"Percentage Completed"
 						]
 					]
 				}
@@ -304,13 +301,9 @@
 					"rows": [
 						[
 							"Mainland Access",
-							"Starfish Island Access"
-						],
-						[
+							"Starfish Island Access",
 							"Prawn Island Bridge",
-							"Leaf Links Bridge"
-						],
-						[
+							"Leaf Links Bridge",
 							"Ocean Beach Bridge",
 							"Starfish Island Causeway"
 						]
@@ -325,7 +318,8 @@
 					"item_margin": "2,2",
 					"rows": [
 						[
-							"Package Fragment"
+							"Package Fragment",
+							"Percentage Completed"
 						]
 					]
 				}

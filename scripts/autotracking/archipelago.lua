@@ -5,6 +5,7 @@ ScriptHost:LoadScript("scripts/autotracking/setting_mapping.lua")
 CUR_INDEX = -1
 SLOT_DATA = nil
 HINTS_KEY = nil
+PERCENTAGE_KEY = nil
 PLAYER_ID = -1
 TEAM_NUMBER = 0
 
@@ -127,11 +128,16 @@ function onClear(slot_data)
     PLAYER_ID = Archipelago.PlayerNumber or -1
     TEAM_NUMBER = Archipelago.TeamNumber or 0
 
-    -- The server's read-only hints list for this slot. Subscribing has to happen
-    -- from a ClearHandler.
+    -- A fresh seed shows no percentage until the mod reports one.
+    updatePercentage(nil)
+
+    -- The server's read-only hints list for this slot, and the completion
+    -- percentage the client publishes for it. Subscribing has to happen from a
+    -- ClearHandler.
     HINTS_KEY = "_read_hints_" .. TEAM_NUMBER .. "_" .. PLAYER_ID
-    Archipelago:Get({HINTS_KEY})
-    Archipelago:SetNotify({HINTS_KEY})
+    PERCENTAGE_KEY = PERCENTAGE_KEY_PREFIX .. TEAM_NUMBER .. "_" .. PLAYER_ID
+    Archipelago:Get({HINTS_KEY, PERCENTAGE_KEY})
+    Archipelago:SetNotify({HINTS_KEY, PERCENTAGE_KEY})
 end
 
 -- Retrieved (Get reply) and SetReply share one dispatcher; old_value is nil for
@@ -139,7 +145,40 @@ end
 function onDataStorageUpdate(key, value, _old_value)
     if key == HINTS_KEY then
         onHintsUpdate(value)
+    elseif key == PERCENTAGE_KEY then
+        updatePercentage(value)
     end
+end
+
+-- The game's own "Percentage completed" stat, which the mod reads out of the
+-- game and the client publishes. Drawn as overlay text on its item, which lights
+-- up once the game itself says a hundred. The mod already truncates the way the
+-- stats menu does, so the number here is the number on that screen.
+function updatePercentage(value)
+    local object = Tracker:FindObjectForCode(PERCENTAGE_CODE)
+    if not object then
+        print("Warning: no tracker object for code:", PERCENTAGE_CODE)
+        return
+    end
+    local percentage = tonumber(value)
+    if percentage == nil then
+        object.Active = false
+        object:SetOverlay("")
+        return
+    end
+    -- Held to the range the mod reports, and floored, before it is formatted.
+    -- The key carries no read-only prefix, so anything in the room can Set it,
+    -- and %d raises on a value with no integer representation: a fraction, an
+    -- infinity, a number past what an integer holds, or a not-a-number, which is
+    -- the one that survives both comparisons and so is tested against itself.
+    -- This runs inside a data store handler, where a raise costs the rest of the
+    -- update rather than just the number.
+    if percentage ~= percentage then percentage = 0 end
+    if percentage < 0 then percentage = 0 end
+    if percentage > 100 then percentage = 100 end
+    percentage = math.floor(percentage)
+    object.Active = percentage >= 100
+    object:SetOverlay(string.format("%d%%", percentage))
 end
 
 -- Mark every hinted location in our own world with its Highlight square. A hint

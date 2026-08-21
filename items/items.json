@@ -738,12 +738,6 @@
 		"codes": "Wanted Level Trap"
 	},
 	{
-		"name": "Exploding Cars Trap",
-		"type": "toggle",
-		"img": "images/items/hud/siterocket.png",
-		"codes": "Exploding Cars Trap"
-	},
-	{
 		"name": "Hostile Pedestrians Trap",
 		"type": "toggle",
 		"img": "images/items/hud/siterocket.png",
@@ -1324,6 +1318,12 @@
 		"type": "toggle",
 		"img": "images/items/hud/radar_centre.png",
 		"codes": "Little Havana Robbable Stores"
+	},
+	{
+		"name": "Percentage Completed",
+		"type": "toggle",
+		"img": "images/items/drawn/percentage.png",
+		"codes": "Percentage Completed"
 	},
 	{
 		"name": "Hidden packages",
