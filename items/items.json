@@ -1473,6 +1473,46 @@
 		"initial_stage_idx": 1
 	},
 	{
+		"name": "Ambient pickups",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/enable_pickups_off.png",
+				"name": "Ambient pickups: off",
+				"codes": "enable_pickups,enable_pickups_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/enable_pickups_on.png",
+				"name": "Ambient pickups: on",
+				"codes": "enable_pickups,enable_pickups_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Shops",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/shuffle_shops_off.png",
+				"name": "Shops: off",
+				"codes": "shuffle_shops,shuffle_shops_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/shuffle_shops_on.png",
+				"name": "Shops: on",
+				"codes": "shuffle_shops,shuffle_shops_on",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
 		"name": "Shuffle emergency rewards",
 		"type": "progressive",
 		"loop": false,
@@ -1614,6 +1654,32 @@
 				"img": "images/items/settings/goal_hundred_percent.png",
 				"name": "Goal: 100 percent",
 				"codes": "goal,goal_hundred_percent",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Split content locks",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/split_content_locks_off.png",
+				"name": "Split content locks: Off, one item per class",
+				"codes": "split_content_locks,split_content_locks_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/split_content_locks_per_district.png",
+				"name": "Split content locks: Per district",
+				"codes": "split_content_locks,split_content_locks_per_district",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/split_content_locks_per_class.png",
+				"name": "Split content locks: Per class per district",
+				"codes": "split_content_locks,split_content_locks_per_class",
 				"inherit_codes": false
 			}
 		]
@@ -2001,6 +2067,48 @@
 				"img": "images/items/settings/show_emergency_vehicles_on.png",
 				"name": "Show Emergency Vehicle Missions: on",
 				"codes": "show_emergency_vehicles,show_emergency_vehicles_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Pickups",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_pickups_off.png",
+				"name": "Show Pickups: off",
+				"codes": "show_pickups,show_pickups_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_pickups_on.png",
+				"name": "Show Pickups: on",
+				"codes": "show_pickups,show_pickups_on",
+				"inherit_codes": false
+			}
+		],
+		"initial_stage_idx": 1
+	},
+	{
+		"name": "Show Shops",
+		"type": "progressive",
+		"loop": false,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/items/settings/show_shops_off.png",
+				"name": "Show Shops: off",
+				"codes": "show_shops,show_shops_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/items/settings/show_shops_on.png",
+				"name": "Show Shops: on",
+				"codes": "show_shops,show_shops_on",
 				"inherit_codes": false
 			}
 		],

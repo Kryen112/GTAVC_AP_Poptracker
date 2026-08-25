@@ -212,14 +212,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump - Vice Point - Construction site",
+				"name": "Unique Stunt Jump - Vice Point - Avery's construction site",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump - Vice Point - Construction site",
+						"name": "Unique Stunt Jump - Vice Point - Avery's construction site",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_Vice_Point_Construction_site"
+							"^$rule_Unique_Stunt_Jump_Vice_Point_Avery_s_construction_site"
 						]
 					}
 				],
@@ -511,14 +511,14 @@
 				]
 			},
 			{
-				"name": "Unique Stunt Jump - Ocean Beach - Gas station stairs",
+				"name": "Unique Stunt Jump - Ocean Beach - Stairs north of Pay 'n' Spray",
 				"chest_unopened_img": "images/items/pins/stunt_jumps.png",
 				"chest_opened_img": "images/items/pins/stunt_jumps_opened.png",
 				"sections": [
 					{
-						"name": "Unique Stunt Jump - Ocean Beach - Gas station stairs",
+						"name": "Unique Stunt Jump - Ocean Beach - Stairs north of Pay 'n' Spray",
 						"access_rules": [
-							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Gas_station_stairs"
+							"^$rule_Unique_Stunt_Jump_Ocean_Beach_Stairs_north_of_Pay_n_Spray"
 						]
 					}
 				],

@@ -28,6 +28,14 @@ SLOT_CODES = {
 		code = "enable_side_events",
 		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
 	},
+	enable_pickups = {
+		code = "enable_pickups",
+		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
+	},
+	shuffle_shops = {
+		code = "shuffle_shops",
+		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
+	},
 	shuffle_emergency_rewards = {
 		code = "shuffle_emergency_rewards",
 		mapping = { [0] = 0, [1] = 1, [false] = 0, [true] = 1 },
@@ -58,6 +66,14 @@ SLOT_CODES = {
 			["final_mission"] = 0, [0] = 0,
 			["hidden_packages"] = 1, [1] = 1,
 			["hundred_percent"] = 2, [2] = 2,
+		},
+	},
+	split_content_locks = {
+		code = "split_content_locks",
+		mapping = {
+			["off"] = 0, [0] = 0,
+			["per_district"] = 1, [1] = 1,
+			["per_class"] = 2, [2] = 2,
 		},
 	},
 }

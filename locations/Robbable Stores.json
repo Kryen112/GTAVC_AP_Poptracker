@@ -74,14 +74,26 @@
 				]
 			},
 			{
-				"name": "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
+				"name": "Little Havana Calleggi Delicatessen",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
 						"name": "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
 							"^$rule_Store_Robbery_Little_Havana_Calleggi_Delicatessen_Restaurant"
+						]
+					},
+					{
+						"name": "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant",
+						"visibility_rules": [
+							"$visHiddenPackages"
+						],
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_Inside_Calleggi_Delicatessen_Restaurant"
 						]
 					}
 				],
@@ -93,6 +105,7 @@
 					}
 				],
 				"visibility_rules": [
+					"$visHiddenPackages",
 					"$visRobbableStores"
 				]
 			},
@@ -120,14 +133,35 @@
 				]
 			},
 			{
-				"name": "Store Robbery - Downtown - Dispensary",
+				"name": "Downtown Dispensary",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
 						"name": "Store Robbery - Downtown - Dispensary",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
 							"^$rule_Store_Robbery_Downtown_Dispensary"
+						]
+					},
+					{
+						"name": "Pickup - Downtown - Adrenaline inside the Dispensary",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Adrenaline_inside_the_Dispensary"
+						]
+					},
+					{
+						"name": "Pickup - Downtown - Health inside the Dispensary",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Health_inside_the_Dispensary"
 						]
 					}
 				],
@@ -139,18 +173,40 @@
 					}
 				],
 				"visibility_rules": [
+					"$visPickups",
 					"$visRobbableStores"
 				]
 			},
 			{
-				"name": "Store Robbery - Little Haiti - Hyton Aide",
+				"name": "Little Haiti Ryton Aide",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
-						"name": "Store Robbery - Little Haiti - Hyton Aide",
+						"name": "Store Robbery - Little Haiti - Ryton Aide",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
-							"^$rule_Store_Robbery_Little_Haiti_Hyton_Aide"
+							"^$rule_Store_Robbery_Little_Haiti_Ryton_Aide"
+						]
+					},
+					{
+						"name": "Pickup - Little Haiti - Adrenaline inside Ryton Aide",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Adrenaline_inside_Ryton_Aide"
+						]
+					},
+					{
+						"name": "Pickup - Little Haiti - Health inside Ryton Aide",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Health_inside_Ryton_Aide"
 						]
 					}
 				],
@@ -162,18 +218,31 @@
 					}
 				],
 				"visibility_rules": [
+					"$visPickups",
 					"$visRobbableStores"
 				]
 			},
 			{
-				"name": "Store Robbery - Vice Point - The Jewelers",
+				"name": "Vice Point Jewelers",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
 						"name": "Store Robbery - Vice Point - The Jewelers",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
 							"^$rule_Store_Robbery_Vice_Point_The_Jewelers"
+						]
+					},
+					{
+						"name": "Hidden Package - Vice Point - Inside the Jewelers",
+						"visibility_rules": [
+							"$visHiddenPackages"
+						],
+						"access_rules": [
+							"^$rule_Hidden_Package_Vice_Point_Inside_the_Jewelers"
 						]
 					}
 				],
@@ -185,18 +254,40 @@
 					}
 				],
 				"visibility_rules": [
+					"$visHiddenPackages",
 					"$visRobbableStores"
 				]
 			},
 			{
-				"name": "Store Robbery - Vice Point - Dispensary",
+				"name": "Vice Point Dispensary",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
 						"name": "Store Robbery - Vice Point - Dispensary",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
 							"^$rule_Store_Robbery_Vice_Point_Dispensary"
+						]
+					},
+					{
+						"name": "Pickup - Vice Point - Adrenaline inside Dispensary",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Adrenaline_inside_Dispensary"
+						]
+					},
+					{
+						"name": "Pickup - Vice Point - Health inside Dispensary",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Health_inside_Dispensary"
 						]
 					}
 				],
@@ -208,6 +299,7 @@
 					}
 				],
 				"visibility_rules": [
+					"$visPickups",
 					"$visRobbableStores"
 				]
 			},
@@ -327,14 +419,26 @@
 				]
 			},
 			{
-				"name": "Store Robbery - Little Havana - Laundromat",
+				"name": "Little Havana Laundromat",
 				"chest_unopened_img": "images/items/pins/robbable_stores.png",
 				"chest_opened_img": "images/items/pins/robbable_stores_opened.png",
 				"sections": [
 					{
 						"name": "Store Robbery - Little Havana - Laundromat",
+						"visibility_rules": [
+							"$visRobbableStores"
+						],
 						"access_rules": [
 							"^$rule_Store_Robbery_Little_Havana_Laundromat"
+						]
+					},
+					{
+						"name": "Hidden Package - Little Havana - Inside the Laundromat",
+						"visibility_rules": [
+							"$visHiddenPackages"
+						],
+						"access_rules": [
+							"^$rule_Hidden_Package_Little_Havana_Inside_the_Laundromat"
 						]
 					}
 				],
@@ -346,6 +450,7 @@
 					}
 				],
 				"visibility_rules": [
+					"$visHiddenPackages",
 					"$visRobbableStores"
 				]
 			}

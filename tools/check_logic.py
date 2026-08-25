@@ -116,7 +116,20 @@ Highlight = nil
 # The settings a generated rule branches on, so every combination of them is run.
 # A rule that carries both (the finale's last mission) has four expressions, and
 # the mixed corners are only reached by toggling them apart.
-SWITCH_SETTINGS = ("enable_properties_on", "split_mainland_access_on")
+# Every setting a rule switches on. The rules are called once per combination,
+# so a branch left out here is a branch no run ever enters: one that raises, or
+# returns something that is not an accessibility level, would never be found.
+#
+# It does NOT make the item codes in those branches visible. lockTerm returns
+# early when its own setting is off, so the item it names is never asked for, and
+# no combination here turns a lock on. Reading the source is what covers that,
+# in rule_item_codes below.
+#
+# The two content stages give all three granularities between them, since off is
+# what no stage code means, and both at once reads as per_district.
+SWITCH_SETTINGS = ("enable_properties_on", "split_mainland_access_on",
+                   "split_content_locks_per_district",
+                   "split_content_locks_per_class")
 
 
 def load_runtime() -> lupa.LuaRuntime:
@@ -166,12 +179,15 @@ def rules_run(runtime: lupa.LuaRuntime, problems: list[str],
             continue
         if result not in levels:
             problems.append(f"{name} returned {result!r}, not an AccessibilityLevel")
-    for helper in ("visStoryMissions", "visProperties", "visHiddenPackages",
-                   "visRampages", "visStuntJumps", "visRobbableStores",
-                   "visSideEvents", "visEmergencyVehicles"):
+    # Read out of the locations rather than listed here. A list goes stale
+    # silently: it named eight helpers and the pickups class had made a ninth,
+    # which nothing checked. Sections carry their own rules as well as nodes,
+    # since a marker standing for two classes hides each half with its own.
+    for helper in sorted(visibility_helpers()):
         function = globals_table[helper]
         if function is None:
-            problems.append(f"visibility helper {helper} is missing")
+            problems.append(f"visibility helper {helper} is missing, and a node "
+                            "or section names it")
             continue
         try:
             function()
@@ -208,6 +224,39 @@ def section_paths_and_rules(problems: list[str]) -> tuple[set[str], set[str]]:
     return paths, referenced
 
 
+def visibility_helpers() -> set[str]:
+    """Every helper named by a visibility rule anywhere in the locations.
+
+    Rules are OR-ed across entries and AND-ed within a comma separated entry, so
+    an entry is split before the leading $ is stripped. A helper that does not
+    exist makes its node or section permanently invisible, which is silent in the
+    pack and only shows in game, so the names are collected from the files rather
+    than written down twice.
+    """
+    helpers: set[str] = set()
+
+    def walk(nodes) -> None:
+        for node in nodes:
+            for holder in [node, *node.get("sections", [])]:
+                for entry in holder.get("visibility_rules", []) or []:
+                    for rule in str(entry).split(","):
+                        name = rule.strip()
+                        if name.startswith("$"):
+                            helpers.add(name[1:])
+            if "children" in node:
+                walk(node["children"])
+
+    for path in sorted((PACK / "locations").glob("*.json")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        walk(data if isinstance(data, list) else [data])
+    if not helpers:
+        # The reader is the only thing that looks at these, so finding none means
+        # the files changed shape rather than that nothing is gated.
+        raise SystemExit("no visibility rules found in locations, so nothing was "
+                         "checked")
+    return helpers
+
+
 def declared_item_codes() -> set[str]:
     codes: set[str] = set()
     for entry in json.loads((PACK / "items" / "items.json").read_text(encoding="utf-8")):
@@ -216,6 +265,38 @@ def declared_item_codes() -> set[str]:
             if field:
                 codes.update(part.strip() for part in field.split(","))
     return codes
+
+
+def rule_item_codes(problems: list[str], item_codes: set[str]) -> None:
+    """Every item any rule names, read out of the source rather than run.
+
+    Running the rules cannot see these. A lock term returns early when its own
+    setting is off, so the item it names is never requested, and a rule carries
+    one version per granularity of which a run enters exactly one. So an item
+    name that nothing provides is invisible to every dynamic check, which is how
+    the content locks came to name Hidden Packages in a seed whose item was
+    called Ocean Beach Hidden Packages: the rule was unsatisfiable and every gate
+    read clean.
+
+    Read as a whole file rather than per rule, since the codes are what matter
+    and a name is spelled the same wherever it appears.
+    """
+    source = (PACK / "scripts" / "logic" / "access_rules.lua").read_text(
+        encoding="utf-8")
+    named: set[str] = set()
+    for pattern in (r'\blockTerm\("((?:[^"\\]|\\.)*)"',
+                    r'\bhas\("((?:[^"\\]|\\.)*)"\)',
+                    r'\bitemAtLeast\("((?:[^"\\]|\\.)*)"'):
+        named.update(lua_unescaped(literal)
+                     for literal in re.findall(pattern, source))
+    problems.extend(
+        f"a rule names item code {code!r}, which items.json does not declare"
+        for code in sorted(named - item_codes))
+    if not named:
+        # The patterns above are the only reader of these, so a rename that made
+        # them all miss would report a clean file rather than nothing checked.
+        problems.append("no rule names any item, so access_rules.lua either has "
+                        "no requirements or is no longer being read")
 
 
 def lua_unescaped(literal: str) -> str:
@@ -425,6 +506,7 @@ def main() -> int:
     problems.extend(
         f"a rule tests item code {code!r}, which items.json does not declare"
         for code in sorted(requested_codes - item_codes))
+    rule_item_codes(problems, item_codes)
     # A missionPassed term names a section rather than an item, so the path it
     # asks for has to be one the locations declare.
     problems.extend(

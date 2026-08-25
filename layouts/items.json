@@ -222,18 +222,23 @@
 					"rows": [
 						[
 							"goal",
+							"split_content_locks",
 							"enable_hidden_packages",
 							"enable_rampages",
 							"enable_stunt_jumps",
 							"enable_emergency_vehicles",
-							"enable_properties",
-							"enable_robbable_stores"
+							"enable_properties"
 						],
 						[
+							"enable_robbable_stores",
 							"enable_side_events",
+							"enable_pickups",
+							"shuffle_shops",
 							"shuffle_emergency_rewards",
 							"randomize_radio_stations",
-							"shuffle_minimap",
+							"shuffle_minimap"
+						],
+						[
 							"randomize_pickups",
 							"split_mainland_access",
 							"death_link"
@@ -282,6 +287,10 @@
 							"show_robbable_stores",
 							"show_side_events",
 							"show_emergency_vehicles"
+						],
+						[
+							"show_pickups",
+							"show_shops"
 						]
 					]
 				}
@@ -517,18 +526,23 @@
 					"rows": [
 						[
 							"goal",
+							"split_content_locks",
 							"enable_hidden_packages",
 							"enable_rampages",
 							"enable_stunt_jumps",
 							"enable_emergency_vehicles",
-							"enable_properties",
-							"enable_robbable_stores"
+							"enable_properties"
 						],
 						[
+							"enable_robbable_stores",
 							"enable_side_events",
+							"enable_pickups",
+							"shuffle_shops",
 							"shuffle_emergency_rewards",
 							"randomize_radio_stations",
-							"shuffle_minimap",
+							"shuffle_minimap"
+						],
+						[
 							"randomize_pickups",
 							"split_mainland_access",
 							"death_link"
@@ -577,6 +591,10 @@
 							"show_robbable_stores",
 							"show_side_events",
 							"show_emergency_vehicles"
+						],
+						[
+							"show_pickups",
+							"show_shops"
 						]
 					]
 				}

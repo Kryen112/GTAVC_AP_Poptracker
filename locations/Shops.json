@@ -1,0 +1,286 @@
+[
+	{
+		"name": "Shops",
+		"chest_unopened_img": "images/items/pins/shops.png",
+		"chest_opened_img": "images/items/pins/shops_opened.png",
+		"children": [
+			{
+				"name": "Ocean Beach Ammu-Nation",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Ocean Beach - Ammu-Nation - Pistol",
+						"access_rules": [
+							"^$rule_Shop_Ocean_Beach_Ammu_Nation_Pistol"
+						]
+					},
+					{
+						"name": "Shop - Ocean Beach - Ammu-Nation - Mac 10",
+						"access_rules": [
+							"^$rule_Shop_Ocean_Beach_Ammu_Nation_Mac_10"
+						]
+					},
+					{
+						"name": "Shop - Ocean Beach - Ammu-Nation - Shotgun",
+						"access_rules": [
+							"^$rule_Shop_Ocean_Beach_Ammu_Nation_Shotgun"
+						]
+					},
+					{
+						"name": "Shop - Ocean Beach - Ammu-Nation - Kruger",
+						"access_rules": [
+							"^$rule_Shop_Ocean_Beach_Ammu_Nation_Kruger"
+						]
+					},
+					{
+						"name": "Shop - Ocean Beach - Ammu-Nation - Body Armour",
+						"access_rules": [
+							"^$rule_Shop_Ocean_Beach_Ammu_Nation_Body_Armour"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 475,
+						"y": 811
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
+			},
+			{
+				"name": "Vice Point Shops",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Pistol",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Pistol"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Uzi",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Uzi"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Stubby Shotgun",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Stubby_Shotgun"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Sniper Rifle",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Sniper_Rifle"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Grenades",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Grenades"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Ammu-Nation - Body Armour",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Ammu_Nation_Body_Armour"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Tooled Up - Screwdriver",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Tooled_Up_Screwdriver"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Tooled Up - Hammer",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Tooled_Up_Hammer"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Tooled Up - Meat Cleaver",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Tooled_Up_Meat_Cleaver"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Tooled Up - Knife",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Tooled_Up_Knife"
+						]
+					},
+					{
+						"name": "Shop - Vice Point - Tooled Up - Katana",
+						"access_rules": [
+							"^$rule_Shop_Vice_Point_Tooled_Up_Katana"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 584,
+						"y": 158
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
+			},
+			{
+				"name": "Downtown Ammu-Nation",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Downtown - Ammu-Nation - .357",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_357"
+						]
+					},
+					{
+						"name": "Shop - Downtown - Ammu-Nation - MP",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_MP"
+						]
+					},
+					{
+						"name": "Shop - Downtown - Ammu-Nation - S.P.A.S. 12",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_S_P_A_S_12"
+						]
+					},
+					{
+						"name": "Shop - Downtown - Ammu-Nation - M4",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_M4"
+						]
+					},
+					{
+						"name": "Shop - Downtown - Ammu-Nation - .308 Sniper",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_308_Sniper"
+						]
+					},
+					{
+						"name": "Shop - Downtown - Ammu-Nation - Body Armour",
+						"access_rules": [
+							"^$rule_Shop_Downtown_Ammu_Nation_Body_Armour"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 316,
+						"y": 122
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
+			},
+			{
+				"name": "Washington Beach Bunch of Tools",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Washington Beach - Bunch of Tools - Screwdriver",
+						"access_rules": [
+							"^$rule_Shop_Washington_Beach_Bunch_of_Tools_Screwdriver"
+						]
+					},
+					{
+						"name": "Shop - Washington Beach - Bunch of Tools - Hammer",
+						"access_rules": [
+							"^$rule_Shop_Washington_Beach_Bunch_of_Tools_Hammer"
+						]
+					},
+					{
+						"name": "Shop - Washington Beach - Bunch of Tools - Meat Cleaver",
+						"access_rules": [
+							"^$rule_Shop_Washington_Beach_Bunch_of_Tools_Meat_Cleaver"
+						]
+					},
+					{
+						"name": "Shop - Washington Beach - Bunch of Tools - Baseball Bat",
+						"access_rules": [
+							"^$rule_Shop_Washington_Beach_Bunch_of_Tools_Baseball_Bat"
+						]
+					},
+					{
+						"name": "Shop - Washington Beach - Bunch of Tools - Machete",
+						"access_rules": [
+							"^$rule_Shop_Washington_Beach_Bunch_of_Tools_Machete"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 543,
+						"y": 550
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
+			},
+			{
+				"name": "Little Havana Screw This",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Little Havana - Screw This - Screwdriver",
+						"access_rules": [
+							"^$rule_Shop_Little_Havana_Screw_This_Screwdriver"
+						]
+					},
+					{
+						"name": "Shop - Little Havana - Screw This - Hammer",
+						"access_rules": [
+							"^$rule_Shop_Little_Havana_Screw_This_Hammer"
+						]
+					},
+					{
+						"name": "Shop - Little Havana - Screw This - Meat Cleaver",
+						"access_rules": [
+							"^$rule_Shop_Little_Havana_Screw_This_Meat_Cleaver"
+						]
+					},
+					{
+						"name": "Shop - Little Havana - Screw This - Machete",
+						"access_rules": [
+							"^$rule_Shop_Little_Havana_Screw_This_Machete"
+						]
+					},
+					{
+						"name": "Shop - Little Havana - Screw This - Chainsaw",
+						"access_rules": [
+							"^$rule_Shop_Little_Havana_Screw_This_Chainsaw"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 245,
+						"y": 607
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
+			}
+		]
+	}
+]

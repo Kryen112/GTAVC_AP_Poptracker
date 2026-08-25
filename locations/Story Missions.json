@@ -28,7 +28,7 @@
 				]
 			},
 			{
-				"name": "Rosenberg",
+				"name": "Ken Rosenberg",
 				"chest_unopened_img": "images/items/pins/story_missions.png",
 				"chest_opened_img": "images/items/pins/story_missions_opened.png",
 				"sections": [
@@ -69,7 +69,7 @@
 				]
 			},
 			{
-				"name": "Cortez",
+				"name": "General Cortez",
 				"chest_unopened_img": "images/items/pins/story_missions.png",
 				"chest_opened_img": "images/items/pins/story_missions_opened.png",
 				"sections": [
@@ -116,7 +116,7 @@
 				]
 			},
 			{
-				"name": "The Chase & Phnom Penh '86 & The Fastest Boat & Supply & Demand & Shakedown & Bar Brawl & Cop Land & Keep Your Friends Close...",
+				"name": "Ricardo Diaz + Vercetti Protection + Vercetti Finale",
 				"chest_unopened_img": "images/items/pins/story_missions.png",
 				"chest_opened_img": "images/items/pins/story_missions_opened.png",
 				"sections": [
@@ -528,29 +528,6 @@
 						"map": "Vice City",
 						"x": 241,
 						"y": 566
-					}
-				],
-				"visibility_rules": [
-					"$visStoryMissions"
-				]
-			},
-			{
-				"name": "Cap the Collector",
-				"chest_unopened_img": "images/items/pins/story_missions.png",
-				"chest_opened_img": "images/items/pins/story_missions_opened.png",
-				"sections": [
-					{
-						"name": "Cap the Collector",
-						"access_rules": [
-							"^$rule_Cap_the_Collector"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 219,
-						"y": 501
 					}
 				],
 				"visibility_rules": [

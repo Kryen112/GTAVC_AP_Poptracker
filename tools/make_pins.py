@@ -40,6 +40,10 @@ CLASS_COLOURS = {
     "robbable_stores": (255, 149, 0),
     "side_events": (175, 82, 222),
     "emergency_vehicles": (90, 200, 250),
+    "pickups": (48, 209, 183),
+    # A warm brown, far enough from the teal pickups and the orange stores that
+    # a shop pin is not mistaken for either at map scale.
+    "shops": (162, 132, 94),
 }
 
 EDGE = (24, 24, 28, 255)

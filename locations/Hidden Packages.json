@@ -166,29 +166,6 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Washington Beach - Near Body armour behind big Pink building",
-				"chest_unopened_img": "images/items/pins/hidden_packages.png",
-				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
-				"sections": [
-					{
-						"name": "Hidden Package - Washington Beach - Near Body armour behind big Pink building",
-						"access_rules": [
-							"^$rule_Hidden_Package_Washington_Beach_Near_Body_armour_behind_big_Pink_building"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 544,
-						"y": 658
-					}
-				],
-				"visibility_rules": [
-					"$visHiddenPackages"
-				]
-			},
-			{
 				"name": "Hidden Package - Washington Beach - Bridge south of Hardware store",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
@@ -320,29 +297,6 @@
 						"map": "Vice City",
 						"x": 612,
 						"y": 400
-					}
-				],
-				"visibility_rules": [
-					"$visHiddenPackages"
-				]
-			},
-			{
-				"name": "Hidden Package - Vice Point - Inside the Jewelers",
-				"chest_unopened_img": "images/items/pins/hidden_packages.png",
-				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
-				"sections": [
-					{
-						"name": "Hidden Package - Vice Point - Inside the Jewelers",
-						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_Inside_the_Jewelers"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 588,
-						"y": 375
 					}
 				],
 				"visibility_rules": [
@@ -649,14 +603,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - Top of construction site",
+				"name": "Hidden Package - Vice Point - Top of Avery's construction site",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - Top of construction site",
+						"name": "Hidden Package - Vice Point - Top of Avery's construction site",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_Top_of_construction_site"
+							"^$rule_Hidden_Package_Vice_Point_Top_of_Avery_s_construction_site"
 						]
 					}
 				],
@@ -787,14 +741,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Vice Point - On pier northwest of construction site",
+				"name": "Hidden Package - Vice Point - On pier northwest of Avery's construction site",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Vice Point - On pier northwest of construction site",
+						"name": "Hidden Package - Vice Point - On pier northwest of Avery's construction site",
 						"access_rules": [
-							"^$rule_Hidden_Package_Vice_Point_On_pier_northwest_of_construction_site"
+							"^$rule_Hidden_Package_Vice_Point_On_pier_northwest_of_Avery_s_construction_site"
 						]
 					}
 				],
@@ -1661,37 +1615,14 @@
 				]
 			},
 			{
-				"name": "Hidden Package - Little Havana - Inside the Laundromat",
+				"name": "Hidden Package - Little Havana - Kaufman Cabs billboard east of Café Robina",
 				"chest_unopened_img": "images/items/pins/hidden_packages.png",
 				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
 				"sections": [
 					{
-						"name": "Hidden Package - Little Havana - Inside the Laundromat",
+						"name": "Hidden Package - Little Havana - Kaufman Cabs billboard east of Café Robina",
 						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_Inside_the_Laundromat"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 185,
-						"y": 511
-					}
-				],
-				"visibility_rules": [
-					"$visHiddenPackages"
-				]
-			},
-			{
-				"name": "Hidden Package - Little Havana - Kaufman Cabs billboard",
-				"chest_unopened_img": "images/items/pins/hidden_packages.png",
-				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
-				"sections": [
-					{
-						"name": "Hidden Package - Little Havana - Kaufman Cabs billboard",
-						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_Kaufman_Cabs_billboard"
+							"^$rule_Hidden_Package_Little_Havana_Kaufman_Cabs_billboard_east_of_Caf_Robina"
 						]
 					}
 				],
@@ -1746,29 +1677,6 @@
 						"map": "Vice City",
 						"x": 230,
 						"y": 654
-					}
-				],
-				"visibility_rules": [
-					"$visHiddenPackages"
-				]
-			},
-			{
-				"name": "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant",
-				"chest_unopened_img": "images/items/pins/hidden_packages.png",
-				"chest_opened_img": "images/items/pins/hidden_packages_opened.png",
-				"sections": [
-					{
-						"name": "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant",
-						"access_rules": [
-							"^$rule_Hidden_Package_Little_Havana_Inside_Calleggi_Delicatessen_Restaurant"
-						]
-					}
-				],
-				"map_locations": [
-					{
-						"map": "Vice City",
-						"x": 272,
-						"y": 592
 					}
 				],
 				"visibility_rules": [

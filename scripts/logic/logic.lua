@@ -75,6 +75,25 @@ function mainlandCrossingsSplit()
     return has("split_mainland_access_on")
 end
 
+-- How finely the content locks are cut. Stage codes rather than a number, so the
+-- generated rules read the same word the setting shows: off, per_district or
+-- per_class. An item's NAME changes with this, since Hidden Packages becomes
+-- Ocean Beach Hidden Packages, so a rule that names a content item has one
+-- version per granularity and asks here which one applies.
+--
+-- Defaults to off when the setting has not arrived, matching the option's own
+-- default: before slot_data lands, no stage code is set and the whole-class
+-- reading is the one that was right for every seed before this existed.
+function contentSplit(stage)
+    if has("split_content_locks_per_district") then
+        return stage == "per_district"
+    end
+    if has("split_content_locks_per_class") then
+        return stage == "per_class"
+    end
+    return stage == "off"
+end
+
 -- A class's pins show only when the seed made it checks and the player has not
 -- hidden the class. Story missions are always on, so only the display toggle
 -- gates them.
@@ -114,4 +133,12 @@ end
 
 function visEmergencyVehicles()
     return classShown("emergency_vehicles", "enable_emergency_vehicles")
+end
+
+function visPickups()
+    return classShown("pickups", "enable_pickups")
+end
+
+function visShops()
+    return classShown("shops", "shuffle_shops")
 end

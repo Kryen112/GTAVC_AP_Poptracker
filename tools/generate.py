@@ -42,6 +42,7 @@ Run from the pack root:
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import sys
@@ -75,6 +76,7 @@ MERGE_DISTANCE_PIXELS = 14
 # building.
 NEVER_MERGED_CLASSES = frozenset({
     "robbable_stores", "hidden_packages", "rampages", "stunt_jumps",
+    "pickups",
 })
 
 # The one class placed rather than derived. Emergency vehicle milestones have no
@@ -130,6 +132,8 @@ CHECK_CLASSES: list[tuple[str, str, str | None]] = [
     ("robbable_stores", "Robbable Stores", "enable_robbable_stores"),
     ("side_events", "Side Events", "enable_side_events"),
     ("emergency_vehicles", "Emergency Vehicle Missions", "enable_emergency_vehicles"),
+    ("pickups", "Pickups", "enable_pickups"),
+    ("shops", "Shops", "shuffle_shops"),
 ]
 
 CLASS_DISPLAY = {key: display for key, display, _option in CHECK_CLASSES}
@@ -173,6 +177,8 @@ BINARY_SETTINGS: list[tuple[str, str, bool]] = [
     ("enable_properties", "Properties and assets", True),
     ("enable_robbable_stores", "Robbable stores", True),
     ("enable_side_events", "Side events", True),
+    ("enable_pickups", "Ambient pickups", False),
+    ("shuffle_shops", "Shops", False),
     ("shuffle_emergency_rewards", "Shuffle emergency rewards", False),
     ("randomize_radio_stations", "Randomize radio stations", False),
     ("shuffle_minimap", "Shuffle minimap", False),
@@ -181,12 +187,36 @@ BINARY_SETTINGS: list[tuple[str, str, bool]] = [
     ("death_link", "Death Link", False),
 ]
 
+# Every check class option must appear in BINARY_SETTINGS as well as in
+# CHECK_CLASSES. A class in one list and not the other emits pins whose
+# visibility rule asks for a code no item declares, so the pins exist and can
+# never show, which is silent in the pack and only visible in game.
+_class_options = {option for option in CLASS_OPTION.values() if option}
+_declared = {key for key, _label, _default in BINARY_SETTINGS}
+if _class_options - _declared:
+    raise SystemExit(
+        "check class options missing from BINARY_SETTINGS: "
+        f"{sorted(_class_options - _declared)}")
+
 STAGED_SETTINGS: list[tuple[str, str, list[tuple[str, str]]]] = [
     ("goal", "Goal", [
         ("final_mission", "Final mission"),
         ("hidden_packages", "Hidden package hunt"),
         ("hundred_percent", "100 percent"),
     ]),
+    # In the option's own value order, since the mapping reads the slot_data int
+    # as a stage index as well as by name.
+    ("split_content_locks", "Split content locks", [
+        ("off", "Off, one item per class"),
+        ("per_district", "Per district"),
+        ("per_class", "Per class per district"),
+    ]),
+]
+
+# The stage keys above, by the option value each one is. A rule is captured once
+# per entry, so this is also the order the emitted branches test in.
+CONTENT_SPLIT_STAGES: list[tuple[int, str]] = [
+    (0, "off"), (1, "per_district"), (2, "per_class"),
 ]
 
 # Set-valued slot_data keys: each member key becomes its own binary setting, so
@@ -307,7 +337,8 @@ Rule = tuple
 
 def capture_rules(rules, properties_enabled: bool, ability_locks: frozenset[str],
                   content_locks: frozenset[str],
-                  split_mainland_access: bool = False) -> dict[str, Rule]:
+                  split_mainland_access: bool = False,
+                  split_content_locks: int = 0) -> dict[str, Rule]:
     """The world's own location rules as requirement structures.
 
     build_location_rules returns predicates built by exactly two helpers, so
@@ -329,6 +360,7 @@ def capture_rules(rules, properties_enabled: bool, ability_locks: frozenset[str]
             ability_locks=ability_locks,
             content_locks=content_locks,
             split_mainland_access=split_mainland_access,
+            split_content_locks=split_content_locks,
         )
     finally:
         rules._requires = original_requires
@@ -367,6 +399,52 @@ def mission_passed_path(item: str) -> str | None:
     if path is None:
         raise SystemExit(f"no tracker section for the mission {mission!r}")
     return path
+
+
+def content_lock_overlay(data, location_name: str, split: int) -> dict[str, str]:
+    """Split-scoped content items -> the setting whose key decides them.
+
+    The base map is keyed by the whole-class item name, which is the only name a
+    content term carries while the locks are whole. Split, the term names a
+    district item instead, and that name alone does not say which key holds it:
+    Ocean Beach Content covers every selected class in Ocean Beach, so the same
+    name means the packages key in a package's rule and the rampages key in a
+    rampage's. The location is what resolves it, so the map is built per
+    location rather than once.
+
+    Without this a split term falls through to a plain has(), which would demand
+    the district item even in a seed whose key for that class is unselected, and
+    the world puts no term there at all.
+    """
+    overlay: dict[str, str] = {}
+
+    def claim(item: str, setting: str) -> None:
+        previous = overlay.get(item)
+        if previous is not None and previous != setting:
+            # One name, two keys, in one rule. Nothing produces this today and
+            # lockTerm holds one setting, so it is refused rather than resolved
+            # to whichever came last.
+            raise SystemExit(
+                f"{location_name}: {item} would read as both {previous} and "
+                f"{setting}, which one lockTerm cannot express")
+        overlay[item] = setting
+
+    # The location's own class first, because it is the specific reading. A
+    # district item is claimed by the property prerequisite too, and for a
+    # package in a district that also holds a property those are the same name:
+    # in a PACKAGE's rule that name is there for the package, so the class that
+    # owns the location wins and the property claim only fills in names the
+    # location does not already answer for. The finale is what needs the second
+    # pass, being a mission that spends money at property icons while covered by
+    # no content class of its own.
+    covering = data.content_item_for(location_name, split)
+    if covering is not None:
+        whole = data.LOCATION_CONTENT_CLASS[location_name]
+        claim(covering, f"content_lock_{data.CONTENT_ITEM_KEY[whole]}")
+    for item in data.property_content_items(split):
+        if item not in overlay:
+            claim(item, "content_lock_properties")
+    return overlay
 
 
 def item_code(name: str) -> str:
@@ -493,20 +571,41 @@ def rule_expression(rule: Rule | None, region_groups: list[list[str]],
     return conjunction(terms)
 
 
-def rule_function(function: str, calls: dict[tuple[bool, bool], str]) -> list[str]:
+def rule_function(function: str,
+                  calls: dict[tuple[bool, bool, int], str]) -> list[str]:
     """One Lua function for a rule, switching only on the settings it depends on.
 
-    calls is keyed by (properties class on, crossings split). Identical versions
-    collapse, so a rule that ignores a setting carries no test for it.
+    calls is keyed by (properties class on, crossings split, content split).
+    Identical versions collapse at every level, so a rule that ignores a setting
+    carries no test for it, and the great majority ignore all three.
     """
+    def content_branch(properties: bool, crossings: bool,
+                       indent: str) -> list[str]:
+        versions = [calls[properties, crossings, value]
+                    for value, _stage in CONTENT_SPLIT_STAGES]
+        if len(set(versions)) == 1:
+            return [f"{indent}return {versions[0]}"]
+        lines = []
+        for position, (_value, stage) in enumerate(CONTENT_SPLIT_STAGES):
+            if position == len(CONTENT_SPLIT_STAGES) - 1:
+                lines.append(f"{indent}else")
+                lines.append(f"{indent}\treturn {versions[position]}")
+                continue
+            keyword = "if" if position == 0 else "elseif"
+            lines.append(f"{indent}{keyword} contentSplit({lua_string(stage)}) then")
+            lines.append(f"{indent}\treturn {versions[position]}")
+        lines.append(f"{indent}end")
+        return lines
+
     def branch(properties: bool, indent: str) -> list[str]:
-        whole, split = calls[properties, False], calls[properties, True]
+        whole = content_branch(properties, False, indent)
+        split = content_branch(properties, True, indent)
         if whole == split:
-            return [f"{indent}return {whole}"]
+            return whole
         return [f"{indent}if mainlandCrossingsSplit() then",
-                f"{indent}\treturn {split}",
+                *content_branch(properties, True, indent + "\t"),
                 f"{indent}else",
-                f"{indent}\treturn {whole}",
+                *content_branch(properties, False, indent + "\t"),
                 f"{indent}end"]
 
     if len(set(calls.values())) == 1:
@@ -683,6 +782,16 @@ def check_positions(data, locations, check_coords,
         positions[data.hidden_package_name(index + 1)] = (x, y)
     for index, (x, y, _z) in enumerate(check_coords.RAMPAGE_COORDS):
         positions[data.rampage_name(index + 1)] = (x, y)
+    # The ambient pickups come from the world's own table for the reason the
+    # packages do: pickup_data holds all 110 positions, so check_coords keeps no
+    # copy that could drift from it.
+    for index, slot in enumerate(data.PICKUP_SLOTS):
+        positions[data.pickup_name(index)] = (slot[0], slot[1])
+    # Each shop's stock hangs within a metre of the next item, so the pack's own
+    # merging turns a shop into one marker holding what it sells, which is what a
+    # shop is from the map: one place to walk into.
+    for item in data.shop_data.SHOP_ITEMS:
+        positions[data.shop_data.shop_item_name(item)] = (item.x, item.y)
     for name, (x, y, _z) in check_coords.PROPERTY_COORDS.items():
         positions[name] = (x, y)
     for index, (x, y, _z) in enumerate(check_coords.STORE_COORDS):
@@ -735,15 +844,53 @@ def property_owners(data) -> dict[str, str]:
     return owners
 
 
+def shop_of(name: str) -> str | None:
+    """The shop a check is sold in, or None when the check is not a shop item."""
+    if not name.startswith("Shop - "):
+        return None
+    parts = name.split(" - ")
+    return f"{parts[1]} {parts[2]}" if len(parts) >= 4 else None
+
+
+# What a strand is called on a pin, where the world names it for the giver alone.
+# A player reads the map, so the pin says who the missions are for; the item
+# names stay the world's, which is what hints and the spoiler log print.
+STRAND_DISPLAY_NAMES: dict[str, str] = {
+    "Rosenberg": "Ken Rosenberg",
+    "Cortez": "General Cortez",
+    "Diaz": "Ricardo Diaz",
+}
+
+
+def strand_display(strand: str) -> str:
+    return STRAND_DISPLAY_NAMES.get(strand, strand)
+
+
 def node_name(members: list[str], locations, owners: dict[str, str]) -> str:
     """The pin's name. Checks sharing a pixel share a pin, and when they are one
     strand's missions the strand names it, when they are one property's checks
-    the property does; otherwise the members do."""
+    the property does, when they are one shop's stock the shop does; otherwise
+    the members do."""
     if len(members) == 1:
         return members[0]
+    shops = {shop_of(member) for member in members}
+    if len(shops) == 1 and None not in shops:
+        return shops.pop()
+    # A mall holds two shops close enough to share a pin, so the district names
+    # it rather than eleven weapons doing so.
+    if None not in shops:
+        districts = {member.split(" - ")[1] for member in members}
+        if len(districts) == 1:
+            return f"{districts.pop()} Shops"
     strands = {locations.MISSION_GIVER.get(member) for member in members}
     if len(strands) == 1 and None not in strands:
-        return strands.pop()
+        return strand_display(strands.pop())
+    # Several strands handed out from one spot, which the mansion is: naming the
+    # strands says whose missions they are, where listing a dozen mission names
+    # runs off the pin and tells a player nothing they cannot read below it.
+    if None not in strands:
+        ordered = sorted(strands, key=list(locations.STRAND_MISSIONS).index)
+        return " + ".join(strand_display(strand) for strand in ordered)
     properties = {owners.get(member) for member in members}
     if len(properties) == 1 and None not in properties:
         return properties.pop()
@@ -828,7 +975,161 @@ def build_locations(data, locations, positions, geometry: Geometry,
                 node["map_locations"] = [{"map": geometry.name, "x": x, "y": y}]
             nodes.append(node)
         groups[display] = nodes
+    stands = shop_stand_merges(data, locations, positions)
+    for host_name, guests in merge_markers(
+            groups, locations, {**stands, **CONSENTED_MARKER_MERGES},
+            {**{store: shop_node_name(store) for store in stands.values()},
+             **CONSENTED_MARKER_HEADERS}):
+        print(f"merged into {host_name}: {', '.join(sorted(guests))}")
     return groups
+
+
+# How close a pay stand has to be to a shop's own check to be inside that shop.
+# The six stands that share a shop with a robbery sit 3.3 to 15.2 world units
+# from it, and the nearest stand to a shop it is NOT in is far outside this, so
+# the band separates the two cases without naming a single shop.
+SHOP_STAND_DISTANCE_UNITS = 20.0
+
+
+def shop_stand_merges(data, locations, positions: dict[str, tuple[float, float]],
+                      ) -> dict[str, str]:
+    """Pay stand check -> the store check standing in the same shop.
+
+    The in-shop stands are the one place two classes are the same PLACE rather
+    than the same point: a stand is inside a shop, and the shop's own robbery
+    check is the same doorway a player walks through. On the map they are one
+    marker, and merging them is what stops one hiding under the other.
+
+    Only the ten type-1 stands can merge, and only into a robbable store, so
+    nothing else in the pack is joined across classes. Distance and not a named
+    list, so a shop the audit moves keeps working.
+    """
+    stores = [name for name in locations.LOCATION_NAME_TO_ID
+              if locations.LOCATION_CLASS[name] == "robbable_stores"
+              and name in positions]
+    merges: dict[str, str] = {}
+    for index in sorted(data.PICKUP_PAY_STAND_INDICES):
+        stand = data.pickup_name(index)
+        if stand not in positions:
+            continue
+        stand_x, stand_y = positions[stand]
+        nearest, best = None, None
+        for store in stores:
+            store_x, store_y = positions[store]
+            distance = math.hypot(stand_x - store_x, stand_y - store_y)
+            if distance <= SHOP_STAND_DISTANCE_UNITS and (best is None
+                                                          or distance < best):
+                nearest, best = store, distance
+        if nearest is not None:
+            merges[stand] = nearest
+    return merges
+
+
+# Checks whose markers stand on one place across two classes, where the place is
+# a single named thing rather than a rule anything derives. Guest check -> the
+# check whose marker absorbs it. Every entry is a merge asked for by name, and
+# the host is the thing a player would say they are standing at.
+#
+# Full names on both sides because the short ones are not unique: there is a
+# Jewelers in Downtown as well as in Vice Point, and a Body Armor 01 in four
+# districts.
+CONSENTED_MARKER_MERGES: dict[str, str] = {
+    # The purchase icon and the mission that starts at its door, 5.2 units.
+    "Cap the Collector": "Printworks Purchase",
+    # A package inside a shop and that shop's own robbery, 2.7 and 4.0 units.
+    "Hidden Package - Vice Point - Inside the Jewelers":
+        "Store Robbery - Vice Point - The Jewelers",
+    "Hidden Package - Little Havana - Inside Calleggi Delicatessen Restaurant":
+        "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
+    "Hidden Package - Little Havana - Inside the Laundromat":
+        "Store Robbery - Little Havana - Laundromat",
+    # A package named for the body armour it lies beside, 3.2 units. The armour
+    # hosts, since it is the thing the package is named after.
+    "Hidden Package - Washington Beach - Near Body armour behind big Pink building":
+        "Pickup - Washington Beach - Body Armor behind big pink building",
+}
+
+# What to call a marker that now stands for more than the check it was named for.
+# Host check -> heading. Without an entry the host keeps its own name, which is
+# right for a marker like the Printworks that is already named for its building.
+CONSENTED_MARKER_HEADERS: dict[str, str] = {
+    "Store Robbery - Vice Point - The Jewelers": "Vice Point Jewelers",
+    "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant":
+        "Little Havana Calleggi Delicatessen",
+    "Pickup - Washington Beach - Body Armor behind big pink building":
+        "Washington Beach Body Armor",
+    "Store Robbery - Little Havana - Laundromat": "Little Havana Laundromat",
+}
+
+
+def merge_markers(groups: dict[str, list[dict]], locations,
+                  merges: dict[str, str], headers: dict[str, str],
+                  ) -> list[tuple[str, list[str]]]:
+    """Fold each guest check's marker into the marker holding its host check.
+
+    Cross-class, and safe only because PopTracker carries visibility per SECTION
+    as well as per location and inherits the parent's rules on top. The marker is
+    visible when EITHER class is on and each section only with its own class, so a
+    seed with the guest's class off keeps the host's checks and drops the guest's
+    rather than showing checks the seed does not contain, which would leave a
+    marker that can never complete.
+
+    Returns what it merged, so the run prints it and nothing is quiet about a
+    marker standing for more than one class.
+    """
+    holding = {}
+    for display, nodes in groups.items():
+        for node in nodes:
+            for section in node["sections"]:
+                holding[section["name"]] = (display, node)
+
+    def visibility_of(check: str) -> str:
+        return class_visibility_code(locations.LOCATION_CLASS[check])
+
+    absorbed = []
+    for guest_check, host_check in sorted(merges.items()):
+        host_entry = holding.get(host_check)
+        guest_entry = holding.get(guest_check)
+        if host_entry is None or guest_entry is None:
+            raise SystemExit(f"cannot merge {guest_check} into {host_check}: "
+                             "one of them has no marker")
+        _host_display, host = host_entry
+        guest_display, guest = guest_entry
+        if host is guest:
+            continue
+        if len(guest["sections"]) != 1:
+            # Moving a marker that already holds several checks would take the
+            # others with it, which is a merge nobody asked for.
+            raise SystemExit(f"{guest_check} shares its marker, so it cannot be "
+                             "folded without taking its neighbours along")
+        for section in host["sections"]:
+            section.setdefault("visibility_rules",
+                               [visibility_of(section["name"])])
+        moved = guest["sections"][0]
+        moved["visibility_rules"] = [visibility_of(guest_check)]
+        host["sections"].append(moved)
+        if host_check in headers:
+            host["name"] = headers[host_check]
+        # Either class shows the marker, which is what the OR of a rules list is.
+        host["visibility_rules"] = sorted({
+            visibility_of(section["name"]) for section in host["sections"]})
+        groups[guest_display].remove(guest)
+        absorbed.append((host["name"], guest_check))
+
+    merged = {}
+    for host_name, guest_check in absorbed:
+        merged.setdefault(host_name, []).append(guest_check)
+    return sorted(merged.items())
+
+
+def shop_node_name(store_check: str) -> str:
+    """The shop's own name, for a marker that is no longer only its robbery.
+
+    "Store Robbery - Vice Point - Dispensary" becomes "Vice Point Dispensary",
+    which is what a player calls the place they are standing in.
+    """
+    parts = [part.strip() for part in store_check.split(" - ")]
+    return " ".join(parts[1:]) if len(parts) >= 3 else store_check
 
 
 def unpinned_nodes(class_key: str, members: list[str],
@@ -961,10 +1262,12 @@ def main() -> int:
     # the finale carries its asset prerequisite, and the mainland crossing split
     # decides whether the mainland is one item or a choice of four.
     captured = {
-        (properties, split): capture_rules(
-            rules, properties, all_ability_locks, all_content_locks, split)
+        (properties, split, content_split): capture_rules(
+            rules, properties, all_ability_locks, all_content_locks, split,
+            content_split)
         for properties in (True, False)
         for split in (False, True)
+        for content_split, _stage in CONTENT_SPLIT_STAGES
     }
     regions_by_split = {
         split: {
@@ -984,9 +1287,10 @@ def main() -> int:
         "-- Generated by tools/generate.py from the GTA Vice City apworld.",
         "-- One function per AP location returning its PopTracker AccessibilityLevel:",
         "-- its region entry ANDed with the world's own requirements for it. A rule",
-        "-- that differs between the properties class being on and off, or between",
-        "-- the mainland crossings being split and whole, carries each version and",
-        "-- switches on the seed's own settings. A second argument is what the",
+        "-- that differs between the properties class being on and off, between",
+        "-- the mainland crossings being split and whole, or between the three",
+        "-- content lock granularities, carries each version and switches on the",
+        "-- seed's own settings. A second argument is what the",
         "-- rule still demands once its soft requirement is set aside, and holding",
         "-- that much makes the check out of logic rather than unreachable.",
         "",
@@ -996,10 +1300,25 @@ def main() -> int:
         region_item = region_items[region]
         soft = SOFT_REQUIREMENTS.get(locations.LOCATION_CLASS[name], frozenset())
         calls = {
-            key: access_call(rules_for.get(name), regions_by_split[key[1]][region],
-                             region_item, lock_settings, soft)
+            key: access_call(
+                rules_for.get(name), regions_by_split[key[1]][region], region_item,
+                {**lock_settings, **content_lock_overlay(data, name, key[2])}, soft)
             for key, rules_for in captured.items()
         }
+        # The item a content term names is the one the world would name at that
+        # granularity, and nothing downstream can tell a wrong-but-real name from
+        # a right one: naming Hidden Packages where the seed hands over Ocean
+        # Beach Hidden Packages is a rule that can never pass, and it reads as
+        # ordinary Lua to every other check. So it is asserted here, where both
+        # sides are in hand.
+        for key, call in calls.items():
+            expected = data.content_item_for(name, key[2])
+            if expected is None:
+                continue
+            if f'"{item_code(expected)}"' not in call:
+                raise SystemExit(
+                    f"{name}: the rule for split {key[2]} does not name "
+                    f"{expected!r}, which is the item covering it")
         lines.extend(rule_function(f"rule_{slug(name)}", calls))
     write_text(PACK / "scripts" / "logic" / "access_rules.lua", "\n".join(lines) + "\n")
 
@@ -1008,10 +1327,15 @@ def main() -> int:
     print(f"locations  {len(locations.LOCATION_NAME_TO_ID):>4} "
           f"({pinned} pinned, {len(locations.LOCATION_NAME_TO_ID) - pinned} listed)")
     print(f"pins       {sum(1 for nodes in groups.values() for node in nodes if 'map_locations' in node):>4}")
-    for _class_key, display, _option in CHECK_CLASSES:
+    # Counted by the CHECK's own class and not by the file its section ended up
+    # in, since a pay stand's section lives in the shop it stands in: counting
+    # sections per file read that stand as a robbable store and left the pickups
+    # six short of the 110 there are.
+    for class_key, display, _option in CHECK_CLASSES:
         nodes = groups.get(display, [])
-        sections = sum(len(node["sections"]) for node in nodes)
-        print(f"  {display:<28} {sections:>4} checks in {len(nodes):>3} nodes")
+        checks = sum(1 for name in locations.LOCATION_NAME_TO_ID
+                     if locations.LOCATION_CLASS[name] == class_key)
+        print(f"  {display:<28} {checks:>4} checks in {len(nodes):>3} nodes")
     return 0
 
 

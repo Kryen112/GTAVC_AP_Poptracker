@@ -1,0 +1,2414 @@
+[
+	{
+		"name": "Pickups",
+		"chest_unopened_img": "images/items/pins/pickups.png",
+		"chest_opened_img": "images/items/pins/pickups_opened.png",
+		"children": [
+			{
+				"name": "Pickup - Vice Point - Police Bribe behind a building west of the Malibu Club",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Police Bribe behind a building west of the Malibu Club",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Police_Bribe_behind_a_building_west_of_the_Malibu_Club"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 592,
+						"y": 445
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Police Bribe in below-grade shopping plaza",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Police Bribe in below-grade shopping plaza",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Police_Bribe_in_below_grade_shopping_plaza"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 521,
+						"y": 766
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Police Bribe in alleyway",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Police Bribe in alleyway",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Police_Bribe_in_alleyway"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 592,
+						"y": 599
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Police Bribe north of Malibu club",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Police Bribe north of Malibu club",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Police_Bribe_north_of_Malibu_club"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 611,
+						"y": 412
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Police Bribe east of Links View Apartment",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Police Bribe east of Links View Apartment",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Police_Bribe_east_of_Links_View_Apartment"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 589,
+						"y": 337
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Police Bribe south of North Point Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Police Bribe south of North Point Mall",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Police_Bribe_south_of_North_Point_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 599,
+						"y": 181
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Prawn Island - Police Bribe on the southeast of the island",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Prawn Island - Police Bribe on the southeast of the island",
+						"access_rules": [
+							"^$rule_Pickup_Prawn_Island_Police_Bribe_on_the_southeast_of_the_island"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 514,
+						"y": 203
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Police Bribe near Hyman Condo",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Police Bribe near Hyman Condo",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Police_Bribe_near_Hyman_Condo"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 280,
+						"y": 96
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Police Bribe east of Kaufman Cabs (Ramp jump)",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Police Bribe east of Kaufman Cabs (Ramp jump)",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Police_Bribe_east_of_Kaufman_Cabs_Ramp_jump"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 260,
+						"y": 366
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Police Bribe south of Auntie Poulet's",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Police Bribe south of Auntie Poulet's",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Police_Bribe_south_of_Auntie_Poulet_s"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 242,
+						"y": 414
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Police Bribe over the ditch south of Auntie Poulet's (Ramp jump)",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Police Bribe over the ditch south of Auntie Poulet's (Ramp jump)",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Police_Bribe_over_the_ditch_south_of_Auntie_Poulet_s_Ramp_jump"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 251,
+						"y": 459
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Police Bribe in an alley northwest of Screw This",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Police Bribe in an alley northwest of Screw This",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Police_Bribe_in_an_alley_northwest_of_Screw_This"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 231,
+						"y": 591
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Police Bribe east of Sunshine Autos (Ramp jump)",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Police Bribe east of Sunshine Autos (Ramp jump)",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Police_Bribe_east_of_Sunshine_Autos_Ramp_jump"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 259,
+						"y": 644
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Chainsaw in Apartment 3C",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Chainsaw in Apartment 3C",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Chainsaw_in_Apartment_3C"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 499,
+						"y": 771
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Baseball Bat behind Ocean View Hotel",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Baseball Bat behind Ocean View Hotel",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Baseball_Bat_behind_Ocean_View_Hotel"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 544,
+						"y": 751
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Pistol in bushes near Cortez's docks",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Pistol in bushes near Cortez's docks",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Pistol_in_bushes_near_Cortez_s_docks"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 433,
+						"y": 767
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Pistol inside Avery's construction site",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Pistol inside Avery's construction site",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Pistol_inside_Avery_s_construction_site"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 578,
+						"y": 494
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Shotgun on top of Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Shotgun on top of Mall",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Shotgun_on_top_of_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 502,
+						"y": 676
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Shotgun on a bench near the beach",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Shotgun on a bench near the beach",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Shotgun_on_a_bench_near_the_beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 637,
+						"y": 545
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Tec-9 behind northeast building by the cul-de-sac",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Tec-9 behind northeast building by the cul-de-sac",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Tec_9_behind_northeast_building_by_the_cul_de_sac"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 565,
+						"y": 417
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Grenades behind VCPD HQ",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Grenades behind VCPD HQ",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Grenades_behind_VCPD_HQ"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 584,
+						"y": 558
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Meat Cleaver behind Pizza Parlor",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Meat Cleaver behind Pizza Parlor",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Meat_Cleaver_behind_Pizza_Parlor"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 594,
+						"y": 404
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Kruger on El Swanko Casa",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Kruger on El Swanko Casa",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Kruger_on_El_Swanko_Casa"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 598,
+						"y": 279
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Katana inside Tarbrush Café office inside North Point Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Katana inside Tarbrush Café office inside North Point Mall",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Katana_inside_Tarbrush_Caf_office_inside_North_Point_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 613,
+						"y": 170
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Nightstick inside VCPD HQ",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Nightstick inside VCPD HQ",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Nightstick_inside_VCPD_HQ"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 594,
+						"y": 555
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Brass Knuckles behind Front Page Café",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Brass Knuckles behind Front Page Café",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Brass_Knuckles_behind_Front_Page_Caf"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 548,
+						"y": 739
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Knife in southern tip of alleyways",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Knife in southern tip of alleyways",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Knife_in_southern_tip_of_alleyways"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 521,
+						"y": 826
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Machete on bridge to Starfish Island",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Machete on bridge to Starfish Island",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Machete_on_bridge_to_Starfish_Island"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 505,
+						"y": 548
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Uzi behind Pay 'n' Spray",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Uzi behind Pay 'n' Spray",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Uzi_behind_Pay_n_Spray"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 492,
+						"y": 757
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Uzi west of big pink building",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Uzi west of big pink building",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Uzi_west_of_big_pink_building"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 531,
+						"y": 659
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Remote Grenades behind building east of basketball courts",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Remote Grenades behind building east of basketball courts",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Remote_Grenades_behind_building_east_of_basketball_courts"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 633,
+						"y": 377
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Prawn Island - M4 inside stage B of the Film Studio",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Prawn Island - M4 inside stage B of the Film Studio",
+						"access_rules": [
+							"^$rule_Pickup_Prawn_Island_M4_inside_stage_B_of_the_Film_Studio"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 483,
+						"y": 169
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Prawn Island - Uzi on north building",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Prawn Island - Uzi on north building",
+						"access_rules": [
+							"^$rule_Pickup_Prawn_Island_Uzi_on_north_building"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 495,
+						"y": 137
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Leaf Links - Golf Club near the entrance",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Leaf Links - Golf Club near the entrance",
+						"access_rules": [
+							"^$rule_Pickup_Leaf_Links_Golf_Club_near_the_entrance"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 515,
+						"y": 359
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Flamethrower in Rockstar logo pool",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Flamethrower in Rockstar logo pool",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Flamethrower_in_Rockstar_logo_pool"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 351,
+						"y": 537
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Sniper Rifle in Diaz's maze",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Sniper Rifle in Diaz's maze",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Sniper_Rifle_in_Diaz_s_maze"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 369,
+						"y": 576
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Katana in the garage of the house west of Diaz's mansion",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Katana in the garage of the house west of Diaz's mansion",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Katana_in_the_garage_of_the_house_west_of_Diaz_s_mansion"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 349,
+						"y": 570
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Molotov Cocktails under Tacopalypse",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Molotov Cocktails under Tacopalypse",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Molotov_Cocktails_under_Tacopalypse"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 298,
+						"y": 85
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Uzi under stairs near Skumole Shack",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Uzi under stairs near Skumole Shack",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Uzi_under_stairs_near_Skumole_Shack"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 351,
+						"y": 252
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - M4 near Auntie Poulet's",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - M4 near Auntie Poulet's",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_M4_near_Auntie_Poulet_s"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 240,
+						"y": 400
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - M4 west of Café Robina",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - M4 west of Café Robina",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_M4_west_of_Caf_Robina"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 178,
+						"y": 594
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Sniper Rifle on bridge to Ocean Beach",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Sniper Rifle on bridge to Ocean Beach",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Sniper_Rifle_on_bridge_to_Ocean_Beach"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 301,
+						"y": 673
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Rocket Launcher in a pool Northwest of the Pay 'n' Spray",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Rocket Launcher in a pool Northwest of the Pay 'n' Spray",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Rocket_Launcher_in_a_pool_Northwest_of_the_Pay_n_Spray"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 236,
+						"y": 732
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Mac 10 west of the Boatyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Mac 10 west of the Boatyard",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Mac_10_west_of_the_Boatyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 308,
+						"y": 805
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Flamethrower south of the Pay 'n' Spray",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Flamethrower south of the Pay 'n' Spray",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Flamethrower_south_of_the_Pay_n_Spray"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 231,
+						"y": 787
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Escobar International - S.P.A.S. 12 behind the Vice Surf board",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Escobar International - S.P.A.S. 12 behind the Vice Surf board",
+						"access_rules": [
+							"^$rule_Pickup_Escobar_International_S_P_A_S_12_behind_the_Vice_Surf_board"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 143,
+						"y": 620
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Escobar International - M60 inside the west entrance tower to Fort Baxter Air Base",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Escobar International - M60 inside the west entrance tower to Fort Baxter Air Base",
+						"access_rules": [
+							"^$rule_Pickup_Escobar_International_M60_inside_the_west_entrance_tower_to_Fort_Baxter_Air_Base"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 44,
+						"y": 504
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Grenades in basketball courts",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Grenades in basketball courts",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Grenades_in_basketball_courts"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 250,
+						"y": 549
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - .357 near the Red Bridge",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - .357 near the Red Bridge",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_357_near_the_Red_Bridge"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 188,
+						"y": 446
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Junk Yard - Stubby Shotgun behind northwest hangar",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Junk Yard - Stubby Shotgun behind northwest hangar",
+						"access_rules": [
+							"^$rule_Pickup_Junk_Yard_Stubby_Shotgun_behind_northwest_hangar"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 157,
+						"y": 385
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - .308 Sniper on the roof east of Café Robina",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - .308 Sniper on the roof east of Café Robina",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_308_Sniper_on_the_roof_east_of_Caf_Robina"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 206,
+						"y": 584
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Buyable Health in front of hospital",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Buyable Health in front of hospital",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Buyable_Health_in_front_of_hospital"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 462,
+						"y": 680
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Health in bushes north of Cortez's docks",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Health in bushes north of Cortez's docks",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Health_in_bushes_north_of_Cortez_s_docks"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 433,
+						"y": 726
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Health on rooftops east of VCPD HQ",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Health on rooftops east of VCPD HQ",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Health_on_rooftops_east_of_VCPD_HQ"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 608,
+						"y": 551
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Health northeast of Pay 'n' Spray",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Health northeast of Pay 'n' Spray",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Health_northeast_of_Pay_n_Spray"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 588,
+						"y": 310
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Buyable Health in front of hospital",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Buyable Health in front of hospital",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Buyable_Health_in_front_of_hospital"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 611,
+						"y": 251
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Health inside milkshake stand inside North Point Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Health inside milkshake stand inside North Point Mall",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Health_inside_milkshake_stand_inside_North_Point_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 590,
+						"y": 120
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Prawn Island - Health near the Fountain",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Prawn Island - Health near the Fountain",
+						"access_rules": [
+							"^$rule_Pickup_Prawn_Island_Health_near_the_Fountain"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 494,
+						"y": 149
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Leaf Links - Health on the western bridge",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Leaf Links - Health on the western bridge",
+						"access_rules": [
+							"^$rule_Pickup_Leaf_Links_Health_on_the_western_bridge"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 513,
+						"y": 327
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Health on the causeway to the mainland",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Health on the causeway to the mainland",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Health_on_the_causeway_to_the_mainland"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 309,
+						"y": 558
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Health inside Diaz's mansion south",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Health inside Diaz's mansion south",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Health_inside_Diaz_s_mansion_south"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 388,
+						"y": 581
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Health inside Diaz's mansion north",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Health inside Diaz's mansion north",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Health_inside_Diaz_s_mansion_north"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 387,
+						"y": 575
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Health inside the Trial by Dirt track",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Health inside the Trial by Dirt track",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Health_inside_the_Trial_by_Dirt_track"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 369,
+						"y": 62
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Health on top of Ammu-Nation",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Health on top of Ammu-Nation",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Health_on_top_of_Ammu_Nation"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 318,
+						"y": 107
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Health on top of the hospital",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Health on top of the hospital",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Health_on_top_of_the_hospital"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 281,
+						"y": 137
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Health in Haitian drugs factory",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Health in Haitian drugs factory",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Health_in_Haitian_drugs_factory"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 199,
+						"y": 416
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Junk Yard - Health on top of a trash chute",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Junk Yard - Health on top of a trash chute",
+						"access_rules": [
+							"^$rule_Pickup_Junk_Yard_Health_on_top_of_a_trash_chute"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 161,
+						"y": 406
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Health near hospital",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Health near hospital",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Health_near_hospital"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 264,
+						"y": 554
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Health behind the Cherry Popper Ice Cream Factory",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Health behind the Cherry Popper Ice Cream Factory",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Health_behind_the_Cherry_Popper_Ice_Cream_Factory"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 254,
+						"y": 593
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Health under bridge to big boat",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Health under bridge to big boat",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Health_under_bridge_to_big_boat"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 314,
+						"y": 759
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Health on a jetty south of the Boatyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Health on a jetty south of the Boatyard",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Health_on_a_jetty_south_of_the_Boatyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 323,
+						"y": 816
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Escobar International - Health inside the main Terminal",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Escobar International - Health inside the main Terminal",
+						"access_rules": [
+							"^$rule_Pickup_Escobar_International_Health_inside_the_main_Terminal"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 133,
+						"y": 652
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Health in the hospital",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Health in the hospital",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Health_in_the_hospital"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 280,
+						"y": 139
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Body Armor on top of stairs north of Pay 'n' Spray",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Body Armor on top of stairs north of Pay 'n' Spray",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Body_Armor_on_top_of_stairs_north_of_Pay_n_Spray"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 492,
+						"y": 747
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Washington Beach Body Armor",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Body Armor behind big pink building",
+						"visibility_rules": [
+							"$visPickups"
+						],
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Body_Armor_behind_big_pink_building"
+						]
+					},
+					{
+						"name": "Hidden Package - Washington Beach - Near Body armour behind big Pink building",
+						"visibility_rules": [
+							"$visHiddenPackages"
+						],
+						"access_rules": [
+							"^$rule_Hidden_Package_Washington_Beach_Near_Body_armour_behind_big_Pink_building"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 544,
+						"y": 657
+					}
+				],
+				"visibility_rules": [
+					"$visHiddenPackages",
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Body Armor inside building demolished in Demolition man",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Body Armor inside building demolished in Demolition man",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Body_Armor_inside_building_demolished_in_Demolition_man"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 529,
+						"y": 520
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Body Armor by the Standing Vice Point sign",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Body Armor by the Standing Vice Point sign",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Body_Armor_by_the_Standing_Vice_Point_sign"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 624,
+						"y": 474
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Body Armor near the basketball courts",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Body Armor near the basketball courts",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Body_Armor_near_the_basketball_courts"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 601,
+						"y": 389
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Body Armor south of El Swanko Casa",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Body Armor south of El Swanko Casa",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Body_Armor_south_of_El_Swanko_Casa"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 598,
+						"y": 297
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Body Armor inside blue building block south of North Point Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Body Armor inside blue building block south of North Point Mall",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Body_Armor_inside_blue_building_block_south_of_North_Point_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 581,
+						"y": 203
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Body Armor South of 3321 Vice Point",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Body Armor South of 3321 Vice Point",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Body_Armor_South_of_3321_Vice_Point"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 628,
+						"y": 119
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Prawn Island - Body Armor across from the Film Studio",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Prawn Island - Body Armor across from the Film Studio",
+						"access_rules": [
+							"^$rule_Pickup_Prawn_Island_Body_Armor_across_from_the_Film_Studio"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 502,
+						"y": 187
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Leaf Links - Body Armor inside a sand pit to the northwest",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Leaf Links - Body Armor inside a sand pit to the northwest",
+						"access_rules": [
+							"^$rule_Pickup_Leaf_Links_Body_Armor_inside_a_sand_pit_to_the_northwest"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 473,
+						"y": 299
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Escobar International - Body Armor inside the east entrance tower to Fort Baxter Air Base",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Escobar International - Body Armor inside the east entrance tower to Fort Baxter Air Base",
+						"access_rules": [
+							"^$rule_Pickup_Escobar_International_Body_Armor_inside_the_east_entrance_tower_to_Fort_Baxter_Air_Base"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 57,
+						"y": 504
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Body Armor on top of a roof near Trial by Dirt",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Body Armor on top of a roof near Trial by Dirt",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Body_Armor_on_top_of_a_roof_near_Trial_by_Dirt"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 346,
+						"y": 79
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Body Armor in alley behind Rock City",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Body Armor in alley behind Rock City",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Body_Armor_in_alley_behind_Rock_City"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 255,
+						"y": 245
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Body Armor on top of the Printworks",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Body Armor on top of the Printworks",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Body_Armor_on_top_of_the_Printworks"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 220,
+						"y": 492
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Body Armor behind The Greasy Chopper",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Body Armor behind The Greasy Chopper",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Body_Armor_behind_The_Greasy_Chopper"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 331,
+						"y": 271
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Viceport - Body Armor in cubby east of big boat",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Viceport - Body Armor in cubby east of big boat",
+						"access_rules": [
+							"^$rule_Pickup_Viceport_Body_Armor_in_cubby_east_of_big_boat"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 303,
+						"y": 761
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Escobar International - Body Armor west of Sunshine Autos",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Escobar International - Body Armor west of Sunshine Autos",
+						"access_rules": [
+							"^$rule_Pickup_Escobar_International_Body_Armor_west_of_Sunshine_Autos"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 190,
+						"y": 664
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Body Armor south of Laundromat",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Body Armor south of Laundromat",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Body_Armor_south_of_Laundromat"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 191,
+						"y": 547
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Ocean Beach - Adrenaline inside the Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Ocean Beach - Adrenaline inside the Mall",
+						"access_rules": [
+							"^$rule_Pickup_Ocean_Beach_Adrenaline_inside_the_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 481,
+						"y": 670
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Washington Beach - Adrenaline in alleyway",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Washington Beach - Adrenaline in alleyway",
+						"access_rules": [
+							"^$rule_Pickup_Washington_Beach_Adrenaline_in_alleyway"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 612,
+						"y": 544
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Adrenaline behind building north of Malibu Club",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Adrenaline behind building north of Malibu Club",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Adrenaline_behind_building_north_of_Malibu_Club"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 606,
+						"y": 426
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Adrenaline east of The Jewellers",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Adrenaline east of The Jewellers",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Adrenaline_east_of_The_Jewellers"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 600,
+						"y": 373
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Adrenaline south of North Point Mall",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Adrenaline south of North Point Mall",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Adrenaline_south_of_North_Point_Mall"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 601,
+						"y": 187
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Adrenaline north of Diaz's mansion",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Adrenaline north of Diaz's mansion",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Adrenaline_north_of_Diaz_s_mansion"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 397,
+						"y": 558
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Adrenaline inside Diaz's mansion",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Adrenaline inside Diaz's mansion",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Adrenaline_inside_Diaz_s_mansion"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 403,
+						"y": 581
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Adrenaline near the bridge to Prawn Island",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Adrenaline near the bridge to Prawn Island",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Adrenaline_near_the_bridge_to_Prawn_Island"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 393,
+						"y": 157
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Downtown - Adrenaline on top of Ammu-Nation",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Downtown - Adrenaline on top of Ammu-Nation",
+						"access_rules": [
+							"^$rule_Pickup_Downtown_Adrenaline_on_top_of_Ammu_Nation"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 304,
+						"y": 116
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Adrenaline west of Pizza parlor",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Adrenaline west of Pizza parlor",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Adrenaline_west_of_Pizza_parlor"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 211,
+						"y": 405
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Adrenaline south of Auntie Poulet's",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Adrenaline south of Auntie Poulet's",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Adrenaline_south_of_Auntie_Poulet_s"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 243,
+						"y": 446
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Havana - Adrenaline behind Calle Cafetaria",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Havana - Adrenaline behind Calle Cafetaria",
+						"access_rules": [
+							"^$rule_Pickup_Little_Havana_Adrenaline_behind_Calle_Cafetaria"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 229,
+						"y": 570
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Adrenaline under some stairs east of Auntie Poulet's",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Adrenaline under some stairs east of Auntie Poulet's",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Adrenaline_under_some_stairs_east_of_Auntie_Poulet_s"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 265,
+						"y": 402
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			}
+		]
+	}
+]

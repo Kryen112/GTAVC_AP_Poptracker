@@ -11,20 +11,38 @@
 				"sections": [
 					{
 						"name": "Printworks Purchase",
+						"visibility_rules": [
+							"$visProperties"
+						],
 						"access_rules": [
 							"^$rule_Printworks_Purchase"
 						]
 					},
 					{
 						"name": "Spilling the Beans",
+						"visibility_rules": [
+							"$visProperties"
+						],
 						"access_rules": [
 							"^$rule_Spilling_the_Beans"
 						]
 					},
 					{
 						"name": "Hit the Courier",
+						"visibility_rules": [
+							"$visProperties"
+						],
 						"access_rules": [
 							"^$rule_Hit_the_Courier"
+						]
+					},
+					{
+						"name": "Cap the Collector",
+						"visibility_rules": [
+							"$visStoryMissions"
+						],
+						"access_rules": [
+							"^$rule_Cap_the_Collector"
 						]
 					}
 				],
@@ -36,7 +54,8 @@
 					}
 				],
 				"visibility_rules": [
-					"$visProperties"
+					"$visProperties",
+					"$visStoryMissions"
 				]
 			},
 			{
