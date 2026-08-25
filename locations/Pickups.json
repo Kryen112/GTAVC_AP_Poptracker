@@ -2408,6 +2408,144 @@
 				"visibility_rules": [
 					"$visPickups"
 				]
+			},
+			{
+				"name": "Pickup - Starfish Island - M4 in the Vercetti Estate courtyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - M4 in the Vercetti Estate courtyard",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_M4_in_the_Vercetti_Estate_courtyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 406,
+						"y": 576
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Shotgun in the Vercetti Estate courtyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Shotgun in the Vercetti Estate courtyard",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Shotgun_in_the_Vercetti_Estate_courtyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 405,
+						"y": 576
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Health in the Vercetti Estate courtyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Health in the Vercetti Estate courtyard",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Health_in_the_Vercetti_Estate_courtyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 406,
+						"y": 577
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Starfish Island - Body Armor in the Vercetti Estate courtyard",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Starfish Island - Body Armor in the Vercetti Estate courtyard",
+						"access_rules": [
+							"^$rule_Pickup_Starfish_Island_Body_Armor_in_the_Vercetti_Estate_courtyard"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 405,
+						"y": 577
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Vice Point - Knife outside the Malibu Club",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Vice Point - Knife outside the Malibu Club",
+						"access_rules": [
+							"^$rule_Pickup_Vice_Point_Knife_outside_the_Malibu_Club"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 611,
+						"y": 444
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
+			},
+			{
+				"name": "Pickup - Little Haiti - Minigun on the ruined Haitian drugs factory",
+				"chest_unopened_img": "images/items/pins/pickups.png",
+				"chest_opened_img": "images/items/pins/pickups_opened.png",
+				"sections": [
+					{
+						"name": "Pickup - Little Haiti - Minigun on the ruined Haitian drugs factory",
+						"access_rules": [
+							"^$rule_Pickup_Little_Haiti_Minigun_on_the_ruined_Haitian_drugs_factory"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 188,
+						"y": 404
+					}
+				],
+				"visibility_rules": [
+					"$visPickups"
+				]
 			}
 		]
 	}

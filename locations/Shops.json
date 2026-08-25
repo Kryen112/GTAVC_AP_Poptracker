@@ -280,6 +280,47 @@
 				"visibility_rules": [
 					"$visShops"
 				]
+			},
+			{
+				"name": "Little Haiti Phil's Place",
+				"chest_unopened_img": "images/items/pins/shops.png",
+				"chest_opened_img": "images/items/pins/shops_opened.png",
+				"sections": [
+					{
+						"name": "Shop - Little Haiti - Phil's Place - M60",
+						"access_rules": [
+							"^$rule_Shop_Little_Haiti_Phil_s_Place_M60"
+						]
+					},
+					{
+						"name": "Shop - Little Haiti - Phil's Place - Rocket Launcher",
+						"access_rules": [
+							"^$rule_Shop_Little_Haiti_Phil_s_Place_Rocket_Launcher"
+						]
+					},
+					{
+						"name": "Shop - Little Haiti - Phil's Place - Minigun",
+						"access_rules": [
+							"^$rule_Shop_Little_Haiti_Phil_s_Place_Minigun"
+						]
+					},
+					{
+						"name": "Shop - Little Haiti - Phil's Place - Remote Grenades",
+						"access_rules": [
+							"^$rule_Shop_Little_Haiti_Phil_s_Place_Remote_Grenades"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "Vice City",
+						"x": 208,
+						"y": 346
+					}
+				],
+				"visibility_rules": [
+					"$visShops"
+				]
 			}
 		]
 	}

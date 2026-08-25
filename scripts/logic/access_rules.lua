@@ -4524,6 +4524,42 @@ function rule_Pickup_Downtown_Adrenaline_inside_the_Dispensary()
 		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet")))
 	end
 end
+function rule_Pickup_Starfish_Island_M4_in_the_Vercetti_Estate_courtyard()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	else
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	end
+end
+function rule_Pickup_Starfish_Island_Shotgun_in_the_Vercetti_Estate_courtyard()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	else
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	end
+end
+function rule_Pickup_Starfish_Island_Health_in_the_Vercetti_Estate_courtyard()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	else
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	end
+end
+function rule_Pickup_Starfish_Island_Body_Armor_in_the_Vercetti_Estate_courtyard()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	else
+		return reachAccess((satisfiedCount({has("Starfish Island Access"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Sea Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/General Cortez/All Hands On Deck!"))}) >= 1 and missionPassed("@Story Missions/Rub Out/Rub Out")))
+	end
+end
+function rule_Pickup_Vice_Point_Knife_outside_the_Malibu_Club() return reachAccess(missionPassed("@Properties/Malibu Club/The Job")) end
+function rule_Pickup_Little_Haiti_Minigun_on_the_ruined_Haitian_drugs_factory()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and missionPassed("@Story Missions/Umberto Robina/Trojan Voodoo")))
+	else
+		return reachAccess((has("Mainland Access") and missionPassed("@Story Missions/Umberto Robina/Trojan Voodoo")))
+	end
+end
 function rule_Shop_Ocean_Beach_Ammu_Nation_Pistol() return reachAccess(lockTerm("Wallet", "ability_lock_wallet")) end
 function rule_Shop_Ocean_Beach_Ammu_Nation_Mac_10() return reachAccess(lockTerm("Wallet", "ability_lock_wallet")) end
 function rule_Shop_Ocean_Beach_Ammu_Nation_Shotgun() return reachAccess((lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/General Cortez/Mall Shootout"))) end
@@ -4626,5 +4662,33 @@ function rule_Shop_Little_Havana_Screw_This_Chainsaw()
 		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet")))
 	else
 		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet")))
+	end
+end
+function rule_Shop_Little_Haiti_Phil_s_Place_M60()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	else
+		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	end
+end
+function rule_Shop_Little_Haiti_Phil_s_Place_Rocket_Launcher()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	else
+		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	end
+end
+function rule_Shop_Little_Haiti_Phil_s_Place_Minigun()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	else
+		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	end
+end
+function rule_Shop_Little_Haiti_Phil_s_Place_Remote_Grenades()
+	if mainlandCrossingsSplit() then
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
+	else
+		return reachAccess((has("Mainland Access") and lockTerm("Wallet", "ability_lock_wallet") and missionPassed("@Story Missions/Phil Cassidy/Boomshine Saigon")))
 	end
 end
