@@ -9,7 +9,7 @@
 -- that much makes the check out of logic rather than unreachable.
 
 function rule_An_Old_Friend() return reachAccess(true) end
-function rule_The_Party() return reachAccess((has("Progressive Rosenberg") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
+function rule_The_Party() return reachAccess(has("Progressive Rosenberg")) end
 function rule_Back_Alley_Brawl() return reachAccess((itemAtLeast("Progressive Rosenberg", 2) and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
 function rule_Jury_Fury() return reachAccess((itemAtLeast("Progressive Rosenberg", 3) and lockTerm("Weapon Equip", "ability_lock_weapon_equip") and lockTerm("Land Vehicles", "ability_lock_vehicles"))) end
 function rule_Riot() return reachAccess((itemAtLeast("Progressive Rosenberg", 4) and lockTerm("Land Vehicles", "ability_lock_vehicles") and lockTerm("Weapon Equip", "ability_lock_weapon_equip"))) end
