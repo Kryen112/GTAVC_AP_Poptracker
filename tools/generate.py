@@ -1518,7 +1518,7 @@ def build_items_layout(data, items) -> dict:
         # is its own narrow thing. The map filters are left out of it for want
         # of a map, and the seed settings for want of the button that opens
         # them, which that window does not carry.
-        "items": column_layout(owned_sections + content_sections),
+        BROADCAST_PANEL: column_layout(owned_sections + content_sections),
         "panel_one": column_layout(owned_sections),
         "panel_two": column_layout(beside_sections),
         # The same groups as one row, for the horizontal variant, whose window
@@ -1565,6 +1565,9 @@ WINDOW_PANELS: dict[str, tuple[str, ...]] = {
     "the columns": ("panel_one", "panel_two", "settings_popup"),
     "the strip": ("panel_strip", "settings_popup"),
 }
+# The broadcast window's column, which is a subset of what the columns hold by
+# construction, so it is the one panel no window has to ask about.
+BROADCAST_PANEL = "items"
 
 
 def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> None:
@@ -1585,6 +1588,13 @@ def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> 
     quiet = {item_code(name) for name in
              [*data.FILLER_ITEMS, *items.GENERAL_FILLER_NAMES, *data.TRAP_ITEMS,
               BLANK_ITEM]}
+    # Both ways round the table: a panel drawn by a window that no window asks
+    # about is the same silence this gate exists to break.
+    claimed = {panel for panels in WINDOW_PANELS.values() for panel in panels}
+    unclaimed = sorted(set(layout) - claimed - {BROADCAST_PANEL})
+    if unclaimed:
+        raise SystemExit(
+            f"the layout holds panels no window in WINDOW_PANELS asks for: {unclaimed}")
     for window, panels in WINDOW_PANELS.items():
         absent = [panel for panel in panels if panel not in layout]
         if absent:
@@ -1623,7 +1633,18 @@ def strip_shaped(groups: list[tuple[str, list[str], int]],
                 f"two column groups are both headed {header!r}, so the strip "
                 "cannot say which of them it is regrouping")
         holdings[header] = names
+    headers = [header for header, _sources in STRIP_GROUPS]
+    twice_over = sorted({header for header in headers if headers.count(header) > 1})
+    if twice_over:
+        raise SystemExit(
+            f"STRIP_GROUPS heads more than one of its groups {twice_over}, so the "
+            "band would draw two frames under the same word")
     named = [source for _header, sources in STRIP_GROUPS for source in sources]
+    repeated = sorted({source for source in named if named.count(source) > 1})
+    if repeated:
+        raise SystemExit(
+            f"STRIP_GROUPS regroups the column groups {repeated} more than once, "
+            "so the band would draw their items twice")
     if sorted(named) != sorted(holdings):
         raise SystemExit(
             "STRIP_GROUPS does not regroup exactly the column groups, and each "
@@ -1747,8 +1768,8 @@ def report_strip_size(sections: list[tuple[str, list[list[str]]]]) -> None:
 
     The length counts icons alone. A group is never narrower than its own header,
     and most of the band's groups are one or two icons wide, so the band draws
-    longer than this by the words it carries: the budget is set well inside the
-    window for that reason, and only a render says by how much.
+    longer than this by each group's header width: the budget is set well inside
+    the window for that reason, and only a render says by how much.
     """
     depth = max((len(rows) * STRIP_CELL + HEADER_HEIGHT
                  for _header, rows in sections), default=0)
@@ -1756,7 +1777,8 @@ def report_strip_size(sections: list[tuple[str, list[list[str]]]]) -> None:
                 for _header, rows in sections)
     length = icons * STRIP_CELL
     print(f"strip     about {depth:>4} px deep, {icons} icons "
-          f"({length} px of icons, headers on top) long, {len(sections)} sections")
+          f"({length} px of icons, plus each group's header width) long, "
+          f"{len(sections)} sections")
     if depth > STRIP_HEIGHT_BUDGET:
         print(f"  a strip past {STRIP_HEIGHT_BUDGET} px deep leaves the map less "
               "height than the city needs; lower STRIP_ROWS or STRIP_ICON_SIZE")

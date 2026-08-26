@@ -185,8 +185,8 @@ and everything else shares the rest.
 The generator prints the band's size against `STRIP_HEIGHT_BUDGET` and
 `STRIP_WIDTH_BUDGET`, the mirror of the columns' two budgets, because depth comes
 off the map's height and length runs off the side of the window. It measures 270
-px deep and 780 px of icons long, with each group's header on top of that, since a
-group is never narrower than its own words. The first version was a column's icons
+px deep and 780 px of icons long, plus each group's header width, since a group is
+never narrower than its own words. The first version was a column's icons
 under all eleven of a column's headers and came out 1292 px, which reads as very
 wide on a 1920 screen: this band is a third of the window rather than two thirds
 of it.

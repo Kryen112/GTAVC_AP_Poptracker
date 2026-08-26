@@ -283,9 +283,14 @@ def loaded_layout_paths() -> list[str]:
 
     PopTracker reads the files a pack names and no others, so a layout file
     under any other name is never read, whichever folder it sits in.
+
+    Comments come off first, since a commented-out load would otherwise read as
+    a load and the file it names would count as drawn. Both quote styles and the
+    parenthesis-free call are read, all three being the same call in Lua.
     """
     body = (PACK / "scripts" / "init.lua").read_text(encoding="utf-8")
-    paths = re.findall(r'Tracker:AddLayouts\("([^"]+)"\)', body)
+    live = "\n".join(re.sub(r"--.*", "", line) for line in body.splitlines())
+    paths = re.findall(r"""Tracker:AddLayouts\s*\(?\s*['"]([^'"]+)['"]""", live)
     if not paths:
         raise SystemExit("init.lua loads no layouts, so nothing was checked")
     return paths
@@ -303,26 +308,39 @@ def layout_files_by_variant(problems: list[str]) -> dict[str, list[Path]]:
     """
     manifest = json.loads((PACK / "manifest.json").read_text(encoding="utf-8"))
     loaded = loaded_layout_paths()
+    # A name the pack lacks is reported and then dropped, so the reading below
+    # cannot die on it before main has printed a single problem.
+    present = [path for path in loaded if (PACK / path).is_file()]
     problems.extend(f"init.lua loads {path}, which the pack does not have"
-                    for path in loaded if not (PACK / path).is_file())
-    problems.extend(
-        f"the pack carries layouts/{found.name}, which init.lua never loads"
-        for found in sorted((PACK / "layouts").glob("*.json"))
-        if f"layouts/{found.name}" not in loaded)
+                    for path in loaded if path not in present)
+    # The reverse sweep walks the folders the loaded names live in and compares
+    # resolved paths, so a name spelled another way in init.lua is not reported
+    # as a file nothing loads.
+    loaded_files = {(PACK / path).resolve() for path in present}
+    folders = sorted({(PACK / path).parent for path in present})
+    for folder in folders:
+        problems.extend(
+            f"the pack carries {found.relative_to(PACK).as_posix()}, which "
+            "init.lua never loads"
+            for found in sorted(folder.glob("*.json"))
+            if found.resolve() not in loaded_files)
 
     variants: dict[str, list[Path]] = {}
     for variant in manifest.get("variants") or {}:
         files = []
-        for path in loaded:
+        for path in present:
             override = PACK / variant / path
             files.append(override if override.is_file() else PACK / path)
         variants[variant] = files
-        problems.extend(
-            f"variant {variant!r} carries {variant}/layouts/{found.name}, which "
-            "init.lua never loads, so it overrides nothing"
-            for found in sorted((PACK / variant / "layouts").glob("*.json"))
-            if f"layouts/{found.name}" not in loaded)
-    return variants or {"": [PACK / path for path in loaded]}
+        for folder in sorted({(PACK / variant / path).parent for path in present}):
+            problems.extend(
+                f"variant {variant!r} carries "
+                f"{found.relative_to(PACK).as_posix()}, which init.lua never "
+                "loads, so it overrides nothing"
+                for found in sorted(folder.glob("*.json"))
+                if (PACK / found.relative_to(PACK / variant)).resolve()
+                not in loaded_files)
+    return variants or {"": [PACK / path for path in present]}
 
 
 def check_layouts(problems: list[str], item_codes: set[str]) -> int:
