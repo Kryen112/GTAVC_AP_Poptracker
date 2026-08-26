@@ -1087,6 +1087,19 @@ CONSENTED_MARKER_MERGES: dict[str, str] = {
         "Store Robbery - Little Havana - Calleggi Delicatessen Restaurant",
     "Hidden Package - Little Havana - Inside the Laundromat":
         "Store Robbery - Little Havana - Laundromat",
+    # A hardware shop's stock and the robbery over the same counter, 4.9 and
+    # 7.3 units. The stock hosts, because its marker is already named for the
+    # shop and a marker holding five checks is not one that can move.
+    "Store Robbery - Washington Beach - Hardware store":
+        "Shop - Washington Beach - Bunch of Tools - Screwdriver",
+    "Store Robbery - Little Havana - Screw This":
+        "Shop - Little Havana - Screw This - Screwdriver",
+    # The mall's Tooled Up, whose robbery the world names for the mall and whose
+    # stock it names for the district, 20.3 units from the nearest of the icons
+    # it sells over. The Ammu-Nation along the way already shares that marker,
+    # so the heading stays the district's.
+    "Store Robbery - North Point Mall - Tooled Up":
+        "Shop - Vice Point - Tooled Up - Screwdriver",
     # A package named for the body armour it lies beside, 3.2 units. The armour
     # hosts, since it is the thing the package is named after.
     "Hidden Package - Washington Beach - Near Body armour behind big Pink building":
