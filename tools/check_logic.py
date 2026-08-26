@@ -278,25 +278,51 @@ TRACKER_LAYOUT_KEYS = frozenset({
 })
 
 
-def layout_files_by_variant() -> dict[str, list[Path]]:
+def loaded_layout_paths() -> list[str]:
+    """The layout files init.lua hands the tracker, in the order it hands them.
+
+    PopTracker reads the files a pack names and no others, so a layout file
+    under any other name is never read, whichever folder it sits in.
+    """
+    body = (PACK / "scripts" / "init.lua").read_text(encoding="utf-8")
+    paths = re.findall(r'Tracker:AddLayouts\("([^"]+)"\)', body)
+    if not paths:
+        raise SystemExit("init.lua loads no layouts, so nothing was checked")
+    return paths
+
+
+def layout_files_by_variant(problems: list[str]) -> dict[str, list[Path]]:
     """The layout files each variant of the pack sees.
 
     PopTracker resolves a file inside a variant's own folder ahead of the one of
     the same name at the pack root, which is how one variant draws a different
-    window over the same panels. A variant with no folder of its own sees the
-    root files alone.
+    window over the same panels, and it tries both for every name the pack
+    loads. So the names are init.lua's, not whatever the folders hold: a variant
+    file under a name the pack never loads overrides nothing and would leave
+    that variant drawing the root's window.
     """
     manifest = json.loads((PACK / "manifest.json").read_text(encoding="utf-8"))
-    root = {path.name: path for path in sorted((PACK / "layouts").glob("*.json"))}
-    if not root:
-        raise SystemExit("no layout files at the pack root, so nothing was checked")
+    loaded = loaded_layout_paths()
+    problems.extend(f"init.lua loads {path}, which the pack does not have"
+                    for path in loaded if not (PACK / path).is_file())
+    problems.extend(
+        f"the pack carries layouts/{found.name}, which init.lua never loads"
+        for found in sorted((PACK / "layouts").glob("*.json"))
+        if f"layouts/{found.name}" not in loaded)
+
     variants: dict[str, list[Path]] = {}
     for variant in manifest.get("variants") or {}:
-        files = dict(root)
-        for path in sorted((PACK / variant / "layouts").glob("*.json")):
-            files[path.name] = path
-        variants[variant] = sorted(files.values())
-    return variants or {"": sorted(root.values())}
+        files = []
+        for path in loaded:
+            override = PACK / variant / path
+            files.append(override if override.is_file() else PACK / path)
+        variants[variant] = files
+        problems.extend(
+            f"variant {variant!r} carries {variant}/layouts/{found.name}, which "
+            "init.lua never loads, so it overrides nothing"
+            for found in sorted((PACK / variant / "layouts").glob("*.json"))
+            if f"layouts/{found.name}" not in loaded)
+    return variants or {"": [PACK / path for path in loaded]}
 
 
 def check_layouts(problems: list[str], item_codes: set[str]) -> int:
@@ -315,7 +341,7 @@ def check_layouts(problems: list[str], item_codes: set[str]) -> int:
     codes: set[str] = set()
     defined: set[str] = set()
     referenced: set[str] = set()
-    for variant, files in layout_files_by_variant().items():
+    for variant, files in layout_files_by_variant(problems).items():
         seen: set[str] = set()
         names: set[str] = set()
         for path in files:

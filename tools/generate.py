@@ -1444,11 +1444,12 @@ def content_matrix(data) -> list[list[str]]:
     expected = [item_code(name) for name in
                 [*data.CONTENT_ITEMS, *data.all_district_content_items()]]
     missing = sorted(set(expected) - set(laid_out))
+    extra = sorted(set(laid_out) - set(expected))
     twice = sorted({code for code in laid_out if laid_out.count(code) > 1})
-    if missing or twice or len(laid_out) != len(expected):
+    if missing or extra or twice or len(laid_out) != len(expected):
         raise SystemExit(
             "the content matrix does not hold every content lock item exactly "
-            f"once; missing {missing}, twice over {twice}")
+            f"once; missing {missing}, unexpected {extra}, twice over {twice}")
     return rows
 
 
@@ -1556,18 +1557,26 @@ def entry_codes(entry: dict) -> set[str]:
             for part in field.split(",")}
 
 
-def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> None:
-    """Every item standing for progress or for a setting sits in some layout.
+# The panels each window of the pack draws. An item shown in one window and not
+# the other is a variant holding less than its sibling, which the union of every
+# panel cannot see, so the check below runs per window. The broadcast column is
+# deliberately a subset of what the player holds, so it is not a window here.
+WINDOW_PANELS: dict[str, tuple[str, ...]] = {
+    "the columns": ("panel_one", "panel_two", "settings_popup"),
+    "the strip": ("panel_strip", "settings_popup"),
+}
 
-    An item can be declared, mapped by the autotracker, and laid out nowhere. It
-    then arrives, turns on, and shows the player nothing, which is silent in the
-    pack and visible only in game: exactly how 53 district content items sat in
-    it while the panel showed the five whole-class ones. So both directions are
-    compared here rather than trusted.
+
+def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> None:
+    """Every item standing for progress or for a setting sits in every window.
+
+    An item can be declared, mapped by the autotracker, and laid out nowhere: it
+    arrives, turns on, and shows the player nothing, which is silent in the pack
+    and visible only in the tracker. Each window is asked separately, since a
+    window drawing its own panels can hold less than its sibling does.
     """
-    shown = layout_item_codes(layout)
     declared = {code for entry in entries for code in entry_codes(entry)}
-    undeclared = sorted(shown - declared)
+    undeclared = sorted(layout_item_codes(layout) - declared)
     if undeclared:
         raise SystemExit(
             f"a layout names item codes items.json does not declare: {undeclared}")
@@ -1576,11 +1585,18 @@ def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> 
     quiet = {item_code(name) for name in
              [*data.FILLER_ITEMS, *items.GENERAL_FILLER_NAMES, *data.TRAP_ITEMS,
               BLANK_ITEM]}
-    hidden = sorted(entry["name"] for entry in entries
-                    if not entry_codes(entry) & shown
-                    and not entry_codes(entry) & quiet)
-    if hidden:
-        raise SystemExit(f"items.json declares items no layout shows: {hidden}")
+    for window, panels in WINDOW_PANELS.items():
+        absent = [panel for panel in panels if panel not in layout]
+        if absent:
+            raise SystemExit(
+                f"WINDOW_PANELS names panels the layout does not hold: {absent}")
+        shown = layout_item_codes({panel: layout[panel] for panel in panels})
+        hidden = sorted(entry["name"] for entry in entries
+                        if not entry_codes(entry) & shown
+                        and not entry_codes(entry) & quiet)
+        if hidden:
+            raise SystemExit(
+                f"items.json declares items {window} never shows: {hidden}")
 
 
 def column_sections(groups: list[tuple[str, list[str], int]]
@@ -1600,17 +1616,25 @@ def strip_shaped(groups: list[tuple[str, list[str], int]],
     either way: a group named there and not here, or here and not there, is
     refused rather than quietly dropped from one variant.
     """
-    holdings = {header: names for header, names, _per_row in groups}
+    holdings: dict[str, list[str]] = {}
+    for header, names, _per_row in groups:
+        if header in holdings:
+            raise SystemExit(
+                f"two column groups are both headed {header!r}, so the strip "
+                "cannot say which of them it is regrouping")
+        holdings[header] = names
     named = [source for _header, sources in STRIP_GROUPS for source in sources]
     if sorted(named) != sorted(holdings):
         raise SystemExit(
             "STRIP_GROUPS does not regroup exactly the column groups, and each "
             f"of them exactly once: {sorted(set(named) ^ set(holdings))}")
-    unshaped = sorted(header for header, sources in STRIP_GROUPS
-                      if not sources and header not in fixed)
-    if unshaped:
+    # Both directions on the fixed sections too: one the table forgets is a
+    # section the columns draw and the strip does not.
+    shaped = {header for header, sources in STRIP_GROUPS if not sources}
+    if shaped != set(fixed):
         raise SystemExit(
-            f"STRIP_GROUPS names sections nothing shapes: {unshaped}")
+            "STRIP_GROUPS and the sections keeping their own shape do not name "
+            f"the same ones: {sorted(shaped ^ set(fixed))}")
 
     sections = []
     for header, sources in STRIP_GROUPS:
@@ -1618,6 +1642,8 @@ def strip_shaped(groups: list[tuple[str, list[str], int]],
             sections.append((header, fixed[header]))
             continue
         names = [name for source in sources for name in holdings[source]]
+        if not names:
+            raise SystemExit(f"the strip's {header!r} holds nothing")
         sections.append((header, wrap(names, math.ceil(len(names) / STRIP_ROWS))))
     return sections
 
@@ -1718,6 +1744,11 @@ def report_strip_size(sections: list[tuple[str, list[list[str]]]]) -> None:
     A strip trades the columns' problem for the mirror of it: its depth is taken
     off the map's height rather than its width, and its length is what runs off
     the side of the window.
+
+    The length counts icons alone. A group is never narrower than its own header,
+    and most of the band's groups are one or two icons wide, so the band draws
+    longer than this by the words it carries: the budget is set well inside the
+    window for that reason, and only a render says by how much.
     """
     depth = max((len(rows) * STRIP_CELL + HEADER_HEIGHT
                  for _header, rows in sections), default=0)
@@ -1725,7 +1756,7 @@ def report_strip_size(sections: list[tuple[str, list[list[str]]]]) -> None:
                 for _header, rows in sections)
     length = icons * STRIP_CELL
     print(f"strip     about {depth:>4} px deep, {icons} icons "
-          f"({length} px) long, {len(sections)} sections")
+          f"({length} px of icons, headers on top) long, {len(sections)} sections")
     if depth > STRIP_HEIGHT_BUDGET:
         print(f"  a strip past {STRIP_HEIGHT_BUDGET} px deep leaves the map less "
               "height than the city needs; lower STRIP_ROWS or STRIP_ICON_SIZE")
