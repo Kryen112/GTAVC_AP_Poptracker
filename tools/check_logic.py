@@ -12,6 +12,7 @@ Checks run:
     every location section has a rule, and every rule has a section
     every item code a rule tests is declared in items.json
     every item code a layout names is declared in items.json
+    every layout key a variant's window names is defined where it can see it
     the percentage item the autotracker draws on is declared and named
     the autotracker draws the percentage it is given, and only its own slot's
     every location id the world knows maps to exactly one section path
@@ -268,24 +269,85 @@ def declared_item_codes() -> set[str]:
     return codes
 
 
-def layout_item_codes(problems: list[str], item_codes: set[str]) -> int:
-    """Every item code the layouts name, checked against items.json.
+# The layout keys PopTracker looks up by name instead of following a reference:
+# the windows themselves, and the pack settings popup. Anything else a layout
+# file defines has to be named by one of those or nothing ever draws it.
+TRACKER_LAYOUT_KEYS = frozenset({
+    "tracker_default", "tracker_horizontal", "tracker_vertical",
+    "tracker_broadcast", "tracker_capture_item", "settings_popup",
+})
 
-    A layout is the one place an item code goes unchecked everywhere else: a
-    grid cell naming a code no item declares draws nothing and says nothing,
-    and an item no cell names is invisible however well it autotracks. The
-    generator refuses the second, this catches the first, and both are the same
-    failure as the rules naming an item nothing provides.
+
+def layout_files_by_variant() -> dict[str, list[Path]]:
+    """The layout files each variant of the pack sees.
+
+    PopTracker resolves a file inside a variant's own folder ahead of the one of
+    the same name at the pack root, which is how one variant draws a different
+    window over the same panels. A variant with no folder of its own sees the
+    root files alone.
+    """
+    manifest = json.loads((PACK / "manifest.json").read_text(encoding="utf-8"))
+    root = {path.name: path for path in sorted((PACK / "layouts").glob("*.json"))}
+    if not root:
+        raise SystemExit("no layout files at the pack root, so nothing was checked")
+    variants: dict[str, list[Path]] = {}
+    for variant in manifest.get("variants") or {}:
+        files = dict(root)
+        for path in sorted((PACK / variant / "layouts").glob("*.json")):
+            files[path.name] = path
+        variants[variant] = sorted(files.values())
+    return variants or {"": sorted(root.values())}
+
+
+def check_layouts(problems: list[str], item_codes: set[str]) -> int:
+    """Every layout of every variant, against items.json and against itself.
+
+    Two things go unchecked everywhere else. A grid cell naming an item code no
+    item declares draws nothing and says nothing, and an element naming a layout
+    key nothing defines leaves a hole where a panel belongs. Both are silent in
+    the pack and visible only in the tracker, and the second is what variants
+    make easy: a variant's window names the panels by key from a file of its own,
+    so the two can be renamed apart.
+
+    The other direction, an item no cell names, is the generator's own gate,
+    since that is where the exemptions live.
     """
     codes: set[str] = set()
-    for path in sorted((PACK / "layouts").glob("*.json")):
-        collect_layout_codes(json.loads(path.read_text(encoding="utf-8")), codes)
+    defined: set[str] = set()
+    referenced: set[str] = set()
+    for variant, files in layout_files_by_variant().items():
+        seen: set[str] = set()
+        names: set[str] = set()
+        for path in files:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            collect_layout_codes(payload, codes)
+            seen.update(payload)
+            collect_layout_references(payload, names)
+        problems.extend(
+            f"variant {variant!r} names layout key {key!r}, which no layout file "
+            "it sees defines" for key in sorted(names - seen))
+        defined |= seen
+        referenced |= names
+    problems.extend(
+        f"a layout defines {key!r}, which no variant draws"
+        for key in sorted(defined - referenced - TRACKER_LAYOUT_KEYS))
     if not codes:
         raise SystemExit("no item codes found in the layouts, so nothing was checked")
     problems.extend(
         f"a layout names item code {code!r}, which items.json does not declare"
         for code in sorted(codes - item_codes))
     return len(codes)
+
+
+def collect_layout_references(node, keys: set[str]) -> None:
+    if isinstance(node, dict):
+        if node.get("type") == "layout" and node.get("key"):
+            keys.add(node["key"])
+        for value in node.values():
+            collect_layout_references(value, keys)
+    elif isinstance(node, list):
+        for value in node:
+            collect_layout_references(value, keys)
 
 
 def collect_layout_codes(node, codes: set[str]) -> None:
@@ -541,7 +603,7 @@ def main() -> int:
         f"a rule tests item code {code!r}, which items.json does not declare"
         for code in sorted(requested_codes - item_codes))
     rule_item_codes(problems, item_codes)
-    layout_codes = layout_item_codes(problems, item_codes)
+    layout_codes = check_layouts(problems, item_codes)
     # A missionPassed term names a section rather than an item, so the path it
     # asks for has to be one the locations declare.
     problems.extend(

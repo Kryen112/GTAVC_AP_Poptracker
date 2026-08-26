@@ -615,6 +615,414 @@
 			}
 		]
 	},
+	"panel_strip": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Access",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Mainland Access"
+						],
+						[
+							"Starfish Island Access"
+						],
+						[
+							"Prawn Island Bridge"
+						],
+						[
+							"Leaf Links Bridge"
+						],
+						[
+							"Ocean Beach Bridge"
+						],
+						[
+							"Starfish Island Causeway"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Goal",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Package Fragment"
+						],
+						[
+							"Percentage Completed"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Story",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Progressive Rosenberg",
+							"Progressive Cortez"
+						],
+						[
+							"Progressive Diaz",
+							"Progressive Death Row"
+						],
+						[
+							"Progressive Avery",
+							"Progressive Phil Cassidy"
+						],
+						[
+							"Progressive Vercetti Protection",
+							"Progressive Big Mitch Baker"
+						],
+						[
+							"Progressive Umberto Robina",
+							"Progressive Auntie Poulet"
+						],
+						[
+							"Progressive Love Fist",
+							"Progressive Mr. Black"
+						],
+						[
+							"Progressive Vercetti Finale"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Venues",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Progressive Malibu Club"
+						],
+						[
+							"Progressive Film Studio"
+						],
+						[
+							"Progressive Printworks"
+						],
+						[
+							"Progressive Kaufman Cabs"
+						],
+						[
+							"Progressive Cherry Popper"
+						],
+						[
+							"Progressive Boatyard"
+						],
+						[
+							"Progressive Sunshine Autos"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Property",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Printworks Ownership",
+							"Sunshine Autos Ownership"
+						],
+						[
+							"Film Studio Ownership",
+							"Cherry Popper Ownership"
+						],
+						[
+							"Kaufman Cabs Ownership",
+							"Malibu Club Ownership"
+						],
+						[
+							"Boatyard Ownership",
+							"Pole Position Ownership"
+						],
+						[
+							"El Swanko Casa Ownership",
+							"Links View Apartment Ownership"
+						],
+						[
+							"Hyman Condo Ownership",
+							"Ocean Heights Apartment Ownership"
+						],
+						[
+							"1102 Washington Street Ownership",
+							"3321 Vice Point Ownership"
+						],
+						[
+							"Skumole Shack Ownership"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Abilities",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Sprint"
+						],
+						[
+							"Jump"
+						],
+						[
+							"Crouch"
+						],
+						[
+							"Land Vehicles"
+						],
+						[
+							"Sea Vehicles"
+						],
+						[
+							"Air Vehicles"
+						],
+						[
+							"Weapon Equip"
+						],
+						[
+							"Wallet"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Rewards",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Body Armor Spawn",
+							"Chainsaw Spawn"
+						],
+						[
+							".357 Spawn",
+							"Flamethrower Spawn"
+						],
+						[
+							".308 Sniper Spawn",
+							"Minigun Spawn"
+						],
+						[
+							"Rocket Launcher Spawn",
+							"Sea Sparrow Spawn"
+						],
+						[
+							"Rhino Spawn",
+							"Hunter Spawn"
+						],
+						[
+							"$100000",
+							"Infinite Sprint"
+						],
+						[
+							"Fireproof",
+							"Max Armor Upgrade"
+						],
+						[
+							"Taxi Jump Ability",
+							"Max Health Upgrade"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Radio",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"Radio Station: Wildstyle",
+							"Radio Station: Flash FM"
+						],
+						[
+							"Radio Station: K-Chat",
+							"Radio Station: Fever 105"
+						],
+						[
+							"Radio Station: V-Rock",
+							"Radio Station: VCPR"
+						],
+						[
+							"Radio Station: Radio Espantoso",
+							"Radio Station: Emotion 98.3"
+						],
+						[
+							"Radio Station: Wave 103",
+							"Minimap"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Content locks",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"split_content_locks",
+							"Ocean Beach Content",
+							"Washington Beach Content",
+							"Vice Point Content",
+							"Starfish Island Content",
+							"Prawn Island Content",
+							"Leaf Links Content",
+							"Downtown Content",
+							"Little Haiti Content",
+							"Little Havana Content",
+							"Viceport Content",
+							"Escobar International Content"
+						],
+						[
+							"Hidden Packages",
+							"Ocean Beach Hidden Packages",
+							"Washington Beach Hidden Packages",
+							"Vice Point Hidden Packages",
+							"Starfish Island Hidden Packages",
+							"Prawn Island Hidden Packages",
+							"Leaf Links Hidden Packages",
+							"Downtown Hidden Packages",
+							"Little Haiti Hidden Packages",
+							"Little Havana Hidden Packages",
+							"Viceport Hidden Packages",
+							"Escobar International Hidden Packages"
+						],
+						[
+							"Rampages",
+							"Ocean Beach Rampages",
+							"Washington Beach Rampages",
+							"Vice Point Rampages",
+							"Starfish Island Rampages",
+							"Blank",
+							"Blank",
+							"Downtown Rampages",
+							"Little Haiti Rampages",
+							"Little Havana Rampages",
+							"Viceport Rampages",
+							"Escobar International Rampages"
+						],
+						[
+							"Stunt Jumps",
+							"Ocean Beach Stunt Jumps",
+							"Washington Beach Stunt Jumps",
+							"Vice Point Stunt Jumps",
+							"Starfish Island Stunt Jumps",
+							"Prawn Island Stunt Jumps",
+							"Blank",
+							"Downtown Stunt Jumps",
+							"Little Haiti Stunt Jumps",
+							"Little Havana Stunt Jumps",
+							"Blank",
+							"Escobar International Stunt Jumps"
+						],
+						[
+							"Property Purchases",
+							"Ocean Beach Property Purchases",
+							"Washington Beach Property Purchases",
+							"Vice Point Property Purchases",
+							"Blank",
+							"Prawn Island Property Purchases",
+							"Blank",
+							"Downtown Property Purchases",
+							"Little Haiti Property Purchases",
+							"Little Havana Property Purchases",
+							"Viceport Property Purchases",
+							"Blank"
+						],
+						[
+							"Robbable Stores",
+							"Blank",
+							"Washington Beach Robbable Stores",
+							"Vice Point Robbable Stores",
+							"Blank",
+							"Blank",
+							"Blank",
+							"Downtown Robbable Stores",
+							"Little Haiti Robbable Stores",
+							"Little Havana Robbable Stores",
+							"Blank",
+							"Blank"
+						]
+					],
+					"item_size": 24
+				}
+			},
+			{
+				"type": "group",
+				"dock": "left",
+				"header": "Show",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "2,2",
+					"rows": [
+						[
+							"show_story_missions",
+							"show_properties"
+						],
+						[
+							"show_hidden_packages",
+							"show_rampages"
+						],
+						[
+							"show_stunt_jumps",
+							"show_robbable_stores"
+						],
+						[
+							"show_side_events",
+							"show_emergency_vehicles"
+						],
+						[
+							"show_pickups",
+							"show_shops"
+						]
+					],
+					"item_size": 24
+				}
+			}
+		]
+	},
 	"settings_popup": {
 		"type": "array",
 		"orientation": "vertical",

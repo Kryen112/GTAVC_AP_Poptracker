@@ -1482,25 +1482,36 @@ def build_items_layout(data, items) -> dict:
     ]
     display_codes = [f"show_{class_key}" for class_key, _display, _option in CHECK_CLASSES]
 
-    owned_sections = [
-        ("Area access", wrap(list(data.AREA_ITEMS), 6)),
-        ("Goal", wrap([data.PACKAGE_FRAGMENT_ITEM, PERCENTAGE_ITEM], 2)),
-        ("Story strands", wrap(story, 7)),
-        ("Venue strands", wrap(venues, 7)),
-        ("Property ownership", wrap(list(data.PROPERTY_OWNERSHIP_ITEMS), 8)),
-        ("Abilities", wrap(list(data.ABILITY_ITEMS), 8)),
-        ("Package rewards", wrap(list(data.PACKAGE_REWARD_ITEMS), 6)),
-        ("Emergency rewards", wrap(list(data.EMERGENCY_REWARD_ITEMS), 5)),
-        ("Radio and minimap",
-         wrap([*data.RADIO_STATION_ITEMS, data.MINIMAP_ITEM], 5)),
+    # A group is its header, what it holds, and how wide it sits in a column.
+    # The strip shapes the same holdings for itself, so the two variants cannot
+    # come to hold different items.
+    owned_groups = [
+        ("Area access", list(data.AREA_ITEMS), 6),
+        ("Goal", [data.PACKAGE_FRAGMENT_ITEM, PERCENTAGE_ITEM], 2),
+        ("Story strands", story, 7),
+        ("Venue strands", venues, 7),
+        ("Property ownership", list(data.PROPERTY_OWNERSHIP_ITEMS), 8),
+        ("Abilities", list(data.ABILITY_ITEMS), 8),
+        ("Package rewards", list(data.PACKAGE_REWARD_ITEMS), 6),
+        ("Emergency rewards", list(data.EMERGENCY_REWARD_ITEMS), 5),
+        ("Radio and minimap", [*data.RADIO_STATION_ITEMS, data.MINIMAP_ITEM], 5),
     ]
+    filter_groups = [("Show on map", display_codes, 8)]
+    settings_groups = [
+        ("Seed options", settings_codes, 7),
+        ("Locks selected", lock_codes, 6),
+    ]
+
+    owned_sections = column_sections(owned_groups)
     content_sections = [("Content locks", content_matrix(data))]
-    beside_sections = [*content_sections, ("Show on map", wrap(display_codes, 8))]
-    settings_sections = [
-        ("Seed options", wrap(settings_codes, 7)),
-        ("Locks selected", wrap(lock_codes, 6)),
-    ]
+    beside_sections = [*content_sections, *column_sections(filter_groups)]
+    settings_sections = column_sections(settings_groups)
+    # The strip holds every group the two columns hold, regrouped for a band,
+    # since the horizontal variant is those columns laid along the bottom.
+    strip_sections = strip_shaped([*owned_groups, *filter_groups],
+                                  dict(content_sections))
     report_column_sizes(owned_sections, beside_sections)
+    report_strip_size(strip_sections)
     return {
         # One column of what the player holds, for the broadcast window, which
         # is its own narrow thing. The map filters are left out of it for want
@@ -1509,6 +1520,9 @@ def build_items_layout(data, items) -> dict:
         "items": column_layout(owned_sections + content_sections),
         "panel_one": column_layout(owned_sections),
         "panel_two": column_layout(beside_sections),
+        # The same groups as one row, for the horizontal variant, whose window
+        # puts them along the bottom with the map above.
+        "panel_strip": strip_layout(strip_sections),
         # PopTracker's own pack settings window, opened from the button in its
         # top bar. The key is the one the tracker looks that layout up by, and
         # the margin is what a window of its own wants and a docked panel does
@@ -1569,6 +1583,62 @@ def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> 
         raise SystemExit(f"items.json declares items no layout shows: {hidden}")
 
 
+def column_sections(groups: list[tuple[str, list[str], int]]
+                    ) -> list[tuple[str, list[list[str]]]]:
+    """Groups shaped for a column, each as wide as it was written to be."""
+    return [(header, wrap(names, per_row)) for header, names, per_row in groups]
+
+
+def strip_shaped(groups: list[tuple[str, list[str], int]],
+                 fixed: dict[str, list[list[str]]]
+                 ) -> list[tuple[str, list[list[str]]]]:
+    """The groups regrouped and reshaped for the strip along the bottom.
+
+    A group in a strip costs length, and length is what a strip runs out of, so
+    each one is made as deep as the band allows and no wider than it has to be.
+    The regrouping is STRIP_GROUPS' doing and the items are the columns' items
+    either way: a group named there and not here, or here and not there, is
+    refused rather than quietly dropped from one variant.
+    """
+    holdings = {header: names for header, names, _per_row in groups}
+    named = [source for _header, sources in STRIP_GROUPS for source in sources]
+    if sorted(named) != sorted(holdings):
+        raise SystemExit(
+            "STRIP_GROUPS does not regroup exactly the column groups, and each "
+            f"of them exactly once: {sorted(set(named) ^ set(holdings))}")
+    unshaped = sorted(header for header, sources in STRIP_GROUPS
+                      if not sources and header not in fixed)
+    if unshaped:
+        raise SystemExit(
+            f"STRIP_GROUPS names sections nothing shapes: {unshaped}")
+
+    sections = []
+    for header, sources in STRIP_GROUPS:
+        if not sources:
+            sections.append((header, fixed[header]))
+            continue
+        names = [name for source in sources for name in holdings[source]]
+        sections.append((header, wrap(names, math.ceil(len(names) / STRIP_ROWS))))
+    return sections
+
+
+def strip_layout(sections: list[tuple[str, list[list[str]]]]) -> dict:
+    """The groups as one row, each docked to the left of the space left.
+
+    Every grid in the band is drawn at the strip's own icon size, the content
+    grid included, so the band is one size throughout and shorter than a row of
+    panel-sized icons would be.
+    """
+    return {
+        "type": "dock",
+        "content": [
+            {"type": "group", "dock": "left", "header": header,
+             "content": {**item_grid(rows), "item_size": STRIP_ICON_SIZE}}
+            for header, rows in sections
+        ],
+    }
+
+
 # What the pack settings window keeps between its content and its own edges.
 POPUP_MARGIN = 5
 
@@ -1603,9 +1673,65 @@ COLUMN_HEIGHT_BUDGET = 950
 # window has about 1200 to give the columns before the map has to shrink for
 # them.
 PANEL_WIDTH_BUDGET = 1200
+# The horizontal variant's strip is a glance bar rather than a panel, so it is
+# drawn in its own size: smaller icons than a column's, and enough rows that a
+# group spends its space downwards rather than along the band, since length is
+# what a strip runs out of. Eight rows of the smaller icon is about as deep as
+# the content grid's six, so the band stays shallow either way.
+STRIP_ICON_SIZE = 24
+STRIP_CELL = STRIP_ICON_SIZE + 6
+STRIP_ROWS = 8
+# What the strip may take. A 1080p window has about 978 px of height, and the
+# city wants some 500 px of it to stay readable, so the band may have 350; and
+# the row runs out of window at about 1900 px wide.
+STRIP_HEIGHT_BUDGET = 350
+STRIP_WIDTH_BUDGET = 1900
+
+# How the strip regroups the columns' groups. A group two icons wide under the
+# words "Property ownership" is as wide as the words are, so a band of them is
+# mostly headers: the strip carries fewer frames and shorter words, and the gate
+# in strip_shaped refuses a column group this table forgets. An entry naming no
+# column group is a section that keeps its own shape, the content grid being the
+# one that says what it says by being a matrix.
+STRIP_GROUPS: list[tuple[str, tuple[str, ...]]] = [
+    ("Access", ("Area access",)),
+    ("Goal", ("Goal",)),
+    ("Story", ("Story strands",)),
+    ("Venues", ("Venue strands",)),
+    ("Property", ("Property ownership",)),
+    ("Abilities", ("Abilities",)),
+    ("Rewards", ("Package rewards", "Emergency rewards")),
+    ("Radio", ("Radio and minimap",)),
+    ("Content locks", ()),
+    ("Show", ("Show on map",)),
+]
+
+
 def section_height(section: tuple[str, list[list[str]]]) -> int:
     _header, rows = section
     return len(rows) * ROW_HEIGHT + HEADER_HEIGHT
+
+
+def report_strip_size(sections: list[tuple[str, list[list[str]]]]) -> None:
+    """Say how deep and how long the horizontal variant's strip comes out.
+
+    A strip trades the columns' problem for the mirror of it: its depth is taken
+    off the map's height rather than its width, and its length is what runs off
+    the side of the window.
+    """
+    depth = max((len(rows) * STRIP_CELL + HEADER_HEIGHT
+                 for _header, rows in sections), default=0)
+    icons = sum(max((len(row) for row in rows), default=0)
+                for _header, rows in sections)
+    length = icons * STRIP_CELL
+    print(f"strip     about {depth:>4} px deep, {icons} icons "
+          f"({length} px) long, {len(sections)} sections")
+    if depth > STRIP_HEIGHT_BUDGET:
+        print(f"  a strip past {STRIP_HEIGHT_BUDGET} px deep leaves the map less "
+              "height than the city needs; lower STRIP_ROWS or STRIP_ICON_SIZE")
+    if length > STRIP_WIDTH_BUDGET:
+        print(f"  a strip past {STRIP_WIDTH_BUDGET} px long runs off the side of "
+              "the window; raise STRIP_ROWS or merge groups in STRIP_GROUPS")
 
 
 def report_column_sizes(*columns: list[tuple[str, list[list[str]]]]) -> None:

@@ -146,6 +146,55 @@ The broadcast window gets one column of what the player holds plus the grid. It
 has no map to filter and no settings button to open, so neither of those goes in
 it.
 
+## Vertical and Horizontal
+
+The pack has two variants, picked where PopTracker lists the packs:
+
+| variant | uid | window |
+| --- | --- | --- |
+| Vertical | `standard` | the two columns down the left, the map beside them |
+| Horizontal | `var_horizontal` | the same groups as one row along the bottom, the map above |
+
+PopTracker resolves a file inside a variant's own folder ahead of the file of the
+same name at the pack root, so a variant needs to carry only what it changes.
+Horizontal carries one file, `var_horizontal/layouts/tracker.json`, which is the
+window: its first child docks to the bottom and holds `panel_strip`, where the
+vertical window docks two columns to the left. Everything else, the panels and the
+grid and the popup and the maps, comes from the root files, which is what keeps
+the two variants showing the same items.
+
+`panel_strip` is generated beside the columns from the same list of groups, so the
+two cannot drift apart in what they hold, only in how they sit. A group in a strip
+costs length and length is what a strip runs out of, so the band is drawn in its
+own size rather than a column's:
+
+- `STRIP_ICON_SIZE` of 24 px, a glance bar rather than a panel, applied to every
+  grid in the band including the content one
+- `STRIP_ROWS` of 8, so a group spends its space downwards instead of along the
+  band
+- `STRIP_GROUPS`, which regroups the columns' groups into fewer frames with
+  shorter words. A group two icons wide under the words "Property ownership" is
+  as wide as the words are, so the band says "Property", merges the two reward
+  groups into "Rewards", and a column group the table forgets is refused rather
+  than dropped from one variant.
+
+The content grid is the one section that keeps its own shape, six rows by twelve,
+because it says what it says by being a matrix. It is 288 px of the band's length
+and everything else shares the rest.
+
+The generator prints the band's size against `STRIP_HEIGHT_BUDGET` and
+`STRIP_WIDTH_BUDGET`, the mirror of the columns' two budgets, because depth comes
+off the map's height and length runs off the side of the window. It measures 270
+px deep and 780 px long. The first version was a column's icons under all eleven
+of a column's headers and came out 1292 px long, which reads as very wide on a
+1920 screen: this band is a third of the window rather than two thirds of it.
+
+Nothing here is written by hand. `tools/generate.py` emits all three from the
+world's own tables and refuses to write if the grid misses a content item or if an
+item that stands for progress is laid out nowhere, which is how the district
+content items came to be declared, autotracked, and invisible. `tools/check_logic.py`
+catches the other direction, a layout naming a code no item declares.
+
 ## What is not pinned
 
 Two classes have no world position.
