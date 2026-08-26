@@ -202,7 +202,11 @@ def main() -> int:
         image, draw = tile(colour)
         glyph(draw)
         image.save(DIRECTORY / f"{name}.png")
-    print(f"wrote {len(ICONS)} icons to {DIRECTORY}")
+    # The hole the content matrix leaves where a district holds nothing of a
+    # class. An item grid takes item codes and nothing else, so a hole in one is
+    # an item too, and this is what it looks like.
+    Image.new("RGBA", (CANVAS, CANVAS), (0, 0, 0, 0)).save(DIRECTORY / "blank.png")
+    print(f"wrote {len(ICONS) + 1} icons to {DIRECTORY}")
     return 0
 
 

@@ -974,31 +974,31 @@
 	{
 		"name": "Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_save.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Hidden Packages"
 	},
 	{
 		"name": "Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_save.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Rampages"
 	},
 	{
 		"name": "Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_save.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Stunt Jumps"
 	},
 	{
 		"name": "Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_save.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Property Purchases"
 	},
 	{
 		"name": "Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_save.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Robbable Stores"
 	},
 	{
@@ -1070,253 +1070,253 @@
 	{
 		"name": "Ocean Beach Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Ocean Beach Hidden Packages"
 	},
 	{
 		"name": "Washington Beach Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Washington Beach Hidden Packages"
 	},
 	{
 		"name": "Vice Point Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Vice Point Hidden Packages"
 	},
 	{
 		"name": "Starfish Island Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Starfish Island Hidden Packages"
 	},
 	{
 		"name": "Prawn Island Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Prawn Island Hidden Packages"
 	},
 	{
 		"name": "Leaf Links Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Leaf Links Hidden Packages"
 	},
 	{
 		"name": "Downtown Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Downtown Hidden Packages"
 	},
 	{
 		"name": "Little Haiti Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Little Haiti Hidden Packages"
 	},
 	{
 		"name": "Little Havana Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Little Havana Hidden Packages"
 	},
 	{
 		"name": "Viceport Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Viceport Hidden Packages"
 	},
 	{
 		"name": "Escobar International Hidden Packages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/hidden_packages.png",
 		"codes": "Escobar International Hidden Packages"
 	},
 	{
 		"name": "Ocean Beach Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Ocean Beach Rampages"
 	},
 	{
 		"name": "Washington Beach Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Washington Beach Rampages"
 	},
 	{
 		"name": "Vice Point Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Vice Point Rampages"
 	},
 	{
 		"name": "Starfish Island Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Starfish Island Rampages"
 	},
 	{
 		"name": "Downtown Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Downtown Rampages"
 	},
 	{
 		"name": "Little Haiti Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Little Haiti Rampages"
 	},
 	{
 		"name": "Little Havana Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Little Havana Rampages"
 	},
 	{
 		"name": "Viceport Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Viceport Rampages"
 	},
 	{
 		"name": "Escobar International Rampages",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/rampages.png",
 		"codes": "Escobar International Rampages"
 	},
 	{
 		"name": "Ocean Beach Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Ocean Beach Stunt Jumps"
 	},
 	{
 		"name": "Washington Beach Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Washington Beach Stunt Jumps"
 	},
 	{
 		"name": "Vice Point Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Vice Point Stunt Jumps"
 	},
 	{
 		"name": "Starfish Island Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Starfish Island Stunt Jumps"
 	},
 	{
 		"name": "Prawn Island Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Prawn Island Stunt Jumps"
 	},
 	{
 		"name": "Downtown Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Downtown Stunt Jumps"
 	},
 	{
 		"name": "Little Haiti Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Little Haiti Stunt Jumps"
 	},
 	{
 		"name": "Little Havana Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Little Havana Stunt Jumps"
 	},
 	{
 		"name": "Escobar International Stunt Jumps",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/stunt_jumps.png",
 		"codes": "Escobar International Stunt Jumps"
 	},
 	{
 		"name": "Ocean Beach Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Ocean Beach Property Purchases"
 	},
 	{
 		"name": "Washington Beach Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Washington Beach Property Purchases"
 	},
 	{
 		"name": "Vice Point Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Vice Point Property Purchases"
 	},
 	{
 		"name": "Prawn Island Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Prawn Island Property Purchases"
 	},
 	{
 		"name": "Downtown Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Downtown Property Purchases"
 	},
 	{
 		"name": "Little Haiti Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Little Haiti Property Purchases"
 	},
 	{
 		"name": "Little Havana Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Little Havana Property Purchases"
 	},
 	{
 		"name": "Viceport Property Purchases",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/properties.png",
 		"codes": "Viceport Property Purchases"
 	},
 	{
 		"name": "Washington Beach Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Washington Beach Robbable Stores"
 	},
 	{
 		"name": "Vice Point Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Vice Point Robbable Stores"
 	},
 	{
 		"name": "Downtown Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Downtown Robbable Stores"
 	},
 	{
 		"name": "Little Haiti Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Little Haiti Robbable Stores"
 	},
 	{
 		"name": "Little Havana Robbable Stores",
 		"type": "toggle",
-		"img": "images/items/hud/radar_centre.png",
+		"img": "images/items/pins/robbable_stores.png",
 		"codes": "Little Havana Robbable Stores"
 	},
 	{
@@ -1324,6 +1324,12 @@
 		"type": "toggle",
 		"img": "images/items/drawn/percentage.png",
 		"codes": "Percentage Completed"
+	},
+	{
+		"name": "Blank",
+		"type": "static",
+		"img": "images/items/drawn/blank.png",
+		"codes": "Blank"
 	},
 	{
 		"name": "Hidden packages",

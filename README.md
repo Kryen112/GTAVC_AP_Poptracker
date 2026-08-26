@@ -94,17 +94,57 @@ amount of zooming out recovers it. That 1269 was a single tall column of items,
 against a window of about 978.
 
 So the fix is never in the map. Everything beside it goes in two columns: one
-holds what the player has, the other what the seed was rolled with, so each reads
-as one thing. The generator prints both column heights and warns past
-`COLUMN_HEIGHT_BUDGET`, since a column taller than the window is what pushes the
-map off the screen. If that warning appears, move a section across or add a
-column.
+holds what the player has, the other the content lock grid and the map filters,
+so each reads as one thing. What the seed was rolled with is not beside the map at
+all; it is in the pack settings window. The generator prints both column heights
+and warns past `COLUMN_HEIGHT_BUDGET`, since a column taller than the window is
+what pushes the map off the screen. If that warning appears, move a section across
+or add a column.
+
+Width is the other half, and the grid is what made it one: the generator prints
+the two columns' widths as well and warns past `PANEL_WIDTH_BUDGET`. The map draws
+contained in the pane it is given, so at a column height around 900 px the city
+wants some 700 px of width, and a 1920 window has about 1200 to give the columns
+before the map has to shrink for them.
 
 With the columns short, the map fits the window and no padding is wanted: the
 image is the cropped city and nothing else, and PopTracker centres it in whatever
 space is left. Padding the sides out to a wide aspect, which an earlier version
 did, only shrinks the city, since the scale then follows the padded width rather
 than the height.
+
+## The panels, and where the settings went
+
+Three homes, and which one a thing goes in follows from how often a player looks
+at it.
+
+The first column is what the player holds: area access, the goal, the strands,
+property ownership, the abilities, the package and emergency rewards, the radio
+stations and the minimap.
+
+The second column is the content lock grid and the map filters. The grid is one
+item grid read as a matrix: a column per district in the order the item ids run,
+a row per content class, and a blank where a district holds nothing of that class.
+Column zero is the whole-class item, the first row the per-district items, and the
+rest one item per class per district, which is exactly the three granularities
+`split_content_locks` chooses between. The corner cell is that setting itself,
+sitting where its two axes meet, because a layout cannot ask what a seed rolled:
+PopTracker has visibility rules for locations and none for layouts, so the grid is
+drawn once and shown to every seed, and only the corner says which part of it is
+live. The other two thirds stay dark all game, which is the price of a static
+layout and the reason the coarse items sit in a column rather than scattered.
+
+What the seed was rolled with, the seed options and the selected locks, is in
+PopTracker's own pack settings window, opened from the button in its top bar. The
+autotracker fills those from slot_data and a player changes them about never, so
+they are not worth the width beside the map. The layout key the tracker looks them
+up by is `settings_popup`. A gear on a group header is not the route: the pack
+schema marks `header_content` and `button_popup` "not implemented yet" on every
+field, and the string does not appear in the tracker binary at all.
+
+The broadcast window gets one column of what the player holds plus the grid. It
+has no map to filter and no settings button to open, so neither of those goes in
+it.
 
 ## What is not pinned
 
@@ -191,6 +231,12 @@ of flames. `tools/make_icons.py` draws those instead: a white glyph on a rounded
 tile, the tile colour naming the family and the glyph the item. Package rewards
 are amber, emergency rewards teal, the minimap blue, the completion percentage
 violet.
+
+Content lock items are the third kind: each wears its own class's map pin, so a
+row of the content grid reads as the class its pins read as on the map, and the
+per-district items covering every class at once keep the neutral radar disc. The
+blank cells are an item too, drawn as nothing, since an item grid takes item codes
+and a hole in one still has to be one.
 
 Without them all eleven package rewards, all five emergency rewards and the
 minimap fall back to the same marker, and a panel of identical icons says

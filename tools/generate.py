@@ -4,6 +4,7 @@ Everything the pack knows about checks, items, and logic is derived here, so
 the tracker cannot drift from the world it tracks. Emits:
 
     items/items.json
+    layouts/items.json
     locations/<Check class>.json
     maps/maps.json
     scripts/locations_import.lua
@@ -158,8 +159,8 @@ def class_visibility_code(class_key: str) -> str:
 
 def pin_images(class_key: str) -> dict[str, str]:
     return {
-        "chest_unopened_img": f"images/items/pins/{class_key}.png",
-        "chest_opened_img": f"images/items/pins/{class_key}_opened.png",
+        "chest_unopened_img": f"{PIN_DIRECTORY}/{class_key}.png",
+        "chest_opened_img": f"{PIN_DIRECTORY}/{class_key}_opened.png",
     }
 
 
@@ -219,6 +220,13 @@ CONTENT_SPLIT_STAGES: list[tuple[int, str]] = [
     (0, "off"), (1, "per_district"), (2, "per_class"),
 ]
 
+# The setting the content matrix puts in its corner, since the grid is drawn once
+# for every seed and this is what says which of its parts a seed uses.
+SPLIT_SETTING_KEY = "split_content_locks"
+if SPLIT_SETTING_KEY not in {key for key, _label, _stages in STAGED_SETTINGS}:
+    raise SystemExit(f"{SPLIT_SETTING_KEY} is not a staged setting any more, so "
+                     "the content matrix has nothing to put in its corner")
+
 # Set-valued slot_data keys: each member key becomes its own binary setting, so
 # a rule can ask whether that one lock is selected this seed.
 SET_SETTINGS: list[tuple[str, str, str]] = [
@@ -257,6 +265,13 @@ RADIO_ICONS = {
 
 FALLBACK_ICON = "radar_centre"
 
+# The pin art tools/make_pins.py draws, one colour per check class. A content
+# lock item wears its own class's pin, so a row of the content matrix reads as
+# the class its pins read as on the map, and five identical icons become five
+# colours. The district items covering every class at once keep the neutral
+# radar icon, since no one class owns them.
+PIN_DIRECTORY = "images/items/pins"
+
 # The game's own "Percentage completed" stat, which the mod reads off the same
 # number the stats menu prints and the client publishes to the AP data store.
 # Not an AP item: nothing in the multiworld grants it and no rule reads it, so it
@@ -264,6 +279,12 @@ FALLBACK_ICON = "radar_centre"
 # overlay text on this item instead.
 PERCENTAGE_ITEM = "Percentage Completed"
 PERCENTAGE_ICON = "percentage"
+
+# The content matrix leaves a hole wherever a district holds nothing of a class.
+# A PopTracker item grid takes item codes and nothing else, so the hole has to be
+# an item: a static one, which no click can change, drawn as nothing at all.
+BLANK_ITEM = "Blank"
+BLANK_ICON = "blank"
 
 # Items the game has no art for, drawn by tools/make_icons.py instead. Vice City
 # renders its weapon and vehicle icons as models rather than sprites, so without
@@ -669,8 +690,9 @@ def icon_for_item(name: str, data, items) -> str:
         return f"{ICON_DIRECTORY}/property.png"
     if name in data.ABILITY_ITEMS:
         return f"{ICON_DIRECTORY}/fist.png"
-    if name in data.CONTENT_ITEMS:
-        return f"{ICON_DIRECTORY}/radar_save.png"
+    content_class = content_class_key(name, data)
+    if content_class is not None:
+        return f"{PIN_DIRECTORY}/{content_class}.png"
     if name in data.TRAP_ITEMS:
         return f"{ICON_DIRECTORY}/siterocket.png"
     if name == data.PACKAGE_FRAGMENT_ITEM:
@@ -678,6 +700,22 @@ def icon_for_item(name: str, data, items) -> str:
     if name in items.GENERAL_FILLER_NAMES or name in data.FILLER_ITEMS:
         return f"{ICON_DIRECTORY}/gun.png"
     return f"{ICON_DIRECTORY}/{FALLBACK_ICON}.png"
+
+
+def content_class_key(name: str, data) -> str | None:
+    """The content class a lock item holds, whole city or one district of it.
+
+    A district item covers every selected class in its district, so it belongs
+    to no single class and answers None.
+    """
+    whole = data.CONTENT_ITEM_KEY.get(name)
+    if whole is not None:
+        return whole
+    for item, districts in data.CONTENT_CLASS_DISTRICTS.items():
+        if name in {data.district_class_item_name(district, item)
+                    for district in districts}:
+            return data.CONTENT_ITEM_KEY[item]
+    return None
 
 
 def build_items_json(data, items) -> list[dict]:
@@ -710,6 +748,12 @@ def build_items_json(data, items) -> list[dict]:
         "name": PERCENTAGE_ITEM, "type": "toggle",
         "img": f"{DRAWN_ICON_DIRECTORY}/{PERCENTAGE_ICON}.png",
         "codes": item_code(PERCENTAGE_ITEM),
+    })
+
+    entries.append({
+        "name": BLANK_ITEM, "type": "static",
+        "img": f"{DRAWN_ICON_DIRECTORY}/{BLANK_ICON}.png",
+        "codes": item_code(BLANK_ITEM),
     })
 
     for key, label, default_on in BINARY_SETTINGS:
@@ -1174,11 +1218,19 @@ def main() -> int:
         raise SystemExit(
             f"DRAWN_ICONS names items the world does not have: {unknown_icons}")
     missing_art = sorted(
-        drawn for drawn in set(DRAWN_ICONS.values()) | {PERCENTAGE_ICON}
+        drawn for drawn in set(DRAWN_ICONS.values()) | {PERCENTAGE_ICON, BLANK_ICON}
         if not (PACK / DRAWN_ICON_DIRECTORY / f"{drawn}.png").is_file())
     if missing_art:
         raise SystemExit(
             f"drawn icons missing, run tools/make_icons.py: {missing_art}")
+    # A content lock item wears its class's pin, so a class whose pin is not
+    # drawn would leave a row of the content matrix blank.
+    missing_pins = sorted(
+        key for key in set(data.CONTENT_ITEM_KEY.values())
+        if not (PACK / PIN_DIRECTORY / f"{key}.png").is_file())
+    if missing_pins:
+        raise SystemExit(
+            f"content lock pin art missing, run tools/make_pins.py: {missing_pins}")
 
     positions = check_positions(data, locations, check_coords,
                                 unpinnable_classes(check_coords))
@@ -1186,8 +1238,11 @@ def main() -> int:
     attach_access_rules(groups)
 
     # ---- items/items.json and the panels showing them --------------------
-    write_json(PACK / "items" / "items.json", build_items_json(data, items))
-    write_json(PACK / "layouts" / "items.json", build_items_layout(data, items))
+    item_entries = build_items_json(data, items)
+    layout = build_items_layout(data, items)
+    check_layout_shows_items(data, items, item_entries, layout)
+    write_json(PACK / "items" / "items.json", item_entries)
+    write_json(PACK / "layouts" / "items.json", layout)
 
     # ---- maps/maps.json ---------------------------------------------------
     write_json(PACK / "maps" / "maps.json", [{
@@ -1357,18 +1412,62 @@ def wrap(names: list[str], per_row: int) -> list[list[str]]:
     return [codes[start:start + per_row] for start in range(0, len(codes), per_row)]
 
 
+def content_matrix(data) -> list[list[str]]:
+    """The content lock items as a grid, a column per district and a row per class.
+
+    Which of them a seed puts in the pool is split_content_locks' answer, and a
+    layout cannot ask: it is drawn once and shown to every seed, PopTracker
+    having visibility rules for locations and none for layouts. So all three
+    granularities are laid out at once, placed so the grid itself says which is
+    which. Column zero holds the whole-class items, the first row the
+    per-district ones, and the rest is one item per class per district. The
+    corner is the split setting, the axis the rest is read along, and a district
+    holding nothing of a class leaves a blank.
+    """
+    districts = list(data.CONTENT_DISTRICTS)
+    rows = [[SPLIT_SETTING_KEY]
+            + [item_code(data.district_content_item_name(district))
+               for district in districts]]
+    for whole in data.CONTENT_ITEMS:
+        covered = data.CONTENT_CLASS_DISTRICTS[whole]
+        rows.append(
+            [item_code(whole)]
+            + [item_code(data.district_class_item_name(district, whole))
+               if district in covered else item_code(BLANK_ITEM)
+               for district in districts])
+
+    # Every content item exactly once, so a new district or a new content class
+    # cannot quietly miss its cell: an item the grid never names is an item the
+    # player never sees arrive.
+    laid_out = [code for row in rows for code in row
+                if code not in (SPLIT_SETTING_KEY, item_code(BLANK_ITEM))]
+    expected = [item_code(name) for name in
+                [*data.CONTENT_ITEMS, *data.all_district_content_items()]]
+    missing = sorted(set(expected) - set(laid_out))
+    twice = sorted({code for code in laid_out if laid_out.count(code) > 1})
+    if missing or twice or len(laid_out) != len(expected):
+        raise SystemExit(
+            "the content matrix does not hold every content lock item exactly "
+            f"once; missing {missing}, twice over {twice}")
+    return rows
+
+
 def build_items_layout(data, items) -> dict:
-    """The two panels beside the map.
+    """The two panels beside the map, and the pack settings window.
 
     Generated alongside items.json so a renamed item cannot leave a dead code
     behind in a hand-written layout. Cash, filler, and traps are left out: they
     gate nothing and would bury the items that do.
 
-    One column holds what the player has, the other what the seed was rolled
-    with, so each column reads as one thing. Two columns rather than one because
-    PopTracker lays the window out to whatever height its tallest column needs
-    and fits the map into that: a column taller than the window makes the map
-    taller than the window too.
+    Three homes, each reading as one thing. One column holds what the player
+    has. The other holds the content matrix, which is wide enough to want a
+    column of its own, and the map filters. What the seed was rolled with goes
+    into PopTracker's own pack settings window rather than beside the map, since
+    the autotracker fills it from slot_data and a player changes it about never.
+
+    Two columns rather than one because PopTracker lays the window out to
+    whatever height its tallest column needs and fits the map into that: a
+    column taller than the window makes the map taller than the window too.
     """
     story = [data.progressive_item_name(giver) for giver in data.STORY_GIVERS]
     venues = [data.progressive_item_name(venue) for venue in data.VENUE_STRANDS]
@@ -1390,29 +1489,93 @@ def build_items_layout(data, items) -> dict:
         ("Venue strands", wrap(venues, 7)),
         ("Property ownership", wrap(list(data.PROPERTY_OWNERSHIP_ITEMS), 8)),
         ("Abilities", wrap(list(data.ABILITY_ITEMS), 8)),
-        ("Content locks", wrap(list(data.CONTENT_ITEMS), 5)),
         ("Package rewards", wrap(list(data.PACKAGE_REWARD_ITEMS), 6)),
         ("Emergency rewards", wrap(list(data.EMERGENCY_REWARD_ITEMS), 5)),
         ("Radio and minimap",
          wrap([*data.RADIO_STATION_ITEMS, data.MINIMAP_ITEM], 5)),
     ]
-    seed_sections = [
+    content_sections = [("Content locks", content_matrix(data))]
+    beside_sections = [*content_sections, ("Show on map", wrap(display_codes, 8))]
+    settings_sections = [
         ("Seed options", wrap(settings_codes, 7)),
         ("Locks selected", wrap(lock_codes, 6)),
-        ("Show on map", wrap(display_codes, 8)),
     ]
-    report_column_heights(owned_sections, seed_sections)
+    report_column_sizes(owned_sections, beside_sections)
     return {
-        # One column of everything, for the broadcast window, which is its own
-        # narrow thing and has no map to sit beside.
-        "items": column_layout(owned_sections + seed_sections),
+        # One column of what the player holds, for the broadcast window, which
+        # is its own narrow thing. The map filters are left out of it for want
+        # of a map, and the seed settings for want of the button that opens
+        # them, which that window does not carry.
+        "items": column_layout(owned_sections + content_sections),
         "panel_one": column_layout(owned_sections),
-        "panel_two": column_layout(seed_sections),
+        "panel_two": column_layout(beside_sections),
+        # PopTracker's own pack settings window, opened from the button in its
+        # top bar. The key is the one the tracker looks that layout up by, and
+        # the margin is what a window of its own wants and a docked panel does
+        # not.
+        "settings_popup": column_layout(settings_sections, margin=POPUP_MARGIN),
     }
 
 
-def column_layout(sections: list[tuple[str, list[list[str]]]]) -> dict:
-    return {
+def layout_item_codes(layout) -> set[str]:
+    """Every item code a layout names, grids and single items alike."""
+    codes: set[str] = set()
+    if isinstance(layout, dict):
+        if layout.get("type") == "itemgrid":
+            codes.update(code for row in layout.get("rows", [])
+                         for code in row if code)
+        if layout.get("type") == "item" and layout.get("item"):
+            codes.add(layout["item"])
+        for value in layout.values():
+            codes |= layout_item_codes(value)
+    elif isinstance(layout, list):
+        for value in layout:
+            codes |= layout_item_codes(value)
+    return codes
+
+
+def entry_codes(entry: dict) -> set[str]:
+    """Every code one items.json entry provides, its stages included."""
+    fields = [entry.get("codes"),
+              *(stage.get("codes") for stage in entry.get("stages", []))]
+    return {part.strip() for field in fields if field
+            for part in field.split(",")}
+
+
+def check_layout_shows_items(data, items, entries: list[dict], layout: dict) -> None:
+    """Every item standing for progress or for a setting sits in some layout.
+
+    An item can be declared, mapped by the autotracker, and laid out nowhere. It
+    then arrives, turns on, and shows the player nothing, which is silent in the
+    pack and visible only in game: exactly how 53 district content items sat in
+    it while the panel showed the five whole-class ones. So both directions are
+    compared here rather than trusted.
+    """
+    shown = layout_item_codes(layout)
+    declared = {code for entry in entries for code in entry_codes(entry)}
+    undeclared = sorted(shown - declared)
+    if undeclared:
+        raise SystemExit(
+            f"a layout names item codes items.json does not declare: {undeclared}")
+    # Cash, filler and traps gate nothing and would bury the items that do, so
+    # they are deliberately absent; the blank cell is furniture, not an item.
+    quiet = {item_code(name) for name in
+             [*data.FILLER_ITEMS, *items.GENERAL_FILLER_NAMES, *data.TRAP_ITEMS,
+              BLANK_ITEM]}
+    hidden = sorted(entry["name"] for entry in entries
+                    if not entry_codes(entry) & shown
+                    and not entry_codes(entry) & quiet)
+    if hidden:
+        raise SystemExit(f"items.json declares items no layout shows: {hidden}")
+
+
+# What the pack settings window keeps between its content and its own edges.
+POPUP_MARGIN = 5
+
+
+def column_layout(sections: list[tuple[str, list[list[str]]]],
+                  margin: int | None = None) -> dict:
+    layout = {
         "type": "array",
         "orientation": "vertical",
         "content": [
@@ -1420,33 +1583,51 @@ def column_layout(sections: list[tuple[str, list[list[str]]]]) -> dict:
             for header, rows in sections
         ],
     }
+    if margin is not None:
+        layout["margin"] = margin
+    return layout
 
 
-# Rough heights, for the warning below only: one row of icons, and the group
+# Rough sizes, for the warnings below only: one row of icons, and the group
 # header above it, in the proportions PopTracker draws them.
 ROW_HEIGHT = 38
 HEADER_HEIGHT = 30
+# An icon and its margins are as wide as they are tall, so a row of them is as
+# wide as a row is high.
+ICON_WIDTH = ROW_HEIGHT
 # About what a 1080p window leaves for a column once its own furniture is out of
 # the way. A column past this makes the map taller than the window.
 COLUMN_HEIGHT_BUDGET = 950
-
-
+# What both columns may take together. The map draws contained in the pane, so a
+# column height around 900 has the city wanting some 700 px of width, and a 1920
+# window has about 1200 to give the columns before the map has to shrink for
+# them.
+PANEL_WIDTH_BUDGET = 1200
 def section_height(section: tuple[str, list[list[str]]]) -> int:
     _header, rows = section
     return len(rows) * ROW_HEIGHT + HEADER_HEIGHT
 
 
-def report_column_heights(*columns: list[tuple[str, list[list[str]]]]) -> None:
-    """Say how tall each column comes out, and warn when one grows past what a
-    window holds, since that is what pushes the map off the screen."""
+def report_column_sizes(*columns: list[tuple[str, list[list[str]]]]) -> None:
+    """Say how tall and how wide each column comes out, and warn past what a
+    window holds. Height is what pushes the map off the screen, and the two
+    widths together are what squeeze it narrower than its own image."""
+    together = 0
     for number, sections in enumerate(columns, start=1):
         height = sum(section_height(section) for section in sections)
+        icons = max((len(row) for _header, rows in sections for row in rows),
+                    default=0)
+        together += icons * ICON_WIDTH
         note = "" if height <= COLUMN_HEIGHT_BUDGET else "  OVER BUDGET"
-        print(f"column {number}  about {height:>4} px tall, "
-              f"{len(sections)} sections{note}")
+        print(f"column {number}  about {height:>4} px tall, {icons:>2} icons "
+              f"wide, {len(sections)} sections{note}")
         if height > COLUMN_HEIGHT_BUDGET:
             print(f"  a column past {COLUMN_HEIGHT_BUDGET} px makes the map taller "
                   "than the window; rebalance the sections or add a column")
+    print(f"columns   about {together} px wide together")
+    if together > PANEL_WIDTH_BUDGET:
+        print(f"  columns past {PANEL_WIDTH_BUDGET} px wide leave the map narrower "
+              "than its own image; narrow a grid or move a section")
 
 
 

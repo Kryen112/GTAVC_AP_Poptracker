@@ -11,6 +11,7 @@ Checks run:
     every rule function runs against a stub tracker and returns a level
     every location section has a rule, and every rule has a section
     every item code a rule tests is declared in items.json
+    every item code a layout names is declared in items.json
     the percentage item the autotracker draws on is declared and named
     the autotracker draws the percentage it is given, and only its own slot's
     every location id the world knows maps to exactly one section path
@@ -267,6 +268,39 @@ def declared_item_codes() -> set[str]:
     return codes
 
 
+def layout_item_codes(problems: list[str], item_codes: set[str]) -> int:
+    """Every item code the layouts name, checked against items.json.
+
+    A layout is the one place an item code goes unchecked everywhere else: a
+    grid cell naming a code no item declares draws nothing and says nothing,
+    and an item no cell names is invisible however well it autotracks. The
+    generator refuses the second, this catches the first, and both are the same
+    failure as the rules naming an item nothing provides.
+    """
+    codes: set[str] = set()
+    for path in sorted((PACK / "layouts").glob("*.json")):
+        collect_layout_codes(json.loads(path.read_text(encoding="utf-8")), codes)
+    if not codes:
+        raise SystemExit("no item codes found in the layouts, so nothing was checked")
+    problems.extend(
+        f"a layout names item code {code!r}, which items.json does not declare"
+        for code in sorted(codes - item_codes))
+    return len(codes)
+
+
+def collect_layout_codes(node, codes: set[str]) -> None:
+    if isinstance(node, dict):
+        if node.get("type") == "itemgrid":
+            codes.update(code for row in node.get("rows", []) for code in row if code)
+        if node.get("type") == "item" and node.get("item"):
+            codes.add(node["item"])
+        for value in node.values():
+            collect_layout_codes(value, codes)
+    elif isinstance(node, list):
+        for value in node:
+            collect_layout_codes(value, codes)
+
+
 def rule_item_codes(problems: list[str], item_codes: set[str]) -> None:
     """Every item any rule names, read out of the source rather than run.
 
@@ -507,6 +541,7 @@ def main() -> int:
         f"a rule tests item code {code!r}, which items.json does not declare"
         for code in sorted(requested_codes - item_codes))
     rule_item_codes(problems, item_codes)
+    layout_codes = layout_item_codes(problems, item_codes)
     # A missionPassed term names a section rather than an item, so the path it
     # asks for has to be one the locations declare.
     problems.extend(
@@ -539,7 +574,8 @@ def main() -> int:
     for problem in problems:
         print(f"FAIL {problem}")
     print(f"rules {len(declared_rules)}, sections {len(paths)}, "
-          f"location ids {len(locations)}, item ids {len(items)}, pins {pins}")
+          f"location ids {len(locations)}, item ids {len(items)}, "
+          f"laid out codes {layout_codes}, pins {pins}")
     print(f"problems: {len(problems)}")
     return 1 if problems else 0
 
