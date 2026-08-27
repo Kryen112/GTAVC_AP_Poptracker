@@ -26,9 +26,9 @@ turns into. The emergency vehicle activities are the one exception: they have no
 world position, so they are laid out in open water.
 
 The access rules are the world's own. Rather than reimplement the requirement
-tables, this stands in a recorder for the two predicate builders in rules.py and
-calls build_location_rules, so what comes back is the exact requirement
-structure the generator itself uses, per option configuration. A rule is
+tables, this calls the world's build_location_requirements, which hands back the
+structures its own predicates are compiled from, so what the pack renders is the
+exact logic the generator runs, per option configuration. A rule is
 emitted for the properties-on and properties-off worlds and switched in Lua,
 and each lock item's term carries its own key so an unselected key reads as no
 lock, matching how rules.py filters them.
@@ -351,8 +351,12 @@ def load_check_coords():
 # Requirement capture
 # ---------------------------------------------------------------------------
 
-# A captured rule is ("all", requirements) or
-# ("thresholds", requirements, [(alternative_requirement_sets, needed), ...]).
+# A rule here is the world's own LocationRequirements: its requirements, and its
+# thresholds as [(alternative_requirement_sets, needed), ...]. No tag saying
+# which of the two forms it is, because choosing between them would be this
+# repository holding a copy of the world's compile branch, and a copy is the one
+# thing that can drift without a name changing. A rule with no thresholds
+# renders exactly as one whose threshold list is empty.
 Rule = tuple
 
 
@@ -362,30 +366,27 @@ def capture_rules(rules, properties_enabled: bool, ability_locks: frozenset[str]
                   split_content_locks: int = 0) -> dict[str, Rule]:
     """The world's own location rules as requirement structures.
 
-    build_location_rules returns predicates built by exactly two helpers, so
-    standing a recorder in for both hands back the structures instead, with no
-    second copy of the requirement logic to drift.
+    build_location_requirements is the world's public form of its own logic:
+    the same structures build_location_rules compiles into predicates. Reading
+    them means the pack cannot drift from the rules it tracks, and nothing here
+    reaches into the world's private helpers to get them.
     """
-    original_requires = rules._requires
-    original_thresholds = rules._requires_with_thresholds
-    try:
-        rules._requires = lambda requirements: ("all", list(requirements))
-        rules._requires_with_thresholds = (
-            lambda requirements, thresholds: (
-                "thresholds", list(requirements),
-                [([list(each) for each in alternatives], needed)
-                 for alternatives, needed in thresholds])
-        )
-        return rules.build_location_rules(
-            properties_enabled=properties_enabled,
-            ability_locks=ability_locks,
-            content_locks=content_locks,
-            split_mainland_access=split_mainland_access,
-            split_content_locks=split_content_locks,
-        )
-    finally:
-        rules._requires = original_requires
-        rules._requires_with_thresholds = original_thresholds
+    built = rules.build_location_requirements(
+        properties_enabled=properties_enabled,
+        ability_locks=ability_locks,
+        content_locks=content_locks,
+        split_mainland_access=split_mainland_access,
+        split_content_locks=split_content_locks,
+    )
+    # Copied out at both levels: the world hands these structures out by
+    # reference and several locations share one threshold list, so rendering
+    # must not be able to reach back into the logic it is reading.
+    return {
+        name: (list(entry.requirements),
+               [([list(each) for each in alternatives], needed)
+                for alternatives, needed in entry.thresholds])
+        for name, entry in built.items()
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -580,11 +581,7 @@ def rule_expression(rule: Rule | None, region_groups: list[list[str]],
         terms.append(region)
     if rule is None:
         return conjunction(terms)
-    if rule[0] == "all":
-        terms.extend(requirement_term(item, count, lock_settings)
-                     for item, count in deduplicated(rule[1]) if item not in omitted)
-        return conjunction(terms)
-    _kind, requirements, thresholds = rule
+    requirements, thresholds = rule
     terms.extend(requirement_term(item, count, lock_settings)
                  for item, count in deduplicated(requirements) if item not in omitted)
     terms.extend(threshold_term(alternatives, needed, lock_settings)
