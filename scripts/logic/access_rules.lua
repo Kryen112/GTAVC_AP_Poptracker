@@ -4058,9 +4058,9 @@ function rule_Pickup_Downtown_Police_Bribe_near_Hyman_Condo()
 end
 function rule_Pickup_Little_Haiti_Police_Bribe_east_of_Kaufman_Cabs_Ramp_jump()
 	if mainlandCrossingsSplit() then
-		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Starfish Island Causeway") and has("Starfish Island Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	else
-		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((has("Mainland Access") and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	end
 end
 function rule_Pickup_Little_Haiti_Police_Bribe_south_of_Auntie_Poulet_s()
@@ -4072,9 +4072,9 @@ function rule_Pickup_Little_Haiti_Police_Bribe_south_of_Auntie_Poulet_s()
 end
 function rule_Pickup_Little_Haiti_Police_Bribe_over_the_ditch_south_of_Auntie_Poulet_s_Ramp_jump()
 	if mainlandCrossingsSplit() then
-		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Starfish Island Causeway") and has("Starfish Island Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	else
-		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((has("Mainland Access") and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	end
 end
 function rule_Pickup_Little_Havana_Police_Bribe_in_an_alley_northwest_of_Screw_This()
@@ -4086,9 +4086,9 @@ function rule_Pickup_Little_Havana_Police_Bribe_in_an_alley_northwest_of_Screw_T
 end
 function rule_Pickup_Little_Havana_Police_Bribe_east_of_Sunshine_Autos_Ramp_jump()
 	if mainlandCrossingsSplit() then
-		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((satisfiedCount({has("Prawn Island Bridge"), has("Leaf Links Bridge"), has("Ocean Beach Bridge"), (has("Starfish Island Causeway") and has("Starfish Island Access"))}) >= 1 and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Prawn Island Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Leaf Links Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Ocean Beach Bridge")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Starfish Island Causeway") and has("Starfish Island Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	else
-		return reachAccess((has("Mainland Access") and lockTerm("Land Vehicles", "ability_lock_vehicles")))
+		return reachAccess((has("Mainland Access") and satisfiedCount({lockTerm("Land Vehicles", "ability_lock_vehicles"), (lockTerm("Air Vehicles", "ability_lock_vehicles") and has("Mainland Access")), (lockTerm("Air Vehicles", "ability_lock_vehicles") and missionPassed("@Story Missions/Rub Out/Rub Out"))}) >= 1))
 	end
 end
 function rule_Pickup_Ocean_Beach_Chainsaw_in_Apartment_3C() return reachAccess(true) end
