@@ -105,11 +105,14 @@ def set_manifest_version(version: str) -> None:
                  "so write 0.2.0 rather than v0.2.0.")
     path = manifest_path()
     text = path.read_text(encoding="utf-8")
-    bumped = re.sub(r'("package_version"\s*:\s*")[^"]*(")',
-                    rf"\g<1>{version}\g<2>", text)
-    if bumped == text:
+    field = re.compile(r'("package_version"\s*:\s*")[^"]*(")')
+    if field.search(text) is None:
         sys.exit("error: could not find package_version in manifest.json")
-    path.write_text(bumped, encoding="utf-8")
+    # Unchanged when the manifest already carries this version, which is a
+    # release of what is there rather than a mistake.
+    bumped = field.sub(rf"\g<1>{version}\g<2>", text)
+    if bumped != text:
+        path.write_text(bumped, encoding="utf-8")
 
 
 def manifest_version() -> str:
