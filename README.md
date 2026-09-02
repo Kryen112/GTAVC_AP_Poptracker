@@ -17,6 +17,7 @@ of it that can drift.
 | Item art | `py -3.12 tools/make_icons.py` | `images/items/drawn/*.png` |
 | Self-test | `py -3.12 tools/check_logic.py` | pass or a list of problems |
 | Preview | `py -3.12 tools/preview_map.py` | `preview/pinned_map.png` |
+| Release | `py -3.12 tools/release.py --version <version> --changelog "..."` | `dist/GTAVC_AP_Poptracker_v<version>.zip`, `versions.json` |
 
 Run the map extractor once, then the generator whenever the world changes, then
 the pin art (it reads the generated item list to know which settings need
@@ -31,6 +32,24 @@ runtime. It needs `lupa` and `Pillow`.
 `tools/preview_map.py` draws the pins as a picture, reading the emitted
 `locations/*.json` rather than the coordinate table, so it checks the whole
 pipeline. A pin in the sea is obvious there and invisible in a diff.
+
+`tools/release.py` packages a release and, with `--publish`, cuts it. PopTracker
+auto-updates by reading `manifest.json` -> `versions_url` -> `versions.json`,
+taking the top entry as the latest and verifying the download's sha256, so a
+release is three things that have to agree: a tag holding the zip, a
+`versions.json` entry naming it, and a manifest carrying the same version. The
+script writes all three from one number.
+
+The owner, the repository and the branch come from the manifest's `versions_url`
+rather than from constants in the script, so it refuses a publish from a branch
+PopTracker does not read, and refuses one whose `origin` names a different
+repository. It runs `check_logic.py` first, and it refuses a zip whose art is
+missing: the map and the legend icons are extracted from the player's own game
+install and are not committed, so a fresh checkout can otherwise package a pack
+that draws nothing.
+
+Only runtime content goes in the zip. `tools/`, `data/`, `preview/` and the lint
+config are how the pack is built rather than part of it.
 
 `data/check_coords.py` is the check position table. It comes from the world
 repository, not from here:
