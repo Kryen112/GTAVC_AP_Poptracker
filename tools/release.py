@@ -55,7 +55,7 @@ PACK = Path(__file__).resolve().parent.parent
 # tables, the tools that ran it, the preview renders and the lint config are dev
 # tooling and stay out. var_horizontal carries the horizontal variant's one
 # layout, so a release without it ships a variant with no window of its own.
-INCLUDE = ["manifest.json", "README.md", "images", "items", "layouts",
+INCLUDE = ["manifest.json", "README.md", "LICENSE", "images", "items", "layouts",
            "locations", "maps", "scripts", "var_horizontal"]
 
 # The pack's own gate. It cross-checks the generated files against each other and
