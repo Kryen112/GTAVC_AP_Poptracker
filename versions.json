@@ -1,3 +1,13 @@
 {
-	"versions": []
+	"versions": [
+		{
+			"package_version": "1.0.0",
+			"download_url": "https://github.com/Kryen112/GTAVC_AP_Poptracker/releases/download/v1.0.0/GTAVC_AP_Poptracker_v1.0.0.zip",
+			"sha256": "fd07344c97fedd598377a96e21729fc7624376868a458474c7ba32aa46e6636f",
+			"changelog": [
+				"First release, alongside GTA: Vice City Archipelago v1.0.0.",
+				"One map of the whole city with every check pinned, in a Vertical and a Horizontal variant."
+			]
+		}
+	]
 }
